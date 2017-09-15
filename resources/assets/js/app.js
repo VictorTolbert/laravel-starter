@@ -1,22 +1,24 @@
+import Vue from 'vue'
+// import router from './routes'
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+// FIXME: -- need to figure this out (to annotate problems)
+// TODO: -- need to implement (to annotate solutions to problems)
 
-require('./bootstrap');
+require('./bootstrap')
 
-window.Vue = require('vue');
+Vue.component('flash', require('./components/Flash.vue'))
+Vue.component('paginator', require('./components/Paginator.vue'))
+Vue.component('quick-links', require('./components/QuickLinks.vue'))
+Vue.component('scan-view', require('./components/scan-view.vue'))
+Vue.component('multi-index', require('./components/MultiIndex.vue'))
+Vue.component('autocomplete', require('./components/Autocomplete'))
+Vue.component('accordion-menu', require('./components/AccordionMenu'))
+Vue.component('notification', require('./components/Notification'))
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('account-performance', require('./components/AccountPerformance'))
+Vue.component('avails', require('./components/Avails'))
 
 const app = new Vue({
     el: '#app'
-});
+    // router,
+})

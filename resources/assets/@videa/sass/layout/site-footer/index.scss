@@ -1,0 +1,35 @@
+// @import "../../../design-tokens/index";
+// Site Footer
+//
+// Footer is element/organism that is present on the bottom of each page.
+//
+// Markup:
+// <footer role="contentinfo" class="vui-site-footer">
+//   <div class="vui-container">
+//     <nav class="vui-navigation--footer vui-grid vui-grid--align-center">
+//       <ul class="vui-list--horizontal vui-has-dividers--right">
+//         <li class="vui-list__item"><a href="">Privacy Policy</a></li>
+//         <li class="vui-list__item"><a href="">Terms &amp; Conditions</a></li>
+//       </ul>
+//     </nav>
+//     <p>3390 Peachtree Road, NE, Suite 400 Atlanta, GA 30326<br>Copyright © 2014–2016 Videa. All rights reserved.</p>
+//   </div>
+// </footer>
+//
+// Styleguide 3.1
+.#{$css-prefix}site-footer {
+  background-color: $vui-color-brand-2;
+  background-color: $vui-color-brand-4;
+  color: $white;
+  text-align: center;
+  padding: $spacing-medium;
+
+  .v-link-active {
+    color: $vui-color-brand-6 !important;
+  }
+}
+
+.#{$css-prefix}navigation--footer a {
+  color: $white;
+  text-decoration: underline;
+}

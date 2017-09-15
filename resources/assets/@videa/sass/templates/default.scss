@@ -1,0 +1,106 @@
+// Default Template
+//
+// Markup:
+// <div id="app" class="vui-app">
+//   <header role="banner" class="vui-site-header vui-site-header--app">
+//     <div class="vui-site-header--app__container vui-grid vui-grid--align-spread">
+//       <a href="" class="vui-align-middle v-link-active">
+//         <img alt="Videa" src="../assets/svg/videa-logo--white.svg" style="width:144.531px;height:32px" class="vui-site-header__logo"/>
+//       </a>
+//       <div class="vui-medium-show vui-action">
+//         <span class="vui-m-right--xx-small">Welcome Back,</span>
+//         <div class="vui-dropdown-trigger vui-dropdown-trigger--click dropdown-left vui-m-right--x-small dropdown">
+//           <button aria-live="assertive" aria-haspopup="true" class="vui-button vui-not-selected">
+//             <span style="color: white" class="vui-m-right--xx-small">Seller User</span>
+//             <svg style="color: #4296b4; margin-right: 0" class="vui-icon vui-icon--x-small vui-align-middle">
+//               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/icons.svg#icon-caret-down"></use>
+//             </svg>
+//           </button>
+//           <div class="vui-dropdown vui-nubbin--top">
+//             <ul role="menu" class="dropdown-menu dropdown__list vui-dropdown__list">
+//               <li class="dropdown-item vui-dropdown__item">
+//                 <a role="menuitem">
+//                   <p class="vui-truncate">Preferences</p>
+//                 </a>
+//               </li>
+//               <li class="dropdown-item vui-dropdown__item">
+//                 <a role="menuitem">
+//                   <p class="vui-truncate">Logout</p>
+//                 </a>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+//         <button id="stationSelector" class="vui-button vui-button--inverse vui-button--small vui-m-right--x-small">WVVV
+//           <svg style="width: 18px; height: 18px;color:hsla(28, 91%, 54%, 1);" class="vui-icon">
+//             <use xlink:href="../assets/icons.svg#icon-caret-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+//           </svg>
+//         </button>
+//       </div>
+//     </div>
+//   </header>
+//   <nav class="vui-site-navigation">
+//     <div class="vui-container vui-grid vui-grid--align-spread vui-grid--vertical-align-center">
+//       <ul class="vui-grid vui-grow">
+//         <li><a href="" class="v-link-active">Orders</a></li>
+//         <li><a href="">Program Guide</a></li>
+//         <li><a href="">OTRI</a></li>
+//         <li>
+//           <div class="vui-dropdown-trigger vui-dropdown-trigger--click dropdown"><a aria-live="assertive" aria-haspopup="true"><span style="color: white" class="vui-m-right--xx-small">Performance</span>
+//               <svg style="color: #4296b4; margin-right: 0" class="vui-icon vui-icon--x-small vui-align-middle">
+//                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/icons.svg#icon-caret-down"></use>
+//               </svg></a>
+//             <div class="vui-dropdown">
+//               <ul role="menu" class="dropdown-menu dropdown__list vui-dropdown__list">
+//                 <li class="dropdown-item vui-dropdown__item"><a role="menuitem">
+//                     <p class="vui-truncate">Account Performance</p></a></li>
+//                 <li class="dropdown-item vui-dropdown__item"><a role="menuitem">
+//                     <p class="vui-truncate">Station Performance</p></a></li>
+//               </ul>
+//             </div>
+//           </div>
+//         </li>
+//       </ul>
+//       <ul class="vui-grid">
+//         <li><a href="">Price Guide</a></li>
+//         <li><a href="">Avails</a></li>
+//         <li>
+//           <div class="vui-dropdown-trigger vui-dropdown-trigger--click dropdown"><a aria-live="assertive" aria-haspopup="true"><span style="color: white" class="vui-m-right--xx-small">Order Management</span>
+//               <svg style="color: #4296b4; margin-right: 0" class="vui-icon vui-icon--x-small vui-align-middle">
+//                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-down"></use>
+//               </svg></a>
+//             <div class="vui-dropdown">
+//               <ul role="menu" class="dropdown-menu dropdown__list vui-dropdown__list">
+//                 <li class="dropdown-item vui-dropdown__item">
+//                   <a role="menuitem">
+//                     <p class="vui-truncate">Accept/Reject Orders</p>
+//                   </a>
+//                 </li>
+//                 <li class="dropdown-item vui-dropdown__item">
+//                   <a role="menuitem">
+//                     <p class="vui-truncate">Makegoods Dashboard</p>
+//                   </a>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//         </li>
+//       </ul>
+//     </div>
+//   </nav>
+//   <main class="vui-main">
+//   </main>
+//   <footer role="contentinfo" class="vui-site-footer">
+//     <div class="vui-container">
+//       <nav class="vui-navigation--footer vui-grid vui-grid--align-center">
+//         <ul class="vui-list--horizontal vui-has-dividers--right">
+//           <li class="vui-list__item"><a href="">Privacy Policy</a></li>
+//           <li class="vui-list__item"><a href="">Terms & Conditions</a></li>
+//         </ul>
+//       </nav>
+//       <p>3390 Peachtree Road, NE, Suite 400 Atlanta, GA 30326<br/>Copyright © 2014–2016 Videa. All rights reserved.</p>
+//     </div>
+//   </footer>
+// </div>
+//
+// Styleguide 4.1

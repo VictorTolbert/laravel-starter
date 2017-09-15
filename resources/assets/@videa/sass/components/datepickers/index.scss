@@ -1,0 +1,161 @@
+// @import "../../../design-tokens/index";
+// Datepickers
+//
+// Markup:
+// <div class="vui-datepicker" id="fromDate">
+//   <div class="vui-datepicker__calendar">
+//     <header>
+//       <span class="prev">&nbsp;</span>
+//       <span class="up">Apr 2016</span>
+//       <span class="next">&nbsp;</span>
+//     </header>
+//     <span class="cell day-header">Mon</span>
+//     <span class="cell day-header">Tue</span>
+//     <span class="cell day-header">Wed</span>
+//     <span class="cell day-header">Thu</span>
+//     <span class="cell day-header">Fri</span>
+//     <span class="cell day-header">Sat</span>
+//     <span class="cell day-header">Sun</span>
+//     <span class="cell day blank"></span>
+//     <span class="cell day blank"></span>
+//     <span class="cell day blank"></span>
+//     <span class="cell day blank"></span>
+//     <!---->
+//     <span class="cell day">01</span>
+//     <span class="cell day">02</span>
+//     <span class="cell day">03</span>
+//     <span class="cell day">04</span>
+//     <span class="cell day">05</span>
+//     <span class="cell day">06</span>
+//     <span class="cell day">07</span>
+//     <span class="cell day">08</span>
+//     <span class="cell day">09</span>
+//     <span class="cell day">10</span>
+//     <span class="cell day">11</span>
+//     <span class="cell day">12</span>
+//     <span class="cell day">13</span>
+//     <span class="cell day">14</span>
+//     <span class="cell day">15</span>
+//     <span class="cell day">16</span>
+//     <span class="cell day">17</span>
+//     <span class="cell day">18</span>
+//     <span class="cell day">19</span>
+//     <span class="cell day">20</span>
+//     <span class="cell day">21</span>
+//     <span class="cell day">22</span>
+//     <span class="cell day">23</span>
+//     <span class="cell day">24</span>
+//     <span class="cell day selected">25</span>
+//     <span class="cell day">26</span>
+//     <span class="cell day">27</span>
+//     <span class="cell day">28</span>
+//     <span class="cell day">29</span>
+//     <span class="cell day">30</span>
+//   </div>
+// </div>
+//
+// Styleguide 2.4
+
+.#{$css-prefix}datepicker {
+  position: relative;
+}
+.#{$css-prefix}datepicker__calendar {
+  position: absolute;
+  z-index: 100;
+  background: #fff;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+.#{$css-prefix}datepicker__calendar header {
+  display: block;
+  line-height: 40px;
+}
+.#{$css-prefix}datepicker__calendar header span {
+  display: inline-block;
+  text-align: center;
+  width: 71.42857142857143%;
+  float: left;
+}
+.#{$css-prefix}datepicker__calendar header .prev,
+.#{$css-prefix}datepicker__calendar header .next {
+  width: 14.285714285714286%;
+  float: left;
+  text-indent: -1000px;
+  position: relative;
+}
+.#{$css-prefix}datepicker__calendar header .prev:after,
+.#{$css-prefix}datepicker__calendar header .next:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border: 6px solid transparent;
+}
+.#{$css-prefix}datepicker__calendar header .prev:after {
+  border-right: 10px solid #6a2565;
+  margin-left: -5px;
+}
+.#{$css-prefix}datepicker__calendar header .next:after {
+  border-left: 10px solid #6a2565;
+  margin-left: 5px;
+}
+.#{$css-prefix}datepicker__calendar header .prev:not(.disabled),
+.#{$css-prefix}datepicker__calendar header .next:not(.disabled),
+.#{$css-prefix}datepicker__calendar header .up:not(.disabled) {
+  cursor: pointer;
+}
+.#{$css-prefix}datepicker__calendar header .prev:not(.disabled):hover,
+.#{$css-prefix}datepicker__calendar header .next:not(.disabled):hover,
+.#{$css-prefix}datepicker__calendar header .up:not(.disabled):hover {
+  background: #eee;
+}
+.#{$css-prefix}datepicker__calendar .disabled {
+  color: #ddd;
+  cursor: default;
+}
+.#{$css-prefix}datepicker__calendar .cell {
+  display: inline-block;
+  padding: 0 5px;
+  width: 14.285714285714286%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+}
+.#{$css-prefix}datepicker__calendar .cell:not(.blank):not(.disabled).day,
+.#{$css-prefix}datepicker__calendar .cell:not(.blank):not(.disabled).month,
+.#{$css-prefix}datepicker__calendar .cell:not(.blank):not(.disabled).year {
+  cursor: pointer;
+}
+.#{$css-prefix}datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,
+.#{$css-prefix}datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,
+.#{$css-prefix}datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {
+  border: 1px solid #6a2565;
+}
+.#{$css-prefix}datepicker__calendar .cell.selected {
+  background: #6a2565;
+  color: #fff;
+}
+.#{$css-prefix}datepicker__calendar .cell.selected:hover {
+  background: #6a2565;
+}
+.#{$css-prefix}datepicker__calendar .cell.grey {
+  color: #888;
+}
+.#{$css-prefix}datepicker__calendar .cell.grey:hover {
+  background: inherit;
+}
+.#{$css-prefix}datepicker__calendar .cell.day-header {
+  font-size: 75%;
+  cursor: inherit;
+}
+.#{$css-prefix}datepicker__calendar .cell.day-header:hover {
+  background: inherit;
+}
+.#{$css-prefix}datepicker__calendar .month,
+.#{$css-prefix}datepicker__calendar .year {
+  width: 33.333%;
+}

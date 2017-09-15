@@ -1,0 +1,78 @@
+// @import "../../../design-tokens/index";
+// Badges
+//
+// Markup:
+// <span class="vui-badge {$modifiers}">{$modifiers}</span>
+//
+// .vui-badge              - Default Badge
+// .vui-badge.new          - New Badge
+// .vui-badge.pending      - Pending Badge
+// .vui-badge.cancelled    - Cancelled Badge
+//
+// Styleguide 2.1
+
+.vui-badge {
+  color: $white;
+  border-radius: $border-radius-small;
+
+  &.ahead,
+  &.new,
+  &.active,
+  &.confirmed {
+    color: $white;
+    background-color: $vui-color-success;
+    border-radius: $border-radius-small;
+  }
+
+  &.on-track {
+    color: $white;
+    background-color: $vui-color-warn;
+    border-radius: $border-radius-small;
+  }
+
+  &.resend {
+    color: $white;
+    background-color: $vui-color-brand-9;
+    border-radius: $border-radius-small;
+  }
+
+  &.pending {
+    color: $white;
+    background-color: $vui-color-brand-9;
+    border-radius: $border-radius-small;
+  }
+
+  &.released {
+    color: $white;
+    background-color: $vui-color-brand-3;
+    border-radius: $border-radius-small;
+  }
+
+  &.behind,
+  &.cancelled {
+    color: $white;
+    background-color: $vui-color-brand-10;
+    border-radius: $border-radius-small;
+  }
+
+  &.accepted,
+  &.pending {
+    color: $white;
+    background-color: $vui-color-brand-3;
+    border-radius: $border-radius-small;
+  }
+
+  &.rejected,
+  &.expired {
+    color: $white;
+    background-color: $vui-color-brand-10;
+    border-radius: $border-radius-small;
+  }
+}
+
+.badge--dev-ready {
+  background: #4bca81;
+  color: $white;
+  border-radius: 15rem;
+  padding: 0.25rem 0.5rem;
+}

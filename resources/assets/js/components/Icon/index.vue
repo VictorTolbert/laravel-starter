@@ -1,0 +1,91 @@
+<template>
+    <section>
+      <div class="container">
+        <h1 class="title">Icons</h1>
+        <h2 class="subtitle">
+          Bulma is compatible with <strong><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></strong> icons.
+        </h2>
+
+        <hr>
+
+        <div class="content">
+          <p>Because the icons can take a few seconds to load, and because you want control over the <strong>space</strong> the icons will take, you can use the <code>icon</code> class as a container:</p>
+        </div>
+
+
+        <div class="example">
+
+    <span class="icon">
+      <i class="fa fa-home"></i>
+    </span>
+
+        </div>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/span&gt;</span></code></pre><button class="copy">Copy</button></figure>
+
+        <div class="content">
+          <p>The <code>icon</code> container will take up <em>exactly</em> <strong>1.5rem x 1.5rem</strong>. The icon itself is sized at <strong>21px</strong>.</p>
+        </div>
+
+        <hr>
+
+        <h3 class="title">Sizes</h3>
+
+        <div class="content">
+          <p>Font Awesome icons use a font-size of <strong>28px</strong> by default, and are best rendered when using <strong>multiples of 7</strong>.</p>
+          <p>The Bulma <code>icon</code> container is always slightly bigger than the font-size used:</p>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2">Class</th>
+              <th>Font-size</th>
+              <th>Container size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>icon is-small</code></td>
+              <td><span class="icon is-small"><i class="fa fa-home"></i></span></td>
+              <td>14px</td>
+              <td>1rem x 1rem</td>
+            </tr>
+            <tr>
+              <td><code>icon</code></td>
+              <td><span class="icon"><i class="fa fa-home"></i></span></td>
+              <td>21px</td>
+              <td>1.5rem x 1.5rem</td>
+            </tr>
+            <tr>
+              <td><code>icon is-medium</code></td>
+              <td><span class="icon is-medium"><i class="fa fa-home"></i></span></td>
+              <td>28px</td>
+              <td>2rem x 2rem</td>
+            </tr>
+            <tr>
+              <td><code>icon is-large</code></td>
+              <td><span class="icon is-large"><i class="fa fa-home"></i></span></td>
+              <td>42px</td>
+              <td>3rem x 3rem</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                template3: `
+                    <p class="content">
+                        <b>Selected:</b> {{ asyncExample.selected }}
+                    </p>
+                `
+            }
+        }
+    }
+</script>

@@ -1,0 +1,74 @@
+// Login Template
+//
+// Markup:
+// <div id="app" class="vui-app">
+//   <header class="vui-site-header vui-site-header--app" role="banner">
+//     <div class="vui-site-header--app__container vui-grid vui-grid--align-spread">
+//       <a class="vui-align-middle" href="#!/">
+//         <img alt="Videa" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIzNzkuNTg4cHgiIGhlaWdodD0iODQuMDRweCIgdmlld0JveD0iMCAwIDM3OS41ODggODQuMDQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM3OS41ODggODQuMDQiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjM3MS43MzMsODQuMDM5IDM3MS43MzMsNzUuMTUyIDM3My41MjEsNzUuMTUyIDM3NS42NTUsODEuNzYgMzc3LjgxMyw3NS4xNTIgMzc5LjU4OCw3NS4xNTIKCTM3OS41ODgsODQuMDM5IDM3OC4yNTcsODQuMDM5IDM3OC4yNTcsNzcuMzU5IDM3Ni4xMjMsODQuMDM5IDM3NS4xMTUsODQuMDM5IDM3Mi45NjgsNzcuMzU5IDM3Mi45NjgsODQuMDM5ICIvPgo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjM2Ni45MDgsODQuMDM5IDM2Ni45MDgsNzYuNDU5IDM2NC40NzMsNzYuNDU5IDM2NC40NzMsNzUuMTUyIDM3MC43MjEsNzUuMTUyIDM3MC43MjEsNzYuNDU5CgkzNjguMjg3LDc2LjQ1OSAzNjguMjg3LDg0LjAzOSAiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM1NS4yNCw4NC4wNGg0LjAyOEwyODkuMTQzLDIuOTc1QzI4Ny41MDgsMS4wODYsMjg1LjEzMywwLDI4Mi42MzUsMGgtMC4wNGgtMTMuNzI0djg0LjA0aDEzLjcyNFY2Ny41OTQKCWg0NC43NWw1LjI4Miw2LjEwNkMzMzguMzA4LDgwLjI2NiwzNDYuNTYsODQuMDQsMzU1LjI0LDg0LjA0IE0yODIuNTk1LDU1LjY4NlYxNS44NjRsMzQuNDQ4LDM5LjgyMkgyODIuNTk1eiIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjAyLjAyMiw2Ni4wOTlWMGg1Ni40Nzl2MTIuODE2aC00Mi43NTd2MjIuNjgyaDQyLjc1N3YxMi4yNDloLTQyLjc1N3YxNy45NWMwLDMuMzAzLDIuNjc3LDUuOTgsNS45NzksNS45OAoJaDM2Ljc3N3YxMi4zNjFoLTM4LjU0QzIxMC4wNTQsODQuMDM5LDIwMi4wMjIsNzYuMDA3LDIwMi4wMjIsNjYuMDk5Ii8+CjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMjQuODU5LDY2LjA5OVYwaDI3LjU2YzIzLjcwMywwLDQzLjQzNyw4Ljk1OSw0My40MzcsNDEuOTYyYzAsMzIuNDM3LTIxLjIwOCw0Mi4wNzgtNDUuMDI1LDQyLjA3OGgtOC4wMzIKCUMxMzIuODkxLDg0LjA0LDEyNC44NTksNzYuMDA3LDEyNC44NTksNjYuMDk5IE0xMzguNTgzLDY1LjY5N2MwLDMuMzA0LDIuNjc3LDUuOTgsNS45OCw1Ljk4aDguMzEKCWMxOC4zNzMsMCwyOC45Mi04LjE2NiwyOC45Mi0yOS43MTVjMC0yMS40MzQtMTAuMDk0LTI5LjE0Ni0zMC4xNjgtMjkuMTQ2aC0xMy4wNDJWNjUuNjk3eiIvPgo8cmVjdCB4PSIxMDAuNzY3IiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMTMuNzI0IiBoZWlnaHQ9Ijg0LjAzOSIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNzYuNjczLDY4LjE3NUwyNi42NDEsMTAuMzM5QzIwLjk2MSwzLjc3MywxMi43MDksMC4wMDEsNC4wMjgsMC4wMDFIMGw3MC4xMjYsODEuMDYzCgljMS42MzQsMS44ODksNC4wMDksMi45NzUsNi41MDcsMi45NzVoMC4wNGgxMy43MjRWMC4wMDFINzYuNjczVjY4LjE3NXoiLz4KPC9zdmc+Cg==" style="width:144.531px;height:2rem" class="vui-site-header__logo">
+//       </a>
+//     </div>
+//   </header>
+//   <nav class="vui-site-navigation">
+//     <div class="vui-container vui-grid vui-grid--align-spread vui-grid--vertical-align-center">
+//       <form class="vui-form--compound vui-align-middle">
+//         <fieldset class="vui-form--compound">
+//           <div class="form-element__group">
+//             <div class="vui-form-element__row vui-m-bottom--medium">
+//               <div class="vui-form-element vui-size--1-of-3 vui-align-bottom">
+//                 <label for="email" style="color: white" class="vui-form-element__label">
+//                   Username
+//                 </label>
+//                 <div class="vui-form-element__control vui-input-has-icon vui-input-has-icon--left">
+//                   <svg aria-hidden="true" style="color: hsla(214, 66%, 34%, 1)" class="vui-icon vui-input__icon">
+//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-envelope"></use>
+//                   </svg>
+//                   <input id="email" type="email" placeholder="john.doe@email.com" style="min-width: 14rem" class="vui-input">
+//                 </div>
+//               </div>
+//               <div class="vui-form-element vui-size--1-of-3 vui-align-bottom">
+//                 <label for="password" style="color: white" class="vui-form-element__label">
+//                   Password
+//                 </label>
+//                 <div class="vui-form-element__control vui-input-has-icon vui-input-has-icon--left">
+//                   <svg aria-hidden="true" style="color: hsla(214, 66%, 34%, 1)" class="vui-icon vui-input__icon">
+//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lock">
+//                     </use>
+//                   </svg>
+//                   <input id="password" type="password" placeholder="Password" style="min-width: 14rem" class="vui-input">
+//                 </div>
+//               </div>
+//               <div class="vui-form-element vui-size--1-of-3 vui-align-bottom">
+//                 <button class="vui-button vui-button--secondary vui-m-right--x-small">
+//                   Login
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </fieldset>
+//       </form>
+//     </div>
+//   </nav>
+//   <main class="vui-main vui-main--login">
+//     <div class="home-view">
+//     </div>
+//   </main>
+//   <footer role="contentinfo" class="vui-site-footer">
+//     <div class="vui-container">
+//       <nav class="vui-navigation--footer vui-grid vui-grid--align-center">
+//         <ul class="vui-list--horizontal vui-has-dividers--right">
+//           <li class="vui-list__item">
+//             <a href="#!/privacy">Privacy Policy</a>
+//           </li>
+//           <li class="vui-list__item">
+//             <a href="#!/terms">Terms &amp; Conditions</a>
+//           </li>
+//         </ul>
+//       </nav>
+//       <p>3390 Peachtree Road, NE, Suite 400 Atlanta, GA 30326<br>
+//       Copyright © 2014–2016 Videa. All rights reserved.</p>
+//     </div>
+//   </footer>
+// </div>
+//
+// Styleguide 4.2

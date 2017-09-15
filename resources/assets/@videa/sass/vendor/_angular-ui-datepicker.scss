@@ -1,0 +1,125 @@
+ .uib-datepicker .uib-title {
+     width: 100%;
+     color: $color-brand;
+ }
+
+ .uib-datepicker .glyphicon {
+     color: $color-brand;
+ }
+
+ .uib-day .text-info {
+     color: $color-brand;
+ }
+ .uib-day .text-muted {
+     color: #ddd !important;
+     font-style: italic;
+ }
+
+ .uib-datepicker-popup.dropdown-menu {
+     display:block;
+     position: absolute;
+     z-index: 1;
+     border: 1px solid #ccc;
+     padding: $spacing-xxx-small;
+     background-color: $white;
+ }
+
+.uib-datepicker-popup.dropdown-menu li {
+    padding: 0;
+}
+
+.uib-datepicker-popup.dropdown-menu li:hover {
+     background: transparent;
+ }
+
+ .uib-button-bar {
+     padding: 10px 9px 2px;
+ }
+
+ .uib-daypicker,
+ .uib-monthpicker {
+     outline: none;
+ }
+
+ .uib-daypicker button,
+ .uib-monthpicker button {
+     min-width: 100%;
+     background-color: $white;
+     border: none;
+ }
+
+ .uib-day button,
+ .uib-month button,
+ .uib-year button {
+     min-width: 100%;
+     background-color: $white;
+     padding: $spacing-x-small;
+     border: none;
+     display: inline-block;
+     border: 1px solid transparent;
+     font-size: 0.875rem;
+
+ }
+ .uib-day button.active {
+     font-weight: bold;
+     color: $white;
+     background-color: $color-brand;
+     border-color: $color-brand;
+ }
+ .uib-day button:hover {
+     border: 1px solid $color-brand;
+ }
+ .uib-day button:disabled {
+     background: green;
+ }
+
+ .uib-daypicker th,
+ .uib-daypicker td,
+ .uib-monthpicker th,
+ .uib-monthpicker td {
+      background-color: $white;
+      text-align: center;
+      text-transform: uppercase;
+ }
+
+// Month Names Row
+.uib-daypicker tr:last-child th {
+    color: $color-brand;
+    padding: 0 $spacing-x-small;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.uib-daypicker thead tr:last-child th:first-child::after {
+    content: "Wk#";
+    font-size: $font-size-small;
+}
+
+// Week #
+.uib-weeks td:first-child {
+    padding: $spacing-small;
+    font-size: $font-size-x-small;
+    border: none;
+    border-right: 1px solid #eee;
+}
+
+.filter-calendar {
+    position: relative;
+}
+
+.filter-calendar-button.calendar-button {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    border: none;
+    background: none;
+    outline: none;
+    .icon-calendar {
+        color: $color-brand;
+    }
+    .icon-calendar:before {
+        content: "\f073";
+    }
+}

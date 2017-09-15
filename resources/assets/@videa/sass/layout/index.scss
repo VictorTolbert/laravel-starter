@@ -1,0 +1,43 @@
+// Layout
+//
+// Styleguide 3.0
+
+// @import "../../design-tokens/index";
+
+@import 'site-header/index';
+@import 'site-navigation/index';
+@import 'site-footer/index';
+@import 'site-help/index';
+
+.#{$css-prefix}container {
+  padding-left: ($spacing-large * 3);
+  padding-right: ($spacing-large * 3);
+}
+
+
+.#{$css-prefix}app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-background;
+  color: $black;
+  position: relative;
+}
+
+.#{$css-prefix}main {
+  margin-bottom: $spacing-x-large;
+  padding-left: ($spacing-large * 3);
+  padding-right: ($spacing-large * 3);
+  flex-grow: 1;
+}
+
+.#{$css-prefix}main--login {
+  background-image: url('#{$static-image-path}/login-background.jpg');
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  margin-top: -($spacing-x-large);
+  margin-bottom: 0;
+  max-width: none;
+}

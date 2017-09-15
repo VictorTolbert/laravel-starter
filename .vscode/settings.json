@@ -1,0 +1,108 @@
+// Place your settings in this file to overwrite the default settings
+{
+  // Override Your Fonts Style and Sizes
+  "terminal.integrated.fontFamily": "Operator Mono",
+  "terminal.integrated.fontSize": 16,
+  "window.zoomLevel": 0,
+  "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 17,
+  "editor.lineHeight": 40,
+  "editor.letterSpacing": 0.5,
+  "editor.fontWeight": "400",
+  "prettier.eslintIntegration": true,
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.cursorBlinking": "solid",
+  "editor.renderWhitespace": "all",
+  // Accept code suggestions by pressing "enter" (in addition to the default "tab")
+  "editor.acceptSuggestionOnEnter": "on",
+  // Highlight matching brackets when one of them is selected.
+  "editor.matchBrackets": true,
+  // Wrap text to the viewport width
+  "editor.wordWrap": "on",
+  // Use 4 spaces for tabs
+  "editor.tabSize": 4,
+  // Use hard tabs
+  "editor.insertSpaces": false,
+  // Automatically indent text
+  // "editor.autoIndent": true,
+  // Indent wrapped lines for easier viewing
+  "editor.wrappingIndent": "indent",
+  // "files.associations": {
+  //   "*.blade.php": "html"
+  // },
+  // Use Emmet on .vue and .blade
+  "emmet.syntaxProfiles": {
+    "blade": "html",
+    "vue-html": "html"
+  },
+  "workbench.colorTheme": "Cobalt2",
+  // Add Your Icon Theme if You Need this lol
+  "workbench.iconTheme": "vscode-great-icons",
+  // Edit Both Start and Ending of Tags
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "javascript",
+    "blade",
+    "vue"
+  ],
+  // Exclude Vendor Folders During Search and Replace (GLOBAL)
+  "files.watcherExclude": {
+    "**/vendor/**": true,
+    "**/node_modules/**": true
+  },
+  // Exclude Vendor Folders During Search and Replace (GLOBAL)
+  "search.exclude": {
+    "**/vendor/**": true,
+    "**/node_modules/**": true
+  },
+  // remove crlf error on eslint
+  "files.eol": "\n",
+  // remove dynamic import error after adding eslint package to it
+  // vue router lazyload feature
+  "javascript.validate.enable": false,
+  // eslint configs
+  "eslint.enable": true,
+  "eslint.options": {
+    "extensions": [
+      ".html",
+      ".js",
+      ".vue",
+      ".jsx"
+    ]
+  },
+  "eslint.validate": [
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    }
+  ],
+  "eslint.run": "onSave",
+  "eslint.autoFixOnSave": true,
+  // PHP Configuration
+  "php.validate.run": "onType",
+  "php.suggest.basic": false,
+  "phpformatter.composer": true,
+  "composer.executablePath": "/usr/local/bin/php",
+  "php.validate.executablePath": "/usr/local/bin/php",
+  "git.ignoreLimitWarning": true,
+  "vetur.format.js.InsertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true,
+  "vetur.format.html.wrap_line_length": 80,
+  "vetur.format.html.wrap_attributes": "force-expand-multiline"
+}

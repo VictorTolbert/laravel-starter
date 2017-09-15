@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'description' => env('APP_DESCRIPTION', 'Laravel'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -167,6 +169,39 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\Cors\ServiceProvider::class,
+        BladeSvg\BladeSvgServiceProvider::class,
+        Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+        Corcel\Laravel\CorcelServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class,
+        Jenssegers\Date\DateServiceProvider::class,
+        Jtant\LaravelEnvSync\EnvSyncServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
+        Lubusin\Decomposer\DecomposerServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Pbmedia\LaravelFFMpeg\FFMpegServiceProvider::class,
+        Spatie\Analytics\AnalyticsServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
+        Spatie\CollectionMacros\CollectionMacroServiceProvider::class,
+        Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
+        Spatie\GoogleTagManager\GoogleTagManagerServiceProvider::class,
+        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
+        Spatie\Menu\Laravel\MenuServiceProvider::class,
+        Spatie\MissingPageRedirector\MissingPageRedirectorServiceProvider::class,
+        Spatie\Newsletter\NewsletterServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        Spatie\ResponseCache\ResponseCacheServiceProvider::class,
+        Spatie\Tail\TailServiceProvider::class,
+        Themsaid\MailPreview\MailPreviewServiceProvider::class,
+        Tightenco\Ziggy\ZiggyServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -176,6 +211,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Navigation\NavigationServiceProvider::class,
+        Spatie\DemoMode\DemoModeServiceProvider::class,
 
     ],
 
@@ -225,7 +262,19 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'GoogleTagManager' => Spatie\GoogleTagManager\GoogleTagManagerFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
+        'Date' => Jenssegers\Date\Date::class,
+        'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
+        'GoogleCalendar' => Spatie\GoogleCalendar\GoogleCalendarFacade::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'FFMpeg' => Pbmedia\LaravelFFMpeg\FFMpegFacade::class,
+        'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
+        'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
     ],
 
 ];

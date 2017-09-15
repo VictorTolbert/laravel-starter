@@ -1,0 +1,40 @@
+// is-expanded
+
+// @import "../../design-tokens/index";
+
+.#{$css-prefix}highlight {
+  background-color: #cce4ea;
+}
+
+.error {
+  font-weight: bold;
+  color: $vui-color-brand-10;
+}
+
+.required {
+  color: $vui-color-brand-10;
+}
+
+.v-link-active {
+  color: $vui-color-link-active !important;
+  text-decoration: underline;
+}
+
+// [v-cloak] {
+//   .v-cloak--block
+//     display block
+//   .v-cloak--inline
+//     display inline
+//   .v-cloak--inlineBlock
+//     display inline-block
+//   .v-cloak--hidden
+//     display none
+//   .v-cloak--invisible
+//     visibility hidden
+// }
+
+// .v-cloak--block,
+// .v-cloak--inline,
+// .v-cloak--inlineBlock {
+//   display: none;
+// }

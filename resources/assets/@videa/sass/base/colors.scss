@@ -1,0 +1,48 @@
+// Colors
+//
+// Here should be defined all colors and color variables/constants of the project.
+//
+// Styleguide 1.1
+
+// Colors Variables
+//
+// Naming convention - base color + the name of the color base on the project http://chir.ag/projects/name-that-color/
+//
+// $white - White color
+// $gray-alto - Default
+// $gray-emperor - Default
+// $black - Used for flickr branding
+// $twitter-blue - Twitter blue color
+// $facebook-blue - Facebook blue color
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1.1
+
+$white: #FFFFFF;
+$gray-alto: #D5D5D5;
+$gray-emperor: #555555;
+$black: #000000;
+
+$twitter-blue: #55ACEE;
+$facebook-blue: #3B5998;
+
+// Colors Constants
+//
+// In this section are defined color constants for various elements of web. **To define contast use only variables from above section**
+//
+// $body-color - white
+// $primary-font-color - Used as primary color for the fonts
+// $primary-header-color - Used for the headers
+// $primary-link-color - primary link color
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1.2
+
+$body-color: $white;
+$primary-font-color: $gray-emperor;
+$primary-headline-color: $gray-emperor;
+$primary-link-color: $gray-alto;

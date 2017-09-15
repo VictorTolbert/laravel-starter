@@ -1,0 +1,133 @@
+@import "colors";
+@import "fonts/index";
+@import "typography";
+@import "form-fields";
+
+// @import '../../../design-tokens/index';
+
+// Base
+//
+// Styleguide 1.0
+
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+a {
+  color: $vui-color-link;
+}
+
+i, sup {
+  color: $vui-color-brand-9;
+}
+
+// .body {
+//   font-family: Roboto, sans-serif;
+//   font-weight: 300;
+//   color: $vui-color-brand-8;
+// }
+
+body,
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%; /*  Avoid the IE 10-11 `min-height` bug. */
+  background-color: $color-background;
+  color: $black;
+  position: relative;
+}
+
+// input::placeholder {
+//   color: $color-placeholder;
+// }
+
+
+// border-radius override -- vui-box
+.vui-box {
+  border-radius: 0;
+}
+
+// .vui-icon--sort-arrow {
+//   width: 1rem;
+//   height: 1rem;
+//   color: $vui-color-sort-arrow;
+// }
+
+// border-radius override for form elements
+.vui-input,
+.vui-select,
+.vui-button,
+.vui-textarea {
+  border-radius: $border-radius-small;
+}
+
+
+/**
+ * Utililty Classes
+ */
+.u-width-xx-small {
+  width: 3rem;
+}
+.u-width-x-small {
+  width: 4rem;
+}
+.u-width-small {
+  width: 5rem;
+}
+.u-width-medium {
+  width: 6rem;
+}
+.u-width-large {
+  width: 7rem;
+}
+.u-width-x-large {
+  width: 8rem;
+}
+.u-width-xx-large {
+  width: 9rem;
+}
+.u-width-xxx-large {
+  width: 10rem;
+}
+.u-currency {
+  text-align: right;
+}
+.u-currency:before {
+  display: block;
+  float: left;
+  padding-right: 1rem;
+  content: "$ ";
+  // color: #a6a8b0;
+  color: lighten($vui-color-brand-8, 50%)
+}
+
+.u-highlight {
+  background-color: $vui-color-highlight;
+}
+
+.vui-highlight {
+  // background-color rgb(206, 229, 235)
+  background-color: #cce4ea;
+}
+
+.vui-selected {
+  background: hsla(188, 40%, 56%, 0.5);
+}
+
+.vui-table-legend {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #eee;
+}
+
+.vui-table-legend--selected {
+  background-color: hsla(188, 40%, 56%, 0.5);
+}
+
+.vui-table-legend--unselected {
+  background-color: $white;
+}

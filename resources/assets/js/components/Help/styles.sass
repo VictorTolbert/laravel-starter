@@ -1,0 +1,67 @@
+.site-help
+  width: 640px
+  position: fixed
+  top: 14rem
+  right: 0
+  background: #fff
+  border: 4px solid $primary
+  border-right: none
+  z-index: 9
+.site-help__toggle
+  position: absolute
+  display: inline-block
+  margin-top: 8.78rem
+  margin-left: -3rem
+  -webkit-transform: rotate(-90deg)
+  transform: rotate(-90deg)
+  -webkit-transform-origin: 0 0
+  transform-origin: 0 0
+  background-color: $primary
+  color: #fff
+  padding: .75rem 1.5rem
+  cursor: pointer
+.site-help__content
+  padding: 1.5rem
+  padding-top: 0
+  padding-bottom: 0
+// .site-help__content .icon
+//   color: #5f9ea0
+//   margin-left: 10px
+.site-help.open-drawer
+  -webkit-transform: translateX(0)
+  transform: translateX(0)
+  -webkit-animation: slide-in .3s
+  animation: slide-in 0.3s
+.site-help.close-drawer
+  -webkit-transform: translateX(100%)
+  transform: translateX(100%)
+.site-help .load-spinner
+  position: absolute
+  top: 45%
+  z-index: 9999
+  left: 50%
+.site-help .chatOffline
+  cursor: not-allowed
+  // filter: alpha(opacity = 65)
+  box-shadow: none
+  opacity: 0.65
+
+@keyframes slide-in
+  0%
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    opacity: 0
+  to
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes slide-out
+  0%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+  to
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    opacity: 0

@@ -1,0 +1,45 @@
+// @import "../../../../../design-tokens/index";
+
+// View Selection Panel
+//
+// Markup:
+// <div class="vui-panel">
+//     <div class="vui-panel__heading">
+//         <h2 class="vui-panel__title">View Selection</h2>
+//     </div>
+//     <div class="vui-panel__body">
+//     </div>
+// </div>
+//
+// Styleguide 2.8
+
+.#{$css-prefix}panel {
+  border-radius: $border-radius-large;
+
+  &__heading {
+    background-color: $vui-color-brand-8;
+    background-image: url('#{$static-image-path}/panel-header-background.gif');
+    background-repeat: no-repeat;
+    height: 38px;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: $spacing-medium;
+  }
+
+  &__title {
+    font-weight: 400;
+    padding: $spacing-x-small;
+    padding-left: ($spacing-x-large * 2);
+    line-height: $line-height-reset;
+    margin: 0;
+  }
+
+  &__body {
+    background: lighten($vui-color-brand-8, 50%);
+    background: $white;
+    padding: $spacing-medium;
+    border: 1px solid #ccc;
+  }
+}
