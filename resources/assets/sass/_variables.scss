@@ -5,31 +5,42 @@
 // @import "../sass/utilities/initial-variables"
 
 // 2. Set your own initial variables
-$blue: #284fa3; // ECCO
-$red: #980e0e; // GASPS
+$red: #c5203e;
+$yellow: #f4831f;
 $green: #04864b;
+$blue: #4295b3;
 
-// Add pink and its invert
-$pink: #ffb3b3;
-$pink-invert: #fff;
+$fun-blue: #1D4F90;
+$st-tropaz: #276092;
+$boston-blue: #4296B4;
+$fountain-blue: #64B1BC;
+$monte-carlo: #83C8BC;
+$porcelain: #E0E4E5;
+$trout: #52545D;
+$cardinal: #C5203E;
+$plum: #692565;
+$ecstasy: #f4831f;
+$beeswax: #FDECBB;
 
 // Add a serif family
 $family-serif: "Merriweather", "Georgia", serif;
 
 // 3. Set the derived variables
-$primary: $blue; // ECCO
-$primary: $red; // GASPS
-$primary: $dark;
+$primary: $plum;
 $primary-invert: findColorInvert($primary);
 
-$success: $dark;
+$danger: $red;
+$danger-invert: findColorInvert($danger);
+
+$warning: $yellow;
+$warning-invert: findColorInvert($warning);
+
+$success: $green;
 $success-invert: findColorInvert($success);
 
-$info: $dark;
+$info: $blue;
+$info-invert: findColorInvert($info);
 
-// Use the existing orange as the danger color
-$danger: $dark;
-$danger-invert: findColorInvert($danger);
 
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
@@ -74,7 +85,7 @@ $weight-bold: 700;
 
 // Body
 $body-background: #fff;
-$body-size: 16px;
+$body-size: 14px;
 
 // ////////////////////////////////////////////////
 // ////////////////////////////////////////////////

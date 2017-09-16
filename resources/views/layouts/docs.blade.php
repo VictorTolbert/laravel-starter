@@ -9,9 +9,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @isset($title)
-        <title>{{ $title }} | SPS Guidelines</title>
+        <title>{{ $title }} | Videa Design Docs</title>
     @else
-        <title>SPS Guidelines</title>
+        <title>Videa Design Docs</title>
     @endif
 
     <link href="{{ mix('css/docs.css') }}" rel="stylesheet">

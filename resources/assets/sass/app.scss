@@ -6,6 +6,22 @@
 
 @import "components/badge.sass";
 @import "components/calendar.sass";
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 320px, 1fr));
+    grid-gap: 1rem;
+}
+.icons {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 128px, 1fr));
+    grid-gap: 1rem;
+}
+.u-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 300px, 1fr));
+    grid-gap: 1rem;
+}
 @import "components/timeline.sass";
 
 @import "components/pagination";

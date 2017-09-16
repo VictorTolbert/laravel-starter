@@ -32,12 +32,9 @@
                             @endif
                         </div>
 
+
                         <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                </label>
-                            </div>
+                            <b-checkbox name="remember" {{ old('remember') ? 'checked' : '' }}>Remember Me</b-checkbox>
                         </div>
 
                         <div class="field is-grouped">

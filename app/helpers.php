@@ -2,6 +2,11 @@
 
 use Carbon\Carbon;
 
+function now()
+{
+    return Carbon::now();
+}
+
 function visit($url)
 {
     $agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";

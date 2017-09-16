@@ -13,6 +13,5 @@ class InitialDummyData extends Seeder
     public function run()
     {
         factory(User::class, 10)->create();
-
     }
 }

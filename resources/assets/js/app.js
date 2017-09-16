@@ -6,17 +6,28 @@ import Vue from 'vue'
 
 require('./bootstrap')
 
-Vue.component('flash', require('./components/Flash.vue'))
-Vue.component('paginator', require('./components/Paginator.vue'))
-Vue.component('quick-links', require('./components/QuickLinks.vue'))
-Vue.component('scan-view', require('./components/scan-view.vue'))
-Vue.component('multi-index', require('./components/MultiIndex.vue'))
+Vue.component('flash', require('./components/Flash'))
+Vue.component('paginator', require('./components/Paginator'))
+Vue.component('quick-links', require('./components/QuickLinks'))
+Vue.component('scan-view', require('./components/scan-view'))
+Vue.component('multi-index', require('./components/MultiIndex'))
 Vue.component('autocomplete', require('./components/Autocomplete'))
 Vue.component('accordion-menu', require('./components/AccordionMenu'))
 Vue.component('notification', require('./components/Notification'))
-
+Vue.component('publish-button', require('./components/PublishButton'))
+Vue.component('subscribe-button', require('./components/SubscribeButton'))
+Vue.component(
+    'cover-image-upload',
+    require('./components/CoverImageUpload')
+)
 Vue.component('account-performance', require('./components/AccountPerformance'))
 Vue.component('avails', require('./components/Avails'))
+Vue.component('publish-button', require('./components/PublishButton'))
+Vue.component('subscribe-button', require('./components/SubscribeButton'))
+Vue.component(
+    'cover-image-upload',
+    require('./components/CoverImageUpload')
+)
 
 const app = new Vue({
     el: '#app'

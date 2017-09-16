@@ -1,38 +1,81 @@
 <template>
     <div>
-        <b-field>
-            <b-select v-model="perPage" :disabled="!isPaginated">
-                <option value="5">5 per page</option>
-                <option value="10">10 per page</option>
-                <option value="15">15 per page</option>
-                <option value="20">20 per page</option>
-            </b-select>
-        </b-field>
 
-        <!-- <b-field grouped group-multiline>
-            <div v-for="column in columnsTemplate" class="control">
-                <b-checkbox v-model="column.visible">
-                    {{ column.title }}
-                </b-checkbox>
+    <b-field>
+        <b-input
+            expanded
+            placeholder="Search..."
+            icon="search"
+        >
+            </b-input>
+    </b-field>
+
+    <hr>
+
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+
+                    <b-field>
+                        <b-input
+                            expanded
+                            placeholder="Search..."
+                            icon="search"
+                        >
+                            </b-input>
+                    </b-field>
+
+                </div>
+                <div class="level-item">
+
+                    <button
+                        v-tooltip.top="{ html: 'tooltipContent' }"
+                        class="button is-link"
+                    >
+                        Multiline (default)
+                        </button>
+
+                        <div id="tooltipContent">
+                            <div class="content">
+                                <p>Hello
+                                    <b>There</b> Maecenas sed diam eget risus varius blandit sit amet non
+                                    magna.</p>
+                            </div>
+                        </div>
+
+                </div>
+
             </div>
-        </b-field> -->
+            <div class="level-right">
+                <div class="level-item">
+                    <b-field>
+                        <b-select placeholder="Select columns">
+                            <option value="flint">All</option>
+                            <option value="flint">Advertiser</option>
+                        </b-select>
+                    </b-field>
+                </div>
+                <div class="level-item">
+                    <b-field>
+                        <b-select
+                            v-model="perPage"
+                            :disabled="!isPaginated"
+                        >
+                            <option value="5">5 per page</option>
+                            <option value="10">10 per page</option>
+                            <option value="15">15 per page</option>
+                            <option value="20">20 per page</option>
+                        </b-select>
+                    </b-field>
 
-        <!-- <b-table :data="tableDataSimple">
-            <template scope="props">
-                <b-table-column
-                    v-for="(column, index) in columnsTemplate"
-                    :key="index"
-                    :label="column.title"
-                    :visible="column.visible"
-                >
-                    {{ props.row[column.field] }}
-                    </b-table-column>
-            </template>
-        </b-table> -->
+                </div>
+            </div>
+        </div>
 
         <b-table :data="avails"
             striped
             checkable
+            bordered
             detailed
             :paginated="avails.length > perPage"
             :per-page="perPage"
@@ -46,7 +89,7 @@
                     <a style="text-decoration: underline" @click="alert">{{ props.row.id }}</a>
                 </b-table-column>
                 <b-table-column field="status" label="Status" sortable>
-                    <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">{{ props.row.status }}</span>
+                    <span class="tag is-rounded is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">{{ props.row.status }}</span>
                 </b-table-column>
                 <b-table-column field="releasedDate" label="Released" sortable>
                     {{ props.row.releasedDate }}
@@ -78,7 +121,7 @@
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img src="/images/papa-johns.gif">
+                            <img src="/images/placeholder-128x128.png">
                         </p>
                     </figure>
                     <div class="media-content">

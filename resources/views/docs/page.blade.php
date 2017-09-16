@@ -5,7 +5,7 @@
         <nav class="sidebar__contents">
             <div class="sidebar__logo">
                 <a href="/" target="videa">
-                    @include('@videa.partials.videa-logo')
+                    @include('partials.logo')
                 </a>
             </div>
             <div class="sidebar__home">

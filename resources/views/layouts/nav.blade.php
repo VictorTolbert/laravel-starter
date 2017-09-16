@@ -1,5 +1,5 @@
 <div>
-    <div class="container">
+    <div class="container is-fluid">
         <nav class="navbar is-transparent">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ route('home') }}">
@@ -28,13 +28,14 @@
 
             <div class="navbar-menu" id="navMenuIndex">
                 <div class="navbar-start">
+
                 </div>
 
                 <div class="navbar-end">
                     @if (Auth::guest())
-                        <a class="nav-item" href="{{ route('login') }}">Login</a>
-                        <a class="nav-item" href="{{ route('register') }}">Register</a>
                     @else
+                        <a href="/podcasts" class="navbar-item">Podcasts</a>
+                        <a href="/episodes" class="navbar-item">Episodes</a>
                         <div class="navbar-item has-dropdown is-hoverable">
                             <div class="navbar-link">
                                 {{ Auth::user()->name }} <span class="caret"></span>

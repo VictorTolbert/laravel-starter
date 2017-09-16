@@ -4,11 +4,11 @@
             <div class="home__header__inner">
                 <div class="home__logo">
                     <a href="/" target="videa">
-                        @include('@videa.partials.videa-logo')
+                        @include('partials.logo')
                     </a>
                 </div>
                 <h1 class="home__title">
-                    User Interface Toolkit
+                    Design Docs
                 </h1>
             </div>
         </header>
