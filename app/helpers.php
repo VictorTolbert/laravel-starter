@@ -2,10 +2,10 @@
 
 use Carbon\Carbon;
 
-function now()
-{
-    return Carbon::now();
-}
+// function now()
+// {
+//     return Carbon::now();
+// }
 
 function visit($url)
 {
