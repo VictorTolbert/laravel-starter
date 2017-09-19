@@ -1,5 +1,4 @@
 <?php
-
 use Carbon\Carbon;
 
 // function now()
@@ -46,7 +45,7 @@ function gravatar_profile($email = "victor.tolbert@gmail.com")
  * @param string $s Size in pixels, defaults to 80px [ 1 - 2048 ]
  * @param string $d Default imageset to use [ 404 | mm | identicon | monsterid | wavatar ]
  * @param string $r Maximum rating (inclusive) [ g | pg | r | x ]
- * @param boole $img True to return a complete IMG tag False for just the URL
+ * @param bool $img True to return a complete IMG tag False for just the URL
  * @param array $atts Optional, additional key/value attributes to include in the IMG tag
  * @return String containing either just a URL or a complete image tag
  * @source http://gravatar.com/site/implement/images/php/
@@ -67,13 +66,16 @@ function get_gravatar($email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts 
 
 function convert_file_size($size)
 {
-    if (($size / 1073741824) > 1) {
-        $show_size = round(($size / 1073741824), 2) . "Gb";
-    } else if (($size / 1048576) > 1) {
-        $show_size = round(($size / 1048576), 2) . "Mb";
-    } else if (($size / 1024) > 1) {
-        $show_size = round(($size / 1024), 2) . "Kb";
-    } else {
+    if ( ($size / 1073741824) > 1) {
+        $show_size = round( ($size / 1073741824), 2) . "Gb";
+    }
+    else if ( ($size / 1048576) > 1) {
+        $show_size = round( ($size / 1048576), 2) . "Mb";
+    }
+    else if ( ($size / 1024) > 1) {
+        $show_size = round( ($size / 1024), 2) . "Kb";
+    }
+    else {
         $show_size = $size . " bytes";
     }
     return $show_size;
@@ -103,13 +105,15 @@ function format_phone($phoneNumber)
         $lastFour = substr($phoneNumber, -4, 4);
 
         $phoneNumber = '+' . $countryCode . ' (' . $areaCode . ') ' . $nextThree . '-' . $lastFour;
-    } else if (strlen($phoneNumber) == 10) {
+    }
+    else if (strlen($phoneNumber) == 10) {
         $areaCode = substr($phoneNumber, 0, 3);
         $nextThree = substr($phoneNumber, 3, 3);
         $lastFour = substr($phoneNumber, 6, 4);
 
         $phoneNumber = '(' . $areaCode . ') ' . $nextThree . '-' . $lastFour;
-    } else if (strlen($phoneNumber) == 7) {
+    }
+    else if (strlen($phoneNumber) == 7) {
         $nextThree = substr($phoneNumber, 0, 3);
         $lastFour = substr($phoneNumber, 3, 4);
 

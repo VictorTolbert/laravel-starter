@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="container mt-6">
-        <div class="row pull-x-4">
-            <div class="col-3 px-4">
+        <div class="columns row pull-x-4">
+            <div class="column is-3 col-3 px-4">
                 <div class="block box-shadow mb-4">
                     <a href="{{ url("/podcasts/{$podcast->id}") }}">
                         <img src="{{ $podcast->imageUrl() }}" class="img-fit">
                     </a>
                 </div>
             </div>
-            <div class="col-9 px-4">
+            <div class="column is-9 col-9 px-4">
                 <div class="mb-6">
                     <div class="flex-spaced flex-y-center mb-4">
                         <div>
@@ -26,7 +26,7 @@
                         <div class="">
                             @if ($podcast->isOwnedBy(Auth::user()))
                                 <publish-button :data-podcast="{{ $podcast }}" class="mr-2"></publish-button>
-                                <a href="{{ url("/podcasts/{$podcast->id}/edit") }}" class="btn btn-sm btn-secondary">
+                                <a href="{{ url("/podcasts/{$podcast->id}/edit") }}" class="button is-secondary is-small btn btn-sm btn-secondary">
                                     Settings
                                 </a>
                             @endif
@@ -60,7 +60,7 @@
                                     {{ $episode->published_at->format('M j, Y') }}
                                 </div>
                                 <div style="flex: 0 0 4.5rem;" class="text-no-wrap text-right">
-                                    <a href="{{ url("/episodes/{$episode->id}") }}" class="btn btn-xs btn-secondary">Listen</a>
+                                    <a href="{{ url("/episodes/{$episode->id}") }}" class="button is-secondary is-small btn btn-xs btn-secondary">Listen</a>
                                 </div>
                             </div>
                         @endforeach

@@ -1,5 +1,4 @@
 <?php
-
 Auth::routes();
 
 // Route::get('/', function () {
@@ -30,6 +29,11 @@ Route::delete('/subscriptions/{id}', 'SubscriptionsController@destroy');
 
 Route::post('/published-podcasts', 'PublishedPodcastsController@store');
 Route::delete('/published-podcasts/{id}', 'PublishedPodcastsController@destroy');
+
+Route::group(['prefix' => 'proposal-viewer'], function () {
+    Route::get('/', ['as' => 'proposal-viewer.index', 'uses' => 'ProposalViewerController@index']);
+    Route::any('show', ['as' => 'proposal-viewer.show', 'uses' => 'ProposalViewerController@show']);
+});
 
 Route::name('profile')->get('/profiles/{user}', 'ProfilesController@show');
 Route::name('docs')->get('/docs', 'HomeController@docs');

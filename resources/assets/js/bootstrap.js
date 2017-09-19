@@ -15,12 +15,19 @@ import TableComponent from 'vue-table-component'
 import Tooltip from 'vue-directive-tooltip'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueFloatLabel from 'vue-float-label'
+import flatPickr from 'vue-flatpickr-component'
+
+// import Rythm from 'rythm.js'
+// const rythm = new Rythm()
+// rythm.setMusic("path/to/sample.mp3")
+// rythm.start()
 
 // import "bootstrap/dist/css/bootstrap.css"
 // import "bootstrap-vue/dist/bootstrap-vue.css"
 import 'vue-flex/dist/vue-flex.css'
-import 'vue-directive-tooltip/css/index.css'
+// import 'vue-directive-tooltip/css/index.css'
 import 'swiper/dist/css/swiper.css'
+import 'flatpickr/dist/flatpickr.css'
 
 Vue.prototype.authorize = function (handler) {
     // Additional admin privileges here.
@@ -43,9 +50,15 @@ Vue.use(TableComponent)
 Vue.use(Tooltip)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueFloatLabel)
+Vue.use(flatPickr)
 
 window.Vue = Vue
 window._ = lodash
+
+try {
+    window.$ = window.jQuery = require('jquery')
+} catch (e) {}
+
 window.axios = axios
 window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
@@ -62,7 +75,9 @@ let token = document.head.querySelector('meta[name="csrf-token"]')
 if (token) {
     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content
 } else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token')
+    console.error(
+        'CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token'
+    )
 }
 
 Promise.delay = function (time) {

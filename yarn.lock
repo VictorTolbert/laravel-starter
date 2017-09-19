@@ -1657,6 +1657,10 @@ bluebird@^3.0.5, bluebird@^3.1.1:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
+blueimp-gallery@^2.27.0:
+  version "2.27.0"
+  resolved "https://registry.yarnpkg.com/blueimp-gallery/-/blueimp-gallery-2.27.0.tgz#7e5c25099ab483c4dea6dccabb70af6c88ea29a2"
+
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
@@ -3730,6 +3734,10 @@ first-chunk-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/first-chunk-stream/-/first-chunk-stream-1.0.0.tgz#59bfb50cd905f60d7c394cd3d9acaab4e6ad934e"
 
+fitty:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/fitty/-/fitty-2.2.4.tgz#b2b5f4c66286153abb6b98662315a4fa1d553ad4"
+
 flat-cache@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.2.2.tgz#fa86714e72c21db88601761ecf2f555d1abc6b96"
@@ -3738,6 +3746,10 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
+
+flatpickr@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-3.0.7.tgz#2aa980c0bd83884c0299ee9fba3b7809bea16a29"
 
 flatten@^1.0.2:
   version "1.0.2"
@@ -5599,6 +5611,10 @@ marked-terminal@^1.6.2:
 marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
+
+material-design-icons:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/material-design-icons/-/material-design-icons-3.0.1.tgz#9a71c48747218ebca51e51a66da682038cdcb7bf"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
@@ -7860,6 +7876,10 @@ rx@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
+rythm.js:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/rythm.js/-/rythm.js-2.2.0.tgz#998a0b8b336e6f5498eb33f25a970e6133085805"
+
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1, safe-buffer@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
@@ -9122,6 +9142,12 @@ vue-eslint-parser@^2.0.1-beta.0:
     esquery "^1.0.0"
     lodash "^4.17.4"
 
+vue-flatpickr-component:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vue-flatpickr-component/-/vue-flatpickr-component-3.0.0.tgz#056ae6f35b1911a5fb25bb6722e93b937c107812"
+  dependencies:
+    flatpickr "^3.0.7"
+
 vue-flex@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/vue-flex/-/vue-flex-1.0.9.tgz#4605bd85c9fd9516db132f05b76e2c4d0ab9dc7f"
@@ -9133,6 +9159,12 @@ vue-float-label:
 vue-functional-data-merge@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-1.0.6.tgz#cde4f0cf3f251f7f0196341156d2c936cca63d40"
+
+vue-gallery:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/vue-gallery/-/vue-gallery-1.1.5.tgz#657ba5fabf608f09444285598c3e98567ccdc9ff"
+  dependencies:
+    blueimp-gallery "^2.27.0"
 
 vue-hot-reload-api@^2.1.0:
   version "2.1.0"

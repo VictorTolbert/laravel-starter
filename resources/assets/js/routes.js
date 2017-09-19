@@ -4,7 +4,19 @@ import slideshows from './slideshows'
 const routes = [
     {
         path: '/',
-        component: require('./pages/Search.vue')
+        component: require('./pages/Search')
+    },
+    {
+        path: '/movies',
+        component: require('./components/Movies/Intro')
+    },
+    {
+        path: '/movies/:id',
+        component: require('./components/Movies/Movie')
+    },
+    {
+        path: '/movies/:id/trailer',
+        component: require('./components/Movies/MovieTrailer')
     },
     {
         path: '/faqs',

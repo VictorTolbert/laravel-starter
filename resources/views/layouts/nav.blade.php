@@ -3,20 +3,8 @@
         <nav class="navbar is-transparent">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ route('home') }}">
-                    @include('partials.logo')
+                    @include('partials.svg.logo')
                     <span class="is-inline-flex">&nbsp;Design Engineering</span>
-                </a>
-
-                <a class="navbar-item is-hidden-desktop" href="https://github.com/VictorTolbert" target="_blank">
-                    <span class="icon" style="color: #333;">
-                        <i class="fa fa-github"></i>
-                    </span>
-                </a>
-
-                <a class="navbar-item is-hidden-desktop" href="https://twitter.com/VictorTolbert" target="_blank">
-                    <span class="icon" style="color: #55acee;">
-                        <i class="fa fa-twitter"></i>
-                    </span>
                 </a>
 
                 <div class="navbar-burger burger" data-target="navMenuIndex">
@@ -36,6 +24,7 @@
                     @else
                         <a href="/podcasts" class="navbar-item">Podcasts</a>
                         <a href="/episodes" class="navbar-item">Episodes</a>
+                        <a href="/proposal-viewer" class="navbar-item">XML Proposal Viewer</a>
                         <div class="navbar-item has-dropdown is-hoverable">
                             <div class="navbar-link">
                                 {{ Auth::user()->name }} <span class="caret"></span>

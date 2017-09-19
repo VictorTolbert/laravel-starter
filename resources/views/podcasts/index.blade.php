@@ -13,9 +13,9 @@
         <div class="container is-fluid">
             <div class="content">
                 <h1 class="text-bold mb-4">Popular Shows</h1>
-                <div class="row pull-x-4 pull-b-6">
+                <div class="columns row pull-x-4 pull-b-6">
                     @foreach ($podcasts as $podcast)
-                    <div class="col-2 px-4 mb-6">
+                    <div class="column is-2 col-2 px-4 mb-6">
                         <div class="hover-grow">
                             <a href="{{ url("/podcasts/{$podcast->id}") }}" class="block box-shadow mb-2">
                                 <img src="{{ $podcast->imageUrl() }}" class="img-fit">

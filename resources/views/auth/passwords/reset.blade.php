@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="section">
-    <div class="container">
+    <div class="container is-fluid">
         <div class="columns">
             <div class="column is-3">
                 <div class="content">
@@ -22,8 +22,11 @@
                         <div class="field">
                             <label for="email" class="label">E-Mail Address</label>
 
-                            <div class="control">
+                            <div class="control has-icons-left">
                                 <input id="email" type="email" class="{{ $errors->has('email') ? ' is-danger' : '' }}" name="email" value="{{ $email or old('email') }}" required autofocus>
+                                <span class="icon is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
                             </div>
 
                             @if ($errors->has('email'))

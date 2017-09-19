@@ -4,7 +4,7 @@
             <div class="home__header__inner">
                 <div class="home__logo">
                     <a href="/" target="videa">
-                        @include('partials.logo')
+                        @include('partials.svg.logo')
                     </a>
                 </div>
                 <h1 class="home__title">

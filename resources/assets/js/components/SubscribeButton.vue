@@ -1,9 +1,9 @@
 <template>
     <transition mode="out-in">
-        <button v-if="subscribed" type="button" class="btn btn-sm" :class="{'btn-primary': !hovering && !working, 'btn-danger': hovering && !working, 'btn-loading btn-secondary': working}" key="subscribed" @mouseenter="hovering = true" @mouseleave="hovering = false" @click="unsubscribe" :disabled="working">
+        <button v-if="subscribed" type="button" class="button is-small btn btn-sm" :class="{'btn-primary': !hovering && !working, 'is-danger btn-danger': hovering && !working, 'is-loading btn-loading btn-secondary': working}" key="subscribed" @mouseenter="hovering = true" @mouseleave="hovering = false" @click="unsubscribe" :disabled="working">
             {{ subscribedText }}
         </button>
-        <button v-if="!subscribed" type="button" class="btn btn-sm btn-secondary" :class="{'btn-loading': working}"key="unsubscribed" @click="subscribe" :disabled="working">
+        <button v-if="!subscribed" type="button" class="button is-small is-secondary btn btn-sm btn-secondary" :class="{'is-loading btn-loading': working}"key="unsubscribed" @click="subscribe" :disabled="working">
             Subscribe
         </button>
     </transition>
