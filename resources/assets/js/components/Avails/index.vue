@@ -1,23 +1,11 @@
 <template>
     <div>
-        <b-table
-            :data="isEmpty ? [] : avails"
-            :selected.sync="selected"
-            checkable
-            :checked-rows.sync="checkedRows"
-            detailed
-            @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
-            :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
-            :bordered="isBordered"
-            :striped="isStriped"
-            :narrowed="isNarrowed"
-            :loading="isLoading"
-            :mobile-cards="hasMobileCards"
-            :paginated="avails.length > perPage"
-            :per-page="perPage"
-            :pagination-simple="isPaginationSimple"
-            :default-sort-direction="defaultSortDirection"
-            default-sort="">
+        <b-table :data="isEmpty ? [] : avails" :selected.sync="selected" checkable :checked-rows.sync="checkedRows"
+            detailed @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
+            :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''" :bordered="isBordered"
+            :striped="isStriped" :narrowed="isNarrowed" :loading="isLoading" :mobile-cards="hasMobileCards"
+            :paginated="avails.length > perPage" :per-page="perPage" :pagination-simple="isPaginationSimple"
+            :default-sort-direction="defaultSortDirection" default-sort="">
             <template scope="props">
                 <b-table-column field="id" meta="Internal ID" label="Number" sortable>
                     <a style="text-decoration: underline" @click="alert">{{ props.row.id }}</a>
@@ -75,9 +63,7 @@
                 <section class="section">
                     <div class="content has-text-grey has-text-centered">
                         <p>
-                            <b-icon
-                                icon="sentiment_very_dissatisfied"
-                                size="is-large">
+                            <b-icon icon="sentiment_very_dissatisfied" size="is-large">
                             </b-icon>
                         </p>
                         <p>Nothing here.</p>
@@ -86,34 +72,34 @@
             </template>
         </b-table>
         <b-field grouped group-multiline>
-               <div class="control">
-                   <b-switch v-model="isBordered">Bordered</b-switch>
-               </div>
-               <div class="control">
-                   <b-switch v-model="isStriped">Striped</b-switch>
-               </div>
-               <div class="control">
-                   <b-switch v-model="isNarrowed">Narrowed</b-switch>
-               </div>
-               <div class="control">
-                   <b-switch v-model="isLoading">Loading state</b-switch>
-               </div>
-               <div class="control">
-                   <b-switch v-model="isEmpty">Empty</b-switch>
-               </div>
-               <div class="control">
-                   <b-switch v-model="hasMobileCards">Mobile cards <small>(collapsed rows)</small></b-switch>
-               </div>
+            <div class="control">
+                <b-switch v-model="isBordered">Bordered</b-switch>
+            </div>
+            <div class="control">
+                <b-switch v-model="isStriped">Striped</b-switch>
+            </div>
+            <div class="control">
+                <b-switch v-model="isNarrowed">Narrowed</b-switch>
+            </div>
+            <div class="control">
+                <b-switch v-model="isLoading">Loading state</b-switch>
+            </div>
+            <div class="control">
+                <b-switch v-model="isEmpty">Empty</b-switch>
+            </div>
+            <div class="control">
+                <b-switch v-model="hasMobileCards">Mobile cards
+                    <small>(collapsed rows)</small>
+                </b-switch>
+            </div>
         </b-field>
 
-        <button class="button field is-danger" @click="selected = {}"
-            :disabled="!Object.keys(selected).length">
+        <button class="button field is-danger" @click="selected = {}" :disabled="!Object.keys(selected).length">
             <b-icon icon="clear"></b-icon>
             <span>Clear selected</span>
         </button>
 
-        <button class="button field is-danger" @click="checkedRows = []"
-            :disabled="!checkedRows.length">
+        <button class="button field is-danger" @click="checkedRows = []" :disabled="!checkedRows.length">
             <b-icon icon="clear"></b-icon>
             <span>Clear checked</span>
         </button>
@@ -145,7 +131,7 @@ export default {
             avails,
             date: null,
             selected: avails[1],
-            selected: [],
+            selected: {},
             checkedRows: [avails[1], avails[3]],
             checkedRows: [],
             isEmpty: false,

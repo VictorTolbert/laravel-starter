@@ -5,43 +5,16 @@
 
 @section('content')
 <section class="section">
-    <button class="button block" @click="isActive = !isActive">Toggle</button>
-    <b-message title="Default" :active.sync="isActive" type="is-danger" has-icon>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
-    </b-message>
-    <b-notification  :active.sync="isActive" type="is-danger" has-icon>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
-    </b-notification>
-</section>
-<section class="section">
-    <p class="content"><b>selected</b>: @{{ selectedOptions }}</p>
-    <b-field>
-        <b-select
-            multiple
-            native-size="8"
-            v-model="selectedOptions">
-            <option value="flint">Flint</option>
-            <option value="silver">Silver</option>
-            <option value="vane">Vane</option>
-            <option value="billy">Billy</option>
-            <option value="jack">Jack</option>
-            <option value="heisenberg">Heisenberg</option>
-            <option value="jesse">Jesse</option>
-            <option value="saul">Saul</option>
-            <option value="mike">Mike</option>
-        </b-select>
-    </b-field>
-</section>
-<section class="section">
     <div class="container is-fluid">
-        <b-tabs>
+        <button class="button block" @click="activeTab = 1">Set Inbox</button>
+        <b-tabs v-model="activeTab">
             <b-tab-item label="Inventory Search" icon-pack="fa" icon="search">
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
                             <div class="level-item">
                                 <h1>
-                                    <span class="title">WJAX Schedule Guide</span><br>
+                                    <span class="title has-text-danger">WJAX Schedule Guide</span><br>
                                     <span class="subtitle">Last Uploaded 03/06/17</span>
                                 </h1>
                             </div>
@@ -95,7 +68,20 @@
                                 <b-field label="Flight Start">
                                     <b-datepicker
                                         placeholder="Click to select..."
-                                        icon="today">
+                                        :first-day-of-week="1"
+                                        icon="today"
+                                        :readonly="false">
+                                        <button class="button is-primary"
+                                            @click="date = new Date()">
+                                            <b-icon icon="today"></b-icon>
+                                            <span>Today</span>
+                                        </button>
+
+                                        <button class="button is-danger"
+                                            @click="date = null">
+                                            <b-icon icon="clear"></b-icon>
+                                            <span>Clear</span>
+                                        </button>
                                     </b-datepicker>
                                 </b-field>
                             </div>
@@ -103,7 +89,9 @@
                                 <b-field label="Flight End">
                                     <b-datepicker
                                         placeholder="Click to select..."
-                                        icon="today">
+                                        icon="today"
+                                        :first-day-of-week="1"
+                                        :readonly="false">
                                     </b-datepicker>
                                 </b-field>
                             </div>
@@ -366,97 +354,38 @@
                         </div>
                     </div>
                 </section>
-            </b-tab-item>
-            <b-tab-item label="CSS Grid" icon-pack="fa" icon="th">
                 <section class="section">
-                    <div class="level">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <h1 class="title">CSS Grid</h1>
-                            </div>
-                        </div>
-                        <div class="level-right">
-                            <div class="level-item">
-                                <div class="block">
-                                    <span class="tag is-success">
-                                        Complete
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <ul class="gallery">
-                        <li v-for="n in 12">
-                            <img src="/images/placeholder-1280x960.png">
-                        </li>
-                    </ul>
+                    <button class="button block" @click="isActive = !isActive">Toggle</button>
+                    <b-message title="Default" :active.sync="isActive" type="is-danger" has-icon>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+                    </b-message>
+                    <b-notification  :active.sync="isActive" type="is-danger" has-icon>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+                    </b-notification>
+                </section>
+                <section class="section">
+                    <p class="content"><b>selected</b>: @{{ selectedOptions }}</p>
+                    <b-field>
+                        <b-select
+                            multiple
+                            native-size="8"
+                            v-model="selectedOptions">
+                            <option value="flint">Flint</option>
+                            <option value="silver">Silver</option>
+                            <option value="vane">Vane</option>
+                            <option value="billy">Billy</option>
+                            <option value="jack">Jack</option>
+                            <option value="heisenberg">Heisenberg</option>
+                            <option value="jesse">Jesse</option>
+                            <option value="saul">Saul</option>
+                            <option value="mike">Mike</option>
+                        </b-select>
+                    </b-field>
                 </section>
             </b-tab-item>
-            <b-tab-item label="Layouts" icon-pack="fa" icon="columns">
-                <section class="section">
-                    <div class="level">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <h1 class="title">Layouts</h1>
-                            </div>
-                        </div>
-                        <div class="level-right">
-                            <div class="level-item">
-                                <div class="block">
-                                    <span class="tag is-success">
-                                        Complete
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="columns">
-                        <div class="column is-2">
-                            <aside class="menu">
-                                <p class="menu-label">
-                                    General
-                                </p>
-                                <ul class="menu-list">
-                                    <li><a>Dashboard</a></li>
-                                    <li><a>Login Page</a></li>
-                                    <li><a>Help Drawer</a></li>
-                                </ul>
-                                <p class="menu-label">Administration</p>
-                                <ul class="menu-list">
-                                    <li>
-                                        <a href="">Team Settings</a>
-                                    </li>
-                                    <li>
-                                        <a class="is-active">Manage Your Team</a>
-                                        <ul>
-                                            <li><a>Members</a></li>
-                                            <li><a>Plugins</a></li>
-                                            <li><a>Add a member</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Invitations</a></li>
-                                    <li><a>Cloud Storage Environment Settings</a></li>
-                                    <li><a>Authentication</a></li>
-                                </ul>
-                                <p class="menu-label">
-                                    Transactions
-                                </p>
-                                <ul class="menu-list">
-                                    <li><a>Payments</a></li>
-                                    <li><a>Transfers</a></li>
-                                    <li><a>Balance</a></li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <div class="column">
-                            <avails></avails>
-                        </div>
-                    </div>
-                </section>
+            <b-tab-item label="Utilities">
             </b-tab-item>
-            <b-tab-item label="Colors">
+            <b-tab-item label="Base">
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -645,8 +574,6 @@
                     </ul>
                     <hr>
                 </section>
-            </b-tab-item>
-            <b-tab-item label="Icons" icon-pack="fa" icon="font-awesome">
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -680,8 +607,6 @@
                         </li>
                     </ul>
                 </section>
-            </b-tab-item>
-            <b-tab-item label="Typography" icon-pack="fa" icon="font">
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -702,7 +627,118 @@
                     <hr>
                 </section>
             </b-tab-item>
-            <b-tab-item label="Buttons" icon-pack="fa" icon="external-link">
+            <b-tab-item label="Elements">
+                <section class="section">
+
+                    <a class="button is-link">Customize Data Table</a>
+                    <h2>Edit Columns</h2>
+                    <p>Show or hide columns. Prioritze columns by using up and down arrows. Customize column widths and ability to lock first column.</p>
+                    <table class="table is-bordered is-narrowed">
+                        <thead>
+                            <tr>
+                                <th>Show/Hide</th>
+                                <th>Column</th>
+                                <th>Width</th>
+                                <th>Lock Column</th>
+                            </tr>
+                        </thead>
+
+                        <tr v-for="column in clientsColumns">
+                            <td>
+                                <b-checkbox v-model="column.isVisible">
+                                    @{{ column.title }}
+                                </b-checkbox>
+                            </td>
+                            <td>
+                                <b-select v-model="column.width">
+                                    <option value="">Auto Fit</option>
+                                    <option value="80">Extra Small (80)</option>
+                                    <option value="120">Small (120)</option>
+                                    <option value="240">Medium (240)</option>
+                                    <option value="360">Large (360)</option>
+                                    <option value="500">Extra Large (500)</option>
+                                </b-select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <a class="button is-primary">OK</a>
+                    <a class="button is-neutral">Cancel</a>
+
+                    {{--  <b-field grouped group-multiline>
+                        <div v-for="column in clientsColumns" class="control">
+                            <b-checkbox v-model="column.isVisible">
+                                @{{ column.title }}
+                            </b-checkbox>
+                        </div>
+                    </b-field>  --}}
+
+                    <b-table
+                        class="b-table--custom"
+                        :data="clients"
+                        :selected.sync="selectedClient"
+                        bordered
+                        narrowed
+                        striped
+                        checkable
+                    >
+                        <template scope="props">
+                            <b-table-column v-for="(column, index) in clientsColumns"
+                                :key="index"
+                                :label="column.title"
+                                :field="column.field"
+                                :meta="column.meta"
+                                :width="column.width"
+                                :numeric="column.isNumeric"
+                                :centered="column.isCentered"
+                                :sortable="column.isSortable"
+                                :visible="column.isVisible" >
+                                @{{ props.row[column.field] }}
+                            </b-table-column>
+                        </template>
+                    </b-table>
+                </section>
+                <section class="section">
+                    <b-table
+                        :data="data"
+                        :loading="loading"
+
+                        paginated
+                        backend-pagination
+                        :total="total"
+                        :per-page="perPage"
+                        @page-change="onPageChange"
+
+                        backend-sorting
+                        :default-sort-direction="sortOrder"
+                        :default-sort="[sortField, sortOrder]"
+                        @sort="onSort">
+
+                        <template scope="props">
+                            <b-table-column field="original_title" label="Title" sortable>
+                                @{{ props.row.original_title }}
+                            </b-table-column>
+
+                            <b-table-column field="vote_average" label="Vote Average" numeric sortable>
+                                <span class="tag" :class="type(props.row.vote_average)">
+                                   @{{ props.row.vote_average }}
+                                </span>
+                            </b-table-column>
+
+                            <b-table-column field="vote_count" label="Vote Count" numeric sortable>
+                                @{{ props.row.vote_count }}
+                            </b-table-column>
+
+                            <b-table-column field="release_date" label="Release Date" sortable centered>
+                                @{{ props.row.release_date ? new Date(props.row.release_date).toLocaleDateString() : '' }}
+                            </b-table-column>
+
+                            <b-table-column label="Overview" width="500">
+                                @{{ props.row.overview | truncate(80) }}
+                            </b-table-column>
+                        </template>
+                    </b-table>
+                </section>
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -768,78 +804,21 @@
                     </div>
                     <hr>
                     <a class="button is-success is-outlined">
-                        <span class="icon is-small">
-                        <i class="fa fa-check"></i>
-                        </span>
                         <span>Save</span>
+                        <span class="icon is-small">
+                            <i class="fa fa-check"></i>
+                        </span>
                     </a>
                     <a class="button is-danger is-outlined">
+                        <span>Delete</span>
                         <span class="icon is-small">
-                        <i class="fa fa-check"></i>
+                            <i class="fa fa-check"></i>
                         </span>
-                        <span>Save</span>
                     </a>
                     <hr>
                     <a class="button is-link">Link Button</a>
 
                 </section>
-            </b-tab-item>
-            <b-tab-item label="Badges" icon-pack="fa" icon="certificate">
-                <section class="section">
-                    <div class="level">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <h1 class="title">Badges</h1>
-                            </div>
-                        </div>
-                        <div class="level-right">
-                            <div class="level-item">
-                                <div class="block">
-                                    <span class="tag is-success">
-                                        Complete
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="field">
-                        <button class="button badge" data-badge="8">Button</button>
-                    </div>
-                    <div class="field">
-                        <span class="badge is-badge-danger" data-badge="8">
-                            Conflicts
-                        </span>
-                    </div>
-                    <div class="field">
-                        <span class="badge is-badge-danger" data-badge="4">
-                            Gaps
-                        </span>
-                    </div>
-                </section>
-            </b-tab-item>
-            <b-tab-item label="Tags" icon-pack="fa" icon="tags">
-                <section class="section">
-                    <div class="level">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <h1 class="title">Tags</h1>
-                            </div>
-                        </div>
-                        <div class="level-right">
-                            <div class="level-item">
-                                <div class="block">
-                                    <span class="tag is-success">
-                                        Complete
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                </section>
-            </b-tab-item>
-            <b-tab-item label="Forms" icon-pack="fa" icon="check-square-o">
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -865,7 +844,7 @@
                                     <flat-pickr v-model="date"></flat-pickr>
                                 </b-field>
                                 <b-field label="Search">
-                                    <b-input expanded icon="search">
+                                    <b-input has-counter expanded icon="search" maxlength="30">
                                     </b-input>
                                 </b-field>
                                 <b-field label="Sort by">
@@ -952,8 +931,110 @@
                         </div>
                     </div>
                 </section>
+                {{--  <section class="section">
+                    <h1 class="title">Autocomplete</h1>
+                    <p>Extended input that provide suggestions while the user types. Use with Field to access all functionalities</p>
+                    <hr>
+                    <div class="field">
+                        <b-switch v-model="keepFirst">
+                            Keep-first <small>(will always have first option pre-selected)</small>
+                        </b-switch>
+                    </div>
+                    <p class="content"><b>Selected:</b> @{{ selected }}</p>
+                    <b-field label="Find a name">
+                        <b-autocomplete
+                            v-model="name"
+                            placeholder="e.g. Anne"
+                            :keep-first="keepFirst"
+                            :data="filteredPeople"
+                            field="user.first_name"
+                            @select="option => selected = option">
+                        </b-autocomplete>
+                    </b-field>
+                </section>  --}}
+                {{--  <section class="section">
+                    <p class="content"><b>Selected:</b> @{{ selected }}</p>
+                    <b-field label="Find a movie">
+                        <b-autocomplete
+                            v-model="name"
+                            :data="data"
+                            placeholder="e.g. Fight Club"
+                            field="title"
+                            :loading="isFetching"
+                            @input="getMovies"
+                            @select="option => selected = option">
+
+                            <template scope="props">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img width="32" :src="`https://image.tmdb.org/t/p/w500/${props.option.poster_path}`">
+                                    </div>
+                                    <div class="media-content">
+                                        @{{ props.option.title }}
+                                        <br>
+                                        <small>
+                                            Released at @{{ props.option.release_date }},
+                                            rated <b>@{{ props.option.vote_average }}</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-autocomplete>
+                    </b-field>
+                </section>  --}}
             </b-tab-item>
-            <b-tab-item label="Data Table" icon-pack="fa" icon="table">
+            <b-tab-item label="Components" icon-pack="fa" icon="external-link">
+                <section class="section">
+                    <div class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <h1 class="title">Badges</h1>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="block">
+                                    <span class="tag is-success">
+                                        Complete
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="field">
+                        <button class="button badge" data-badge="8">Button</button>
+                    </div>
+                    <div class="field">
+                        <span class="badge is-badge-danger" data-badge="8">
+                            Conflicts
+                        </span>
+                    </div>
+                    <div class="field">
+                        <span class="badge is-badge-danger" data-badge="4">
+                            Gaps
+                        </span>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <h1 class="title">Tags</h1>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="block">
+                                    <span class="tag is-success">
+                                        Complete
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -975,7 +1056,307 @@
                     <avails></avails>
                 </section>
             </b-tab-item>
-            <b-tab-item label="Calendar" icon-pack="fa" icon="calendar">
+            <b-tab-item label="Grid" icon-pack="fa" icon="th"></b-tab-item>
+            <b-tab-item label="Layout" icon-pack="fa" icon="columns">
+                <section class="section">
+                    <div class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <h1 class="title">Layouts</h1>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="block">
+                                    <span class="tag is-success">
+                                        Complete
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="columns">
+                        <div class="column is-2">
+                            <aside class="menu">
+                                <p class="menu-label">
+                                    General
+                                </p>
+                                <ul class="menu-list">
+                                    <li><a>Dashboard</a></li>
+                                    <li><a>Login Page</a></li>
+                                    <li><a>Help Drawer</a></li>
+                                </ul>
+                                <p class="menu-label">Administration</p>
+                                <ul class="menu-list">
+                                    <li>
+                                        <a href="">Team Settings</a>
+                                    </li>
+                                    <li>
+                                        <a class="is-active">Manage Your Team</a>
+                                        <ul>
+                                            <li><a>Members</a></li>
+                                            <li><a>Plugins</a></li>
+                                            <li><a>Add a member</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a>Invitations</a></li>
+                                    <li><a>Cloud Storage Environment Settings</a></li>
+                                    <li><a>Authentication</a></li>
+                                </ul>
+                                <p class="menu-label">
+                                    Transactions
+                                </p>
+                                <ul class="menu-list">
+                                    <li><a>Payments</a></li>
+                                    <li><a>Transfers</a></li>
+                                    <li><a>Balance</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <avails></avails>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <h1 class="title">CSS Grid</h1>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="block">
+                                    <span class="tag is-success">
+                                        Complete
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul class="gallery">
+                        <li v-for="n in 12">
+                            <img src="/images/placeholder-1280x960.png">
+                        </li>
+                    </ul>
+                </section>
+                <section class="section">
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile">
+                            <div class="tile is-parent is-vertical">
+                                <article class="tile is-child box">
+                                <p class="title">Vertical tiles</p>
+                                <p class="subtitle">Top box</p>
+                                </article>
+                                <article class="tile is-child box">
+                                <p class="title">Vertical tiles</p>
+                                <p class="subtitle">Bottom box</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                <p class="title">Middle box</p>
+                                <p class="subtitle">With an image</p>
+                                <figure class="image is-4by3">
+                                    <img src="/images/placeholder-640x480.png">
+                                </figure>
+                                </article>
+                            </div>
+                            </div>
+                            <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Wide column</p>
+                                <p class="subtitle">Aligned with the right column</p>
+                                <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                                </div>
+                            </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                            <div class="content">
+                                <p class="title">Tall column</p>
+                                <p class="subtitle">With even more content</p>
+                                <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+                                <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
+                                <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+                                </div>
+                            </div>
+                            </article>
+                        </div>
+                        </div>
+                </section>
+            </b-tab-item>
+            <b-tab-item icon="ellipsis-h" icon-pack="fa">
+                {{--  <section class="section">
+                    <button class="button is-primary is-medium"
+                        @click="isComponentModalActive = true">
+                        Launch component modal
+                    </button>
+
+                    <b-modal :active.sync="isComponentModalActive" has-modal-card>
+                        <modal-form v-bind="formProps"></modal-form>
+                    </b-modal>
+                </section>  --}}
+                <section class="section">
+                    <h1 class="title">Steps</h1>
+                    <div class="steps" id="stepsDemo">
+                        <div class="step-item is-active is-success">
+                            <div class="step-marker">
+                                <span class="icon">
+                                    <i class="fa fa-check"></i>
+                                </span>
+                            </div>
+                            <div class="step-content">
+                                <p class="step-title">Step 1</p>
+                                <p>This is the first step of the process.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-marker"></div>
+                            <div class="step-content">
+                                <p class="step-title">Step 2</p>
+                                <p>This is the second step. You get here once you have completed the first step.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-marker">3</div>
+                            <div class="step-content">
+                                <p class="step-title">Step 3</p>
+                                <p>This is the third step. One more last before the end.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-marker">
+                                <span class="icon">
+                                    <i class="fa fa-flag"></i>
+                                </span>
+                            </div>
+                            <div class="step-content">
+                                <p class="step-title">Step 4</p>
+                                <p>Final step. You have completed all the previous steps and end the process.</p>
+                            </div>
+                        </div>
+                        <div class="steps-actions">
+                            <div class="steps-action">
+                                <button data-nav="previous" class="button is-light">previous</button>
+                            </div>
+                            <div class="steps-action">
+                                <button data-nav="next" class="button is-light">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <b-field label="Date">
+                        <flat-pickr v-model="date"></flat-pickr>
+                    </b-field>
+
+                    <b-field label="Search">
+                        <b-input expanded icon="search">
+                        </b-input>
+                    </b-field>
+
+                    <b-field label="Sort by">
+                        <b-select icon="sort" expanded>
+                            <option value="1">Advertiser</option>
+                            <option value="2">Agency</option>
+                        </b-select>
+                    </b-field>
+
+                    <b-field label="View Filter">
+                        <b-select icon="filter" expanded>
+                            <option value="1">All</option>
+                            <option value="2">Availed</option>
+                        </b-select>
+                    </b-field>
+
+                    <hr>
+
+                    <div class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+
+                                <b-field>
+                                    <b-input expanded placeholder="Search..." icon="search">
+                                    </b-input>
+                                </b-field>
+
+                            </div>
+                            <div class="level-item">
+
+                                <button v-tooltip.top="{ html: 'tooltipContent' }" class="button is-link">
+                                    Multiline (default)
+                                </button>
+
+                                <div id="tooltipContent">
+                                    <div class="content">
+                                        <p>Hello
+                                            <b>There</b> Maecenas sed diam eget risus varius blandit
+                                            sit amet non magna.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <b-field>
+                                    <b-select placeholder="Select columns">
+                                        <option value="flint">All</option>
+                                        <option value="flint">Advertiser</option>
+                                    </b-select>
+                                </b-field>
+                            </div>
+                            <div class="level-item">
+                                <b-field>
+                                    <b-select v-model="perPage" :disabled="!isPaginated">
+                                        <option value="5">5 per page</option>
+                                        <option value="10">10 per page</option>
+                                        <option value="15">15 per page</option>
+                                        <option value="20">20 per page</option>
+                                    </b-select>
+                                </b-field>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <button class="button is-medium is-primary" @click="alert">
+                        Launch alert (default)
+                    </button>
+                    <button class="button is-medium is-primary" @click="alertCustom">
+                        Launch alert (custom)
+                    </button>
+                </section>
+                <section class="section">
+                    <button class="button is-medium is-info" @click="confirm">
+                        Launch confirm (default)
+                    </button>
+
+                    <button class="button is-medium is-info" @click="confirmCustom">
+                        Launch confirm (custom)
+                    </button>
+
+                    <button class="button is-medium is-danger" @click="confirmCustomDelete">
+                        Launch confirm (custom)
+                    </button>
+                </section>
+                <section class="section ">
+                    <button class="button is-medium is-dark" @click="prompt">
+                        Launch prompt
+                    </button>
+                </section>
                 <section class="section">
                     <div class="level">
                         <div class="level-left">
@@ -1105,106 +1486,6 @@
                         </div>
                     </div>
                 </section>
-            </b-tab-item>
-            <b-tab-item label="Navigation" icon-pack="fa" icon="bars">
-                <section class="section">
-                    <h1 class="title">Navigation</h1>
-                    <hr>
-                    <h2 class="subtitle">Breadcrumb</h2>
-
-                    <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Components</a></li>
-                            <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-                        </ul>
-                    </nav>
-
-                    <h2 class="subtitle">Pagination</h2>
-                    <nav class="pagination" role="navigation" aria-label="pagination">
-                        <a class="pagination-previous">Previous</a>
-                        <a class="pagination-next">Next page</a>
-                        <ul class="pagination-list">
-                            <li>
-                                <a class="pagination-link" aria-label="Goto page 1">1</a>
-                            </li>
-                            <li>
-                                <span class="pagination-ellipsis">&hellip;</span>
-                            </li>
-                            <li>
-                                <a class="pagination-link" aria-label="Goto page 45">45</a>
-                            </li>
-                            <li>
-                                <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
-                            </li>
-                            <li>
-                                <a class="pagination-link" aria-label="Goto page 47">47</a>
-                            </li>
-                            <li>
-                                <span class="pagination-ellipsis">&hellip;</span>
-                            </li>
-                            <li>
-                                <a class="pagination-link" aria-label="Goto page 86">86</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </section>
-            </b-tab-item>
-            <b-tab-item label="Tiles">
-                <section class="section">
-                    <div class="tile is-ancestor">
-                        <div class="tile is-vertical is-8">
-                            <div class="tile">
-                            <div class="tile is-parent is-vertical">
-                                <article class="tile is-child box">
-                                <p class="title">Vertical tiles</p>
-                                <p class="subtitle">Top box</p>
-                                </article>
-                                <article class="tile is-child box">
-                                <p class="title">Vertical tiles</p>
-                                <p class="subtitle">Bottom box</p>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                <p class="title">Middle box</p>
-                                <p class="subtitle">With an image</p>
-                                <figure class="image is-4by3">
-                                    <img src="/images/placeholder-640x480.png">
-                                </figure>
-                                </article>
-                            </div>
-                            </div>
-                            <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Wide column</p>
-                                <p class="subtitle">Aligned with the right column</p>
-                                <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                </div>
-                            </article>
-                            </div>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                            <div class="content">
-                                <p class="title">Tall column</p>
-                                <p class="subtitle">With even more content</p>
-                                <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-                                <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
-                                </div>
-                            </div>
-                            </article>
-                        </div>
-                        </div>
-                </section>
-            </b-tab-item>
-            <b-tab-item label="Data" icon="database" icon-pack="fa"></b-tab-item>
-            <b-tab-item label="Charts" icon="bar-chart" icon-pack="fa"></b-tab-item>
-            <b-tab-item label="More" icon="ellipsis-h" icon-pack="fa">
                 <section class="section">
                     <div class="content">
                         <h1>More Stuff...</h1>
@@ -1214,6 +1495,30 @@
                             <li><a>Item ...</a></li>
                         </ul>
                     </div>
+                </section>
+                <section class="section">
+                    <div class="block">
+                        <b-switch v-model="isCollapsible">Collapsible</b-switch>
+                    </div>
+                    <div class="block">
+                        <button class="button is-medium is-primary"
+                            @click="isOpen = !isOpen">
+                            Toggle
+                        </button>
+                    </div>
+                    <b-panel :open.sync="isOpen" :collapsible="isCollapsible">
+                        <strong slot="header">Title</strong>
+                        <div class="content">
+                            <h3>
+                                Subtitle
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                                Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. <br />
+                                Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                            </p>
+                        </div>
+                    </b-panel>
                 </section>
             </b-tab-item>
         </b-tabs>

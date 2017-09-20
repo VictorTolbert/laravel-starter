@@ -23,26 +23,511 @@ Vue.component('publish-button', require('./components/PublishButton'))
 Vue.component('subscribe-button', require('./components/SubscribeButton'))
 Vue.component('cover-image-upload', require('./components/CoverImageUpload'))
 
+import people from './data/people.json'
+import debounce from 'lodash/debounce'
+import ModalForm from './components/ModalForm'
+
+const clients = [
+    {
+        id: 1,
+        first_name: 'Jesse',
+        last_name: 'Simmons',
+        date: '2016-10-15 13:43:27',
+        gender: 'Male'
+    },
+    {
+        id: 2,
+        first_name: 'John',
+        last_name: 'Jacobs',
+        date: '2016-12-15 06:00:53',
+        gender: 'Male'
+    },
+    {
+        id: 3,
+        first_name: 'Tina',
+        last_name: 'Gilbert',
+        date: '2016-04-26 06:26:28',
+        gender: 'Female'
+    },
+    {
+        id: 4,
+        first_name: 'Clarence',
+        last_name: 'Flores',
+        date: '2016-04-10 10:28:46',
+        gender: 'Male'
+    },
+    {
+        id: 5,
+        first_name: 'Anne',
+        last_name: 'Lee',
+        date: '2016-12-06 14:38:38',
+        gender: 'Female'
+    }
+]
+
 const app = new Vue({
     el: '#app',
     // router,
+    components: {
+        ModalForm
+    },
     data () {
         return {
+            people,
+            data: [],
+            total: 0,
+            loading: false,
+            sortField: 'vote_count',
+            sortOrder: 'desc',
+            page: 1,
+            perPage: 20,
+            clients,
+            clientsColumns: [
+                {
+                    title: 'ID',
+                    field: 'id',
+                    meta: { icon: null },
+                    width: '100',
+                    isVisible: true,
+                    isSortable: true,
+                    isNumeric: false,
+                    isCentered: false
+                },
+                {
+                    title: 'First Name',
+                    field: 'first_name',
+                    meta: { icon: null },
+                    width: '',
+                    isVisible: true,
+                    isSortable: true,
+                    isNumeric: false,
+                    isCentered: false
+                },
+                {
+                    title: 'Last Name',
+                    field: 'last_name',
+                    meta: { icon: null },
+                    width: '',
+                    isVisible: true,
+                    isSortable: true,
+                    isNumeric: false,
+                    isCentered: false
+                },
+                {
+                    title: 'Date',
+                    field: 'date',
+                    meta: { icon: null },
+                    width: '200',
+                    isVisible: true,
+                    isSortable: true,
+                    isNumeric: false,
+                    isCentered: false
+                },
+                {
+                    title: 'Gender',
+                    field: 'gender',
+                    meta: { icon: null },
+                    width: '50',
+                    isVisible: true,
+                    isSortable: true,
+                    isNumeric: false,
+                    isCentered: false
+                }
+            ],
+            movies: [],
+            date: new Date(),
             isActive: true,
+            isCollapsible: false,
+            isComponentModalActive: false,
+            isFetching: false,
             isLoading: false,
+            isOpen: true,
+            isPaginated: true,
+            activeTab: 0,
+            formProps: {
+                email: 'evan@you.com',
+                password: 'testing'
+            },
+            frameworks: [
+                'Angular',
+                'Angular 2',
+                'Aurelia',
+                'Backbone',
+                'Ember',
+                'jQuery',
+                'Meteor',
+                'Node.js',
+                'Polymer',
+                'React',
+                'RxJS',
+                'Vue.js'
+            ],
+            keepFirst: false,
+            name: '',
+            selected: null,
+            selectedClient: clients[1],
             selectedOptions: []
         }
     },
     methods: {
-        openLoading() {
+        openLoading () {
             const vm = this
             vm.isLoading = true
             setTimeout(() => {
                 vm.isLoading = false
             }, 3 * 1000)
+        },
+        /*
+        * Load async data
+        */
+        loadAsyncData () {
+            this.loading = true
+            this.$http
+                .get(
+                    `https://api.themoviedb.org/3/discover/movie?api_key=bb6f51bef07465653c3e553d6ab161a8&language=en-US&include_adult=false&include_video=false&sort_by=${this
+                        .sortField}.${this.sortOrder}&page=${this.page}`
+                )
+                .then(
+                    ({ data }) => {
+                        // api.themoviedb.org manage max 1000 pages
+                        this.data = []
+                        let currentTotal = data.total_results
+                        if (data.total_results / this.perPage > 1000) {
+                            currentTotal = this.perPage * 1000
+                        }
+                        this.total = currentTotal
+                        data.results.forEach(item => this.data.push(item))
+                        this.loading = false
+                    },
+                    response => {
+                        this.data = []
+                        this.total = 0
+                        this.loading = false
+                    }
+                )
+        },
+        /*
+        * Handle page-change event
+        */
+        onPageChange (page) {
+            this.page = page
+            this.loadAsyncData()
+        },
+        /*
+        * Handle sort event
+        */
+        onSort (field, order) {
+            this.sortField = field
+            this.sortOrder = order
+            this.loadAsyncData()
+        },
+        /*
+        * Type style in relation to the value
+        */
+        type (value) {
+            const number = parseFloat(value)
+            if (number < 6) {
+                return 'is-danger'
+            } else if (number >= 6 && number < 8) {
+                return 'is-warning'
+            } else if (number >= 8) {
+                return 'is-success'
+            }
+        },
+
+        alert () {
+            this.$dialog.alert('Everything looks fine!')
+        },
+
+        alertCustom () {
+            this.$dialog.alert({
+                title: 'Title Alert',
+                message: 'I have a title, a custom button and <b>HTML</b>!',
+                confirmText: 'Cool!'
+            })
+        },
+
+        confirm () {
+            this.$dialog.confirm({
+                message: 'Continue on this task?',
+                onConfirm: () => this.$toast.open('User confirmed')
+            })
+        },
+
+        confirmCustom () {
+            this.$dialog.confirm({
+                title: 'Privacy Politics',
+                message: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fusce id fermentum quam. Proin sagittis,
+                    nibh id hendrerit imperdiet, elit sapien laoreet elit,
+                    ac scelerisque diam velit in nisl. Nunc maximus ex non
+                    laoreet semper. Nunc scelerisque, libero sit amet pretium dignissim,
+                    augue purus placerat justo,
+                    sit amet porttitor dui metus in nisl.
+                    Nulla non leo placerat, porta metus eu, laoreet risus.
+                    Etiam lacinia, purus eu luctus maximus, elit ex viverra tellus,
+                    sit amet sodales quam dui nec odio.
+                    Nullam porta mollis est. Quisque aliquet malesuada fringilla.
+                    Pellentesque volutpat lacus at ante posuere,
+                    non pulvinar ante porta. Proin viverra eu massa nec porta.
+                    Aliquam rhoncus velit quis sem hendrerit,
+                    ut dictum nisl accumsan. Maecenas erat enim, scelerisque non ligula ac,
+                    eleifend venenatis ligula.
+                    Praesent molestie mauris sed elit posuere, non malesuada libero gravida.
+                    In hac habitasse platea dictumst.
+                    Pellentesque habitant morbi tristique senectus
+                    et netus et malesuada fames ac turpis egestas.`,
+                cancelText: 'Disagree',
+                confirmText: 'Agree',
+                type: 'is-success',
+                onConfirm: () => this.$toast.open('User agreed')
+            })
+        },
+
+        confirmCustomDelete () {
+            this.$dialog.confirm({
+                title: 'Deleting account',
+                message:
+                    'Are you sure you want to <b>delete</b> your account? This action cannot be undone.',
+                confirmText: 'Delete Account',
+                type: 'is-danger',
+                hasIcon: true,
+                onConfirm: () => this.$toast.open('Account deleted!')
+            })
+        },
+
+        prompt () {
+            this.$dialog.prompt({
+                message: `What's your name?`,
+                inputMaxlength: 20,
+                inputPlaceholder: 'e.g. John Doe',
+                onConfirm: value => this.$toast.open('Your name is: ' + value)
+            })
+        },
+
+        // You have to install and import debounce to use it,
+        // it's not mandatory though.
+        getMovies: debounce(function () {
+            this.movies = []
+            this.isFetching = true
+            this.$http
+                .get(
+                    `https://api.themoviedb.org/3/search/movie?api_key=bb6f51bef07465653c3e553d6ab161a8&query=${this
+                        .name}`
+                )
+                .then(
+                    ({ data }) => {
+                        data.results.forEach(item => this.movies.push(item))
+                        this.isFetching = false
+                    },
+                    response => {
+                        this.isFetching = false
+                    }
+                )
+        }, 500)
+    },
+
+    computed: {
+        filteredPeople () {
+            return this.people.filter(option => {
+                return (
+                    option.user.first_name
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                )
+            })
+        },
+
+        filteredFrameworks () {
+            return this.frameworks.filter(option => {
+                return (
+                    option
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                )
+            })
+        }
+    },
+
+    filters: {
+        /**
+         * Filter to truncate string, accepts a length parameter
+         */
+        truncate (value, length) {
+            return value.length > length
+                ? value.substr(0, length) + '...'
+                : value
         }
     },
     mounted () {
+        // this.loadAsyncData()
+
+        class StepsWizard {
+            constructor (element = null, options = {}) {
+                this.options = Object.assign({}, {
+                    'selector': '.step-item',
+                    'previous_selector': '[data-nav="previous"]',
+                    'next_selector': '[data-nav="next"]',
+                    'active_class': 'is-active',
+                    'completed_class': 'is-completed',
+                    'beforeNext': null,
+                    'onFinish': null,
+                    'onError': null
+                }, options)
+
+                this.element = element
+                this.steps = element.querySelectorAll(this.options.selector)
+                this.previous_btn = element.querySelector(this.options.previous_selector)
+                this.next_btn = element.querySelector(this.options.next_selector)
+
+                this.init()
+            }
+
+            init () {
+                for (var i = 0; i < this.steps.length; i++) {
+                    var step = this.steps[ i ]
+                    step.setAttribute('data-step-id', i)
+                }
+                this.bind()
+                this.start()
+            }
+
+            bind () {
+                var _this = this
+                if (this.previous_btn != null) {
+                    this.previous_btn.addEventListener('click', function (e) {
+                        _this.previous_step()
+                    })
+                }
+
+                if (this.next_btn != null) {
+                    this.next_btn.addEventListener('click', function (e) {
+                        _this.next_step()
+                    })
+                }
+            }
+
+            start () {
+                this.activate_step(this.steps[0])
+                this.updateActions(this.steps[0])
+            }
+
+            get_current_step_id () {
+                for (var i = 0; i < this.steps.length; i++) {
+                    var step = this.steps[i]
+                    if (step.classList.contains(this.options.active_class)) {
+                        return parseInt(step.getAttribute('data-step-id'))
+                    }
+                }
+                return null
+            }
+
+            updateActions (step) {
+                var stepId = parseInt(step.getAttribute('data-step-id'))
+                if (stepId == 0) {
+                    this.previous_btn.setAttribute('disabled', 'disabled')
+                    this.next_btn.removeAttribute('disabled', 'disabled')
+                } else if (stepId == (this.steps.length - 1)) {
+                    this.previous_btn.removeAttribute('disabled', 'disabled')
+                    this.next_btn.setAttribute('disabled', 'disabled')
+                } else {
+                    this.previous_btn.removeAttribute('disabled', 'disabled')
+                    this.next_btn.removeAttribute('disabled', 'disabled')
+                }
+            }
+
+            next_step () {
+                var current_id = this.get_current_step_id()
+
+                if (current_id == null) {
+                    return
+                }
+
+                var next_id = current_id + 1
+                var errors = []
+
+                if (typeof this.options.beforeNext !== 'undefined' &&
+                    this.options.beforeNext != null &&
+                    this.options.beforeNext) {
+                    errors = this.options.beforeNext(this.steps[ current_id ])
+                }
+
+                if (typeof errors === 'undefined') {
+                    errors = []
+                }
+
+                if (errors.length > 0) {
+                    for (var i = 0; i < errors.length; i++) {
+                        if (typeof this.options.onError !== 'undefined' &&
+                            this.options.onError != null &&
+                            this.options.onError) {
+                            this.options.onError(errors[i])
+                        }
+                    }
+                    return
+                }
+
+                if (next_id >= this.steps.length) {
+                    if (typeof this.options.onFinish !== 'undefined' &&
+                        this.options.onFinish != null &&
+                        this.options.onFinish) {
+                        this.options.onFinish(this.steps[current_id])
+                    }
+                    this.deactivate_step(this.steps[current_id])
+                } else {
+                    this.complete_step(this.steps[current_id])
+                    this.activate_step(this.steps[next_id])
+                }
+            }
+
+            previous_step () {
+                var current_id = this.get_current_step_id()
+                if (current_id == null) {
+                    return
+                }
+
+                this.uncomplete_step(this.steps[current_id - 1])
+                this.activate_step(this.steps[current_id - 1])
+            }
+
+            /**
+            * Activate a single step,
+            * will deactivate all other steps.
+            */
+            activate_step (step) {
+                this.updateActions(step)
+
+                for (var i = 0; i < this.steps.length; i++) {
+                    var _step = this.steps[ i ]
+
+                    if (_step == step) {
+                        continue
+                    }
+
+                    this.deactivate_step(_step)
+                }
+                step.classList.add(this.options.active_class)
+            }
+
+            complete_step (step) {
+                step.classList.add(this.options.completed_class)
+            }
+
+            uncomplete_step (step) {
+                step.classList.remove(this.options.completed_class)
+            }
+
+            deactivate_step (step) {
+                step.classList.remove(this.options.active_class)
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var stepsWizard = new StepsWizard(document.getElementById('stepsDemo'))
+        })
+
         $('#clickme').click(function () {
             $('#uploadme').click()
         })

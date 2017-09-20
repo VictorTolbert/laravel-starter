@@ -17,11 +17,14 @@
 @import 'components/steps';
 @import 'components/timeline';
 
-@import "components/__tooltip.sass";
+@import 'components/__tooltip.sass';
 // @import "components/tooltip.sass";
 // @import '~vue-directive-tooltip/src/css/index.scss';
 @import 'laracasts';
 
+.b-table--custom.b-table .table {
+  width: auto;
+}
 
 .bd-callout {
   background-color: whitesmoke;
@@ -78,7 +81,6 @@
   background-color: $danger;
   color: #fff;
 }
-
 
 .ham {
   cursor: pointer;

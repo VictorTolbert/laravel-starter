@@ -22,6 +22,53 @@
                 <div class="navbar-end">
                     @if (Auth::guest())
                     @else
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <div class="navbar-link">
+                                Documentation
+                            </div>
+                            <div id="moreDropdown" class="navbar-dropdown">
+                                <a class="navbar-item" href="/pages/overview">
+                                    Overview
+                                </a>
+                                <a class="navbar-item" href="/pages/components">
+                                    Utilities
+                                </a>
+                                <a class="navbar-item" href="/pages/components">
+                                    Base
+                                </a>
+                                <a class="navbar-item" href="/pages/tips">
+                                    Elements
+                                </a>
+                                <a class="navbar-item" href="/pages/tips">
+                                    Components
+                                </a>
+                                <a class="navbar-item" href="/pages/tips">
+                                    Grid
+                                </a>
+                                <a class="navbar-item" href="/pages/tips">
+                                    Layout
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <div class="navbar-link">
+                                Documentation
+                            </div>
+                            <div id="moreDropdown" class="navbar-dropdown">
+                                <a class="navbar-item" href="/pages/overview">
+                                    Overview
+                                </a>
+                                <a class="navbar-item" href="/pages/components">
+                                    Components
+                                </a>
+                                <a class="navbar-item" href="/pages/tips">
+                                    Tips
+                                </a>
+                                <a class="navbar-item" href="/pages/tips">
+                                    Tools
+                                </a>
+                            </div>
+                        </div>
                         <a href="/podcasts" class="navbar-item">Podcasts</a>
                         <a href="/episodes" class="navbar-item">Episodes</a>
                         <a href="/proposal-viewer" class="navbar-item">XML Proposal Viewer</a>

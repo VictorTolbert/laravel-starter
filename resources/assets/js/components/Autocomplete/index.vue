@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import data from '../../data/data_test.json'
+import data from '../../data/people.json'
 
 export default {
     data () {

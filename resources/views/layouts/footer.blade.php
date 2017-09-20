@@ -33,7 +33,6 @@
     </section>
 </footer>
 <div class="pageloader"></div>
-<b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
 <div id="quickviewDefault" class="quickview">
     <header class="quickview-header">
         <p class="title">Quickview title</p>
