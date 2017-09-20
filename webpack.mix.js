@@ -24,7 +24,10 @@ mix.config.postCss = [
 // mix.config.uglify.compress.drop_console = false;
 
 mix
-    .js('resources/assets/js/docs.js', 'public/js')
     .js('resources/assets/js/app.js', 'public/js')
-    .postCss('resources/assets/css/docs.css', 'public/css')
     .sass('resources/assets/sass/app.scss', 'public/css')
+    .version()
+
+mix
+    .js('resources/assets/js/docs.js', 'public/js')
+    .postCss('resources/assets/css/docs.css', 'public/css')
