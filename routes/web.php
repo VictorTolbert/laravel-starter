@@ -36,6 +36,12 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
 });
 
 Route::name('profile')->get('/profiles/{user}', 'ProfilesController@show');
-Route::name('docs')->get('/docs', 'HomeController@docs');
-Route::name('home')->get('/', 'HomeController@index');
+Route::name('changelog')->get('/changelog', 'PagesController@changelog');
+Route::name('docs')->get('/docs', 'PagesController@docs');
+Route::name('icons')->get('/icons', 'PagesController@icons');
+Route::name('kendo')->get('/kendo', 'PagesController@kendo');
+Route::name('tables')->get('/tables', 'PagesController@tables');
+Route::name('test')->get('/test', 'PagesController@test');
+Route::name('zurb')->get('/zurb', 'PagesController@zurb');
+Route::name('home')->get('/', 'PagesController@tables');
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

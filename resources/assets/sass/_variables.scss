@@ -5,6 +5,8 @@
 // @import "../sass/utilities/initial-variables"
 
 // 2. Set your own initial variables
+@import './utilities/variables/palettes';
+
 $red: #c5203e;
 $yellow: #ffdd57; // Bulma
 $yellow: #fff03f; // Salesforce
@@ -51,27 +53,27 @@ $deep-blush: #ea8288;
 
 // 3. Set the derived variables
 $primary: $plum;
-$primary: $dark;
+$primary: $palette-funblue-600;
 $primary-invert: findColorInvert($primary);
 
-$secondary: $ecstasy;
 $secondary: $dark;
+$secondary: $ecstasy;
 $secondary-invert: findColorInvert($secondary);
 
-$danger: $red;
 $danger: $dark;
+$danger: $red;
 $danger-invert: findColorInvert($danger);
 
-$warning: $yellow;
 $warning: $dark;
+$warning: $yellow;
 $warning-invert: findColorInvert($warning);
 
-$success: $green;
 $success: $dark;
+$success: $green;
 $success-invert: findColorInvert($success);
 
-$info: $blue;
 $info: $dark;
+$info: $blue;
 $info-invert: findColorInvert($info);
 
 $twitter: #4099ff;
@@ -119,7 +121,7 @@ $weight-semibold: 500;
 $weight-bold: 700;
 
 // Body
-$body-size: 16px;
+$body-size: 14px;
 $body-background: $porcelain;
 
 // Code colors

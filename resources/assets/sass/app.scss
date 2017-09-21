@@ -22,8 +22,40 @@
 // @import '~vue-directive-tooltip/src/css/index.scss';
 @import 'laracasts';
 
-.b-table--custom.b-table .table {
-  width: auto;
+.day {
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #ccc;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.breadcrumb li + li::before {
+    color: inherit;
+}
+
+
+.b-table.b-table--custom {
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.b-table--custom.table,
+.b-table.b-table--custom .table {
+    width: auto;
+  table-layout: fixed;
+  white-space: nowrap;
+
+  td {
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .bd-callout {

@@ -1,4 +1,5 @@
 # Overview
+
 - Elegant
 - Clean
 - Semantic
@@ -6,15 +7,40 @@
 - Legible
 - Easy to maintain
 - Reactive
+
 ## Features
-- [#1][/link] Feature
-- New ECMAScript Syntax
+
+- [Modern Javascript](https://github.com/mbeaudru/modern-js-cheatsheet)
+- A NPM + Webpack + Babel Front-End development workflow
+- Supports `ES2015`
+- Declarative
+- Efficient
+- Flexible
+- New ECMAScript ~~Syntax~~
+- ES6 API
+- Components
 - Client Data Container (Vuex, Redux)
 - Opinionated but Configurable (CSS, Sass, Less, Stylus, HTML, Pug, JavaScript, Typescript, JSX)
+
+
+* :airplane:
+* :8ball: :100:
+
+
+This was written by @VictorTolbert
+
 
 ## Topics
 
 CSS Properties, CSS Grid, Flexbox, React, Vue, ES6
+
+
+| Name | Description | Type | Values | Default |
+| ---- | ----------- | ---- | ------ | ------- |
+| `size` | <> size, optional | String | `is-small`, `is-medium`, `is-large` | — |
+
+
+
 
 ## Examples (Blog,)
 

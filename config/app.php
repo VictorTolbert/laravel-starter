@@ -275,6 +275,7 @@ return [
         'FFMpeg' => Pbmedia\LaravelFFMpeg\FFMpegFacade::class,
         'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
         'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
     ],
 
 ];

@@ -1,0 +1,364 @@
+/* For use in _color-definitions.scss */
+$palette-plum:
+rgb(237, 229, 237)
+rgb(210, 190, 209)
+rgb(180, 146, 178)
+rgb(150, 102, 147)
+rgb(128, 70, 124)
+rgb(105, 37, 101)
+rgb(97, 33, 93)
+rgb(86, 27, 83)
+rgb(76, 22, 73)
+rgb(59, 13, 55)
+rgb(255, 117, 244)
+rgb(255, 66, 240)
+rgb(255, 15, 236)
+rgb(245, 0, 225)
+;
+
+$palette-plum-50: nth($palette-plum, 1);
+$palette-plum-100: nth($palette-plum, 2);
+$palette-plum-200: nth($palette-plum, 3);
+$palette-plum-300: nth($palette-plum, 4);
+$palette-plum-400: nth($palette-plum, 5);
+$palette-plum-500: nth($palette-plum, 6);
+$palette-plum-600: nth($palette-plum, 7);
+$palette-plum-700: nth($palette-plum, 8);
+$palette-plum-800: nth($palette-plum, 9);
+$palette-plum-900: nth($palette-plum, 10);
+$palette-plum-A100: nth($palette-plum, 11);
+$palette-plum-A200: nth($palette-plum, 12);
+$palette-plum-A400: nth($palette-plum, 13);
+$palette-plum-A700: nth($palette-plum, 14);
+
+
+$palette-funblue:
+rgb(228, 234, 242)
+rgb(187, 202, 222)
+rgb(142, 167, 200)
+rgb(97, 132, 177)
+rgb(63, 105, 161)
+rgb(29, 79, 144)
+rgb(26, 72, 136)
+rgb(21, 63, 125)
+rgb(17, 54, 115)
+rgb(10, 38, 97)
+rgb(148, 177, 255)
+rgb(97, 139, 255)
+rgb(46, 102, 255)
+rgb(20, 84, 255)
+;
+
+$palette-funblue-50: nth($palette-funblue, 1);
+$palette-funblue-100: nth($palette-funblue, 2);
+$palette-funblue-200: nth($palette-funblue, 3);
+$palette-funblue-300: nth($palette-funblue, 4);
+$palette-funblue-400: nth($palette-funblue, 5);
+$palette-funblue-500: nth($palette-funblue, 6);
+$palette-funblue-600: nth($palette-funblue, 7);
+$palette-funblue-700: nth($palette-funblue, 8);
+$palette-funblue-800: nth($palette-funblue, 9);
+$palette-funblue-900: nth($palette-funblue, 10);
+$palette-funblue-A100: nth($palette-funblue, 11);
+$palette-funblue-A200: nth($palette-funblue, 12);
+$palette-funblue-A400: nth($palette-funblue, 13);
+$palette-funblue-A700: nth($palette-funblue, 14);
+
+
+$palette-ecstasy:
+rgb(254, 240, 228)
+rgb(252, 218, 188)
+rgb(250, 193, 143)
+rgb(247, 168, 98)
+rgb(246, 150, 65)
+rgb(244, 131, 31)
+rgb(243, 123, 27)
+rgb(241, 112, 23)
+rgb(239, 102, 18)
+rgb(236, 83, 10)
+rgb(255, 255, 255)
+rgb(255, 234, 226)
+rgb(255, 197, 175)
+rgb(255, 179, 150)
+;
+
+$palette-ecstasy-50: nth($palette-ecstasy, 1);
+$palette-ecstasy-100: nth($palette-ecstasy, 2);
+$palette-ecstasy-200: nth($palette-ecstasy, 3);
+$palette-ecstasy-300: nth($palette-ecstasy, 4);
+$palette-ecstasy-400: nth($palette-ecstasy, 5);
+$palette-ecstasy-500: nth($palette-ecstasy, 6);
+$palette-ecstasy-600: nth($palette-ecstasy, 7);
+$palette-ecstasy-700: nth($palette-ecstasy, 8);
+$palette-ecstasy-800: nth($palette-ecstasy, 9);
+$palette-ecstasy-900: nth($palette-ecstasy, 10);
+$palette-ecstasy-A100: nth($palette-ecstasy, 11);
+$palette-ecstasy-A200: nth($palette-ecstasy, 12);
+$palette-ecstasy-A400: nth($palette-ecstasy, 13);
+$palette-ecstasy-A700: nth($palette-ecstasy, 14);
+
+
+$palette-cardinal:
+rgb(248, 228, 232)
+rgb(238, 188, 197)
+rgb(226, 144, 159)
+rgb(214, 99, 120)
+rgb(206, 65, 91)
+rgb(197, 32, 62)
+rgb(191, 28, 56)
+rgb(184, 24, 48)
+rgb(176, 19, 40)
+rgb(163, 11, 27)
+rgb(255, 209, 212)
+rgb(255, 158, 165)
+rgb(255, 107, 118)
+rgb(255, 81, 94)
+;
+
+$palette-cardinal-50: nth($palette-cardinal, 1);
+$palette-cardinal-100: nth($palette-cardinal, 2);
+$palette-cardinal-200: nth($palette-cardinal, 3);
+$palette-cardinal-300: nth($palette-cardinal, 4);
+$palette-cardinal-400: nth($palette-cardinal, 5);
+$palette-cardinal-500: nth($palette-cardinal, 6);
+$palette-cardinal-600: nth($palette-cardinal, 7);
+$palette-cardinal-700: nth($palette-cardinal, 8);
+$palette-cardinal-800: nth($palette-cardinal, 9);
+$palette-cardinal-900: nth($palette-cardinal, 10);
+$palette-cardinal-A100: nth($palette-cardinal, 11);
+$palette-cardinal-A200: nth($palette-cardinal, 12);
+$palette-cardinal-A400: nth($palette-cardinal, 13);
+$palette-cardinal-A700: nth($palette-cardinal, 14);
+
+
+$palette-green:
+rgb(225, 240, 233)
+rgb(180, 219, 201)
+rgb(130, 195, 165)
+rgb(79, 170, 129)
+rgb(42, 152, 102)
+rgb(4, 134, 75)
+rgb(3, 126, 68)
+rgb(3, 115, 59)
+rgb(2, 105, 51)
+rgb(1, 86, 35)
+rgb(136, 255, 173)
+rgb(85, 255, 138)
+rgb(34, 255, 103)
+rgb(8, 255, 86)
+;
+
+$palette-green-50: nth($palette-green, 1);
+$palette-green-100: nth($palette-green, 2);
+$palette-green-200: nth($palette-green, 3);
+$palette-green-300: nth($palette-green, 4);
+$palette-green-400: nth($palette-green, 5);
+$palette-green-500: nth($palette-green, 6);
+$palette-green-600: nth($palette-green, 7);
+$palette-green-700: nth($palette-green, 8);
+$palette-green-800: nth($palette-green, 9);
+$palette-green-900: nth($palette-green, 10);
+$palette-green-A100: nth($palette-green, 11);
+$palette-green-A200: nth($palette-green, 12);
+$palette-green-A400: nth($palette-green, 13);
+$palette-green-A700: nth($palette-green, 14);
+
+
+$palette-sttropaz:
+rgb(229, 236, 242)
+rgb(190, 207, 222)
+rgb(147, 176, 201)
+rgb(104, 144, 179)
+rgb(71, 120, 162)
+rgb(39, 96, 146)
+rgb(35, 88, 138)
+rgb(29, 78, 127)
+rgb(23, 68, 117)
+rgb(14, 51, 99)
+rgb(151, 192, 255)
+rgb(100, 162, 255)
+rgb(49, 131, 255)
+rgb(24, 116, 255)
+;
+
+$palette-sttropaz-50: nth($palette-sttropaz, 1);
+$palette-sttropaz-100: nth($palette-sttropaz, 2);
+$palette-sttropaz-200: nth($palette-sttropaz, 3);
+$palette-sttropaz-300: nth($palette-sttropaz, 4);
+$palette-sttropaz-400: nth($palette-sttropaz, 5);
+$palette-sttropaz-500: nth($palette-sttropaz, 6);
+$palette-sttropaz-600: nth($palette-sttropaz, 7);
+$palette-sttropaz-700: nth($palette-sttropaz, 8);
+$palette-sttropaz-800: nth($palette-sttropaz, 9);
+$palette-sttropaz-900: nth($palette-sttropaz, 10);
+$palette-sttropaz-A100: nth($palette-sttropaz, 11);
+$palette-sttropaz-A200: nth($palette-sttropaz, 12);
+$palette-sttropaz-A400: nth($palette-sttropaz, 13);
+$palette-sttropaz-A700: nth($palette-sttropaz, 14);
+
+
+$palette-bostonblue:
+rgb(232, 242, 246)
+rgb(198, 224, 233)
+rgb(161, 203, 218)
+rgb(123, 182, 203)
+rgb(94, 166, 191)
+rgb(66, 150, 180)
+rgb(60, 142, 173)
+rgb(51, 131, 164)
+rgb(43, 121, 156)
+rgb(29, 104, 140)
+rgb(199, 235, 255)
+rgb(148, 217, 255)
+rgb(97, 199, 255)
+rgb(71, 190, 255)
+;
+
+$palette-bostonblue-50: nth($palette-bostonblue, 1);
+$palette-bostonblue-100: nth($palette-bostonblue, 2);
+$palette-bostonblue-200: nth($palette-bostonblue, 3);
+$palette-bostonblue-300: nth($palette-bostonblue, 4);
+$palette-bostonblue-400: nth($palette-bostonblue, 5);
+$palette-bostonblue-500: nth($palette-bostonblue, 6);
+$palette-bostonblue-600: nth($palette-bostonblue, 7);
+$palette-bostonblue-700: nth($palette-bostonblue, 8);
+$palette-bostonblue-800: nth($palette-bostonblue, 9);
+$palette-bostonblue-900: nth($palette-bostonblue, 10);
+$palette-bostonblue-A100: nth($palette-bostonblue, 11);
+$palette-bostonblue-A200: nth($palette-bostonblue, 12);
+$palette-bostonblue-A400: nth($palette-bostonblue, 13);
+$palette-bostonblue-A700: nth($palette-bostonblue, 14);
+
+
+$palette-fountanblue:
+rgb(236, 246, 247)
+rgb(209, 232, 235)
+rgb(178, 216, 222)
+rgb(147, 200, 208)
+rgb(123, 189, 198)
+rgb(100, 177, 188)
+rgb(92, 170, 182)
+rgb(82, 161, 173)
+rgb(72, 152, 165)
+rgb(54, 136, 151)
+rgb(227, 250, 255)
+rgb(176, 242, 255)
+rgb(125, 234, 255)
+rgb(99, 230, 255)
+;
+
+$palette-fountanblue-50: nth($palette-fountanblue, 1);
+$palette-fountanblue-100: nth($palette-fountanblue, 2);
+$palette-fountanblue-200: nth($palette-fountanblue, 3);
+$palette-fountanblue-300: nth($palette-fountanblue, 4);
+$palette-fountanblue-400: nth($palette-fountanblue, 5);
+$palette-fountanblue-500: nth($palette-fountanblue, 6);
+$palette-fountanblue-600: nth($palette-fountanblue, 7);
+$palette-fountanblue-700: nth($palette-fountanblue, 8);
+$palette-fountanblue-800: nth($palette-fountanblue, 9);
+$palette-fountanblue-900: nth($palette-fountanblue, 10);
+$palette-fountanblue-A100: nth($palette-fountanblue, 11);
+$palette-fountanblue-A200: nth($palette-fountanblue, 12);
+$palette-fountanblue-A400: nth($palette-fountanblue, 13);
+$palette-fountanblue-A700: nth($palette-fountanblue, 14);
+
+
+$palette-montecarlo:
+rgb(229, 244, 243)
+rgb(190, 228, 225)
+rgb(147, 211, 205)
+rgb(103, 193, 184)
+rgb(71, 179, 169)
+rgb(38, 166, 154)
+rgb(34, 158, 146)
+rgb(28, 149, 136)
+rgb(23, 139, 126)
+rgb(13, 123, 108)
+rgb(173, 255, 243)
+rgb(122, 255, 236)
+rgb(71, 255, 228)
+rgb(45, 255, 224)
+;
+
+$palette-montecarlo-50: nth($palette-montecarlo, 1);
+$palette-montecarlo-100: nth($palette-montecarlo, 2);
+$palette-montecarlo-200: nth($palette-montecarlo, 3);
+$palette-montecarlo-300: nth($palette-montecarlo, 4);
+$palette-montecarlo-400: nth($palette-montecarlo, 5);
+$palette-montecarlo-500: nth($palette-montecarlo, 6);
+$palette-montecarlo-600: nth($palette-montecarlo, 7);
+$palette-montecarlo-700: nth($palette-montecarlo, 8);
+$palette-montecarlo-800: nth($palette-montecarlo, 9);
+$palette-montecarlo-900: nth($palette-montecarlo, 10);
+$palette-montecarlo-A100: nth($palette-montecarlo, 11);
+$palette-montecarlo-A200: nth($palette-montecarlo, 12);
+$palette-montecarlo-A400: nth($palette-montecarlo, 13);
+$palette-montecarlo-A700: nth($palette-montecarlo, 14);
+
+
+$palette-trout:
+rgb(234, 234, 236)
+rgb(203, 204, 206)
+rgb(169, 170, 174)
+rgb(134, 135, 142)
+rgb(108, 110, 117)
+rgb(82, 84, 93)
+rgb(75, 77, 85)
+rgb(65, 67, 75)
+rgb(56, 58, 65)
+rgb(40, 41, 48)
+rgb(132, 149, 250)
+rgb(83, 106, 248)
+rgb(25, 58, 255)
+rgb(0, 36, 254)
+;
+
+$palette-trout-50: nth($palette-trout, 1);
+$palette-trout-100: nth($palette-trout, 2);
+$palette-trout-200: nth($palette-trout, 3);
+$palette-trout-300: nth($palette-trout, 4);
+$palette-trout-400: nth($palette-trout, 5);
+$palette-trout-500: nth($palette-trout, 6);
+$palette-trout-600: nth($palette-trout, 7);
+$palette-trout-700: nth($palette-trout, 8);
+$palette-trout-800: nth($palette-trout, 9);
+$palette-trout-900: nth($palette-trout, 10);
+$palette-trout-A100: nth($palette-trout, 11);
+$palette-trout-A200: nth($palette-trout, 12);
+$palette-trout-A400: nth($palette-trout, 13);
+$palette-trout-A700: nth($palette-trout, 14);
+
+
+$palette-beeswax:
+rgb(255, 253, 247)
+rgb(254, 249, 235)
+rgb(254, 246, 221)
+rgb(254, 242, 207)
+rgb(253, 239, 197)
+rgb(253, 236, 187)
+rgb(253, 234, 181)
+rgb(252, 231, 172)
+rgb(252, 228, 164)
+rgb(252, 223, 150)
+rgb(255, 255, 255)
+rgb(255, 255, 255)
+rgb(255, 255, 255)
+rgb(255, 255, 255)
+;
+
+$palette-beeswax-50: nth($palette-beeswax, 1);
+$palette-beeswax-100: nth($palette-beeswax, 2);
+$palette-beeswax-200: nth($palette-beeswax, 3);
+$palette-beeswax-300: nth($palette-beeswax, 4);
+$palette-beeswax-400: nth($palette-beeswax, 5);
+$palette-beeswax-500: nth($palette-beeswax, 6);
+$palette-beeswax-600: nth($palette-beeswax, 7);
+$palette-beeswax-700: nth($palette-beeswax, 8);
+$palette-beeswax-800: nth($palette-beeswax, 9);
+$palette-beeswax-900: nth($palette-beeswax, 10);
+$palette-beeswax-A100: nth($palette-beeswax, 11);
+$palette-beeswax-A200: nth($palette-beeswax, 12);
+$palette-beeswax-A400: nth($palette-beeswax, 13);
+$palette-beeswax-A700: nth($palette-beeswax, 14);
+
+

@@ -11,6 +11,12 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
+                        <button id="showPageloader" class="button is-primary">
+                            Show Page-loader (3 sec only)
+                        </button>
+                    </div>
+
+                    <div class="level-item">
                         <button class="button is-primary"
                             @click="openLoading">
                             Launch loading
@@ -34,15 +40,102 @@
 </footer>
 <div class="pageloader"></div>
 <div id="quickviewDefault" class="quickview">
-    <header class="quickview-header">
-        <p class="title">Quickview title</p>
-        <span class="delete" data-dismiss="quickview"></span>
-    </header>
-    <div class="quickview-body">
-        <div class="quickview-block">
-            ...
-        </div>
+    <div class="container is-fluid">
+        <nav class="navbar is-transparent" style="height: 4rem">
+            <div class="navbar-brand">
+            </div>
+            <div class="navbar-menu is-active">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        {{-- <a class="button is-large is-white">
+                            <b-icon icon="settings">
+                            </b-icon>
+                            <span>Settings</span>
+                        </a> --}}
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item" data-dismiss="quickview">
+                          <span class="icon">
+                            {{-- <i class="fa fa-lg fa-times"></i> --}}
+                          </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </div>
-    <footer class="quickview-footer">
+    <header class="hero is-info">
+        <div class="hero-body">
+            <div class="container is-fluid">
+                <h1 class="title">WJAX Schedule Guide</h1>
+                <h1 class="subtitle">Last Uploaded 03/06/17</h1>
+            </div>
+        </div>
+    </header>
+    <section class="section quickview-body">
+        <div class="quickview-block">
+            <div class="">
+                <div class="content">
+                    <h2 class="subtitle">Edit Columns</h2>
+                    <p>Show or hide columns. Prioritze columns by using up and down arrows. Customize column widths and ability to lock first column.</p>
+                </div>
+                <table class="b-table--custom table is-bordered is-narrow is-striped">
+                    <thead>
+                        <tr>
+                            <th>Show/Hide</th>
+                            <th>Column</th>
+                            <th>Width</th>
+                            <th>Lock Column</th>
+                        </tr>
+                    </thead>
+
+                    <tr v-for="(column, index) in clientsColumns">
+                        <td class="has-text-centered">
+                            <b-checkbox v-model="column.isVisible"></b-checkbox>
+                        </td>
+                        <td>
+                            @{{ column.title }}
+                        </td>
+                        <td>
+                            <b-select v-model="column.width">
+                                <option value="">Auto Fit</option>
+                                <option value="80">XX Small (80)</option>
+                                <option value="160">X Small (160)</option>
+                                <option value="240">Small (240)</option>
+                                <option value="320">Medium (320)</option>
+                                <option value="480">Large (480)</option>
+                                <option value="640">X Large (640)</option>
+                                <option value="720">XX Large (720)</option>
+                            </b-select>
+                        </td>
+                        <td class="has-text-centered">
+                            <a class="is-large" v-if="index == 2">
+                                <span class="icon is-large">
+                                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="field">
+                    <a class="button is-primary" data-dismiss="quickview" @click="isCustomizeDataModalActive = false">OK</a>
+                    <a class="button is-neutral" data-dismiss="quickview" @click="isCustomizeDataModalActive = false">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="foot">
+        <section class="section">
+            <div class="container is-fluid">
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                        </div>
+                    </div>
+                    <div class="level-right">
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
 </div>

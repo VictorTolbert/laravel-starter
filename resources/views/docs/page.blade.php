@@ -4,7 +4,7 @@
     <section class="sidebar waves">
         <nav class="sidebar__contents">
             <div class="sidebar__logo">
-                <a href="/" target="videa">
+                <a href="{{route('docs')}}" target="videa">
                     @include('partials.svg.logo')
                 </a>
             </div>
@@ -22,7 +22,7 @@
                     </button>
                 </form>
             @endauth
-            <a href="" target="videa">
+            <a href="{{route('docs')}}" target="videa">
                 © videa
             </a>
         </footer>

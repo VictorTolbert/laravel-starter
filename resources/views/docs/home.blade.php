@@ -3,7 +3,7 @@
         <header class="home__header waves">
             <div class="home__header__inner">
                 <div class="home__logo">
-                    <a href="/" target="videa">
+                    <a href="{{route('docs')}}" target="videa">
                         @include('partials.svg.logo')
                     </a>
                 </div>
@@ -28,7 +28,7 @@
                 {{ app('navigation')->menu()->addClass('menu--home') }}
             </div>
             <footer class="home__index__footer">
-                <a href="/" target="videa">
+                <a href="{{route('docs')}}" target="videa">
                     © videa
                 </a>
             </footer>

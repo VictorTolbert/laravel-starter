@@ -1,0 +1,67 @@
+[
+  {
+    "Title": "Friday",
+    "Year": "1995",
+    "Rated": "R",
+    "Released": "26 Apr 1995",
+    "Runtime": "91 min",
+    "Genre": "Comedy, Drama",
+    "Director": "F. Gary Gray",
+    "Writer": "Ice Cube, DJ Pooh",
+    "Actors": "Ice Cube, Chris Tucker, Nia Long, Tommy 'Tiny' Lister",
+    "Plot":
+      "It is Friday and Craig Jones (Ice Cube) is unemployed, having, yesterday, been fired. He is lounging around his house with his friend Smokey (Chris Tucker), a rather incompetent weed dealer. Smokey's problem is that he tends to smoke, rather than sell, his product. This has lead to trouble with Smokey's supplier, Big Worm, who now wants his money, or his product back, or Smokey is a dead man. Then there's Deebo, the local bully, plus Craig's jealous, psychotic girlfriend, Joi, and Debbie, the neighbour Craig has a crush on. A lot can happen while lounging around your house on a Friday.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "1 win & 5 nominations.",
+    "Poster":
+      "https://images-na.ssl-images-amazon.com/images/M/MV5BYmEwNjNlZTUtNzkwMS00ZTlhLTkyY2MtMjM2MzlmODQyZGVhXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
+    "Ratings": [
+      { "Source": "Internet Movie Database", "Value": "7.3/10" },
+      { "Source": "Metacritic", "Value": "54/100" }
+    ],
+    "Metascore": "54",
+    "imdbRating": "7.3",
+    "imdbVotes": "81,872",
+    "imdbID": "tt0113118",
+    "Type": "movie",
+    "DVD": "10 Sep 2002",
+    "BoxOffice": "N/A",
+    "Production": "Zebra",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "The Social Network",
+    "Year": "2010",
+    "Rated": "PG-13",
+    "Released": "01 Oct 2010",
+    "Runtime": "120 min",
+    "Genre": "Biography, Drama",
+    "Director": "David Fincher",
+    "Writer": "Aaron Sorkin (screenplay), Ben Mezrich (book)",
+    "Actors": "Jesse Eisenberg, Rooney Mara, Bryan Barter, Dustin Fitzsimons",
+    "Plot":
+      "On a fall night in 2003, Harvard undergrad and computer programming genius Mark Zuckerberg sits down at his computer and heatedly begins working on a new idea. In a fury of blogging and programming, what begins in his dorm room soon becomes a global social network and a revolution in communication. A mere six years and 500 million friends later, Mark Zuckerberg is the youngest billionaire in history... but for this entrepreneur, success leads to both personal and legal complications.",
+    "Language": "English, French",
+    "Country": "USA",
+    "Awards": "Won 3 Oscars. Another 165 wins & 168 nominations.",
+    "Poster":
+      "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM2ODk0NDAwMF5BMl5BanBnXkFtZTcwNTM1MDc2Mw@@._V1_SX300.jpg",
+    "Ratings": [
+      { "Source": "Internet Movie Database", "Value": "7.7/10" },
+      { "Source": "Rotten Tomatoes", "Value": "96%" },
+      { "Source": "Metacritic", "Value": "95/100" }
+    ],
+    "Metascore": "95",
+    "imdbRating": "7.7",
+    "imdbVotes": "520,311",
+    "imdbID": "tt1285016",
+    "Type": "movie",
+    "DVD": "11 Jan 2011",
+    "BoxOffice": "$96,400,000",
+    "Production": "Columbia Pictures",
+    "Website": "http://www.thesocialnetwork-movie.com/",
+    "Response": "True"
+  }
+]

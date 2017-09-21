@@ -23,10 +23,13 @@ Vue.component('publish-button', require('./components/PublishButton'))
 Vue.component('subscribe-button', require('./components/SubscribeButton'))
 Vue.component('cover-image-upload', require('./components/CoverImageUpload'))
 Vue.component('steps', require('./components/Steps'))
+// Vue.component('omdb', require('./components/Omdb'))
 
 import people from './data/people.json'
 import debounce from 'lodash/debounce'
 import ModalForm from './components/ModalForm'
+
+// const template = require('./template')
 
 const clients = [
     {
@@ -88,7 +91,7 @@ const app = new Vue({
                     title: 'ID',
                     field: 'id',
                     meta: { icon: null },
-                    width: '100',
+                    width: '',
                     isVisible: true,
                     isSortable: true,
                     isNumeric: false,
@@ -140,6 +143,7 @@ const app = new Vue({
             isActive: true,
             isCollapsible: false,
             isComponentModalActive: false,
+            isCustomizeDataModalActive: false,
             isFetching: false,
             isLoading: false,
             isOpen: true,
@@ -166,7 +170,7 @@ const app = new Vue({
             keepFirst: false,
             name: '',
             selected: null,
-            selectedClient: clients[1],
+            selectedClient: null,
             selectedOptions: []
         }
     },
@@ -370,6 +374,7 @@ const app = new Vue({
     },
     mounted () {
         // this.loadAsyncData()
+        // console.log(template)
 
         $('#clickme').click(function () {
             $('#uploadme').click()
@@ -441,6 +446,28 @@ const app = new Vue({
         }
 
         document.addEventListener('DOMContentLoaded', function () {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target
+                        var $target = document.getElementById(target)
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active')
+                        $target.classList.toggle('is-active')
+                    })
+                })
+            }
+
             // Get all document sliders
             var showQuickview = document.querySelectorAll(
                 '[data-show="quickview"]'

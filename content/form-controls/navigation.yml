@@ -1,0 +1,9 @@
+title: Form controls
+weight: 2
+items:
+  - Input
+  - Textarea
+  - Select
+  - Checkbox
+  - Radio
+  - File

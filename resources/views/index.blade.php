@@ -1,20 +1,100 @@
 @extends('layouts.app')
 
 @section('hero-body')
+<div class="hero-head" style="padding-left: 1.5rem; padding-right: 1.5rem">
+    <div class="container is-fluid">
+        <nav class="breadcrumb has-dot-separator is-marginless" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Components</a></li>
+                <li class="is-active"><a href="#" aria-current="page">Data Tables</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="hero-body" style="padding-top: 1rem">
+    <div class="container is-fluid">
+        <h1 class="title">Data Tables</h1>
+        <h1 class="subtitle">Data tables are an enhanced version of an HTML table and are used to display tabular data.</h1>
+    </div>
+</div>
 @endsection
 
 @section('content')
 <section class="section">
     <div class="container is-fluid">
-        <button class="button block" @click="activeTab = 1">Set Inbox</button>
         <b-tabs v-model="activeTab">
-            <b-tab-item label="Inventory Search" icon-pack="fa" icon="search">
+            <b-tab-item label="Inbox" icon-pack="fa" icon="inbox">
                 <section class="section">
+                    <b-modal
+                        :active.sync="isCustomizeDataModalActive"
+                        :width="960"
+                        has-modal-card
+                        >
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="">
+                                    <div class="content">
+                                        <h2 class="subtitle">Edit Columns</h2>
+                                        <p>Show or hide columns. Prioritze columns by using up and down arrows. Customize column widths and ability to lock first column.</p>
+
+
+                                    </div>
+                                    <table class="b-table--custom table is-bordered is-narrow is-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Show/Hide</th>
+                                                <th>Column</th>
+                                                <th>Width</th>
+                                                <th>Lock Column</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tr v-for="(column, index) in clientsColumns">
+                                            <td class="has-text-centered">
+                                                <b-checkbox v-model="column.isVisible"></b-checkbox>
+                                            </td>
+                                            <td>
+                                                @{{ column.title }}
+                                            </td>
+                                            <td>
+                                                <b-select v-model="column.width">
+                                                    <option value="">Auto Fit</option>
+                                                    <option value="80">XX Small (80)</option>
+                                                    <option value="160">X Small (160)</option>
+                                                    <option value="240">Small (240)</option>
+                                                    <option value="320">Medium (320)</option>
+                                                    <option value="480">Large (480)</option>
+                                                    <option value="640">X Large (640)</option>
+                                                    <option value="720">XX Large (720)</option>
+                                                </b-select>
+                                            </td>
+                                            <td class="has-text-centered">
+
+
+                                                <a class="is-large" v-if="index == 2">
+                                                    <span class="icon is-large">
+                                                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="field">
+                                        <a class="button is-primary" @click="isCustomizeDataModalActive = false">OK</a>
+                                        <a class="button is-neutral" @click="isCustomizeDataModalActive = false">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </b-modal>
                     <div class="level">
                         <div class="level-left">
                             <div class="level-item">
                                 <h1>
-                                    <span class="title has-text-danger">WJAX Schedule Guide</span><br>
+                                    <span class="title">WJAX Schedule Guide</span><br>
                                     <span class="subtitle">Last Uploaded 03/06/17</span>
                                 </h1>
                             </div>
@@ -24,7 +104,203 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <div class="level" style="margin-bottom: 0.25rem">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <div class="tags has-addons">
+                                    <span class="tag">Conflicts</span>
+                                    <span class="tag is-danger">8</span>
+                                </div>
+                            </div>
+                            <div class="level-item">
+                                <div class="tags has-addons">
+                                    <span class="tag">Gaps</span>
+                                    <span class="tag is-danger">4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                        </div>
+                    </div>
+                    <b-panel>
+                        <strong slot="header">View Selection</strong>
+                        <div class="columns">
+                            <div class="column">
+                                <b-field label="Program Search">
+                                    <b-input></b-input>
+                                </b-field>
+                            </div>
+                            <div class="column">
+                                <b-field label="Daypart">
+                                    <b-select expanded disabled>
+                                        <option>Daytime</option>
+                                    </b-select>
+                                </b-field>
+                            </div>
+                            <div class="column">
+                                <b-field label="Flight Start">
+                                    <b-datepicker
+                                        placeholder="Click to select..."
+                                        :first-day-of-week="1"
+                                        icon="today"
+                                        :readonly="false">
+                                        <button class="button is-primary"
+                                            @click="date = new Date()">
+                                            <b-icon icon="today"></b-icon>
+                                            <span>Today</span>
+                                        </button>
+
+                                        <button class="button is-danger"
+                                            @click="date = null">
+                                            <b-icon icon="clear"></b-icon>
+                                            <span>Clear</span>
+                                        </button>
+                                    </b-datepicker>
+                                </b-field>
+                            </div>
+                            <div class="column">
+                                <b-field label="Flight End">
+                                    <b-datepicker
+                                        placeholder="Click to select..."
+                                        icon="today"
+                                        :first-day-of-week="1"
+                                        :readonly="false">
+                                    </b-datepicker>
+                                </b-field>
+                            </div>
+                            <div class="column">
+                                <b-field label="Days">
+                                    <b-select expanded>
+                                        <option>Mon - Fri</option>
+                                        <option>Mon - Sun</option>
+                                        <option>Sat - Sun</option>
+                                        <option>Mon</option>
+                                        <option>Tue</option>
+                                        <option>Wed</option>
+                                        <option>Thu</option>
+                                        <option>Fri</option>
+                                        <option>Sat</option>
+                                        <option>Sun</option>
+                                    </b-select>
+                                </b-field>
+                            </div>
+                            <div class="column">
+                                <b-field label="Show Programs">
+                                    <b-select expanded>
+                                        <option>Availed Only</option>
+                                        <option>Non-Avaiiled Only</option>
+                                        <option>Both Availed and Non-Availed</option>
+                                    </b-select>
+                                </b-field>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">&nbsp;</label>
+                                    <div class="control">
+                                        <button class="button is-primary">Search</button>
+                                        <button class="button is-neutral">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </b-panel>
+                    <div class="level" style="margin-bottom: 0.25rem">
+                        <div class="level-left">
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                      <a class="button is-small">
+                                        <span class="icon is-small">
+                                          <i class="fa fa-table"></i>
+                                        </span>
+                                        <span>Table View</span>
+                                      </a>
+                                    </p>
+                                    <p class="control">
+                                      <a class="button is-small">
+                                        <span class="icon is-small">
+                                          <i class="fa fa-bar-chart"></i>
+                                        </span>
+                                        <span>Chart View</span>
+                                      </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="level-item">
+                                <div class="field has-addons">
+                                  <p class="control">
+                                    <a class="button is-small">
+                                        <b-icon
+                                            icon="filter_list"
+                                            size="is-small">
+                                        </b-icon>
+                                        <span>Filter</span>
+                                    </a>
+                                  </p>
+                                  <p class="control">
+                                    <a class="button is-small">
+                                      <b-icon
+                                          icon="sort"
+                                          size="is-small">
+                                      </b-icon>
+                                      <span>Sort</span>
+                                    </a>
+                                  </p>
+                                  <p class="control">
+                                    <a class="button is-small">
+                                      <b-icon
+                                          icon="file_download"
+                                          size="is-small">
+                                      </b-icon>
+                                      <span>Export</span>
+                                    </a>
+                                  </p>
+                                  <p class="control">
+                                    <a class="button is-small" @click="isCustomizeDataModalActive = true">
+                                      <b-icon
+                                          icon="sliders"
+                                          pack="fa"
+                                          size="is-small">
+                                      </b-icon>
+                                      <span>Customize Columns</span>
+                                    </a>
+                                  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <b-table
+                        :data="clients"
+                        :selected.sync="selectedClient"
+                        bordered
+                        narrowed
+                        striped
+                        checkable
+                        detailed
+                    >
+                        <template scope="props">
+                            <b-table-column v-for="(column, index) in clientsColumns"
+                                :key="index"
+                                :label="column.title"
+                                :field="column.field"
+                                :meta="column.meta"
+                                :width="column.width"
+                                :numeric="column.isNumeric"
+                                :centered="column.isCentered"
+                                :sortable="column.isSortable"
+                                :visible="column.isVisible" >
+                                @{{ props.row[column.field] }}
+                            </b-table-column>
+                        </template>
+
+                        <template slot="detail" scope="props">
+                            <h4 class="is-size-4">Detail</h4>
+                        </template>
+                    </b-table>
+                </section>
+                <section class="section">
                     <div class="level">
                         <div class="level-left">
                             <div class="level-item">
@@ -44,7 +320,6 @@
                             <button class="button is-primary">Upload Station Inventory</button>
                         </div>
                     </div>
-
                     <div class="box">
                         <div class="columns">
                             <div class="column">
@@ -165,190 +440,9 @@
                     <avails></avails>
                 </section>
             </b-tab-item>
-            <b-tab-item label="Inbox" icon-pack="fa" icon="inbox">
-                <section class="section">
-                    <h1 class="title">Inbox</h1>
-                    <hr>
-                    <div class="columns">
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                    <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <figure class="image is-48x48">
-                                                <img src="{{ get_gravatar(auth()->user()->email) }}">
-                                            </figure>
-                                        </div>
-                                        <div class="media-content">
-                                            <p class="title is-4">John Smith</p>
-                                            <p class="subtitle is-6">@johnsmith</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="content">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                        <a href="#">#css</a> <a href="#">#responsive</a>
-                                        <br>
-                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <header class="card-header">
-                                    <p class="card-header-title">
-                                        Component
-                                    </p>
-                                    <a href="#" class="card-header-icon" aria-label="more options">
-                                        <span class="icon">
-                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </a>
-                                </header>
-                                <div class="card-content">
-                                    <div class="content">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                                        <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-                                        <br>
-                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                                    </div>
-                                </div>
-                                <footer class="card-footer">
-                                    <a href="#" class="card-footer-item">Save</a>
-                                    <a href="#" class="card-footer-item">Edit</a>
-                                    <a href="#" class="card-footer-item">Delete</a>
-                                </footer>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="dropdown is-active">
-                                <div class="dropdown-trigger">
-                                    <button class="button is-neutral" aria-haspopup="true" aria-controls="dropdown-menu2">
-                                        <span>Content</span>
-                                        <span class="icon is-small">
-                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-item">
-                                            <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
-
-                                            <img src="/images/placeholder-480x320.png">
-
-                                        </div>
-                                        <hr class="dropdown-divider">
-                                        <div class="dropdown-item">
-                                            <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
-                                        </div>
-                                        <hr class="dropdown-divider">
-                                        <a href="#" class="dropdown-item">
-                                            This is a link
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <nav class="panel">
-                                <p class="panel-heading">
-                                    Repositories
-                                </p>
-                                <div class="panel-block">
-                                    <p class="control has-icons-left">
-                                    <input class="input is-small" type="text" placeholder="Search">
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-search"></i>
-                                    </span>
-                                    </p>
-                                </div>
-                                <p class="panel-tabs">
-                                    <a class="is-active">All</a>
-                                    <a>Public</a>
-                                    <a>Private</a>
-                                    <a>Sources</a>
-                                    <a>Forks</a>
-                                </p>
-                                <a class="panel-block">
-                                    <span class="panel-icon">
-                                        <i class="fa fa-book"></i>
-                                    </span>
-                                    bootstrap
-                                </a>
-                                <a class="panel-block">
-                                    <span class="panel-icon">
-                                        <i class="fa fa-book"></i>
-                                    </span>
-                                    minireset.css
-                                </a>
-                                <a class="panel-block">
-                                    <span class="panel-icon">
-                                        <i class="fa fa-book"></i>
-                                    </span>
-                                    progroup.github.io
-                                </a>
-                                <a class="panel-block">
-                                    <span class="panel-icon">
-                                        <i class="fa fa-code-fork"></i>
-                                    </span>
-                                    progroup/prototype
-                                </a>
-                                <a class="panel-block">
-                                    <span class="panel-icon">
-                                        <i class="fa fa-code-fork"></i>
-                                    </span>
-                                    mojs
-                                </a>
-                                <label class="panel-block">
-                                    <input type="checkbox">
-                                    Remember me
-                                </label>
-                                <div class="panel-block">
-                                    <button class="button is-primary is-outlined is-fullwidth">
-                                        Reset All Filters
-                                    </button>
-                                </div>
-                            </nav>
-                        </div>
-                        <div class="column">
-                            <progress class="progress is-primary" value="30" max="100">30%</progress>
-                            <progress class="progress is-info" value="45" max="100">45%</progress>
-                            <progress class="progress is-success" value="60" max="100">60%</progress>
-                            <progress class="progress is-warning" value="75" max="100">75%</progress>
-                            <progress class="progress is-danger" value="90" max="100">90%</progress>
-
-                            <div class="block">
-                                <span class="tag is-success">
-                                    Hello World
-                                    <button class="delete is-small"></button>
-                                </span>
-                            </div>
-
-                            <div class="notification is-danger">
-                                <button class="delete"></button>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
-                            </div>
-
-                            <article class="message is-info">
-                                <div class="message-header">
-                                    Info
-                                    <button class="delete"></button>
-                                </div>
-                                <div class="message-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+            <b-tab-item label="Logos">
+            </b-tab-item>
+            <b-tab-item label="Scratch">
                 <section class="section">
                     <button class="button block" @click="isActive = !isActive">Toggle</button>
                     <b-message title="Default" :active.sync="isActive" type="is-danger" has-icon>
@@ -623,76 +717,6 @@
                 </section>
             </b-tab-item>
             <b-tab-item label="Elements">
-                <section class="section">
-
-                    <a class="button is-link">Customize Data Table</a>
-                    <h2>Edit Columns</h2>
-                    <p>Show or hide columns. Prioritze columns by using up and down arrows. Customize column widths and ability to lock first column.</p>
-                    <table class="table is-bordered is-narrowed">
-                        <thead>
-                            <tr>
-                                <th>Show/Hide</th>
-                                <th>Column</th>
-                                <th>Width</th>
-                                <th>Lock Column</th>
-                            </tr>
-                        </thead>
-
-                        <tr v-for="column in clientsColumns">
-                            <td>
-                                <b-checkbox v-model="column.isVisible">
-                                    @{{ column.title }}
-                                </b-checkbox>
-                            </td>
-                            <td>
-                                <b-select v-model="column.width">
-                                    <option value="">Auto Fit</option>
-                                    <option value="80">Extra Small (80)</option>
-                                    <option value="120">Small (120)</option>
-                                    <option value="240">Medium (240)</option>
-                                    <option value="360">Large (360)</option>
-                                    <option value="500">Extra Large (500)</option>
-                                </b-select>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <a class="button is-primary">OK</a>
-                    <a class="button is-neutral">Cancel</a>
-
-                    {{--  <b-field grouped group-multiline>
-                        <div v-for="column in clientsColumns" class="control">
-                            <b-checkbox v-model="column.isVisible">
-                                @{{ column.title }}
-                            </b-checkbox>
-                        </div>
-                    </b-field>  --}}
-
-                    <b-table
-                        class="b-table--custom"
-                        :data="clients"
-                        :selected.sync="selectedClient"
-                        bordered
-                        narrowed
-                        striped
-                        checkable
-                    >
-                        <template scope="props">
-                            <b-table-column v-for="(column, index) in clientsColumns"
-                                :key="index"
-                                :label="column.title"
-                                :field="column.field"
-                                :meta="column.meta"
-                                :width="column.width"
-                                :numeric="column.isNumeric"
-                                :centered="column.isCentered"
-                                :sortable="column.isSortable"
-                                :visible="column.isVisible" >
-                                @{{ props.row[column.field] }}
-                            </b-table-column>
-                        </template>
-                    </b-table>
-                </section>
                 <section class="section">
                     <b-table
                         :data="data"

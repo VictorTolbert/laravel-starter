@@ -16,7 +16,7 @@ import Tooltip from 'vue-directive-tooltip'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueFloatLabel from 'vue-float-label'
 import flatPickr from 'vue-flatpickr-component'
-
+// import ElementUI from 'element-ui'
 // import Rythm from 'rythm.js'
 // const rythm = new Rythm()
 // rythm.setMusic("path/to/sample.mp3")
@@ -28,6 +28,8 @@ import 'vue-flex/dist/vue-flex.css'
 // import 'vue-directive-tooltip/css/index.css'
 import 'swiper/dist/css/swiper.css'
 import 'flatpickr/dist/flatpickr.css'
+// import 'element-ui/lib/theme-default/index.css'
+
 
 Vue.prototype.authorize = function (handler) {
     // Additional admin privileges here.
@@ -51,6 +53,7 @@ Vue.use(Tooltip)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueFloatLabel)
 Vue.use(flatPickr)
+// Vue.use(ElementUI)
 
 window.Vue = Vue
 window._ = lodash
@@ -65,6 +68,7 @@ window.axios.defaults.headers.common = {
 }
 
 window.events = new Vue()
+
 
 window.flash = function (message) {
     window.events.$emit('flash', message)
