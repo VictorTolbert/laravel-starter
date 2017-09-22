@@ -24988,8 +24988,8 @@ body {
 }
 
 .hero {
-  min-height: 140px;
-  min-height: 10rem;
+  min-height: 168px;
+  min-height: 12rem;
 }
 
 .hero.has-grid-bg {

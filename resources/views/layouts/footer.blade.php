@@ -83,7 +83,7 @@
             </div>
         </nav>
     </div>
-    <header class="hero is-light">
+    <header class="hero is-dark has-grid-bg">
         <div class="hero-body">
             <div class="container is-fluid">
                 <div class="field is-grouped">
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-foot">
+        {{-- <div class="hero-foot">
             <div class="container">
                 <nav class="tabs">
                     <ul>
@@ -118,7 +118,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div> --}}
     </header>
     <section class="section quickview-body">
         <div class="quickview-block">

@@ -97,7 +97,7 @@
                 </div> --}}
 
 
-                <a class="navbar-item" href="{{ route('team') }}">Team</a>
+                <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
