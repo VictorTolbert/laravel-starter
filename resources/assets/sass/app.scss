@@ -248,7 +248,26 @@ body {
   // grid-gap: 1rem;
 }
 
-/* Demo: Desaturation
+/* Hero: .has-waves
+/* ---------------------------------------------------------- */
+.hero.has-waves {
+    background-image: url('/bubbles.svg'), url('/waves.svg');
+    background-size: auto 400px, 1220px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 100%, 0 5px
+}
+
+/* Hero: .has-waves
+/* ---------------------------------------------------------- */
+.hero.has-bubbles {
+    background-image: url('/bubbles.svg');
+    background-size: auto 400px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+
+/* Hero: Demo: Desaturation
 /* ---------------------------------------------------------- */
 .hero-banner {
   background: #980e0e;

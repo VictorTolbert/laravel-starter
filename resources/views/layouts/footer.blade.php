@@ -11,19 +11,19 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        <button id="showPageloader" class="button is-primary">
+                        <button id="showPageloader" class="button is-primary is-inverted">
                             Show Page-loader (3 sec only)
                         </button>
                     </div>
 
                     <div class="level-item">
-                        <button class="button is-primary"
+                        <button class="button is-primary is-inverted"
                             @click="openLoading">
                             Launch loading
                         </button>
                     </div>
                     <div class="level-item">
-                        <button class="button is-primary" data-show="quickview" data-target="quickviewDefault">
+                        <button class="button is-primary is-inverted" data-show="quickview" data-target="quickviewDefault">
                             <span class="icon">
                                 <i class="fa fa-github"></i>
                             </span>
@@ -47,18 +47,17 @@
             <div class="navbar-menu is-active">
                 <div class="navbar-start">
                     <div class="navbar-item">
-                        {{-- <a class="button is-large is-white">
+                        <a class="button is-large is-white">
                             <b-icon icon="settings">
                             </b-icon>
                             <span>Settings</span>
-                        </a> --}}
+                        </a>
                     </div>
                 </div>
                 <div class="navbar-end">
                     <a class="navbar-item" data-dismiss="quickview">
-                          <span class="icon">
-                            {{-- <i class="fa fa-lg fa-times"></i> --}}
-                          </span>
+                          <b-icon icon="close">
+                          </b-icon>
                     </a>
                 </div>
             </div>
@@ -67,8 +66,8 @@
     <header class="hero is-info">
         <div class="hero-body">
             <div class="container is-fluid">
-                <h1 class="title">WJAX Schedule Guide</h1>
-                <h1 class="subtitle">Last Uploaded 03/06/17</h1>
+                <h1 class="title">Display Settings</h1>
+                <h1 class="subtitle">Lorem ipsum dolor sit amet.</h1>
             </div>
         </div>
     </header>
@@ -76,7 +75,7 @@
         <div class="quickview-block">
             <div class="">
                 <div class="content">
-                    <h2 class="subtitle">Edit Columns</h2>
+                    {{-- <h2 class="subtitle">Edit Columns</h2> --}}
                     <p>Show or hide columns. Prioritze columns by using up and down arrows. Customize column widths and ability to lock first column.</p>
                 </div>
                 <table class="b-table--custom table is-bordered is-narrow is-striped">
@@ -117,9 +116,32 @@
                         </td>
                     </tr>
                 </table>
-                <div class="field">
-                    <a class="button is-primary" data-dismiss="quickview" @click="isCustomizeDataModalActive = false">OK</a>
-                    <a class="button is-neutral" data-dismiss="quickview" @click="isCustomizeDataModalActive = false">Cancel</a>
+                <hr>
+                <div class="content">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Description</th>
+                            </tr>
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <td class="media-left">
+                                    <span class="tag is-lit">
+                                        <b>1</b>
+                                    </span>
+                                </td>
+                                <td class="media-content">
+                                    <div class="content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <blockquote>Ut venenatis, nisl scelerisque sollicitudin.</blockquote>
                 </div>
             </div>
         </div>

@@ -1,4 +1,14 @@
 @extends('layouts.app')
+
+@section('hero-body')
+<div class="hero-body">
+    <div class="container is-fluid">
+        <h1 class="title">Framework Agnostic HTML/CSS Markup</h1>
+        <h1 class="subtitle">Last Uploaded 03/06/17</h1>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <section class="section">
     <div class="container is-fluid">
@@ -9,43 +19,17 @@
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
-                        <div class="field">
-                            <label for="email" class="label">E-Mail Address</label>
+                        <b-field label="Username / Email Address">
+                            <b-input id="email" name="email" type="email" icon="person" value="demo@videa.tv" autofocus></b-input>
+                        </b-field>
 
-                            <div class="control has-icons-left has-icons-right">
-                                <input id="email" type="email" class="input{{ $errors->has('email') ? ' is-danger' : '' }}" name="email" value="{{ old('email') }}" autofocus>
-                                <span class="icon is-left">
-                                    <i class="fa fa-envelope"></i>
-                                </span>
-{{--                                 <span class="icon is-small is-right">
-                                    <i class="fa fa-check"></i>
-                                </span> --}}
-                            </div>
-                            @if ($errors->has('email'))
-                                <p class="help is-danger">{{ $errors->first('email') }}</p>
-                            @endif
-                        </div>
+                        <b-field
+                            label="Password">
+                            <b-input id="password" icon="lock" type="password" name="password" value="password1" password-reveal></b-input>
+                        </b-field>
 
                         <div class="field">
-                            <label for="password" class="label">Password</label>
-
-                            <div class="control has-icons-left has-icons-right">
-                                <input id="password" type="password" class="input{{ $errors->has('password') ? ' is-danger' : '' }}" name="password">
-                                <span class="icon is-left">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-{{--                                 <span class="icon is-small is-right">
-                                    <i class="fa fa-check"></i>
-                                </span> --}}
-                            </div>
-                            @if ($errors->has('password'))
-                                <p class="help is-danger">{{ $errors->first('password') }}</p>
-                            @endif
-                        </div>
-
-
-                        <div class="field">
-                            <b-checkbox name="remember" {{ old('remember') ? 'checked' : '' }}>Remember Me</b-checkbox>
+                            <b-checkbox name="remember" v-model="remember">Remember Me</b-checkbox>
                         </div>
 
                         <div class="field is-grouped">

@@ -10,7 +10,7 @@
 $red: #c5203e;
 $yellow: #ffdd57; // Bulma
 $yellow: #fff03f; // Salesforce
-$yellow: #f4831f;
+$orange: #f4831f;
 $green: #04864b;
 $blue: #4295b3;
 
@@ -65,8 +65,12 @@ $danger: $red;
 $danger-invert: findColorInvert($danger);
 
 $warning: $dark;
-$warning: $yellow;
+$warning: $orange;
 $warning-invert: findColorInvert($warning);
+
+$lit: $dark;
+$lit: $yellow;
+$lit-invert: findColorInvert($lit);
 
 $success: $dark;
 $success: $green;
@@ -91,7 +95,8 @@ $colors: (
   'success': ($success, $success-invert),
   'warning': ($warning, $warning-invert),
   'danger': ($danger, $danger-invert),
-  'twitter': ($twitter, $twitter-invert)
+  'twitter': ($twitter, $twitter-invert),
+  'lit': ($lit, $lit-invert),
 );
 
 // Typography

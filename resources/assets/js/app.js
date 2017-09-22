@@ -81,6 +81,7 @@ const app = new Vue({
             data: [],
             total: 0,
             loading: false,
+            remember: true,
             sortField: 'vote_count',
             sortOrder: 'desc',
             page: 1,
@@ -94,7 +95,7 @@ const app = new Vue({
                     width: '',
                     isVisible: true,
                     isSortable: true,
-                    isNumeric: false,
+                    isNumeric: true,
                     isCentered: false
                 },
                 {

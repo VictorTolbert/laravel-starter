@@ -58,7 +58,7 @@ class PagesController extends Controller
      */
     public function kendo()
     {
-        return view('kendo');
+        return view('templates.kendo');
     }
 
     /**
@@ -88,7 +88,7 @@ class PagesController extends Controller
      */
     public function zurb()
     {
-        return view('zurb');
+        return view('templates.zurb');
     }
 
     /**

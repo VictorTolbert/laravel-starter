@@ -3,7 +3,7 @@
 @section('hero-body')
 <div class="hero-body">
     <div class="container is-fluid">
-        <h1 class="title">WJAX Schedule Guide</h1>
+        <h1 class="title">Schedule Guide</h1>
         <h1 class="subtitle">Last Uploaded 03/06/17</h1>
     </div>
 </div>
@@ -32,85 +32,86 @@
         </div>
         <b-panel>
             {{-- <strong slot="header">View Selection</strong> --}}
-            <div class="columns">
-                <div class="column">
-                    <b-field label="Program Search">
-                        <b-input></b-input>
-                    </b-field>
-                </div>
-                <div class="column">
-                    <b-field label="Daypart">
-                        <b-select expanded disabled>
-                            <option>Daytime</option>
+            <b-field grouped group-multiline>
+                <b-field label="Name" expanded>
+                    <b-field>
+                        <b-select placeholder="Title">
+                            <option>Mr.</option>
+                            <option>Ms.</option>
                         </b-select>
+                        <b-input placeholder="Name" expanded></b-input>
                     </b-field>
-                </div>
-                <div class="column">
-                    <b-field label="Flight Start">
-                        <b-datepicker
-                            placeholder="Click to select..."
-                            :first-day-of-week="1"
-                            icon="today"
-                            :readonly="false">
-                            <button class="button is-primary"
-                                @click="date = new Date()">
-                                <b-icon icon="today"></b-icon>
-                                <span>Today</span>
-                            </button>
+                </b-field>
+                <b-field label="Email" expanded>
+                    <b-input placeholder="some@email.com"></b-input>
+                </b-field>
+                <b-field label="Autocomplete" expanded>
+                    <b-input></b-input>
+                </b-field>
+                <b-field label="Text Input" expanded>
+                    <b-input></b-input>
+                </b-field>
+                <b-field label="Select">
+                    <b-select>
+                        <option>Daytime</option>
+                    </b-select>
+                </b-field>
+                <b-field label="Datepicker">
+                    <b-datepicker
+                        placeholder="Click to select..."
+                        :first-day-of-week="1"
+                        icon="today"
+                        :readonly="false">
+                        <button class="button is-primary"
+                            @click="date = new Date()">
+                            <b-icon icon="today"></b-icon>
+                            <span>Today</span>
+                        </button>
 
-                            <button class="button is-danger"
-                                @click="date = null">
-                                <b-icon icon="clear"></b-icon>
-                                <span>Clear</span>
-                            </button>
-                        </b-datepicker>
-                    </b-field>
-                </div>
-                <div class="column">
-                    <b-field label="Flight End">
-                        <b-datepicker
-                            placeholder="Click to select..."
-                            icon="today"
-                            :first-day-of-week="1"
-                            :readonly="false">
-                        </b-datepicker>
-                    </b-field>
-                </div>
-                <div class="column">
-                    <b-field label="Days">
-                        <b-select expanded>
-                            <option>Mon - Fri</option>
-                            <option>Mon - Sun</option>
-                            <option>Sat - Sun</option>
-                            <option>Mon</option>
-                            <option>Tue</option>
-                            <option>Wed</option>
-                            <option>Thu</option>
-                            <option>Fri</option>
-                            <option>Sat</option>
-                            <option>Sun</option>
-                        </b-select>
-                    </b-field>
-                </div>
-                <div class="column">
-                    <b-field label="Show Programs">
-                        <b-select expanded>
-                            <option>Availed Only</option>
-                            <option>Non-Avaiiled Only</option>
-                            <option>Both Availed and Non-Availed</option>
-                        </b-select>
-                    </b-field>
-                </div>
-                <div class="column">
-                    <div class="field">
-                        <label class="label">&nbsp;</label>
-                        <div class="control">
-                            <button class="button is-primary">Search</button>
-                            <button class="button is-neutral">Clear</button>
-                        </div>
+                        <button class="button is-danger"
+                            @click="date = null">
+                            <b-icon icon="clear"></b-icon>
+                            <span>Clear</span>
+                        </button>
+                    </b-datepicker>
+                </b-field>
+                <b-field label="Flight End">
+                    <b-datepicker
+                        placeholder="Click to select..."
+                        icon="today"
+                        :first-day-of-week="1"
+                        :readonly="false">
+                    </b-datepicker>
+                </b-field>
+                <b-field label="Days">
+                    <b-select>
+                        <option>Mon - Fri</option>
+                        <option>Mon - Sun</option>
+                        <option>Sat - Sun</option>
+                        <option>Mon</option>
+                        <option>Tue</option>
+                        <option>Wed</option>
+                        <option>Thu</option>
+                        <option>Fri</option>
+                        <option>Sat</option>
+                        <option>Sun</option>
+                    </b-select>
+                </b-field>
+                <b-field label="Show Programs">
+                    <b-select>
+                        <option>Availed Only</option>
+                        <option>Non-Avaiiled Only</option>
+                        <option>Both Availed and Non-Availed</option>
+                    </b-select>
+                </b-field>
+                <div class="field">
+                    <label class="label">&nbsp;</label>
+                    <div class="control">
+                        <button class="button is-primary">Search</button>
+                        <button class="button is-neutral">Clear</button>
                     </div>
                 </div>
-            </div>
+            </b-field>
         </b-panel>
         <div class="level" style="margin-bottom: 0.25rem">
             <div class="level-left">

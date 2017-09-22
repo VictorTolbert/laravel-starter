@@ -19,25 +19,65 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
+                <div class="navbar-item">
+                    <b-field>
+                        <p class="control">
+                            <b-dropdown>
+                                <button class="button" slot="trigger">
+                                    <span>Filters</span>
+                                    <b-icon icon="arrow_drop_down"></b-icon>
+                                </button>
+
+                                <b-dropdown-item value="open_issues">Open Issues and Pull Requests</b-dropdown-item>
+                                <b-dropdown-item value="your_issues">Your Issues</b-dropdown-item>
+                                <b-dropdown-item value="pull_requests">Your Pull Requests</b-dropdown-item>
+                                <b-dropdown-item value="everything">Everything</b-dropdown-item>
+                            </b-dropdown>
+                        </p>
+                        <b-input icon="search" type="search" placeholder="Search..."></b-input>
+                    </b-field>
+                </div>
+
+                <div class="navbar-item">
+                    <b-field>
+                        <p class="control">
+                            <button class="button is-primary">
+                                WVVV
+                            </button>
+                        </p>
+                        <p class="control">
+                            <b-dropdown>
+                                <button class="button is-primary" slot="trigger">
+                                    <b-icon icon="arrow_drop_down"></b-icon>
+                                </button>
+
+                                <b-dropdown-item>Action</b-dropdown-item>
+                                <b-dropdown-item>Another action</b-dropdown-item>
+                                <b-dropdown-item>Something else</b-dropdown-item>
+                            </b-dropdown>
+                        </p>
+                    </b-field>
+                </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
-                        Documentation
+                        Overview
                     </div>
                     <div id="moreDropdown" class="navbar-dropdown">
-                        <a class="navbar-item" href="/pages/overview">
-                            Overview
+                        <a class="navbar-item" href="/overview/start">
+                            Start
                         </a>
-                        <a class="navbar-item" href="/pages/components">
-                            Components
+                        <a class="navbar-item" href="/overview/introduction">
+                            Introduction
                         </a>
-                        <a class="navbar-item" href="/pages/tips">
-                            Tips
+                        <a class="navbar-item" href="/overview/changelog">
+                            Changelog
                         </a>
-                        <a class="navbar-item" href="/pages/tips">
-                            Tools
+                        <a class="navbar-item" href="/overview/tips">
+                            Tools and Tips
                         </a>
                     </div>
                 </div>
+                <a class="navbar-item">Blog (Newsletter Archive)</a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         Experiments
@@ -60,9 +100,10 @@
                     </div>
                 </div>
                 <a class="navbar-item" data-show="quickview" data-target="quickviewDefault">
-                      <b-icon icon="sliders" pack="fa" size="is-large">
+                      <b-icon icon="settings">
                       </b-icon>
                 </a>
+
                 @endif
             </div>
         </div>
