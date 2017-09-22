@@ -48,7 +48,7 @@ Route::name('team')->get('/team', 'PagesController@team');
 Route::name('test')->get('/test', 'PagesController@test');
 Route::name('zurb')->get('/zurb', 'PagesController@zurb');
 Route::name('home')->get('/', function () {
-    return redirect()->route('dashboard');
+    return redirect()->route('tables');
 });
 
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

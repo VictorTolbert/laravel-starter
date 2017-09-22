@@ -2,15 +2,27 @@
 
 <!-- https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb -->
 
-- reduce
-- map
-- filter
-- sum
-- sort
-- forEach
-- find
 - every
+- filter
+- find
+- forEach
+- join
+- length
+- map
+- pop
+- push
+- reduce
+- reverse
+- shift
+- slice
 - some
+- sort
+- all
+- first
+- splice
+- split
+- sum
+
 
 ```js
 var colors = ['red', 'green', 'blue']

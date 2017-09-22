@@ -14,13 +14,16 @@
 
         <div class="navbar-menu" id="navMenuIndex">
             <div class="navbar-start">
+                @if (Auth::guest())
+                @else
                 <a class="navbar-item" href="{{ route('team') }}">Team</a>
+                @endif
             </div>
 
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
-                <div class="navbar-item">
+                {{-- <div class="navbar-item">
                     <b-field>
                         <p class="control">
                             <b-dropdown>
@@ -37,9 +40,9 @@
                         </p>
                         <b-input icon="search" type="search" placeholder="Search..."></b-input>
                     </b-field>
-                </div>
+                </div> --}}
 
-                <div class="navbar-item">
+                {{-- <div class="navbar-item">
                     <b-field>
                         <p class="control">
                             <button class="button is-primary">
@@ -58,8 +61,9 @@
                             </b-dropdown>
                         </p>
                     </b-field>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
+                </div> --}}
+
+                {{-- <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         Overview
                     </div>
@@ -77,9 +81,11 @@
                             Tools and Tips
                         </a>
                     </div>
-                </div>
-                <a class="navbar-item">Blog (Newsletter Archive)</a>
-                <div class="navbar-item has-dropdown is-hoverable">
+                </div> --}}
+
+                {{-- <a class="navbar-item">Blog (Newsletter Archive)</a> --}}
+
+                {{-- <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         Experiments
                     </div>
@@ -89,7 +95,8 @@
                         <a href="/podcasts" class="navbar-item">Podcasts</a>
                         <a href="/episodes" class="navbar-item">Episodes</a>
                     </div>
-                </div>
+                </div> --}}
+
                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         {{ Auth::user()->name }} <span class="caret"></span>

@@ -4,7 +4,7 @@
 <div class="hero-body">
     <div class="container is-fluid">
         <h1 class="title">Dashboard</h1>
-        <h1 class="subtitle">Last Uploaded 03/06/17</h1>
+        <h1 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure doloribus, quidem optio, numquam commodi unde nihil nesciunt sapiente obcaecati corporis maiores ipsam cumque magni magnam provident sed sequi, praesentium, veniam.</h1>
     </div>
 </div>
 @endsection
@@ -17,7 +17,9 @@
             <div class="tile is-parent is-vertical">
                 <article class="tile is-child box">
                 <p class="title">Status</p>
-                <p class="subtitle">Top box</p>
+                {{-- <p class="subtitle">Top box</p> --}}
+                    @include('partials.svg.us')
+                    {{-- @include('partials.svg.usa') --}}
                 </article>
                 <article class="tile is-child box">
                 <p class="title">Experiments</p>

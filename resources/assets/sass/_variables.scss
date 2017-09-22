@@ -54,30 +54,31 @@ $deep-blush: #ea8288;
 // 3. Set the derived variables
 $primary: $plum;
 $primary: $palette-funblue-600;
+$primary: $dark;
 $primary-invert: findColorInvert($primary);
 
-$secondary: $dark;
 $secondary: $ecstasy;
+$secondary: $dark;
 $secondary-invert: findColorInvert($secondary);
 
-$danger: $dark;
 $danger: $red;
+$danger: $dark;
 $danger-invert: findColorInvert($danger);
 
-$warning: $dark;
 $warning: $orange;
+$warning: $dark;
 $warning-invert: findColorInvert($warning);
 
-$lit: $dark;
 $lit: $yellow;
+$lit: $dark;
 $lit-invert: findColorInvert($lit);
 
-$success: $dark;
 $success: $green;
+$success: $dark;
 $success-invert: findColorInvert($success);
 
-$info: $dark;
 $info: $blue;
+$info: $dark;
 $info-invert: findColorInvert($info);
 
 $twitter: #4099ff;

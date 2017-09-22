@@ -3,8 +3,8 @@
 @section('hero-body')
 <div class="hero-body">
     <div class="container is-fluid">
-        <h1 class="title">Framework Agnostic HTML/CSS Markup</h1>
-        <h1 class="subtitle">Last Uploaded 03/06/17</h1>
+        <h1 class="title">UI Prototypes</h1>
+        <h1 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, atque porro perspiciatis numquam. Eaque cupiditate minima et, aperiam sunt. Dolor, illo eum! Cupiditate nobis ipsa ab, tempora illo ipsum dolorem.</h1>
     </div>
 </div>
 @endsection
