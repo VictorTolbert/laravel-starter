@@ -16,7 +16,6 @@
             <div class="navbar-start">
                 @if (Auth::guest())
                 @else
-                <a class="navbar-item" href="{{ route('team') }}">Team</a>
                 @endif
             </div>
 
@@ -97,6 +96,9 @@
                     </div>
                 </div> --}}
 
+
+                <a class="navbar-item" href="{{ route('team') }}">Team</a>
+
                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         {{ Auth::user()->name }} <span class="caret"></span>
@@ -111,7 +113,9 @@
                       <b-icon icon="settings">
                       </b-icon>
                 </a>
-
+                <a class="navbar-item">
+                    <b-icon icon="help"></b-icon>
+                </a>
                 @endif
             </div>
         </div>

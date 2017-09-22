@@ -8,6 +8,15 @@
 - Easy to maintain
 - Reactive
 
+## Motivations
+
+- **simpler markup**: flexbox doesn't require as much nesting and as many tweaks like clearfixes or min-heights
+- **new features**: flexbox allows to things that were almost impossible without any JavaScript
+- **easy modifier classes**: I prefer having a base class like `button` and modify the style on top of that, by using a pre-determined syntax, which is that every modifier class should start with is-
+- **learning**: this project has taught me a lot about flexbox, its pros and cons
+
+
+
 ## Features
 
 - [Modern Javascript](https://github.com/mbeaudru/modern-js-cheatsheet)

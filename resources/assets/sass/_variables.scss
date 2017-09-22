@@ -13,6 +13,7 @@ $yellow: #fff03f; // Salesforce
 $orange: #f4831f;
 $green: #04864b;
 $blue: #4295b3;
+$purple: #692565;
 
 // Videa Brand Colors
 $fun-blue: #1d4f90;
@@ -52,34 +53,46 @@ $lemon-chiffon: #faffbd;
 $deep-blush: #ea8288;
 
 // 3. Set the derived variables
-$primary: $plum;
-$primary: $palette-funblue-600;
 $primary: $dark;
+$primary: $purple;
+$primary: $palette-funblue-500;
 $primary-invert: findColorInvert($primary);
 
-$secondary: $ecstasy;
 $secondary: $dark;
+$secondary: $orange;
 $secondary-invert: findColorInvert($secondary);
 
-$danger: $red;
 $danger: $dark;
+$danger: $red;
 $danger-invert: findColorInvert($danger);
 
-$warning: $orange;
 $warning: $dark;
+$warning: $orange;
 $warning-invert: findColorInvert($warning);
 
-$lit: $yellow;
 $lit: $dark;
+$lit: $yellow;
 $lit-invert: findColorInvert($lit);
 
-$success: $green;
 $success: $dark;
+$success: $green;
 $success-invert: findColorInvert($success);
 
-$info: $blue;
 $info: $dark;
+$info: $blue;
 $info-invert: findColorInvert($info);
+
+$css3: #1572B6;
+$css3-invert: findColorInvert($css3);
+
+$html5: #E34F26;
+$html5-invert: findColorInvert($html5);
+
+$javascript: #F7DF1E;
+$javascript-invert: findColorInvert($javascript);
+
+$git: #F14E32;
+$git-invert: findColorInvert($git);
 
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
@@ -102,6 +115,10 @@ $colors: (
   'success': ($success, $success-invert),
   'warning': ($warning, $warning-invert),
   'danger': ($danger, $danger-invert),
+  'css3': ($css3, $css3-invert),
+  'html5': ($html5, $html5-invert),
+  'javascript': ($javascript, $javascript-invert),
+  'git': ($git, $git-invert),
   'react': ($react, $react-invert),
   'twitter': ($twitter, $twitter-invert),
   'vue': ($vue, $vue-invert),

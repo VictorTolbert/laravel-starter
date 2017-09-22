@@ -41,5 +41,6 @@
     @include('partials.navbar-toggle-listener')
 
     <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
 </body>
 </html>

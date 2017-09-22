@@ -1,14 +1,112 @@
 <template>
     <div>
-        <b-table :data="isEmpty ? [] : avails" :selected.sync="selected" checkable :checked-rows.sync="checkedRows"
-            detailed @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
-            :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''" :bordered="isBordered"
-            :striped="isStriped" :narrowed="isNarrowed" :loading="isLoading" :mobile-cards="hasMobileCards"
-            :paginated="avails.length > perPage" :per-page="perPage" :pagination-simple="isPaginationSimple"
-            :default-sort-direction="defaultSortDirection" default-sort="">
+        <h2 class="is-size-3">Avails</h2>
+
+        <hr>
+
+        <div class="control">
+            <b-switch v-model="hasMobileCards">Mobile cards
+                <small>(collapsed rows)</small>
+            </b-switch>
+        </div>
+
+        <div class="control">
+            <button class="button field is-outlined" @click="selected = {}" :disabled="!Object.keys(selected).length">
+                <b-icon icon="clear" size="is-small"></b-icon>
+                <span>Clear selected</span>
+            </button>
+        </div>
+
+        <div class="control">
+            <button class="button field" @click="checkedRows = []" :disabled="!checkedRows.length">
+                <b-icon icon="clear" size="is-small"></b-icon>
+                <span>Clear checked</span>
+            </button>
+        </div>
+
+        <hr>
+
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <b-field grouped group-multiline>
+                        <div class="field">
+                            <input id="switch-bordered" type="checkbox" name="switch-bordered" class="switch is-success" checked="checked" v-model="isBordered">
+                            <label for="switch-bordered">Bordered</label>
+                        </div>
+
+                        <div class="field">
+                            <input id="switch-striped" type="checkbox" name="switch-striped" class="switch is-success" checked="checked" v-model="isStriped">
+                            <label for="switch-striped">Striped</label>
+                        </div>
+
+                        <div class="field">
+                            <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-success" checked="checked" v-model="isNarrowed">
+                            <label for="switch-narrowed">Bordered</label>
+                        </div>
+
+                        <div class="field">
+                            <input id="switch-loading" type="checkbox" name="switch-loading" class="switch is-success" checked="checked" v-model="isLoading">
+                            <label for="switch-loading">Loading</label>
+                        </div>
+
+                        <div class="field">
+                            <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-success" checked="checked" v-model="isEmpty">
+                            <label for="switch-empty">Empty</label>
+                        </div>
+                    </b-field>
+                </div>
+            </div>
+
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Listings&nbsp;per&nbsp;page</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select v-model="perPage">
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="100">100</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <a class="button">Edit Table</a>
+                </div>
+            </div>
+        </div>
+
+        <b-table
+            :data="isEmpty ? [] : avails"
+            :selected.sync="selected"
+            checkable
+            :checked-rows.sync="checkedRows"
+            detailed
+            @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
+            :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
+            :bordered="isBordered"
+            :striped="isStriped"
+            :narrowed="isNarrowed"
+            :loading="isLoading"
+            :mobile-cards="hasMobileCards"
+            :paginated="avails.length > perPage"
+            :per-page="perPage"
+            :pagination-simple="isPaginationSimple"
+            :default-sort-direction="defaultSortDirection"
+            default-sort="">
             <template scope="props">
                 <b-table-column field="id" meta="Internal ID" label="Number" sortable>
-                    <a style="text-decoration: underline" @click="alert">{{ props.row.id }}</a>
+                    <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">{{ props.row.id }}</a>
                 </b-table-column>
                 <b-table-column field="status" label="Status" sortable>
                     <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">{{ props.row.status }}</span>
@@ -17,7 +115,7 @@
                     {{ props.row.releasedDate }}
                 </b-table-column>
                 <b-table-column field="advertiser" width="450" label="Advertiser" sortable>
-                    {{ props.row.advertiser }}
+                    <a style="text-decoration: underline" @click="$toast.open(props.row.advertiser)">{{ props.row.advertiser }}</a>
                 </b-table-column>
                 <b-table-column field="agency" width="450" label="Agency" sortable>
                     {{ props.row.agency }}
@@ -71,39 +169,8 @@
                 </section>
             </template>
         </b-table>
-        <b-field grouped group-multiline>
-            <div class="control">
-                <b-switch v-model="isBordered">Bordered</b-switch>
-            </div>
-            <div class="control">
-                <b-switch v-model="isStriped">Striped</b-switch>
-            </div>
-            <div class="control">
-                <b-switch v-model="isNarrowed">Narrowed</b-switch>
-            </div>
-            <div class="control">
-                <b-switch v-model="isLoading">Loading state</b-switch>
-            </div>
-            <div class="control">
-                <b-switch v-model="isEmpty">Empty</b-switch>
-            </div>
-            <div class="control">
-                <b-switch v-model="hasMobileCards">Mobile cards
-                    <small>(collapsed rows)</small>
-                </b-switch>
-            </div>
-        </b-field>
 
-        <button class="button field is-danger" @click="selected = {}" :disabled="!Object.keys(selected).length">
-            <b-icon icon="clear"></b-icon>
-            <span>Clear selected</span>
-        </button>
-
-        <button class="button field is-danger" @click="checkedRows = []" :disabled="!checkedRows.length">
-            <b-icon icon="clear"></b-icon>
-            <span>Clear checked</span>
-        </button>
-        <div class="modal" :class="isActive ? 'is-active' : 'w'">
+        <div class="modal" :class="isActive ? 'is-active' : ''">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
