@@ -23,6 +23,7 @@ Vue.component('publish-button', require('./components/PublishButton'))
 Vue.component('subscribe-button', require('./components/SubscribeButton'))
 Vue.component('cover-image-upload', require('./components/CoverImageUpload'))
 Vue.component('steps', require('./components/Steps'))
+Vue.component('imdb', require('./components/Imdb'))
 // Vue.component('omdb', require('./components/Omdb'))
 
 import people from './data/people.json'

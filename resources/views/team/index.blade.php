@@ -12,26 +12,21 @@
 @section('content')
 <section class="section">
     <div class="container is-fluid">
+        <div class="columns">
+            <div class="column">
+                <ul>
+                    <li>Lynn Hobbs</li>
+                    <li>Dawn Tavoletti</li>
+                    <li>Tom Phillips</li>
+                    <li>Osen</li>
+                    <li>Evelyn</li>
+                </ul>
+            </div>
+            <div class="is-divider-vertical" data-content="OR"></div>
+            <div class="column">
 
-        <p class="ciu_embed" data-feature="flexbox" data-periods="current,past_1">
-          <a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a> Data on support for the flexbox feature across the major browsers from caniuse.com.
-        </p>
-
-        <p class="ciu_embed" data-feature="css-grid" data-periods="current,past_1">
-          <a href="http://caniuse.com/#feat=css-grid">Can I Use css-grid?</a> Data on support for the css-grid feature across the major browsers from caniuse.com.
-        </p>
-
-<div class="columns">
-  <div class="column">
-
-      Lynn Hobbs
-      Dawn Tavoletti
-      Tom Phillips
-      Osen
-      Evelyn
-  </div>
-  <div class="is-divider-vertical" data-content="OR"></div>
-  <div class="column"></div>
-</div>
+            </div>
+        </div>
     </div>
 </section>
+@endsection

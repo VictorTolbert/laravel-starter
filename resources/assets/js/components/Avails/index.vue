@@ -1,10 +1,12 @@
 <template>
     <div>
-        <h2 class="is-size-3">Avails</h2>
+        <!-- https://archive-2_1_4.lightningdesignsystem.com/components/data-tables -->
 
-        <hr>
+        <!-- <h2 class="is-size-3">Avails</h2> -->
 
-        <div class="control">
+        <!-- <hr> -->
+
+<!--         <div class="control">
             <b-switch v-model="hasMobileCards">Mobile cards
                 <small>(collapsed rows)</small>
             </b-switch>
@@ -24,10 +26,13 @@
             </button>
         </div>
 
-        <hr>
+        <hr> -->
 
         <div class="level">
             <div class="level-left">
+                <div class="level-item">
+                    <imdb></imdb>
+                </div>
                 <div class="level-item">
                     <b-field grouped group-multiline>
                         <div class="field">
@@ -42,37 +47,49 @@
 
                         <div class="field">
                             <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-success" checked="checked" v-model="isNarrowed">
-                            <label for="switch-narrowed">Bordered</label>
+                            <label for="switch-narrowed">Narrowed</label>
                         </div>
 
                         <div class="field">
                             <input id="switch-loading" type="checkbox" name="switch-loading" class="switch is-success" checked="checked" v-model="isLoading">
-                            <label for="switch-loading">Loading</label>
+                            <label for="switch-loading">Loading state</label>
                         </div>
 
                         <div class="field">
                             <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-success" checked="checked" v-model="isEmpty">
                             <label for="switch-empty">Empty</label>
                         </div>
+
+                        <div class="field">
+                            <input id="switch-mobile-cards" type="checkbox" name="switch-mobile-cards" class="switch is-success" checked="checked" v-model="hasMobileCards">
+                            <label for="switch-mobile-cards">Mobile cards</label>
+                        </div>
+
                     </b-field>
+                </div>
+                <div class="level-item">
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-link">Advanced Search</button>
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="level-right">
                 <div class="level-item">
                     <div class="field is-horizontal">
-                        <div class="field-label is-normal">
-                            <label class="label">Listings&nbsp;per&nbsp;page</label>
-                        </div>
                         <div class="field-body">
                             <div class="field">
                                 <div class="control">
                                     <div class="select is-fullwidth">
                                         <select v-model="perPage">
-                                            <option value="5">5</option>
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="100">100</option>
+                                            <option value="5">5 per page</option>
+                                            <option value="10">10 per page</option>
+                                            <option value="25">25 per page</option>
+                                            <option value="50">50 per page</option>
+                                            <option value="100">100 per page</option>
+                                            <option value="250">250 per page</option>
                                         </select>
                                     </div>
                                 </div>
@@ -82,6 +99,18 @@
                 </div>
                 <div class="level-item">
                     <a class="button">Edit Table</a>
+                </div>
+                <div class="level-item">
+                    <a class="button">
+                        <b-icon icon="file_download" size="is-small">
+                        </b-icon>
+                    </a>
+                </div>
+                <div class="level-item">
+                    <a class="button">
+                    <b-icon icon="sliders" pack="fa">
+                        </b-icon>
+                    </a>
                 </div>
             </div>
         </div>

@@ -113,9 +113,9 @@
                       <b-icon icon="settings">
                       </b-icon>
                 </a>
-                <a class="navbar-item">
+{{--                 <a class="navbar-item">
                     <b-icon icon="help"></b-icon>
-                </a>
+                </a> --}}
                 @endif
             </div>
         </div>

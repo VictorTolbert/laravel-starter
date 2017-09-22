@@ -4,18 +4,20 @@
 <div class="hero-body">
     <div class="container is-fluid">
         <h1 class="title">Data Table</h1>
-        <h2 class="subtitle">The inevitable HTML <b>table</b>, with special case cells</h2>
+        <h2 class="subtitle">Data tables are an enhanced version of an HTML table and are used to display tabular data.</h2>
     </div>
 </div>
 @endsection
 
 @section('content')
-
 <section class="section">
     <div class="container is-fluid">
+
+        {{-- <a href="#component-overview">Component Overview</a> --}}
+
         <avails></avails>
-        <hr>
-        <h2 class="is-size-3">Inventory Guide</h2>
+
+        {{-- <h2 class="is-size-3">Inventory Guide</h2>
         <b-table
             :bordered="isBordered"
             :checkable="isCheckable"
@@ -99,7 +101,14 @@
                     </div>
                 </section>
             </template>
-        </b-table>
+        </b-table> --}}
+{{--         <div class="content">
+
+            <h2 id="component-overview">Component Overview</h2>
+            <p>To initialize a data table, apply the <code>.slds-table</code> class to the table element. This class creates a table with formatted cells and allows you to use data table utilities.</p>
+
+        </div> --}}
+
     </div>
 </section>
 {{-- <b-modal
