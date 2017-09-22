@@ -83,6 +83,12 @@ $info-invert: findColorInvert($info);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
 
+$react: #00D8FF;
+$react-invert: findColorInvert($react);
+
+$vue: #4FC08D;
+$vue-invert: findColorInvert($vue);
+
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
   'white': ($white, $black),
@@ -95,7 +101,9 @@ $colors: (
   'success': ($success, $success-invert),
   'warning': ($warning, $warning-invert),
   'danger': ($danger, $danger-invert),
+  'react': ($react, $react-invert),
   'twitter': ($twitter, $twitter-invert),
+  'vue': ($vue, $vue-invert),
   'lit': ($lit, $lit-invert),
 );
 

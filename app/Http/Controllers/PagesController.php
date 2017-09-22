@@ -32,6 +32,56 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function blog()
+    {
+        return view('blog.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function changelog()
+    {
+        return view('changelog');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function docs()
+    {
+        return view('docs.home');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function kendo()
+    {
+        return view('templates.kendo');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function icons()
     {
         $gravatar = get_gravatar('victor.tolbert@gmail.com');
@@ -56,19 +106,9 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function kendo()
+    public function team()
     {
-        return view('templates.kendo');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function changelog()
-    {
-        return view('changelog');
+        return view('team.index');
     }
 
     /**
@@ -89,15 +129,5 @@ class PagesController extends Controller
     public function zurb()
     {
         return view('templates.zurb');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function docs()
-    {
-        return view('docs.home');
     }
 }

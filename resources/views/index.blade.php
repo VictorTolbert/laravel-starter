@@ -31,8 +31,7 @@
                     <b-modal
                         :active.sync="isCustomizeDataModalActive"
                         :width="960"
-                        has-modal-card
-                        >
+                        has-modal-card>
                         <div class="card">
                             <div class="card-content">
                                 <div class="">
@@ -278,8 +277,7 @@
                         narrowed
                         striped
                         checkable
-                        detailed
-                    >
+                        detailed>
                         <template scope="props">
                             <b-table-column v-for="(column, index) in clientsColumns"
                                 :key="index"

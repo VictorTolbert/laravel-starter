@@ -37,11 +37,26 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
 
 Route::name('profile')->get('/profiles/{user}', 'ProfilesController@show');
 Route::name('changelog')->get('/changelog', 'PagesController@changelog');
+Route::name('blog')->get('/blog', 'PagesController@blog');
+Route::name('charts')->get('/charts', 'PagesController@charts');
+Route::name('dashboard')->get('/dashboard', 'PagesController@dashboard');
 Route::name('docs')->get('/docs', 'PagesController@docs');
 Route::name('icons')->get('/icons', 'PagesController@icons');
 Route::name('kendo')->get('/kendo', 'PagesController@kendo');
 Route::name('tables')->get('/tables', 'PagesController@tables');
+Route::name('team')->get('/team', 'PagesController@team');
 Route::name('test')->get('/test', 'PagesController@test');
 Route::name('zurb')->get('/zurb', 'PagesController@zurb');
-Route::name('home')->get('/', 'PagesController@tables');
+Route::name('home')->get('/', function () {
+    return redirect()->route('dashboard');
+});
+
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');
+
+
+
+// Route::group(['prefix'=>'help','as'=>'help'],function() {
+//     Route::any('/',function() {
+//         return Redirect::route('contact');
+//     });
+// });

@@ -3,37 +3,55 @@
 @section('hero-body')
 <div class="hero-body">
     <div class="container is-fluid">
-        <h1 class="title">Schedule Guide</h1>
-        <h1 class="subtitle">Last Uploaded 03/06/17</h1>
+        <h1 class="title">Data Table</h1>
+        <h2 class="subtitle">The inevitable HTML <b>table</b>, with special case cells</h2>
     </div>
 </div>
 @endsection
 
 @section('content')
+<section class="section" style="display: none">
+    <div class="container is-fluid">
+        <b-message title="Danger with icon" type="is-danger" has-icon>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+        </b-message>
+
+        <b-message title="Success with icon" type="is-success" has-icon>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+        </b-message>
+
+        <b-message title="Info with icon" type="is-info" has-icon>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+        </b-message>
+
+        <b-message title="Warning with icon" type="is-warning" has-icon>
+            Lorem ipsum dolor sit amet, consectetur warning elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+        </b-message>
+    </div>
+</section>
 <section class="section">
     <div class="container is-fluid">
-        <div class="level" style="margin-bottom: 0.25rem">
+        <div class="level">
             <div class="level-left">
                 <div class="level-item">
                     <div class="tags has-addons">
-                        <span class="tag">Conflicts</span>
-                        <span class="tag is-danger">8</span>
+                        <span class="tag is-medium">Conflicts</span>
+                        <span class="tag is-medium is-danger">8</span>
                     </div>
                 </div>
                 <div class="level-item">
                     <div class="tags has-addons">
-                        <span class="tag">Gaps</span>
-                        <span class="tag is-danger">4</span>
+                        <span class="tag is-medium">Gaps</span>
+                        <span class="tag is-medium is-danger">4</span>
                     </div>
                 </div>
             </div>
             <div class="level-right">
             </div>
         </div>
-        <b-panel>
-            {{-- <strong slot="header">View Selection</strong> --}}
+        <div class="box">
             <b-field grouped group-multiline>
-                <b-field label="Name" expanded>
+{{--                 <b-field label="Name" expanded>
                     <b-field>
                         <b-select placeholder="Title">
                             <option>Mr.</option>
@@ -47,16 +65,21 @@
                 </b-field>
                 <b-field label="Autocomplete" expanded>
                     <b-input></b-input>
-                </b-field>
-                <b-field label="Text Input" expanded>
+                </b-field> --}}
+                <b-field label="Program Name" expanded>
                     <b-input></b-input>
                 </b-field>
                 <b-field label="Select">
-                    <b-select>
+                    <b-select placeholder="Select Daypart">
                         <option>Daytime</option>
+                        <option>Prime</option>
+                        <option>Early Morning</option>
+                        <option>Early News</option>
+                        <option>Early Fringe</option>
+                        <option>Late Night</option>
                     </b-select>
                 </b-field>
-                <b-field label="Datepicker">
+                <b-field label="Flight Start">
                     <b-datepicker
                         placeholder="Click to select..."
                         :first-day-of-week="1"
@@ -112,27 +135,56 @@
                     </div>
                 </div>
             </b-field>
-        </b-panel>
+        </div>
         <div class="level" style="margin-bottom: 0.25rem">
             <div class="level-left">
+            </div>
+        </div>
+
+        {{-- <avails></avails> --}}
+
+
+        <div class="level" style="margin-bottom: 0.25rem">
+            <div class="level-left">
+
+                <div class="level-item">
+                    <div class="tags has-addons">
+                        <span class="tag is-success">&nbsp;</span>
+                        <span class="tag">Recurring Program</span>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <div class="tags has-addons">
+                        <span class="tag is-warning">&nbsp;</span>
+                        <span class="tag">Program Deviation</span>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <div class="tags has-addons">
+                        <span class="tag is-danger">&nbsp;</span>
+                        <span class="tag">Non-Sellable Program</span>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <div class="tags has-addons">
+                        <span class="tag is-info">&nbsp;</span>
+                        <span class="tag">Both Programs Availed</span>
+                    </div>
+                </div>
             </div>
             <div class="level-right">
                 <div class="level-item">
                     <div class="field has-addons">
                         <p class="control">
-                          <a class="button is-small">
-                            <span class="icon is-small">
-                              <i class="fa fa-table"></i>
-                            </span>
-                            <span>Table View</span>
+                          <a class="button">
+                            <b-icon icon="view_list"></b-icon>
+                            {{-- <span>Table View</span> --}}
                           </a>
                         </p>
                         <p class="control">
-                          <a class="button is-small">
-                            <span class="icon is-small">
-                              <i class="fa fa-bar-chart"></i>
-                            </span>
-                            <span>Chart View</span>
+                          <a class="button">
+                            <b-icon icon="show_chart"></b-icon>
+                            {{-- <span>Chart View</span> --}}
                           </a>
                         </p>
                     </div>
@@ -140,55 +192,56 @@
                 <div class="level-item">
                     <div class="field has-addons">
                       <p class="control">
-                        <a class="button is-small">
-                            <b-icon
-                                icon="filter_list"
-                                size="is-small">
-                            </b-icon>
-                            <span>Filter</span>
+                        <a class="button">
+                            <b-icon icon="filter_list"></b-icon>
+                            {{-- <span>Filter</span> --}}
                         </a>
                       </p>
                       <p class="control">
-                        <a class="button is-small">
-                          <b-icon
-                              icon="sort"
-                              size="is-small">
-                          </b-icon>
-                          <span>Sort</span>
-                        </a>
-                      </p>
-                      <p class="control">
-                        <a class="button is-small">
-                          <b-icon
-                              icon="file_download"
-                              size="is-small">
-                          </b-icon>
-                          <span>Export</span>
-                        </a>
-                      </p>
-                      <p class="control">
-                        {{-- <a class="button is-small" @click="isCustomizeDataModalActive = true"> --}}
-                        <a class="button is-small" data-show="quickview" data-target="quickviewDefault">
-                          <b-icon
-                              icon="sliders"
-                              pack="fa"
-                              size="is-small">
-                          </b-icon>
-                          <span>Customize Columns</span>
+                        <a class="button ">
+                          <b-icon icon="sort"></b-icon>
+                          {{-- <span>Sort</span> --}}
                         </a>
                       </p>
                     </div>
                 </div>
+                <div class="level-item">
+                    <p class="control">
+                        <a class="button">
+                            <b-icon icon="file_download"></b-icon>
+                            {{-- <span>Export</span> --}}
+                        </a>
+                    </p>
+                </div>
+                <div class="level-item">
+                    <p class="control">
+                        {{-- <a class="button is-small" @click="isCustomizeDataModalActive = true"> --}}
+                        <a class="button" data-show="quickview" data-target="quickviewDefault">
+                            <b-icon icon="sliders" pack="fa"></b-icon>
+                            {{-- <span>Customize Columns</span> --}}
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
+
         <b-table
-            class="b-table--custom"
-            :data="clients"
+            :bordered="isBordered"
+            :checkable="isCheckable"
+            :checked-rows.sync="checkedRows"
+            :data="isEmpty ? [] : clients"
+            :default-sort-direction="defaultSortDirection"
+            :loading="isLoading"
+            :mobile-cards="hasMobileCards"
+            :narrowed="isNarrowed"
+            :paginated="clients.length > perPage"
+            :pagination-simple="isPaginationSimple"
+            :per-page="perPage"
+            :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
             :selected.sync="selectedClient"
-            bordered
-            narrowed
-            striped
-            checkable
+            :striped="isStriped"
+
+            default-sort=""
             detailed>
             <template scope="props">
                 <b-table-column v-for="(column, index) in clientsColumns"
@@ -201,37 +254,59 @@
                     :centered="column.isCentered"
                     :sortable="column.isSortable"
                     :visible="column.isVisible" >
-                    <span v-if="column.field !== 'first_name'">
-                        @{{ props.row[column.field] }}
+                    <span v-if="column.field == 'first_name'">
+                        <b-icon
+                            v-if="props.row.id == 1"
+                            icon="fiber_manual_record">
+                        </b-icon>
+                        <b-icon
+                            v-else
+                            icon="dfe">
+                        </b-icon>
+                        <span>@{{ props.row[column.field] }}</span>
+                    </span>
+                    <span v-if="column.field == 'last_name'">
+                        <a class="day">
+                            <span>M</span>
+                        </a>
+                        <a class="day">
+                            <span>T</span>
+                        </a>
+                        <a class="day">
+                            <span>W</span>
+                        </a>
+                        <a class="day">
+                            <span>T</span>
+                        </a>
+                        <a class="day">
+                            <span>F</span>
+                        </a>
+                        <a class="day">
+                            <span>S</span>
+                        </a>
+                        <a class="day">
+                            <span>S</span>
+                        </a>
                     </span>
                     <span v-else>
-                    <a class="day">
-                        <span>M</span>
-                    </a>
-                    <a class="day">
-                        <span>T</span>
-                    </a>
-                    <a class="day">
-                        <span>W</span>
-                    </a>
-                    <a class="day">
-                        <span>T</span>
-                    </a>
-                    <a class="day">
-                        <span>F</span>
-                    </a>
-                    <a class="day">
-                        <span>S</span>
-                    </a>
-                    <a class="day">
-                        <span>S</span>
-                    </a>
+                        @{{ props.row[column.field] }}
                     </span>
                 </b-table-column>
             </template>
 
             <template slot="detail" scope="props">
                 <h4 class="is-size-4">Detail</h4>
+            </template>
+
+            <template slot="empty">
+                <section class="section">
+                    <div class="content has-text-grey has-text-centered">
+                        <p>
+                            <b-icon icon="sentiment_very_dissatisfied" size="is-large"></b-icon>
+                        </p>
+                        <p>Nothing here.</p>
+                    </div>
+                </section>
             </template>
         </b-table>
     </div>

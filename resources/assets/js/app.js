@@ -69,6 +69,8 @@ const clients = [
     }
 ]
 
+const avails = require('./data/avails')
+
 const app = new Vue({
     el: '#app',
     // router,
@@ -77,15 +79,10 @@ const app = new Vue({
     },
     data () {
         return {
-            people,
-            data: [],
-            total: 0,
-            loading: false,
-            remember: true,
-            sortField: 'vote_count',
-            sortOrder: 'desc',
-            page: 1,
-            perPage: 20,
+            activeTab: 0,
+            avails,
+            checkedRows: [],
+            checkedRows: [avails[1], avails[3]],
             clients,
             clientsColumns: [
                 {
@@ -139,17 +136,9 @@ const app = new Vue({
                     isCentered: false
                 }
             ],
-            movies: [],
+            data: [],
             date: new Date(),
-            isActive: true,
-            isCollapsible: false,
-            isComponentModalActive: false,
-            isCustomizeDataModalActive: false,
-            isFetching: false,
-            isLoading: false,
-            isOpen: true,
-            isPaginated: true,
-            activeTab: 0,
+            defaultSortDirection: 'asc',
             formProps: {
                 email: 'evan@you.com',
                 password: 'testing'
@@ -168,11 +157,37 @@ const app = new Vue({
                 'RxJS',
                 'Vue.js'
             ],
+            hasMobileCards: true,
+            isActive: false,
+            isBordered: true,
+            isCheckable: true,
+            isCollapsible: false,
+            isComponentModalActive: false,
+            isCustomizeDataModalActive: false,
+            isEmpty: false,
+            isFetching: false,
+            isLoading: false,
+            isNarrowed: true,
+            isOpen: true,
+            isPaginated: true,
+            isPaginationSimple: true,
+            isStriped: true,
             keepFirst: false,
+            loading: false,
+            movies: [],
             name: '',
+            page: 1,
+            people,
+            perPage: 5,
+            remember: true,
+            selected: avails[1],
             selected: null,
+            selected: {},
             selectedClient: null,
-            selectedOptions: []
+            selectedOptions: [],
+            sortField: 'vote_count',
+            sortOrder: 'desc',
+            total: 0
         }
     },
     methods: {

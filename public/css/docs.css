@@ -627,7 +627,7 @@ body {
 
 .waves {
     background-color: #292324;
-    /* background-image: url('../images/waves.jpg'); */
+    background-image: url(/images/background.jpg?ff915b67e93be80caae0ab33c0acc232);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;

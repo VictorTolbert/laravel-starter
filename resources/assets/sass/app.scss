@@ -22,6 +22,46 @@
 // @import '~vue-directive-tooltip/src/css/index.scss';
 @import 'laracasts';
 
+/* Variables
+/* ---------------------------------------------------------- */
+:root {
+  /* Colours */
+  --blue: #3eb0ef;
+  --green: #a4d037;
+  --purple: #ad26b4;
+  --yellow: #fecd35;
+  --red: #f05230;
+  --darkgrey: #15171a;
+  --midgrey: #738a94;
+  --lightgrey: #c5d2d9;
+  --whitegrey: #e5eff5;
+  --pink: #fa3a57;
+  --brown: #a3821a;
+  --baseline: 16px;
+}
+
+/*
+/* ---------------------------------------------------------- */
+.vui-selected {
+    background: hsla(188, 40%, 56%, 0.5);
+}
+.vui-table-legend {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #eee;
+}
+
+.vui-table-legend--selected {
+    background-color: hsla(188, 40%, 56%, 0.5);
+}
+
+.vui-table-legend--unselected {
+    background-color: $white;
+}
+
+/*
+/* ---------------------------------------------------------- */
 .day {
     text-align: center;
     vertical-align: middle;
@@ -33,31 +73,36 @@
     line-height: 1.5rem;
 }
 
+/*
+/* ---------------------------------------------------------- */
 .breadcrumb li + li::before {
     color: inherit;
 }
 
-
+/*
+/* ---------------------------------------------------------- */
 .b-table.b-table--custom {
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
 }
 
 .b-table--custom.table,
 .b-table.b-table--custom .table {
     width: auto;
-  table-layout: fixed;
-  white-space: nowrap;
-
-  td {
-    vertical-align: middle;
+    table-layout: fixed;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+
+    td {
+        vertical-align: middle;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
+/*
+/* ---------------------------------------------------------- */
 .bd-callout {
   background-color: whitesmoke;
   border-radius: 3px;
@@ -114,6 +159,8 @@
   color: #fff;
 }
 
+/*
+/* ---------------------------------------------------------- */
 .ham {
   cursor: pointer;
 }
@@ -135,6 +182,8 @@
   transition: 0.3s ease-in;
 }
 
+/*
+/* ---------------------------------------------------------- */
 input[type='file'] {
   filter: alpha(opacity=0);
   opacity: 0;
@@ -146,18 +195,24 @@ input[type='file'] {
   padding-left: 6px;
 }
 
+/*
+/* ---------------------------------------------------------- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
 }
 
+/*
+/* ---------------------------------------------------------- */
 .icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   grid-gap: 1rem;
 }
 
+/*
+/* ---------------------------------------------------------- */
 .u-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -217,9 +272,9 @@ body {
   }
 }
 
-/* Demo: Animated Rainbow background
+/* Hero: Animated Rainbow background
 /* ---------------------------------------------------------- */
-.bd-rainbow {
+.hero.bd-rainbow {
   animation: rainbow 8s ease infinite;
   background-image: linear-gradient(124deg, #ff470f, #ff3860, #b86bff, #3273dc);
   background-size: 800% 800%;
@@ -257,7 +312,7 @@ body {
     background-position: 100% 100%, 0 5px
 }
 
-/* Hero: .has-waves
+/* Hero: .has-bubbles
 /* ---------------------------------------------------------- */
 .hero.has-bubbles {
     background-image: url('/bubbles.svg');
@@ -279,8 +334,9 @@ body {
   filter: grayscale(100%);
 }
 
-/* Demo: Animated Background
+/* Hero:
 /* ---------------------------------------------------------- */
+.hero.has-animated-bg,
 .post--header {
   width: 100%;
   min-height: calc(90vh - 117px);
@@ -310,24 +366,7 @@ body {
   background: yellow;
 }
 
-/* Variables
-/* ---------------------------------------------------------- */
 
-:root {
-  /* Colours */
-  --blue: #3eb0ef;
-  --green: #a4d037;
-  --purple: #ad26b4;
-  --yellow: #fecd35;
-  --red: #f05230;
-  --darkgrey: #15171a;
-  --midgrey: #738a94;
-  --lightgrey: #c5d2d9;
-  --whitegrey: #e5eff5;
-  --pink: #fa3a57;
-  --brown: #a3821a;
-  --baseline: 16px;
-}
 
 .navbar-brand {
   display: inline-block;

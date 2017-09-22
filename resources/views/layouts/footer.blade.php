@@ -73,6 +73,43 @@
     </header>
     <section class="section quickview-body">
         <div class="quickview-block">
+
+            <b-field grouped group-multiline>
+                <div class="control">
+                    <b-switch v-model="isCheckable">Checkable</b-switch>
+                </div>
+                <div class="control">
+                    <b-switch v-model="isBordered">Bordered</b-switch>
+                </div>
+                <div class="control">
+                    <b-switch v-model="isStriped">Striped</b-switch>
+                </div>
+                <div class="control">
+                    <b-switch v-model="isNarrowed">Narrowed</b-switch>
+                </div>
+                <div class="control">
+                    <b-switch v-model="isLoading">Loading state</b-switch>
+                </div>
+                <div class="control">
+                    <b-switch v-model="isEmpty">Empty</b-switch>
+                </div>
+                <div class="control">
+                    <b-switch v-model="hasMobileCards">Mobile cards
+                        <small>(collapsed rows)</small>
+                    </b-switch>
+                </div>
+            </b-field>
+
+            <button class="button field is-danger" @click="selected = {}" :disabled="!Object.keys(selected).length">
+                <b-icon icon="clear"></b-icon>
+                <span>Clear selected</span>
+            </button>
+
+            <button class="button field is-danger" @click="checkedRows = []" :disabled="!checkedRows.length">
+                <b-icon icon="clear"></b-icon>
+                <span>Clear checked</span>
+            </button>
+
             <div class="">
                 <div class="content">
                     {{-- <h2 class="subtitle">Edit Columns</h2> --}}
@@ -118,7 +155,7 @@
                 </table>
                 <hr>
                 <div class="content">
-                    <table class="table">
+                    <table class="table is-border is-narrow is-striped">
                         <thead>
                             <tr>
                                 <th>Number</th>
@@ -127,14 +164,26 @@
                         <thead>
                         <tbody>
                             <tr>
-                                <td class="media-left">
-                                    <span class="tag is-lit">
+                                <td class="has-text-right">
+                                    <span class="tag is-medium is-lit">
                                         <b>1</b>
                                     </span>
                                 </td>
                                 <td class="media-content">
                                     <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="has-text-right">
+                                    <span class="tag is-medium is-lit">
+                                        <b>1</b>
+                                    </span>
+                                </td>
+                                <td class="media-content">
+                                    <div class="content">
+                                        <p>Lorem ipsum dolor sit amet..</p>
                                     </div>
                                 </td>
                             </tr>
