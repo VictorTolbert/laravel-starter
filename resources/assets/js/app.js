@@ -24,11 +24,17 @@ Vue.component('subscribe-button', require('./components/SubscribeButton'))
 Vue.component('cover-image-upload', require('./components/CoverImageUpload'))
 Vue.component('steps', require('./components/Steps'))
 Vue.component('imdb', require('./components/Imdb'))
+Vue.component('register', require('./components/Register'))
+Vue.component('device', require('./components/Device'))
+Vue.component('window', require('./components/Window'))
+
 // Vue.component('omdb', require('./components/Omdb'))
 
 import people from './data/people.json'
 import debounce from 'lodash/debounce'
 import ModalForm from './components/ModalForm'
+
+// import logo from './/assets/buefy.png'
 
 // const template = require('./template')
 
@@ -80,11 +86,13 @@ const app = new Vue({
     },
     data () {
         return {
-            activeTab: 0,
             avails,
+            clients,
+            // logo,
+            people,
+            activeTab: 0,
             checkedRows: [],
             checkedRows: [avails[1], avails[3]],
-            clients,
             clientsColumns: [
                 {
                     title: 'ID',
@@ -172,13 +180,14 @@ const app = new Vue({
             isOpen: true,
             isPaginated: true,
             isPaginationSimple: true,
+            isPublic: true,
             isStriped: true,
             keepFirst: false,
             loading: false,
             movies: [],
             name: '',
+            navigation: null,
             page: 1,
-            people,
             perPage: 5,
             remember: true,
             selected: avails[1],

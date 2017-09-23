@@ -5,6 +5,9 @@
     <div class="container is-fluid">
         <h1 class="title">Data Table</h1>
         <h2 class="subtitle">Data tables are an enhanced version of an HTML table and are used to display tabular data.</h2>
+        {{-- <window>
+            Testing
+        </window> --}}
     </div>
 </div>
 @endsection

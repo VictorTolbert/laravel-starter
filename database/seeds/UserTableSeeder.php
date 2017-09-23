@@ -13,9 +13,19 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->truncate();
         User::create([
-            'name' => 'Demo',
+            'name' => 'Demo User',
             'email' => 'demo@videa.tv',
             'password' => bcrypt('password1'),
+        ]);
+        User::create([
+            'name' => 'Admin User',
+            'email' => 'victor.tolbert@gmail.com',
+            'password' => bcrypt('U9lift'),
+        ]);
+        User::create([
+            'name' => 'Another Admin',
+            'email' => 'vtolbert@vticonsulting.com',
+            'password' => bcrypt('U9lift'),
         ]);
     }
 }

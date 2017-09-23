@@ -14,13 +14,16 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-narrow">
-                <figure class="image is-128x128">
-                  <img src="/images/placeholder-128x128.png">
+                <figure class="image is-48x48">
+                  <img src="{{ get_gravatar($profileUser->email) }}">
                 </figure>
             </div>
             <div class="column is-8 col-md-8 col-md-offset-2">
                 <h1 class="title">
                     {{ $profileUser->name }}
+                </h1>
+                <h1 class="subtitle">
+                    {{ $profileUser->email }}
                 </h1>
             </div>
         </div>

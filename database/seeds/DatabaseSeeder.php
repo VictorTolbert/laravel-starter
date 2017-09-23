@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
 
         $otherUser = factory(\App\User::class)->create();
         $me = factory(\App\User::class)->create([
+            'name' => 'Guest User',
             'email' => 'demo@example.com',
             'password' => bcrypt('secret'),
         ]);

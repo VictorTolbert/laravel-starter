@@ -276,7 +276,7 @@ body {
 }
 
 .hero {
-    min-height: 12rem;
+    min-height: 10rem;
 }
 
 .hero.has-grid-bg {
@@ -312,6 +312,14 @@ body {
   // grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
   grid-template-columns: 1fr 1fr 1fr 1fr;
   // grid-gap: 1rem;
+}
+
+.hero.has-logo-bg {
+    background-image: url('/logo-background.svg');
+    background-size: 1 100%;
+    // background-size:  auto 12rem;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
 }
 
 /* Hero: .has-waves

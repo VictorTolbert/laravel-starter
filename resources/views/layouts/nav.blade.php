@@ -3,6 +3,7 @@
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
                 @include('partials.svg.logo')
+                {{-- <img :src="logo" alt="Videa"> --}}
             </a>
 
             <span class="navbar-burger" data-target="navMenuIndex">
@@ -22,6 +23,15 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
+{{--                 <b-dropdown v-model="navigation" position="is-bottom-left">
+                    <a class="navbar-item" slot="trigger">
+                        <span>Custom</span>
+                        <b-icon icon="arrow_drop_down"></b-icon>
+                    </a>
+                    <b-dropdown-item custom paddingless>
+                    </b-dropdown-item>
+                </b-dropdown> --}}
+
                 {{-- <div class="navbar-item">
                     <b-field>
                         <p class="control">
@@ -96,26 +106,43 @@
                     </div>
                 </div> --}}
 
-
                 <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
 
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <div class="navbar-link">
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </div>
-                    <div id="moreDropdown" class="navbar-dropdown">
-                        <a class="navbar-item" href="{{ route('profile', Auth::user()) }}">My Profile</a>
-                        <a class="navbar-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+                <b-dropdown v-model="isPublic">
+                    <a class="navbar-item" slot="trigger">
+                        <span class="icon">
+                            <img src="{{ get_gravatar(Auth::user()->email) }}" style="margin-right: 0.5rem">
+                        </span>
+                        <span>{{ Auth::user()->name }}</span>
+                        <b-icon icon="arrow_drop_down"></b-icon>
+                    </a>
+
+                    <b-dropdown-item has-link value="profile">
+                        <a class="navbar-item" href="{{ route('profile', Auth::user()) }}">
+                            <b-icon icon="person"></b-icon>
+                            My Profile
+                        </a>
+                    </b-dropdown-item>
+
+
+                    <hr class="dropdown-divider">
+
+                    <b-dropdown-item value="settings" data-show="quickview" data-target="quickviewDefault">
+                        <b-icon icon="settings"></b-icon>
+                        Settings
+                    </b-dropdown-item>
+
+                    <b-dropdown-item has-link custom value="logout">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            <b-icon icon="exit_to_app"></b-icon>
+                            Logout
+                        </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                    </div>
-                </div>
-                <a class="navbar-item" data-show="quickview" data-target="quickviewDefault">
-                      <b-icon icon="settings">
-                      </b-icon>
-                </a>
-{{--                 <a class="navbar-item">
-                    <b-icon icon="help"></b-icon>
-                </a> --}}
+                    </b-dropdown-item>
+
+                </b-dropdown>
+
+
                 @endif
             </div>
         </div>

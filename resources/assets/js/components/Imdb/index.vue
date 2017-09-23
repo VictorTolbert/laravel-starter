@@ -1,5 +1,5 @@
 <template>
-    <b-field>
+    <b-field expanded>
         <b-autocomplete
             v-model="name"
             :data="data"

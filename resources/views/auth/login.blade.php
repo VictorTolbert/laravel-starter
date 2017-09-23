@@ -4,7 +4,7 @@
 <div class="hero-body">
     <div class="container is-fluid">
         <h1 class="title">UI Prototypes</h1>
-        <h1 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, atque porro perspiciatis numquam. Eaque cupiditate minima et, aperiam sunt. Dolor, illo eum! Cupiditate nobis ipsa ab, tempora illo ipsum dolorem.</h1>
+        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, atque porro perspiciatis numquam. Eaque cupiditate minima et, aperiam sunt. Dolor, illo eum! Cupiditate nobis ipsa ab, tempora illo ipsum dolorem.</h2>
     </div>
 </div>
 @endsection

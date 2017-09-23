@@ -6,35 +6,23 @@
 
         <!-- <hr> -->
 
-<!--         <div class="control">
-            <b-switch v-model="hasMobileCards">Mobile cards
-                <small>(collapsed rows)</small>
-            </b-switch>
-        </div>
-
-        <div class="control">
-            <button class="button field is-outlined" @click="selected = {}" :disabled="!Object.keys(selected).length">
-                <b-icon icon="clear" size="is-small"></b-icon>
-                <span>Clear selected</span>
-            </button>
-        </div>
-
-        <div class="control">
-            <button class="button field" @click="checkedRows = []" :disabled="!checkedRows.length">
-                <b-icon icon="clear" size="is-small"></b-icon>
-                <span>Clear checked</span>
-            </button>
-        </div>
-
-        <hr> -->
-
-        <div class="level">
+        <div class="level is-hidden-touch">
             <div class="level-left">
-                <div class="level-item">
+<!--                 <div class="level-item">
                     <imdb></imdb>
-                </div>
+                </div> -->
                 <div class="level-item">
                     <b-field grouped group-multiline>
+                        <div class="field">
+                            <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-success" checked="checked" v-model="isNarrowed">
+                            <label for="switch-narrowed">Narrowed</label>
+                        </div>
+
+                        <div class="field">
+                            <input id="switch-checkable" type="checkbox" name="switch-checkable" class="switch is-success" checked="checked" v-model="isCheckable">
+                            <label for="switch-checkable">Checkable</label>
+                        </div>
+
                         <div class="field">
                             <input id="switch-bordered" type="checkbox" name="switch-bordered" class="switch is-success" checked="checked" v-model="isBordered">
                             <label for="switch-bordered">Bordered</label>
@@ -46,8 +34,8 @@
                         </div>
 
                         <div class="field">
-                            <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-success" checked="checked" v-model="isNarrowed">
-                            <label for="switch-narrowed">Narrowed</label>
+                            <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-success" checked="checked" v-model="isEmpty">
+                            <label for="switch-empty">Empty</label>
                         </div>
 
                         <div class="field">
@@ -55,24 +43,18 @@
                             <label for="switch-loading">Loading state</label>
                         </div>
 
-                        <div class="field">
-                            <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-success" checked="checked" v-model="isEmpty">
-                            <label for="switch-empty">Empty</label>
-                        </div>
-
-                        <div class="field">
+<!--                         <div class="field">
                             <input id="switch-mobile-cards" type="checkbox" name="switch-mobile-cards" class="switch is-success" checked="checked" v-model="hasMobileCards">
                             <label for="switch-mobile-cards">Mobile cards</label>
-                        </div>
-
+                        </div> -->
                     </b-field>
                 </div>
                 <div class="level-item">
-                    <div class="field">
+<!--                     <div class="field">
                         <p class="control">
                             <button class="button is-link">Advanced Search</button>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -112,13 +94,19 @@
                         </b-icon>
                     </a>
                 </div>
+                <div class="level-item">
+                    <a class="button">
+                    <b-icon icon="format_size" size="is-small">
+                    </b-icon>
+                    </a>
+                </div>
             </div>
         </div>
 
         <b-table
             :data="isEmpty ? [] : avails"
             :selected.sync="selected"
-            checkable
+            :checkable="isCheckable"
             :checked-rows.sync="checkedRows"
             detailed
             @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
@@ -190,10 +178,10 @@
                 <section class="section">
                     <div class="content has-text-grey has-text-centered">
                         <p>
-                            <b-icon icon="sentiment_very_dissatisfied" size="is-large">
+                            <b-icon icon="info" size="is-medium">
                             </b-icon>
                         </p>
-                        <p>Nothing here.</p>
+                        <p>No results messaging</p>
                     </div>
                 </section>
             </template>
@@ -231,12 +219,13 @@ export default {
             checkedRows: [avails[1], avails[3]],
             checkedRows: [],
             isEmpty: false,
-            isBordered: true,
+            isCheckable: false,
+            isBordered: false,
             isPaginated: true,
             isPaginationSimple: true,
             defaultSortDirection: 'asc',
-            isStriped: true,
-            isNarrowed: true,
+            isStriped: false,
+            isNarrowed: false,
             isLoading: false,
             hasMobileCards: true,
             isActive: false,
