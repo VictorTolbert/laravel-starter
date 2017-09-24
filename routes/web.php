@@ -91,7 +91,7 @@ Route::name('terms')->get('/terms', 'PagesController@terms');
 
 
 Route::name('home')->get('/', function () {
-    return redirect()->route('tables');
+    return redirect()->route('dashboard');
 });
 
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

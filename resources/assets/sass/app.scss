@@ -17,6 +17,18 @@
 @import 'components/steps';
 @import 'components/timeline';
 
+@import "~highlight.js/styles/atelier-cave-light.css";
+
+// @import "../components/Help/styles.sass";
+// @import "../components/Example/styles.scss";
+// @import "../components/Box/styles.scss";
+// @import "../components/Breadcrumb/styles.scss";
+// @import "../components/DebugGrid/styles.scss";
+// @import "../components/Dropdown/styles.scss";
+// @import "../components/Nav/styles.scss";
+// @import "../components/Tag/styles.scss";
+// @import "../components/Progress/styles.scss";
+
 @import 'components/__tooltip.sass';
 // @import "components/tooltip.sass";
 // @import '~vue-directive-tooltip/src/css/index.scss';

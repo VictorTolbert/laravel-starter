@@ -12,12 +12,11 @@
 @section('content')
 <div class="container is-fluid">
     <b-tabs>
-
-        <b-tab-item label="Datatables">
-            <section class="section">
+        <b-tab-item label="Inbox">
                 {{-- @include('partials.datatables.pricing') --}}
                 {{-- @include('partials.datatables.tv-grid') --}}
-            </section>
+                <div class="options"><i class="fa fa-ellipsis-h"></i></div>
+            <a href="#"><i class="fa fa-bars"></i></a>
         </b-tab-item>
         <b-tab-item label="One">
             <section class="section">
@@ -28,20 +27,13 @@
 
                                 <article class="tile is-child box">
                                     <div class="content">
-                                        <h2>Political</h2>
-                                    {{-- <p class="subtitle">Top box</p> --}}
+                                        <!-- -->
                                     </div>
                                     @include('partials.svg.us')
-                                    {{-- @include('partials.svg.usa') --}}
                                 </article>
 
                                 <article class="tile is-child box">
-                                    <div class="content">
-                                        <h2>Experiments</h2>
-                                    </div>
-                                    <hr>
-                                    UI Inventory, Experiments, Prototypes
-                                    {{-- <register></register> --}}
+                                    <!-- -->
                                 </article>
                             </div>
 
@@ -70,104 +62,21 @@
                                             @include('partials.svg.salesforce-logo')
                                         </figure>
                                     </div>
-{{--                                     <window>
-                                        Bulma
-                                    </window> --}}
                                 </article>
                             </div>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <div class="content">
-                                    <h2>Team</h2>
-                                </div>
-                                {{-- <p class="title">Team</p> --}}
-                                {{-- <p class="subtitle">No I in Team</p> --}}
-                                <div class="content is-medium">
-                                    <p>Brian, Bill, Charlane, Jerome, Kahil, Kurt, Lynn, Mark, Mark, Matt, Osen, Phil, Renee, Ro, Ruth, Tom, Shereta, Victor</p>
-                                </div>
+                                <!-- -->
                             </article>
                         </div>
                     </div>
                     <div class="tile is-parent">
                         <article class="tile is-child box">
-                            <div class="content">
-                                Book Quote
-                                <h1 class="is-marginless">The Best Interface is No Interface</h1>
-                                <p>by Golden Krishna</p>
-                                <div>
-                                    <h1 class="title"></h1>
-                                    <p>When you specifically hire someone to generate UI, you won't get new, innovative solutions.  You'll get more UI, not better UX</p>
-                                    <p class="subtitle">This is UI</p>
-                                    <p><a href="{{route('tables')}}">Data Tables</a>, Navigation, subnavigation, menus, dropdowns, buttons, links, windows, rounded corners, shadowing, error messages, alerts, updates, checkboxes, password fields, search fields, text inputs, radio buttons, textareas, hover states, selection states, pressed states, tolltips, banner ads, embedded videos, swipe animations, scrolling, clicking, iconography, colors, lists, slideshows, alt text, badges, notifications, gradients, pop-ups, carousels, OK/Cancel, etc., etc. etc.</p>
-                                    <p class="subtitle">This is UX</p>
-                                    <p>People, happiness, solving problems, understanding needs, love, efficiency, entertainment, pleasure, delight, smiles, soul, warmth, personality, joy, satisfaction, gratification, elation, exhilaration, bliss, euphoria, convience, enchantment, magic, productivity, effectiveness, etc. etc. etc.</p>
-                                    <hr>
-                                </div>
-                            </div>
+                            <!-- -->
                         </article>
                     </div>
                 </div>
-
-                <div class="columns">
-                    <div class="column">
-                        <window>
-                            Bulma
-                        </window>
-                    </div>
-                    <div class="is-divider-vertical" data-content="OR"></div>
-                    <div class="column">
-                        <window>
-                            Bootstrap 4
-                        </window>
-                    </div>
-                    <div class="is-divider-vertical" data-content="OR"></div>
-                    <div class="column">
-                        <window>
-                            Salesforce
-                        </window>
-                    </div>
-                    <div class="is-divider-vertical" data-content="OR"></div>
-                    <div class="column">
-                        <window>
-                            Foundation
-                        </window>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Input</label>
-                    <p class="control is-grouped">
-                        <input class="input" type="text">
-                        <b-icon icon="person"></b-icon>
-                    </p>
-                </div>
-
-
-
-                <!-- Menu -->
-                <aside class="menu">
-                  <p class="menu-label">
-                    <span class="icon"><i class="fa fa-folder"></i></span> General
-                  </p>
-                  <ul class="menu-list">
-                     <li>
-                       <a class="menu-item" href="#">
-                         <span class="icon"><i class="fa fa-home"></i></span> Home
-                       </a>
-                     </li>
-                     <li>
-                       <a class="menu-item" href="#">
-                         <span class="icon"><i class="fa fa-camera"></i></span> Pictures
-                       </a>
-                     </li>
-                     <li>
-                       <a class="menu-item" href="#">
-                         <span class="icon"><i class="fa fa-video-camera"></i></span> Videos
-                       </a>
-                     </li>
-                  </ul>
-                </aside>
             </section>
         </b-tab-item>
         <b-tab-item label="Two">
