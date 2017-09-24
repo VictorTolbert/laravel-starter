@@ -52,6 +52,178 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function avails()
+    {
+        return view('avails.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function campaignPerformance()
+    {
+        return view('campaign-performance.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function accountPerformance()
+    {
+        return view('reporting.account-performance.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function programRevenue()
+    {
+        return view('reporting.program-revenue.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function orderReporting()
+    {
+        return view('reporting.order-reporting.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function settings()
+    {
+        return view('settings.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function help()
+    {
+        return view('help.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function layout()
+    {
+        return view('layout.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function orderManagment()
+    {
+        return view('order-management.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function priceGuide()
+    {
+        return view('price-guide.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function privacy()
+    {
+        return view('privacy');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function terms()
+    {
+        return view('terms');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pendingOrders()
+    {
+        return view('order-management.pending-orders.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function overview()
+    {
+        return view('overview.index');
+    }
+
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pendingMakegoods()
+    {
+        return view('order-management.pending-makegoods.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function openPreempts()
+    {
+        return view('order-management.open-preempts.index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function orderSearch()
+    {
+        return view('order-management.order-search.index');
+    }
+
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function dashboard()
     {
         return view('dashboard');
@@ -75,6 +247,42 @@ class PagesController extends Controller
     public function kendo()
     {
         return view('templates.kendo');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function components()
+    {
+        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+
+        return view('components.index', compact('gravatar'));
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function typography()
+    {
+        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+
+        return view('base.typography', compact('gravatar'));
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function colors()
+    {
+        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+
+        return view('base.colors', compact('gravatar'));
     }
 
     /**

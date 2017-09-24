@@ -30,7 +30,6 @@ import 'swiper/dist/css/swiper.css'
 import 'flatpickr/dist/flatpickr.css'
 // import 'element-ui/lib/theme-default/index.css'
 
-
 Vue.prototype.authorize = function (handler) {
     // Additional admin privileges here.
     let user = window.App.user

@@ -1,0 +1,50 @@
+// TODO Convert to use variables
+.site-help
+    width: 640px
+    position: fixed
+    top: 14rem
+    right: 0
+    background: $white
+    border: 4px solid $primary
+    border-right: none
+    z-index: 8000
+
+.site-help__toggle
+    position: absolute
+    display: inline-block
+    margin-top: 7.89999rem
+    margin-left: -3rem
+    transform: rotate(-90deg)
+    transform-origin: 0 0
+    background-color: $primary
+    color: $white
+    padding: .75rem 1.5rem
+    cursor: pointer
+
+.site-help__content
+    padding: 1.5rem
+
+.site-help__content .icon
+    color: #5f9ea0
+    margin-left: 10px
+
+.site-help.open-drawer
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    -webkit-animation: a .3s
+    animation: a .3s
+
+.site-help.close-drawer
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+
+.site-help .load-spinner
+    position: absolute
+    top: 45%
+    z-index: 9999
+    left: 50%
+
+.site-help .chatOffline
+    cursor: not-allowed
+    box-shadow: none
+    opacity: .65

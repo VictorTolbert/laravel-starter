@@ -1,0 +1,105 @@
+$menu-item-color: $text !default
+$menu-item-radius: $radius-small !default
+$menu-item-hover-color: $text-strong !default
+$menu-item-hover-background-color: $background !default
+$menu-item-active-color: $link-invert !default
+$menu-item-active-background-color: $link !default
+$menu-list-border-left: 1px solid $border !default
+$menu-label-color: $text-light !default
+
+$font-sizes: ['small', 'medium', 'large'] !default
+
+=menu
+  font-size: $size-normal
+  // Sizes
+  @for $size in $font-sizes
+    &.is-#{$size}
+      font-size: $size-#{$size}
+
+  // Alignment
+  &.is-centered
+    text-align: center
+  &.is-right
+    text-align: right
+  @content
+
+=menu-list
+  line-height: 1.25
+
+  &.has-dropdown
+    & a.menu-item.is-active,
+      .menu-dropdown
+        display: block
+
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      a.menu-item
+        &:active,
+        &.is-active
+          background-color: $color
+          color: $color-invert
+
+  @content
+
+=menu-item
+  border-radius: $menu-item-radius
+  color: $menu-item-color
+  display: block
+  padding: 0.5em 0.75em
+  &:hover
+    background-color: $menu-item-hover-background-color
+    color: $menu-item-hover-color
+
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      &:active,
+      &.is-active
+        background-color: $color
+        color: $color-invert
+
+  // Modifiers
+  &:active,
+  &.is-active
+    background-color: $menu-item-active-background-color
+    color: $menu-item-active-color
+  @content
+
+=menu-dropdown
+  display: none
+  border-left: $menu-list-border-left
+  margin: 0.75em
+  padding-left: 0.75em
+  @content
+
+=menu-label
+  color: $menu-label-color
+  font-size: 0.75em
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  &:not(:first-child)
+    margin-top: 1em
+  &:not(:last-child)
+    margin-bottom: 1em
+  @content
+
+.menu
+  +menu
+
+.menu-label
+  +menu-label
+
+.menu-list
+  +menu-list
+
+  a.menu-item
+    +menu-item
+
+  li
+    ul.menu-dropdown
+      +menu-dropdown

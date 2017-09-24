@@ -1,5 +1,5 @@
-<div class="container is-fluid">
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="height: 4rem;">
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="height: 4rem;">
+    <div class="container is-fluid">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
                 @include('partials.svg.logo')
@@ -23,6 +23,7 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
+
 {{--                 <b-dropdown v-model="navigation" position="is-bottom-left">
                     <a class="navbar-item" slot="trigger">
                         <span>Custom</span>
@@ -32,7 +33,7 @@
                     </b-dropdown-item>
                 </b-dropdown> --}}
 
-                {{-- <div class="navbar-item">
+{{--                 <div class="navbar-item">
                     <b-field>
                         <p class="control">
                             <b-dropdown>
@@ -51,7 +52,7 @@
                     </b-field>
                 </div> --}}
 
-                {{-- <div class="navbar-item">
+{{--                 <div class="navbar-item">
                     <b-field>
                         <p class="control">
                             <button class="button is-primary">
@@ -72,7 +73,7 @@
                     </b-field>
                 </div> --}}
 
-                {{-- <div class="navbar-item has-dropdown is-hoverable">
+{{--                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         Overview
                     </div>
@@ -92,21 +93,48 @@
                     </div>
                 </div> --}}
 
-                {{-- <a class="navbar-item">Blog (Newsletter Archive)</a> --}}
+                {{-- <a href="{{ route('blog', Auth::user()) }}" class="navbar-item">Blog (Newsletter Archive)</a> --}}
 
-                {{-- <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-link">
+                        Order Management
+                    </div>
+                    <div id="experimentsDropdown" class="navbar-dropdown">
+                        <a href="{{ route('pending-orders', Auth::user()) }}" class="navbar-item">Pending Orders</a>
+                        <a href="{{ route('pending-makegoods', Auth::user()) }}" class="navbar-item">Pending Makegoods</a>
+                        <a href="{{ route('open-preempts', Auth::user()) }}" class="navbar-item">Open Preempts</a>
+                        <a href="{{ route('order-search', Auth::user()) }}" class="navbar-item">Order Search</a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-link">
+                        Reporting
+                    </div>
+                    <div id="experimentsDropdown" class="navbar-dropdown">
+                        <a href="{{ route('account-performance', Auth::user()) }}" class="navbar-item">Account Performance</a>
+                        <a href="{{ route('program-revenue', Auth::user()) }}" class="navbar-item">Program Revenue</a>
+                        <a href="{{ route('order-reporting', Auth::user()) }}" class="navbar-item">Order Reporting</a>
+                    </div>
+                </div>
+
+                <a href="{{ route('price-guide', Auth::user()) }}" class="navbar-item">Price Guide</a>
+                <a href="{{ route('avails', Auth::user()) }}" class="navbar-item">Avails</a>
+                <a href="{{ route('campaign-performance', Auth::user()) }}" class="navbar-item">Campaign Performance</a>
+
+{{--                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         Experiments
                     </div>
                     <div id="experimentsDropdown" class="navbar-dropdown">
-                        <a href="/changelog" class="navbar-item">Changelog</a>
+                        <a href="{{ route('changelog', Auth::user()) }}" class="navbar-item">Changelog</a>
                         <a href="/proposal-viewer" class="navbar-item">XML Proposal Viewer</a>
-                        <a href="/podcasts" class="navbar-item">Podcasts</a>
-                        <a href="/episodes" class="navbar-item">Episodes</a>
+                        <a href="{{ route('podcasts', Auth::user()) }}" class="navbar-item">Podcasts</a>
+                        <a href="{{ route('episodes', Auth::user()) }}" class="navbar-item">Episodes</a>
                     </div>
                 </div> --}}
 
-                <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a>
+                {{-- <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a> --}}
 
                 <b-dropdown v-model="isPublic">
                     <a class="navbar-item" slot="trigger">
@@ -142,10 +170,17 @@
 
                 </b-dropdown>
 
+{{--                 <a class="navbar-item">
+                    <b-icon icon="search"></b-icon>
+                </a> --}}
+
+                <a class="navbar-item">
+                    <b-icon icon="help"></b-icon>
+                </a>
 
                 @endif
             </div>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>
 

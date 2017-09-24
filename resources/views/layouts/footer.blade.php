@@ -7,6 +7,8 @@
                          {{-- &copy; {{ date('Y') }}
                         Version 2.1.4<br>
                         Last updated 9/15/2017, 11:09:45 AM --}}
+                        <a href="{{ route('privacy') }}">Privacy Policy</a>
+                        <a href="{{ route('terms') }}">Terms and Conditions</a>
                     </div>
                 </div>
                 <div class="level-right">

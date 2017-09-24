@@ -1,16 +1,26 @@
 <template>
     <div>
-        <!-- https://archive-2_1_4.lightningdesignsystem.com/components/data-tables -->
+        <!-- data is great--insights are better -->
+        <h2 class="is-size-3">Data Tables</h2>
 
-        <!-- <h2 class="is-size-3">Avails</h2> -->
-
-        <!-- <hr> -->
-
+        <hr>
+        <pre><code>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            Temporibus ipsum dolorem voluptate repudiandae soluta
+            amet iste vero quo dolor sit tempore neque ut sint
+        </code></pre>
+        <hr>
         <div class="level is-hidden-touch">
             <div class="level-left">
-<!--                 <div class="level-item">
+
+                <div class="level-item">
+                    <multiselect v-model="value" :options="options"></multiselect>
+                </div>
+
+                <div class="level-item">
                     <imdb></imdb>
-                </div> -->
+                </div>
+
                 <div class="level-item">
                     <b-field grouped group-multiline>
                         <div class="field">
@@ -43,18 +53,19 @@
                             <label for="switch-loading">Loading state</label>
                         </div>
 
-<!--                         <div class="field">
+                        <div class="field">
                             <input id="switch-mobile-cards" type="checkbox" name="switch-mobile-cards" class="switch is-success" checked="checked" v-model="hasMobileCards">
                             <label for="switch-mobile-cards">Mobile cards</label>
-                        </div> -->
+                        </div>
                     </b-field>
                 </div>
+
                 <div class="level-item">
-<!--                     <div class="field">
+                    <div class="field">
                         <p class="control">
                             <button class="button is-link">Advanced Search</button>
                         </p>
-                    </div> -->
+                    </div>
                 </div>
             </div>
 
@@ -79,32 +90,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="level-item">
-                    <a class="button">Edit Table</a>
-                </div>
+
                 <div class="level-item">
                     <a class="button">
-                        <b-icon icon="file_download" size="is-small">
-                        </b-icon>
+                        Edit Table
                     </a>
                 </div>
+
                 <div class="level-item">
                     <a class="button">
-                    <b-icon icon="sliders" pack="fa">
-                        </b-icon>
+                        <b-icon icon="file_download" size="is-small"></b-icon>
                     </a>
                 </div>
+
                 <div class="level-item">
                     <a class="button">
-                    <b-icon icon="format_size" size="is-small">
-                    </b-icon>
+                        <b-icon icon="sliders" pack="fa"></b-icon>
+                    </a>
+                </div>
+
+                <div class="level-item">
+                    <a class="button">
+                        <b-icon icon="format_size" size="is-small"></b-icon>
                     </a>
                 </div>
             </div>
         </div>
 
+        <!-- TODO - [ ] Use generic `items` array as the prop when componentized -->
         <b-table
-            :data="isEmpty ? [] : avails"
+            :data="isEmpty ? [] : $parent.db.avails"
             :selected.sync="selected"
             :checkable="isCheckable"
             :checked-rows.sync="checkedRows"
@@ -121,36 +136,97 @@
             :pagination-simple="isPaginationSimple"
             :default-sort-direction="defaultSortDirection"
             default-sort="">
+
             <template scope="props">
+                <!-- TODO - [ ] Loop over columnConfig object [h1] -->
                 <b-table-column field="id" meta="Internal ID" label="Number" sortable>
-                    <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">{{ props.row.id }}</a>
+                    <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
+                        {{ props.row.id }}
+                    </a>
                 </b-table-column>
+
+                <b-table-column field="stationOrderNumber" label="Station Order #" sortable>
+                    {{ props.row.stationOrderNumber }}
+                </b-table-column>
+
+                <b-table-column field="currency" numeric label="Currency" sortable>
+                    {{ props.row.currency }}
+                </b-table-column>
+
                 <b-table-column field="status" label="Status" sortable>
-                    <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">{{ props.row.status }}</span>
+                    <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">
+                        {{ props.row.status }}
+                    </span>
                 </b-table-column>
-                <b-table-column field="releasedDate" label="Released" sortable>
-                    {{ props.row.releasedDate }}
+
+                <b-table-column field="advertiser" label="Advertiser" sortable>
+                    <a style="text-decoration: underline" @click="$toast.open(props.row.advertiser)">
+                        {{ props.row.advertiser }}
+                    </a>
                 </b-table-column>
-                <b-table-column field="advertiser" width="450" label="Advertiser" sortable>
-                    <a style="text-decoration: underline" @click="$toast.open(props.row.advertiser)">{{ props.row.advertiser }}</a>
+
+                <b-table-column field="demo" label="Demo" sortable>
+                    {{ props.row.demo }}
                 </b-table-column>
-                <b-table-column field="agency" width="450" label="Agency" sortable>
+
+                <b-table-column field="agency" label="Agency" sortable>
                     {{ props.row.agency }}
                 </b-table-column>
-                <b-table-column field="estimateNumber" label="Estimate" numeric sortable>
-                    {{ props.row.estimateNumber }}
+
+                <b-table-column field="product" label="Product" numeric sortable>
+                    {{ props.row.product }}
                 </b-table-column>
-                <b-table-column field="flightStartDate" label="Start">
-                    {{ props.row.flightStartDate }}
+
+                <b-table-column field="campaign" label="Campaign" sortable>
+                    {{ props.row.campaign }}
                 </b-table-column>
-                <b-table-column field="flightEndDate" label="End">
-                    {{ props.row.flightEndDate }}
+
+                <b-table-column field="cpe" label="Cpe"  sortable>
+                    {{ props.row.cpe }}
                 </b-table-column>
-                <b-table-column field="revenue" label="Revenue">
+
+                <b-table-column field="estimate" label="Estimate" numeric sortable>
+                    {{ props.row.estimate }}
+                </b-table-column>
+
+                <b-table-column field="flightStart" label="Start" sortable>
+                    {{ props.row.flightStart }}
+                </b-table-column>
+
+                <b-table-column field="flightEnd" label="End" sortable>
+                    {{ props.row.flightEnd }}
+                </b-table-column>
+
+                <b-table-column field="spots" label="Spots" sortable>
+                    {{ props.row.spots }}
+                </b-table-column>
+
+                <b-table-column field="ordered" label="Ordered" sortable>
+                    {{ props.row.ordered }}
+                </b-table-column>
+
+                <b-table-column field="released" label="Released" sortable>
+                    {{ props.row.released }}
+                </b-table-column>
+
+                <b-table-column field="budget" numeric label="Budget" sortable>
+                    {{ props.row.budget }}
+                </b-table-column>
+
+                <b-table-column field="revenue" numeric label="Reveue" sortable>
                     {{ props.row.revenue }}
+                </b-table-column>
+
+                <b-table-column field="type" label="Type" sortable>
+                    {{ props.row.type }}
+                </b-table-column>
+
+                <b-table-column field="share" numeric label="Share" sortable>
+                    {{ props.row.share }}
                 </b-table-column>
             </template>
 
+            <!-- TODO - [ ] Build out detail example -->
             <template slot="detail" scope="props">
                 <article class="media">
                     <figure class="media-left">
@@ -174,12 +250,12 @@
                 </article>
             </template>
 
+            <!-- TODO - [ ] Can component be used as scoped slot template  -->
             <template slot="empty">
                 <section class="section">
                     <div class="content has-text-grey has-text-centered">
                         <p>
-                            <b-icon icon="info" size="is-medium">
-                            </b-icon>
+                            <b-icon icon="info" size="is-medium"></b-icon>
                         </p>
                         <p>No results messaging</p>
                     </div>
@@ -187,6 +263,7 @@
             </template>
         </b-table>
 
+        <!-- TODO - [ ] Consider how to use Modal components -->
         <div class="modal" :class="isActive ? 'is-active' : ''">
             <div class="modal-background"></div>
             <div class="modal-card">
@@ -207,9 +284,14 @@
 </template>
 
 <script>
-const avails = require('../../data/avails')
+
+const avails = require('../../data/orders')
+
+import Multiselect from 'vue-multiselect'
 
 export default {
+    name: 'avails',
+    components: { Multiselect },
     data () {
         return {
             avails,
@@ -230,6 +312,8 @@ export default {
             hasMobileCards: true,
             isActive: false,
             perPage: 5,
+            options: ['list', 'of', 'options'],
+            value: null,
             columnsTemplate: [
                 { title: 'ID', field: 'id', visible: true },
                 { title: 'First Name', field: 'first_name', visible: true },
@@ -253,3 +337,7 @@ export default {
     }
 }
 </script>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+<style>
+  your styles
+</style>

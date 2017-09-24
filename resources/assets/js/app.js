@@ -30,7 +30,11 @@ Vue.component('window', require('./components/Window'))
 
 // Vue.component('omdb', require('./components/Omdb'))
 
+const db = require('./data')()
+
 import people from './data/people.json'
+import tv from './data/tv.json'
+import zipCode from './data/zip-code.json'
 import debounce from 'lodash/debounce'
 import ModalForm from './components/ModalForm'
 
@@ -86,7 +90,8 @@ const app = new Vue({
     },
     data () {
         return {
-            avails,
+            db,
+            avails: db.avails,
             clients,
             // logo,
             people,
@@ -145,7 +150,7 @@ const app = new Vue({
                     isCentered: false
                 }
             ],
-            data: [],
+            // data: [],
             date: new Date(),
             defaultSortDirection: 'asc',
             formProps: {
@@ -187,6 +192,7 @@ const app = new Vue({
             movies: [],
             name: '',
             navigation: null,
+            options: ['list', 'of', 'options'],
             page: 1,
             perPage: 5,
             remember: true,
@@ -197,7 +203,8 @@ const app = new Vue({
             selectedOptions: [],
             sortField: 'vote_count',
             sortOrder: 'desc',
-            total: 0
+            total: 0,
+            value: null
         }
     },
     methods: {

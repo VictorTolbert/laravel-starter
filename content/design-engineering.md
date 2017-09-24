@@ -23,3 +23,9 @@ Learn more about the Design Team and the work being done here https://www.uber.d
 - Relentless obsession over pixel perfect designs and interaction details that make magical experiences.
 - Experience with vector and motion graphics, including SVG, HTML5 Canvas, and Animation via JavaScript and CSS.
 - Amazing communication and collaboration skills.
+
+
+<figure>
+    The design “war room” is where the team comes together to brainstorm product considerations.
+</figure>
+

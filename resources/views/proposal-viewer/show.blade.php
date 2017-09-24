@@ -3,7 +3,7 @@
 <div class="hero-body">
     <div class="container is-fluid">
         <h1 class="title">XML Proposal Viewer</h1>
-        <h1 class="subtitle">{{  $xml->Proposal->Name }}</h1>
+        <h2 class="subtitle">{{  $xml->Proposal->Name }}</h2>
     </div>
 </div>
 @endsection
