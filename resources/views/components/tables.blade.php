@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
 @section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">Data Tables</h1>
-        <h2 class="subtitle">Data tables are an enhanced version of an HTML table and are used to display tabular data.</h2>
-    </div>
-</div>
 @endsection
 
 @section('content')
+<section id="home-intro" class="hero is-primary has-code-bg">
+    <div class="hero-body">
+        <div class="container is-fluid">
+            <h1 class="title">Data Tables</h1>
+            <h2 class="subtitle">Data tables are an enhanced version of an HTML table and are used to display tabular data.</h2>
+        </div>
+    </div>
+</section>
+
 <section class="section">
     <div class="container is-fluid">
 

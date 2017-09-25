@@ -248,7 +248,7 @@ body {
 }
 
 .article__footer a {
-    text-decoration: underline;
+        text-decoration: underline;
 }
 
 @media (max-width: 1000px) {

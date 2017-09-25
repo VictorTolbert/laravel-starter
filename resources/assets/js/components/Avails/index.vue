@@ -13,60 +13,66 @@
         <div class="level is-hidden-touch">
             <div class="level-left">
 
-                <div class="level-item">
+                <!-- <div class="level-item">
                     <multiselect v-model="value" :options="options"></multiselect>
                 </div>
 
                 <div class="level-item">
                     <imdb></imdb>
-                </div>
+                </div> -->
 
                 <div class="level-item">
                     <b-field grouped group-multiline>
                         <div class="field">
-                            <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-success" checked="checked" v-model="isNarrowed">
-                            <label for="switch-narrowed">Narrowed</label>
-                        </div>
-
-                        <div class="field">
-                            <input id="switch-checkable" type="checkbox" name="switch-checkable" class="switch is-success" checked="checked" v-model="isCheckable">
+                            <input id="switch-checkable" type="checkbox" name="switch-checkable" class="switch is-primary" checked="checked" v-model="isCheckable">
                             <label for="switch-checkable">Checkable</label>
                         </div>
 
                         <div class="field">
-                            <input id="switch-bordered" type="checkbox" name="switch-bordered" class="switch is-success" checked="checked" v-model="isBordered">
+                            <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-primary" checked="checked" v-model="isNarrowed">
+                            <label for="switch-narrowed">Narrowed</label>
+                        </div>
+
+
+                        <div class="field">
+                            <input id="switch-details" type="checkbox" name="switch-details" class="switch is-primary" checked="checked" v-model="hasDetails">
+                            <label for="switch-details">Details</label>
+                        </div>
+
+                        <div class="field">
+                            <input id="switch-bordered" type="checkbox" name="switch-bordered" class="switch is-primary" checked="checked" v-model="isBordered">
                             <label for="switch-bordered">Bordered</label>
                         </div>
 
                         <div class="field">
-                            <input id="switch-striped" type="checkbox" name="switch-striped" class="switch is-success" checked="checked" v-model="isStriped">
+                            <input id="switch-striped" type="checkbox" name="switch-striped" class="switch is-primary" checked="checked" v-model="isStriped">
                             <label for="switch-striped">Striped</label>
                         </div>
 
                         <div class="field">
-                            <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-success" checked="checked" v-model="isEmpty">
+                            <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-primary" checked="checked" v-model="isEmpty">
                             <label for="switch-empty">Empty</label>
                         </div>
 
                         <div class="field">
-                            <input id="switch-loading" type="checkbox" name="switch-loading" class="switch is-success" checked="checked" v-model="isLoading">
+                            <input id="switch-loading" type="checkbox" name="switch-loading" class="switch is-primary" checked="checked" v-model="isLoading">
                             <label for="switch-loading">Loading state</label>
                         </div>
 
-                        <div class="field">
-                            <input id="switch-mobile-cards" type="checkbox" name="switch-mobile-cards" class="switch is-success" checked="checked" v-model="hasMobileCards">
+                       <!--  <div class="field">
+                            <input id="switch-mobile-cards" type="checkbox" name="switch-mobile-cards" class="switch is-primary" checked="checked" v-model="hasMobileCards">
                             <label for="switch-mobile-cards">Mobile cards</label>
-                        </div>
+                        </div> -->
                     </b-field>
                 </div>
 
-                <div class="level-item">
+                <!-- <div class="level-item">
                     <div class="field">
                         <p class="control">
                             <button class="button is-link">Advanced Search</button>
                         </p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="level-right">
@@ -117,13 +123,15 @@
             </div>
         </div>
 
+        <hr>
+
         <!-- TODO - [ ] Use generic `items` array as the prop when componentized -->
         <b-table
-            :data="isEmpty ? [] : $parent.db.avails"
+            :data="isEmpty ? [] : avails"
             :selected.sync="selected"
             :checkable="isCheckable"
             :checked-rows.sync="checkedRows"
-            detailed
+            :detailed="hasDetails"
             @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
             :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
             :bordered="isBordered"
@@ -139,48 +147,49 @@
 
             <template scope="props">
                 <!-- TODO - [ ] Loop over columnConfig object [h1] -->
-                <b-table-column field="id" meta="Internal ID" label="Number" sortable>
+
+                <!-- <b-table-column field="status" label="Status" sortable>
+                    <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">
+                        {{ props.row.status }}
+                    </span>
+                </b-table-column> -->
+
+                <b-table-column field="id" meta="Internal ID" label="Videa Order" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
                         {{ props.row.id }}
                     </a>
                 </b-table-column>
 
-                <b-table-column field="stationOrderNumber" label="Station Order #" sortable>
+                <b-table-column field="stationOrderNumber" label="Station Order" sortable>
                     {{ props.row.stationOrderNumber }}
                 </b-table-column>
 
-                <b-table-column field="currency" numeric label="Currency" sortable>
+<!--                 <b-table-column field="currency" label="Currency" sortable>
                     {{ props.row.currency }}
                 </b-table-column>
-
-                <b-table-column field="status" label="Status" sortable>
-                    <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">
-                        {{ props.row.status }}
-                    </span>
-                </b-table-column>
-
+ -->
                 <b-table-column field="advertiser" label="Advertiser" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(props.row.advertiser)">
                         {{ props.row.advertiser }}
                     </a>
                 </b-table-column>
 
-                <b-table-column field="demo" label="Demo" sortable>
-                    {{ props.row.demo }}
-                </b-table-column>
-
                 <b-table-column field="agency" label="Agency" sortable>
                     {{ props.row.agency }}
                 </b-table-column>
 
-                <b-table-column field="product" label="Product" numeric sortable>
+               <b-table-column field="product" label="Product" sortable>
                     {{ props.row.product }}
+                </b-table-column>
+
+                <b-table-column field="demo" label="Demo" sortable>
+                    {{ props.row.demo }}
                 </b-table-column>
 
                 <b-table-column field="campaign" label="Campaign" sortable>
                     {{ props.row.campaign }}
                 </b-table-column>
-
+                <!--
                 <b-table-column field="cpe" label="Cpe"  sortable>
                     {{ props.row.cpe }}
                 </b-table-column>
@@ -223,7 +232,7 @@
 
                 <b-table-column field="share" numeric label="Share" sortable>
                     {{ props.row.share }}
-                </b-table-column>
+                </b-table-column> -->
             </template>
 
             <!-- TODO - [ ] Build out detail example -->
@@ -295,32 +304,33 @@ export default {
     data () {
         return {
             avails,
-            date: null,
-            selected: avails[1],
-            selected: {},
-            checkedRows: [avails[1], avails[3]],
             checkedRows: [],
-            isEmpty: false,
-            isCheckable: false,
-            isBordered: false,
-            isPaginated: true,
-            isPaginationSimple: true,
-            defaultSortDirection: 'asc',
-            isStriped: false,
-            isNarrowed: false,
-            isLoading: false,
-            hasMobileCards: true,
-            isActive: false,
-            perPage: 5,
-            options: ['list', 'of', 'options'],
-            value: null,
+            checkedRows: [avails[1], avails[3]],
             columnsTemplate: [
                 { title: 'ID', field: 'id', visible: true },
                 { title: 'First Name', field: 'first_name', visible: true },
                 { title: 'Last Name', field: 'last_name', visible: true },
                 { title: 'Date', field: 'date', visible: true },
                 { title: 'Gender', field: 'gender', visible: true }
-            ]
+            ],
+            date: null,
+            defaultSortDirection: 'asc',
+            hasDetails: false,
+            hasMobileCards: true,
+            isActive: false,
+            isBordered: false,
+            isCheckable: false,
+            isEmpty: false,
+            isLoading: false,
+            isNarrowed: false,
+            isPaginated: true,
+            isPaginationSimple: false,
+            isStriped: true,
+            options: ['list', 'of', 'options'],
+            perPage: 5,
+            selected: avails[1],
+            selected: {},
+            value: null
         }
     },
     methods: {

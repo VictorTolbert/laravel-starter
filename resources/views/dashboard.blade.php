@@ -10,8 +10,7 @@
 @endsection
 
 @section('content')
-
-{{-- @include('partials.nested-columns') --}}
+@include('partials.nested-columns')
 
 <section class="section">
     <div class="container is-fluid">

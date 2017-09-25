@@ -18672,6 +18672,142 @@ label.panel-block:hover {
   color: whitesmoke;
 }
 
+.hero {
+  min-height: 150px;
+  min-height: 10rem;
+}
+
+.hero.has-grid-bg {
+  background: #363636 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODYyRjhERDU2N0YyMTFFNjg2MzZDQjkwNkQ4MjgwMEIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODYyRjhERDQ2N0YyMTFFNjg2MzZDQjkwNkQ4MjgwMEIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NjcyQkQ3QTY3QzUxMUU2QjJCQ0UyNDA4MTAwMjE3MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NjcyQkQ3QjY3QzUxMUU2QjJCQ0UyNDA4MTAwMjE3MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvCS01IAAABMSURBVHjaYmR4/5+BFPBfAMFm/MBgx8RAGWCn1AAmSg34Q6kBDKMGMDCwICeMIemF/5QawEipAWwUhwEjMDvbAWlWkvVBwu8vQIABAEwBCph8U6c0AAAAAElFTkSuQmCC) repeat top left;
+}
+
+.hero.has-logo-bg {
+  background-image: url("/logo-background.svg");
+  background-size: 1 100%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
+/* Hero: .has-waves
+/* ---------------------------------------------------------- */
+
+.hero.has-waves {
+  background-image: url("/bubbles.svg"), url("/waves.svg");
+  background-size: auto 400px, 1220px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% 100%, 0 5px;
+}
+
+/* Hero: .has-bubbles
+/* ---------------------------------------------------------- */
+
+.hero.has-bubbles {
+  background-image: url("/bubbles.svg");
+  background-size: auto 400px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+/* Hero: Demo: Desaturation
+/* ---------------------------------------------------------- */
+
+.hero-banner {
+  background: #980e0e;
+  display: inline-block;
+}
+
+.hero-banner img {
+  mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%);
+          filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+          filter: grayscale(100%);
+}
+
+/* Hero:
+/* ---------------------------------------------------------- */
+
+.hero.has-animated-bg,
+.post--header {
+  width: 100%;
+  min-height: calc(90vh - 117px);
+  background-color: #e30000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='64' viewBox='0 0 16 32'%3E%3Cg fill='%23920000' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-animation: background 3.5s linear infinite;
+          animation: background 3.5s linear infinite;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 64px;
+  }
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 64px;
+  }
+}
+
+/* Hero: Animated Rainbow background
+/* ---------------------------------------------------------- */
+
+.hero.bd-rainbow {
+  -webkit-animation: rainbow 8s ease infinite;
+          animation: rainbow 8s ease infinite;
+  background-image: linear-gradient(124deg, #ff470f, #ff3860, #b86bff, #3273dc);
+  background-size: 800% 800%;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 80%;
+  }
+
+  50% {
+    background-position: 100% 20%;
+  }
+
+  100% {
+    background-position: 0% 80%;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 80%;
+  }
+
+  50% {
+    background-position: 100% 20%;
+  }
+
+  100% {
+    background-position: 0% 80%;
+  }
+}
+
 .navbar-brand svg {
   height: 22.5px;
   height: 1.5rem;
