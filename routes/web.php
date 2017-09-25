@@ -58,6 +58,7 @@ Route::name('docs')->get('/docs', 'PagesController@docs');
 Route::name('help')->get('/help', 'PagesController@help');
 Route::name('icons')->get('/icons', 'PagesController@icons');
 Route::name('colors')->get('/colors', 'PagesController@colors');
+Route::name('glossary')->get('/glossary', 'PagesController@glossary');
 // Route::name('initiatives')->get('/initiatives', 'PagesController@initiatives');
 // Route::name('kendo')->get('/kendo', 'PagesController@kendo');
 // Route::name('layout')->get('/layout', 'PagesController@layout');
@@ -91,7 +92,7 @@ Route::name('terms')->get('/terms', 'PagesController@terms');
 
 
 Route::name('home')->get('/', function () {
-    return redirect()->route('dashboard');
+    return redirect()->route('tables');
 });
 
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

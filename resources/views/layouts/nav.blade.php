@@ -1,19 +1,17 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="height: 4rem;">
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="container is-fluid">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                @include('partials.svg.logo')
-                {{-- <img :src="logo" alt="Videa"> --}}
+                @include('partials.svg.uxlab-logo')
             </a>
-
-            <span class="navbar-burger" data-target="navMenuIndex">
+            <span class="navbar-burger" data-target="navbar-main">
                 <span></span>
                 <span></span>
                 <span></span>
             </span>
         </div>
 
-        <div class="navbar-menu" id="navMenuIndex">
+        <div class="navbar-menu" id="navbar-main">
             <div class="navbar-start">
                 @if (Auth::guest())
                 @else
@@ -23,55 +21,6 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
-
-{{--                 <b-dropdown v-model="navigation" position="is-bottom-left">
-                    <a class="navbar-item" slot="trigger">
-                        <span>Custom</span>
-                        <b-icon icon="arrow_drop_down"></b-icon>
-                    </a>
-                    <b-dropdown-item custom paddingless>
-                    </b-dropdown-item>
-                </b-dropdown> --}}
-
-{{--                 <div class="navbar-item">
-                    <b-field>
-                        <p class="control">
-                            <b-dropdown>
-                                <button class="button" slot="trigger">
-                                    <span>Filters</span>
-                                    <b-icon icon="arrow_drop_down"></b-icon>
-                                </button>
-
-                                <b-dropdown-item value="open_issues">Open Issues and Pull Requests</b-dropdown-item>
-                                <b-dropdown-item value="your_issues">Your Issues</b-dropdown-item>
-                                <b-dropdown-item value="pull_requests">Your Pull Requests</b-dropdown-item>
-                                <b-dropdown-item value="everything">Everything</b-dropdown-item>
-                            </b-dropdown>
-                        </p>
-                        <b-input icon="search" type="search" placeholder="Search..."></b-input>
-                    </b-field>
-                </div> --}}
-
-{{--                 <div class="navbar-item">
-                    <b-field>
-                        <p class="control">
-                            <button class="button is-primary">
-                                WVVV
-                            </button>
-                        </p>
-                        <p class="control">
-                            <b-dropdown>
-                                <button class="button is-primary" slot="trigger">
-                                    <b-icon icon="arrow_drop_down"></b-icon>
-                                </button>
-
-                                <b-dropdown-item>Action</b-dropdown-item>
-                                <b-dropdown-item>Another action</b-dropdown-item>
-                                <b-dropdown-item>Something else</b-dropdown-item>
-                            </b-dropdown>
-                        </p>
-                    </b-field>
-                </div> --}}
 
 {{--                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
@@ -95,33 +44,6 @@
 
                 {{-- <a href="{{ route('blog', Auth::user()) }}" class="navbar-item">Blog (Newsletter Archive)</a> --}}
 
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <div class="navbar-link">
-                        Order Management
-                    </div>
-                    <div id="experimentsDropdown" class="navbar-dropdown">
-                        <a href="{{ route('pending-orders', Auth::user()) }}" class="navbar-item">Pending Orders</a>
-                        <a href="{{ route('pending-makegoods', Auth::user()) }}" class="navbar-item">Pending Makegoods</a>
-                        <a href="{{ route('open-preempts', Auth::user()) }}" class="navbar-item">Open Preempts</a>
-                        <a href="{{ route('order-search', Auth::user()) }}" class="navbar-item">Order Search</a>
-                    </div>
-                </div>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <div class="navbar-link">
-                        Reporting
-                    </div>
-                    <div id="experimentsDropdown" class="navbar-dropdown">
-                        <a href="{{ route('account-performance', Auth::user()) }}" class="navbar-item">Account Performance</a>
-                        <a href="{{ route('program-revenue', Auth::user()) }}" class="navbar-item">Program Revenue</a>
-                        <a href="{{ route('order-reporting', Auth::user()) }}" class="navbar-item">Order Reporting</a>
-                    </div>
-                </div>
-
-                <a href="{{ route('price-guide', Auth::user()) }}" class="navbar-item">Price Guide</a>
-                <a href="{{ route('avails', Auth::user()) }}" class="navbar-item">Avails</a>
-                <a href="{{ route('campaign-performance', Auth::user()) }}" class="navbar-item">Campaign Performance</a>
-
 {{--                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">
                         Experiments
@@ -136,46 +58,10 @@
 
                 {{-- <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a> --}}
 
-                <b-dropdown v-model="isPublic">
-                    <a class="navbar-item" slot="trigger">
-                        <span class="icon">
-                            <img src="{{ get_gravatar(Auth::user()->email) }}" style="margin-right: 0.5rem">
-                        </span>
-                        <span>{{ Auth::user()->name }}</span>
-                        <b-icon icon="arrow_drop_down"></b-icon>
-                    </a>
-
-                    <b-dropdown-item has-link value="profile">
-                        <a class="navbar-item" href="{{ route('profile', Auth::user()) }}">
-                            <b-icon icon="person"></b-icon>
-                            My Profile
-                        </a>
-                    </b-dropdown-item>
-
-
-                    <hr class="dropdown-divider">
-
-                    <b-dropdown-item value="settings" data-show="quickview" data-target="quickviewDefault">
-                        <b-icon icon="settings"></b-icon>
-                        Settings
-                    </b-dropdown-item>
-
-                    <b-dropdown-item has-link custom value="logout">
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            <b-icon icon="exit_to_app"></b-icon>
-                            Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                    </b-dropdown-item>
-
-                </b-dropdown>
-
-{{--                 <a class="navbar-item">
-                    <b-icon icon="search"></b-icon>
-                </a> --}}
+                <a class="navbar-item" href="{{ route('dashboard') }}">Styleguide</a>
 
                 <a class="navbar-item">
-                    <b-icon icon="help"></b-icon>
+                    <b-icon icon="search"></b-icon>
                 </a>
 
                 @endif

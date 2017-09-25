@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Ahsan">
+	<meta name="description" content="PIXEL - HTML5 App Landing Page">
+	<meta name="keywords" content="landing, app landing, one page, html, html5">
+
+	<title>Pixel||Documentation Template</title>
+
+	<!-- common css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<!-- custom css -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+	<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Table of Contents -->
+				<nav class="sidebar">
+					<a href="#"><img src="images/logo.png" alt="brand" class="img-responsive"></a>
+					<ul class="nav nav-pills nav-stacked">
+						<li><h2 class="nav_head">Table of Contents</h2></li>
+						<li><a data-scroll href="#htmlStructure">HTML Structure</a></li>
+						<li><a data-scroll href="#cssFiles">CSS Files and Structure</a></li>
+						<li><a data-scroll href="#javascript">JavaScript</a></li>
+						<li><a data-scroll href="#logo">Changing brand logo</a></li>
+						<li><a data-scroll href="#images">Changing Images</a></li>
+						<li><a data-scroll href="#colors">Changing Colors</a></li>
+						<li><a data-scroll href="#contact">Changing Email Setting of The Contact Form</a></li>
+						<li><a data-scroll href="#credits">Sources and Credits</a></li>
+					</ul>
+				</nav>
+				<!-- End of .fixed-nav -->
+				<!-- html structure -->
+
+
+				<div class="main">
+					<!-- envato and themeforest -->
+					<div class="text-center grey">
+						<h1>Pixel</h1>
+						<h2>HTML5 App Landing Page <br> version-1.0</h2>
+					</div>
+					<div class="wrapper">
+						<div class="intro text-left p50">
+							<div class="content">
+								<p class="top">
+									<strong>
+									Created: February 6,2017<br>
+									Author: Prosty<br>
+									Email: <a href="mailto:ahsanthemes@gmail.com">ahsanthemes@gmail.com</a>
+									</strong>
+								</p>
+							</div>
+							<div class="">
+								<p class="thanks">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/mahabib">here</a>. Thanks so much!</p>
+							</div>
+						</div>
+
+						<div class="body p50">
+							<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a data-scroll href="#top">Top</a></h3>
+							<p>This theme is a fixed layout with four columns. The main contents are inside the 'body' tag divided into nine 'sections'(i.e. header, banner, services,... footer etc.). The general template structure is the same throughout the template. Here is the general structure.</p>
+							<img src="images/html_structure.png" alt="HTML Structure" />
+							<p>If you would like to edit the color, font, or style of any particular elements, you would first copy the 'id' or 'class' of that element and go to the main.css file. Then you have to find the particular 'id' or 'class' of that element and make the changes you needed.</p>
+							<p id="colors"><strong><i>Example-1:</i></strong> : Suppose you want to change the color of all the content headings of a section called
+								<mark><strong>#services</strong></mark>. Then all you have to do is to do the following:</p>
+							<pre>
+									.content h3{
+										color: #someColor;
+									} 
+								</pre>
+							<p><strong><i>Example-2:</i></strong> : Suppose you want to change the background-color of the image overlay of a section called
+								<mark><strong>#projects</strong></mark>. Then all you have to do is to do the following:</p>
+							<pre>
+									#projects .img_container .overlay{
+										background-color: rgba(79,79,79,.5);
+									} 
+								</pre>
+							<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+							<p><strong><i>i.e.</i></strong></p>
+							<pre>
+									#services .content a {
+										color: #someColor;
+									}
+								</pre>
+							<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours. You can also force your changes to happen by applying
+								<mark>!important</mark> after the value of the particular property.</p>
+							<p><strong><i>i.e.</i></strong></p>
+							<pre>
+									.content a {
+										color: #someColor!important;
+									}
+								</pre>
+							<hr>
+							<!-- css structure -->
+
+
+							<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a data-scroll href="#top">top</a></h3>
+							<p>I'm using two customed css files
+								<mark>(main.css, media_query.css)</mark>,
+								<mark>bootstrap.min.css</mark> file as a framework and several css plugin files.</p>
+							<p>The first one (main.css) is the main custom css file which contains all of the specific stylings for the page.The file is separated into sections like the following structure:</p>
+							<img src="images/css_structure.png" alt="HTML Structure" />
+							<p>The second one is a media query file (media_query.css) to make the webpage fit for any devices. The structure of this file is as same as the main css file displayed above.</p>
+							<p>If you would like to edit a specific section of the site,simply go to the main.css file and find the instuctions at the top of the file.</p>
+							<hr>
+							<h3 id="javascript"><strong>C) Java Script files</strong> - <a data-scroll href="#top">top</a></h3>
+							<p>This theme imports three Javascript files.</p>
+							<ol>
+								<li>jQuery</li>
+								<li>My custom scripts</li>
+								<li>Some plugin</li>
+							</ol>
+							<ol>
+								<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+							</ol>
+							<hr>
+
+
+							<!-- changing brand logo -->
+							<h3 id="logo"><strong>D) Changing brand logo</strong> - <a data-scroll href="#top">Top</a></h3>
+							<p><strong>To change the brand logo</strong></p>
+							<ol>
+								<li>Open the file called
+									<mark>images</mark>.</li>
+								<li>Find the .png file called brand_logo.png</li>
+								<li>Replace the file with your own brand logo</li>
+								<li>Make sure that the file name does not change.The file name shoud be
+									<mark>brand_logo.png</mark>
+								</li>
+							</ol>
+							<hr>
+							<!-- changing any images -->
+							<h3><strong>Note: Images seen in the live preview are only set for preview purposes. They are not included in the download file.</strong></h3>
+							<hr>
+							<h3 id="images"><strong>D) Changing any images</strong> - <a data-scroll href="#top">Top</a></h3>
+							<p><strong>To change any images of the website</strong></p>
+							<ol>
+								<li>Carefully collect the source name of the image <strong>(i.e. banner_bg.jpg)</strong></li>
+								<li>Open the file called
+									<mark>images</mark>.</li>
+								<li>Find the particular image file</li>
+								<li>Replace the file with your image</li>
+								<li>Make sure that the file name does not change.The file name should be the same.</li>
+							</ol>
+							<p><strong><i>Example:</i></strong> : Suppose you want to change the following image file:</p>
+							<img src="images/change_img.png" alt="slider image" class="img-responsive">
+							<p>You have to do the following to change this image with your own image:</p>
+							<ol>
+								<li>Open the file called
+									<mark><strong>images</strong></mark>.</li>
+								<li>Find the particular image file called
+									<mark><strong>original_image.jpg</strong></mark>
+								</li>
+								<li>Replace the file with your image</li>
+								<li>Make sure that the file name does not change.</li>
+							</ol>
+							<hr>
+							<!-- changing colors -->
+							<h3 id="colors"><strong>E) changing colors</strong> - <a data-scroll href="#top">Top</a></h3>
+							<p><strong>To change colors of any element</strong></p>
+							<p>Go to <a href="#colors">A) HTML Structure > Example-1</a></p>
+							<hr>
+
+
+							<!-- Setting the contact form address -->
+							<h3 id="contact"><strong>E) Changing Email Settings of The Contact Form</strong> - <a data-scroll href="#top">Top</a></h3>
+							<div style="display: block;">
+								<p>Open <code>process.php</code> and search for the term <code>$config['from'] = '';</code> and enter an email address inside the quotes.</p>
+								<pre>$config['from'] = 'company@example.com';</pre>
+								<h5>Setting a name with your "From" address</h5>
+								<p>You can also set a name to be sent with the address using the code below.</p>
+								<pre>$config['from'] = array('company@example.com' =&gt; 'Company');</pre>
+								<h5>Setting the "From" address to the submitted email address</h5>
+								<p>You can also set the from address to a submitted email address. To do that set it to be the unique element name surrounded by percent signs, e.g.</p>
+								<pre>$config['from'] = '%email%';</pre>
+								<h5>Setting the "From" address to the submitted email address and name</h5>
+								<p>You can also set the from address to a submitted email address and name combination. To do that, set it to be an array with the email unique element name surrounded by percent signs as the key and the name unique element name surrounded by percent signs as the array value, e.g.</p>
+								<pre>$config['from'] = array('%email%' =&gt; '%name%');</pre>
+							</div>
+
+
+
+							<!-- Sources and Credits -->
+							<h3 id="credits"><strong>G) Sources and Credits </strong> - <a data-scroll href="#top">top</a></h3>
+							<p>I've used the following fonts, free icons and plugins as listed:
+								<ul>
+									<li>Font: Roboto, Google fonts</li>
+									<li>Icon fonts: Fontawesome.io,icomoon line icons</li>
+									<li>Animation: wow.js and animate.css</li>
+									<li>Carousel used: Owl carousel by owl developers</li>
+									<li>Carousel used: Killer carousel</li>
+									<li>Contact for: Quform ajax contact form</li>
+								</ul>
+								<hr>
+								<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+								<p style="color: #558b2f;"><strong>Mohammad Ahsan Habib<br>
+								<a href="https://themeforest.net/user/prosty" target="_blank"><small>themeforest.net/user/prosty</small></a></strong></p>
+								<hr>
+						</div>
+						<!-- End of .body -->
+					</div>
+
+					<footer class="text-center">
+						<h6>PIXEL- A product of <a href="https://themeforest.net/user/prosty">Prosty</a>.</h6>		
+					</footer>
+				</div>
+				<!-- End of .main -->
+			</div>
+			<!-- End of .row -->
+		</div>
+		<!-- End of .container -->
+		</div>
+		<!-- end div .container-fluid -->
+
+
+		<!-- ================ Scripts ================ -->
+		<!-- common scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/smoothscrolling.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+
+</html>

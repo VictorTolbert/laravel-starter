@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- data is great--insights are better -->
-        <h2 class="is-size-3">Data Tables</h2>
+<!--         <h2 class="is-size-3">Data Tables</h2>
 
         <hr>
         <pre><code>
@@ -9,7 +9,7 @@
             Temporibus ipsum dolorem voluptate repudiandae soluta
             amet iste vero quo dolor sit tempore neque ut sint
         </code></pre>
-        <hr>
+        <hr> -->
         <div class="level is-hidden-touch">
             <div class="level-left">
 

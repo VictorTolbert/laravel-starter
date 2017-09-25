@@ -31,8 +31,11 @@
 <body>
     <div id="app">
         <main class="main">
+            {{-- @include('partials.utilities') --}}
             @include('layouts.nav')
-            @include('layouts.hero')
+            {{-- @include('partials.seller-appnav') --}}
+            {{-- @include('layouts.hero') --}}
+
             @yield('content')
             <flash message="{{ session('flash') }}"></flash>
         </main>

@@ -42,6 +42,16 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function glossary()
+    {
+        return view('glossary');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function changelog()
     {
         return view('changelog');

@@ -1,9 +1,9 @@
-<section class="panel">
+<div class="panel">
     <p class="panel-heading">
         Popular Followers
     </p>
     <div class="panel-block">
-        <table class="table">
+        <table class="table is-fullwidth">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -80,4 +80,4 @@
             </tbody>
         </table>
     </div>
-</section>
+</div>

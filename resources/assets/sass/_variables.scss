@@ -88,31 +88,31 @@ $primary                : $purple;
 $primary                : $dark;
 $primary-invert         : findColorInvert($primary);
 
-$secondary              : $orange;
 $secondary              : $dark;
+$secondary              : $orange;
 $secondary-invert       : findColorInvert($secondary);
 
 $tertiary               : $fun-blue;
 $tertiary-invert        : findColorInvert($tertiary);
 
-$danger                 : $red;
 $danger                 : $dark;
+$danger                 : $red;
 $danger-invert          : findColorInvert($danger);
 
-$warning                : $orange;
 $warning                : $dark;
+$warning                : $orange;
 $warning-invert         : findColorInvert($warning);
 
-$lit                    : $yellow;
 $lit                    : $dark;
+$lit                    : $yellow;
 $lit-invert             : findColorInvert($lit);
 
-$success                : $green;
 $success                : $dark;
+$success                : $green;
 $success-invert         : findColorInvert($success);
 
-$info                   : $blue;
 $info                   : $dark;
+$info                   : $blue;
 $info-invert            : findColorInvert($info);
 
 $css3-invert            : findColorInvert($css3);
@@ -175,7 +175,7 @@ $weight-semibold        : 500;
 $weight-bold            : 700;
 
 // Body
-$body-size              : 14px;
+$body-size              : 15px;
 $body-background        : $porcelain;
 
 // Code colors
