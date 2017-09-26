@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="google" value="notranslate">
 
-    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
+    <title>@yield('title') &mdash; {{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons|Audiowide">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {{--  <link rel="stylesheet" href="//maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">  --}}
@@ -31,18 +31,17 @@
 <body>
     <div id="app">
         <main class="main">
-            {{-- @include('partials.utilities') --}}
-            @include('layouts.nav')
-            {{-- @include('partials.seller-appnav') --}}
-            {{-- @include('layouts.hero') --}}
+            @include('partials.navbars.utilities')
+            @include('partials.navbars.app')
+            {{-- @include('partials.navbars.seller') --}}
+            {{-- @include('partials.navbars.pagination') --}}
+            {{-- @include('partials.heros.app') --}}
 
             @yield('content')
             <flash message="{{ session('flash') }}"></flash>
         </main>
-        @include('layouts.footer')
+        @include('partials.footers.app')
     </div>
-
-    @include('partials.navbar-toggle-listener')
 
     <script src="{{ mix('/js/app.js') }}"></script>
     <script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>

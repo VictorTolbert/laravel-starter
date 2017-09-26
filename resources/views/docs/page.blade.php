@@ -5,7 +5,7 @@
         <nav class="sidebar__contents">
             <div class="sidebar__logo">
                 <a href="{{route('docs')}}" target="videa">
-                    @include('partials.svg.logo')
+                    @include('partials.svgs.logo')
                 </a>
             </div>
             <div class="sidebar__home">

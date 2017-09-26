@@ -1,10 +1,6 @@
 <?php
 Auth::routes();
 
-// Route::get('/', function () {
-//     return redirect('/podcasts');
-// });
-
 Route::name('podcasts')->get('/podcasts', 'PodcastsController@index');
 Route::get('/podcasts/new', 'PodcastsController@create');
 Route::post('/podcasts', 'PodcastsController@store');

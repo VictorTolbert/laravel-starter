@@ -2,7 +2,7 @@
     <div class="container is-fluid">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                @include('partials.svg.uxlab-logo')
+                @include('partials.svgs.uxlab-logo')
             </a>
             <span class="navbar-burger" data-target="navbar-main">
                 <span></span>

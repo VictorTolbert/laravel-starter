@@ -1,130 +1,6 @@
 <template>
     <div>
         <!-- data is great--insights are better -->
-<!--         <h2 class="is-size-3">Data Tables</h2>
-
-        <hr>
-        <pre><code>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            Temporibus ipsum dolorem voluptate repudiandae soluta
-            amet iste vero quo dolor sit tempore neque ut sint
-        </code></pre>
-        <hr> -->
-        <div class="level is-hidden-touch">
-            <div class="level-left">
-
-                <!-- <div class="level-item">
-                    <multiselect v-model="value" :options="options"></multiselect>
-                </div>
-
-                <div class="level-item">
-                    <imdb></imdb>
-                </div> -->
-
-                <div class="level-item">
-                    <b-field grouped group-multiline>
-                        <div class="field">
-                            <input id="switch-checkable" type="checkbox" name="switch-checkable" class="switch is-primary" checked="checked" v-model="isCheckable">
-                            <label for="switch-checkable">Checkable</label>
-                        </div>
-
-                        <div class="field">
-                            <input id="switch-narrowed" type="checkbox" name="switch-narrowed" class="switch is-primary" checked="checked" v-model="isNarrowed">
-                            <label for="switch-narrowed">Narrowed</label>
-                        </div>
-
-
-                        <div class="field">
-                            <input id="switch-details" type="checkbox" name="switch-details" class="switch is-primary" checked="checked" v-model="hasDetails">
-                            <label for="switch-details">Details</label>
-                        </div>
-
-                        <div class="field">
-                            <input id="switch-bordered" type="checkbox" name="switch-bordered" class="switch is-primary" checked="checked" v-model="isBordered">
-                            <label for="switch-bordered">Bordered</label>
-                        </div>
-
-                        <div class="field">
-                            <input id="switch-striped" type="checkbox" name="switch-striped" class="switch is-primary" checked="checked" v-model="isStriped">
-                            <label for="switch-striped">Striped</label>
-                        </div>
-
-                        <div class="field">
-                            <input id="switch-empty" type="checkbox" name="switch-empty" class="switch is-primary" checked="checked" v-model="isEmpty">
-                            <label for="switch-empty">Empty</label>
-                        </div>
-
-                        <div class="field">
-                            <input id="switch-loading" type="checkbox" name="switch-loading" class="switch is-primary" checked="checked" v-model="isLoading">
-                            <label for="switch-loading">Loading state</label>
-                        </div>
-
-                       <!--  <div class="field">
-                            <input id="switch-mobile-cards" type="checkbox" name="switch-mobile-cards" class="switch is-primary" checked="checked" v-model="hasMobileCards">
-                            <label for="switch-mobile-cards">Mobile cards</label>
-                        </div> -->
-                    </b-field>
-                </div>
-
-                <!-- <div class="level-item">
-                    <div class="field">
-                        <p class="control">
-                            <button class="button is-link">Advanced Search</button>
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-
-            <div class="level-right">
-                <div class="level-item">
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <div class="select is-fullwidth">
-                                        <select v-model="perPage">
-                                            <option value="5">5 per page</option>
-                                            <option value="10">10 per page</option>
-                                            <option value="25">25 per page</option>
-                                            <option value="50">50 per page</option>
-                                            <option value="100">100 per page</option>
-                                            <option value="250">250 per page</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="level-item">
-                    <a class="button">
-                        Edit Table
-                    </a>
-                </div>
-
-                <div class="level-item">
-                    <a class="button">
-                        <b-icon icon="file_download" size="is-small"></b-icon>
-                    </a>
-                </div>
-
-                <div class="level-item">
-                    <a class="button">
-                        <b-icon icon="sliders" pack="fa"></b-icon>
-                    </a>
-                </div>
-
-                <div class="level-item">
-                    <a class="button">
-                        <b-icon icon="format_size" size="is-small"></b-icon>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
         <!-- TODO - [ ] Use generic `items` array as the prop when componentized -->
         <b-table
             :data="isEmpty ? [] : avails"
@@ -132,7 +8,7 @@
             :checkable="isCheckable"
             :checked-rows.sync="checkedRows"
             :detailed="hasDetails"
-            @details-open="(row, index) => $snackbar.open(`Expanded ${row.advertiser}`)"
+            @details-open="(row, index) => $toast.open(`Expanded ${row.advertiser}`)"
             :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
             :bordered="isBordered"
             :striped="isStriped"
@@ -272,6 +148,22 @@
             </template>
         </b-table>
 
+        <hr class="is-marginless">
+
+        <b-tabs size="is-small">
+            <b-tab-item label="HTML">
+                <pre><code v-text="code"></code></pre>
+            </b-tab-item>
+<!--             <b-tab-item label="Handlebars"></b-tab-item>
+            <b-tab-item label="Nunjucks"></b-tab-item>
+            <b-tab-item label="Pug"></b-tab-item>
+            <b-tab-item label="Angular"></b-tab-item>
+            <b-tab-item label="React"></b-tab-item>
+            <b-tab-item label="Vue"></b-tab-item> -->
+<!--             <b-tab-item label="Props"></b-tab-item>
+            <b-tab-item label="Events"></b-tab-item> -->
+        </b-tabs>
+
         <!-- TODO - [ ] Consider how to use Modal components -->
         <div class="modal" :class="isActive ? 'is-active' : ''">
             <div class="modal-background"></div>
@@ -306,6 +198,9 @@ export default {
             avails,
             checkedRows: [],
             checkedRows: [avails[1], avails[3]],
+            code: `<table class="table is-checkable is-striped is-narrowed">
+    ...
+</table>`,
             columnsTemplate: [
                 { title: 'ID', field: 'id', visible: true },
                 { title: 'First Name', field: 'first_name', visible: true },
@@ -315,19 +210,19 @@ export default {
             ],
             date: null,
             defaultSortDirection: 'asc',
-            hasDetails: false,
+            hasDetails: true,
             hasMobileCards: true,
             isActive: false,
             isBordered: false,
-            isCheckable: false,
+            isCheckable: true,
             isEmpty: false,
             isLoading: false,
-            isNarrowed: false,
-            isPaginated: true,
+            isNarrowed: true,
+            isPaginated: false,
             isPaginationSimple: false,
             isStriped: true,
             options: ['list', 'of', 'options'],
-            perPage: 5,
+            perPage: 20,
             selected: avails[1],
             selected: {},
             value: null

@@ -1,17 +1,25 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="container is-fluid">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                @include('partials.svg.videa-logo')
+                @include('partials.svgs.uxlab-logo')
             </a>
-            <span class="navbar-burger" data-target="navbar-main">
+            @if (Auth::guest())
+            @else
+                <a class="navbar-item is-active" href="">
+                    Components
+                </a>
+            @endif
+
+
+            <span class="navbar-burger" data-target="navbarMain" @click="isActive = !isActive">
                 <span></span>
                 <span></span>
                 <span></span>
             </span>
         </div>
 
-        <div class="navbar-menu" id="navbar-main">
+        <div class="navbar-menu" id="navbarMain">
             <div class="navbar-start">
                 @if (Auth::guest())
                 @else
@@ -21,9 +29,9 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
+                    @include('partials.navbar-items.user-dropdown')
                 @endif
             </div>
         </div>
     </div>
 </nav>
-

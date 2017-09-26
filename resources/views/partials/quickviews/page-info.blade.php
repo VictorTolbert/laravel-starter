@@ -1,4 +1,4 @@
-<div id="quickviewDefault" class="quickview">
+<div id="page-info" class="quickview">
     <div class="container is-fluid">
         <nav class="navbar is-transparent">
             <div class="navbar-brand">

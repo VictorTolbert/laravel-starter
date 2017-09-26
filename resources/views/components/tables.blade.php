@@ -4,20 +4,26 @@
 @endsection
 
 @section('content')
-<section id="home-intro" class="hero is-primary has-code-bg">
+<section id="home-intro" class="hero is-primary">
     <div class="hero-body">
         <div class="container is-fluid">
-            <h1 class="title">Data Tables</h1>
-            <h2 class="subtitle">Data tables are an enhanced version of an HTML table and are used to display tabular data.</h2>
+            <h1 class="title">Tables</h1>
+            <h2 class="subtitle">The inevitable HTML <b>table</b>, with special case cells</h2>
         </div>
     </div>
 </section>
 
+{{-- @include('partials.navbars.wizard') --}}
+
+{{-- <hr class="is-marginless"> --}}
+
 <section class="section">
     <div class="container is-fluid">
 
-        {{-- <a href="#component-overview">Component Overview</a> --}}
+        @include('partials.tabs.table-tools')
         <avails></avails>
+
+        {{-- <a href="#component-overview">Component Overview</a> --}}
 
         {{-- <h2 class="is-size-3">Inventory Guide</h2>
         <b-table

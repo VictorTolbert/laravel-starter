@@ -1,35 +1,35 @@
 <a class="navbar-item">
     <span class="icon is-git">
-        @include('partials.svg.git-logo2')
+        @include('partials.svgs.git-logo2')
     </span>
 </a>
 
 <a class="navbar-item">
     <span class="icon is-html5">
-        @include('partials.svg.html5-logo')
+        @include('partials.svgs.html5-logo')
     </span>
 </a>
 
 <a class="navbar-item">
     <span class="icon is-css3">
-        @include('partials.svg.css3-logo')
+        @include('partials.svgs.css3-logo')
     </span>
 </a>
 
 <a class="navbar-item">
     <span class="icon is-javascript">
-        @include('partials.svg.javascript-logo')
+        @include('partials.svgs.javascript-logo')
     </span>
 </a>
 
 <a class="navbar-item">
     <span class="icon is-react">
-        @include('partials.svg.react-logo')
+        @include('partials.svgs.react-logo')
     </span>
 </a>
 
 <a class="navbar-item">
     <span class="icon is-vue">
-        @include('partials.svg.vue-logo')
+        @include('partials.svgs.vue-logo')
     </span>
 </a>

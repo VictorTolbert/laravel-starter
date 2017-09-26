@@ -20,7 +20,7 @@
         <div class="card">
             <div class="card-image has-text-centered">
                 <section class="section">
-                    @include('partials.svg.vti-logo')
+                    @include('partials.svgs.vti-logo')
                 </section>
             </div>
         </div>
@@ -60,7 +60,7 @@
         <div class="card">
             <div class="card-image has-text-centered">
                 <section class="section">
-                    @include('partials.svg.uxlab-logo')
+                    @include('partials.svgs.uxlab-logo')
                 </section>
             </div>
         </div>

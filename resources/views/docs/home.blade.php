@@ -4,7 +4,7 @@
             <div class="home__header__inner">
                 <div class="home__logo">
                     <a href="{{route('docs')}}" target="videa">
-                        @include('partials.svg.logo')
+                        @include('partials.svgs.logo')
                     </a>
                 </div>
                 <h1 class="home__title">

@@ -18667,6 +18667,23 @@ label.panel-block:hover {
   padding-left: 8rem;
 }
 
+.circle {
+  display: inline-block;
+  background: whitesmoke;
+  color: #363636;
+  border-radius: 100%;
+  border: 1px solid #363636;
+  line-height: 22.5px;
+  line-height: 1.5rem;
+  width: 22.5px;
+  width: 1.5rem;
+  height: 22.5px;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .footer.is-dark {
   background-color: #363636;
   color: whitesmoke;

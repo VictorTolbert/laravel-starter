@@ -1,17 +1,17 @@
-<nav class="navbar is-dark" role="navigation" aria-label="navigation">
+<nav class="navbar is-facebook" role="navigation" aria-label="navigation">
     <div class="container is-fluid">
         <div class="navbar-menu" id="navbar-utilites">
             <div class="navbar-start">
                 <div class="navbar-item" href="{{ route('dashboard') }}">
                     <div class="tags has-addons">
-                        <span class="tag is-primary">Application</span>
+                        {{-- <span class="tag is-primary">Application</span> --}}
                         <span class="tag">Sellers</span>
                     </div>
                 </div>
 
                 <div class="navbar-item" href="{{ route('dashboard') }}">
                     <div class="tags has-addons">
-                        <span class="tag is-primary">Environment</span>
+                        {{-- <span class="tag is-primary">Environment</span> --}}
                         <span class="tag">Alpha</span>
                     </div>
                 </div>
@@ -82,6 +82,11 @@
  --}}
             </div>
             <div class="navbar-end">
+                {{-- @include('partials.navbar-items.preferences') --}}
+                {{-- @include('partials.navbar-items.format-size') --}}
+                @include('partials.navbar-items.help')
+                {{-- @include('partials.navbar-items.notes') --}}
+
                 {{-- <a class="navbar-item" href="{{ route('dashboard') }}">Dashboard</a> --}}
 
 {{--                 <a class="navbar-item">
@@ -90,7 +95,7 @@
 
  --}}{{--                 <a class="navbar-item">
                     <span class="icon">
-                        @include('partials.svg.peach')
+                        @include('partials.svgs.peach')
                     </span>
                 </a>
  --}}
@@ -98,14 +103,15 @@
                     <i class="fa fa-ellipsis-h"></i>
                 </div> --}}
 
-                <a class="navbar-item">
+
+                {{-- <a class="navbar-item">
                     <span class="navbar-burger is-block" data-target="navbar-main">
                         <span></span>
                         <span></span>
                         <span></span>
                     </span>
                     <span>Menu</span>
-                </a>
+                </a> --}}
             </div>
         </div>
     </div>

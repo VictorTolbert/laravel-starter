@@ -17,19 +17,19 @@
         <b-tabs>
             <b-tab-item label="Logos">
                 <section class="section">
-                    @include('partials.logos')
+                    {{-- @include('partials.logos') --}}
                 </section>
             </b-tab-item>
 
             <b-tab-item label="Dayparts">
                 <section class="section">
-                    @include('partials.dayparts')
+                    {{-- @include('partials.dayparts') --}}
                 </section>
             </b-tab-item>
 
             <b-tab-item label="Gallery">
                 <section class="section">
-                    @include('partials.gallery')
+                    {{-- @include('partials.gallery') --}}
                 </section>
             </b-tab-item>
 
@@ -41,12 +41,7 @@
                             <div class="tile">
                                 <div class="tile is-parent is-vertical">
 
-                                    <article class="tile is-child box">
-                                        <div class="content">
-                                            <!-- -->
-                                        </div>
-                                        @include('partials.svg.us')
-                                    </article>
+                                    @include('partials.articles.political')
 
                                     <article class="tile is-child box">
                                         <!-- -->
@@ -54,11 +49,7 @@
                                 </div>
 
                                 <div class="tile is-parent">
-                                    <article class="tile is-child box">
-                                        <div class="content">
-                                            <h2>Featured Component</h2>
-                                        </div>
-                                    </article>
+                                    @include('partials.articles.featured.component')
                                 </div>
                             </div>
                             <div class="tile is-parent">
@@ -81,19 +72,10 @@
                     <div class="tile is-ancestor">
                         <div class="tile is-4 is-vertical is-parent">
                             <div class="tile is-child box">
-                                @include('partials.popular')
+                                {{-- @include('partials.popular') --}}
                             </div>
                             <div class="tile is-child box">
-                                <div class="">
-                                    <h3 class="is-size-3">Spacing Utilities</h3>
-                                    <p class="m-b-xxl">test</p>
-                                    <p class="m-b-xl">test</p>
-                                    <p class="m-b-lg">test</p>
-                                    <p class="m-b-md">test</p>
-                                    <p class="m-b-sm">test</p>
-                                    <p class="m-b-xs">test</p>
-                                    <p class="m-b-xxs">test</p>
-                                </div>
+
                             </div>
                         </div>
                         <div class="tile is-parent">
@@ -112,9 +94,7 @@
                 <section class="section">
                     <div class="tile is-ancestor">
                         <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <h3 class="is-size-3">Agile in a Flash</h3>
-                            </article>
+                            @include('partials.articles.agile')
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
