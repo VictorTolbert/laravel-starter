@@ -10,9 +10,11 @@
     </div>
 </section>
 
-<div class="container is-fluid">
+
+<div class="container is-fluid p-l-lg">
     {{ Breadcrumbs::render('tables') }}
 </div>
+
 <hr class="is-marginless">
 
 <section class="section">

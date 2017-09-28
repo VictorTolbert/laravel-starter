@@ -44,9 +44,9 @@
                 {{-- <window url="https://www.youtube.com/embed/1DWn7Mb0TKI"> --}}
                     {{-- @include('partials.videos.sample') --}}
                     {{-- Easter Egg --}}
-                    <figure class="video-wrapper">
+{{--                     <figure class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/1DWn7Mb0TKI" frameborder="0" allowfullscreen></iframe>
-                    </figure>
+                    </figure> --}}
                 {{-- </window> --}}
                 {{-- <div class="columns">
                     <div class="column is-2">

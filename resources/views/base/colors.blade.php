@@ -9,6 +9,274 @@
     </div>
 </header>
 <section class="section">
+    <div class="container is-fluid">
+        <div class="content">
+            <p>
+                Most elements and components have color variations thanks to <strong>modifiers</strong> with syntax <code>.is-$color</code>, like <code>is-primary</code> or <code>is-dark</code>.
+            </p>
+            <p>
+                This is thanks to the <code>$colors</code> <strong>Sass map</strong>, through which Bulma cycles to grab all the colors and their inverts.
+            </p>
+        </div>
 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Color</th>
+                    <th>Variable</th>
+                    <th>Value</th>
+                    <th>Actual value</th>
+                    <th>Invert variable</th>
+                    <th>Actual invert value</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>
+                        <strong>White</strong>
+                    </td>
+                    <td>
+                        <code>$white</code>
+                    </td>
+                    <td>
+                        <code>$white</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(0, 0%, 100%);"></span>
+                        <code>hsl(0, 0%, 100%)</code>
+
+                    </td>
+                    <td>
+                        <code>$black</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: rgba(0, 0, 0, 0.7);"></span>
+                        <code>rgba(0, 0, 0, 0.7)</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Black</strong>
+                    </td>
+                    <td>
+                        <code>$black</code>
+                    </td>
+                    <td>
+                        <code>$black</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(0, 0%, 4%);"></span>
+                        <code>hsl(0, 0%, 4%)</code>
+
+                    </td>
+                    <td>
+                        <code>$white</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: #fff;"></span>
+                        <code>#fff</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Light</strong>
+                    </td>
+                    <td>
+                        <code>$light</code>
+                    </td>
+                    <td>
+                        <code>$white-ter</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(0, 0%, 96%);"></span>
+                        <code>hsl(0, 0%, 96%)</code>
+
+                    </td>
+                    <td>
+                        <code>$light-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: rgba(0, 0, 0, 0.7);"></span>
+                        <code>rgba(0, 0, 0, 0.7)</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Dark</strong>
+                    </td>
+                    <td>
+                        <code>$dark</code>
+                    </td>
+                    <td>
+                        <code>$grey-darker</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background:  hsl(0, 0%, 21%);"></span>
+                        <code>hsl(0, 0%, 21%)</code>
+
+                    </td>
+                    <td>
+                        <code>$dark-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: #fff;"></span>
+                        <code>#fff</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Primary</strong>
+                    </td>
+                    <td>
+                        <code>$primary</code>
+                    </td>
+                    <td>
+                        <code>$turquoise</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(171, 100%, 41%);"></span>
+                        <code>hsl(171, 100%, 41%)</code>
+
+                    </td>
+                    <td>
+                        <code>$primary-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: #fff;"></span>
+                        <code>#fff</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Info</strong>
+                    </td>
+                    <td>
+                        <code>$info</code>
+                    </td>
+                    <td>
+                        <code>$blue</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(217, 71%,  53%);"></span>
+                        <code>hsl(217, 71%,  53%)</code>
+
+                    </td>
+                    <td>
+                        <code>$info-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: #fff;"></span>
+                        <code>#fff</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Success</strong>
+                    </td>
+                    <td>
+                        <code>$success</code>
+                    </td>
+                    <td>
+                        <code>$green</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(141, 71%,  48%);"></span>
+                        <code>hsl(141, 71%,  48%)</code>
+
+                    </td>
+                    <td>
+                        <code>$success-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: #fff;"></span>
+                        <code>#fff</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Warning</strong>
+                    </td>
+                    <td>
+                        <code>$warning</code>
+                    </td>
+                    <td>
+                        <code>$yellow</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(48,  100%, 67%);"></span>
+                        <code>hsl(48,  100%, 67%)</code>
+
+                    </td>
+                    <td>
+                        <code>$warning-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: rgba(0, 0, 0, 0.7);"></span>
+                        <code>rgba(0, 0, 0, 0.7)</code>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <strong>Danger</strong>
+                    </td>
+                    <td>
+                        <code>$danger</code>
+                    </td>
+                    <td>
+                        <code>$red</code>
+                    </td>
+                    <td>
+                        <span class="bd-color" style="background: hsl(348, 100%, 61%);"></span>
+                        <code>hsl(348, 100%, 61%)</code>
+
+                    </td>
+                    <td>
+                        <code>$danger-invert</code>
+                    </td>
+                    <td>
+
+                        <span class="bd-color" style="background: #fff;"></span>
+                        <code>#fff</code>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 </section>
 @endsection

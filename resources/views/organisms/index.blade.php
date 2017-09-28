@@ -5,8 +5,7 @@
     <div class="hero-body">
         <div class="container is-fluid">
             <h1 class="title">Organisms</h1>
-            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure doloribus, quidem optio, numquam commodi unde nihil nesciunt sapiente obcaecati corporis maiores ipsam cumque magni magnam provident sed sequi, praesentium, veniam.</h2>
-
+            <h2 class="subtitle">Organisms are assemblies of molecules functioning together as a unit.</h2>
         </div>
     </div>
 </header>
