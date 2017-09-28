@@ -1,6 +1,6 @@
 @if (Auth::guest())
 @else
-    <footer class="footer is-dark">
+{{--     <footer class="footer is-dark">
         <nav class="navbar">
             <div class="navbar-menu is-active">
                 <div class="navbar-start">
@@ -8,11 +8,11 @@
                         <p class="has-text-white">Made with
                             <span style="color: red">
                                 @svg('favorite')
-                            </span> {{-- by
+                            </span> by
 
                             <a style="color: white; text-decoration: underline;" href="https://twitter.com/VictorTolbert" target="_blank">
                                 Victor Tolbert
-                            </a>. --}}
+                            </a>.
                         </p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </nav>
-    </footer>
+    </footer> --}}
 @endif
 
 <!-- Page Loader -->

@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-<section id="home-intro" class="hero is-primary">
+<section class="hero is-light" id="home-intro">
     <div class="hero-body">
         <div class="container is-fluid">
 

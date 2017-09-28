@@ -1,6 +1,6 @@
 # Overview
 
-# UX Principles and Goals
+# UX Principles, Goals, Feature to organize
 
 - Elegance
 - Clean
@@ -12,6 +12,20 @@
 - Legible
 - Easy to maintain
 - Reactive
+- [Modern Javascript](https://github.com/mbeaudru/modern-js-cheatsheet)
+- A NPM + Webpack + Babel Front-End development workflow
+- Supports `ES2015`
+- Declarative
+- Efficient
+- Flexible
+- New ECMAScript ~~Syntax~~
+- ES6 API
+- Components
+- Client Data Container (Vuex, Redux)
+- Opinionated but Configurable (CSS, Sass, Less, Stylus, HTML, Pug, JavaScript, Typescript, JSX)
+- **platform-agnostic** to the needs of users on a variety of different technology stacks
+- empower our designers to code and iterate more efficiently in the browser
+- enable our developers creating prototypes to build more quickly
 
 * This framework is Responsive, if it's not contstrained by the framework. It's a one-off.
 * Your project doesn't have to, but the framework)
@@ -34,17 +48,6 @@
 
 ## Features
 
-- [Modern Javascript](https://github.com/mbeaudru/modern-js-cheatsheet)
-- A NPM + Webpack + Babel Front-End development workflow
-- Supports `ES2015`
-- Declarative
-- Efficient
-- Flexible
-- New ECMAScript ~~Syntax~~
-- ES6 API
-- Components
-- Client Data Container (Vuex, Redux)
-- Opinionated but Configurable (CSS, Sass, Less, Stylus, HTML, Pug, JavaScript, Typescript, JSX)
 
 
 This was written by @VictorTolbert

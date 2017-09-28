@@ -25,7 +25,7 @@
 
                         <div class="field is-grouped">
                             <p class="control">
-                                <button type="submit" class="button is-primary">
+                                <button type="submit" class="button is-dark">
                                     Login
                                 </button>
                             </p>
@@ -38,16 +38,17 @@
                     </form>
                 </div>
             </div>
+
             <div class="column is-offset-1">
                 {{-- <a>Request an invite</a> --}}
                 {{-- <window url="https://www.youtube.com/embed/1DWn7Mb0TKI"> --}}
                     {{-- @include('partials.videos.sample') --}}
                     {{-- Easter Egg --}}
-                    {{-- <figure class="image">
+                    <figure class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/1DWn7Mb0TKI" frameborder="0" allowfullscreen></iframe>
-                    </figure> --}}
+                    </figure>
                 {{-- </window> --}}
-                <div class="columns">
+                {{-- <div class="columns">
                     <div class="column is-2">
                         <figure class="image is-4x3 box">
                             <img src="/images/screengrabs/animation-short.gif">
@@ -90,7 +91,7 @@
                             <img src="/images/screengrabs/website-wireframe.gif">
                         </figure>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

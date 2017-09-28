@@ -1,0 +1,25 @@
+$primary-color: #6FBDC9;
+$secondary-color: #F5F6EF;
+$outline-color: adjust-color($primary-color, $hue: 20%, $lightness: -34%);
+$fill-color: adjust-color($primary-color, $saturation: -82%, $lightness: 50%);
+
+body { background-color: $secondary-color; }
+
+.heroicon- {
+	&outline {
+		fill: $outline-color;
+	}
+
+	&component- {
+		&fill {
+			fill: $fill-color;
+		}
+		&accent {
+			fill: $primary-color;
+		}
+	}
+	
+	&shadows {
+		fill: $outline-color; opacity: .4;
+	}
+}

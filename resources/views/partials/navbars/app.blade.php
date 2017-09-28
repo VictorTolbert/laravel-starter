@@ -4,6 +4,7 @@
             <a class="navbar-item" href="{{ route('home') }}">
                 @include('partials.svgs.vti-logo')
                 @include('partials.svgs.uxlab-logo')
+                {{-- @include('partials.svgs.videa-logo') --}}
             </a>
             @if (Auth::guest())
             @else
@@ -11,7 +12,6 @@
                     Design System
                 </a>
             @endif
-
 
             <span class="navbar-burger" data-target="navbarMain" @click="isActive = !isActive">
                 <span></span>

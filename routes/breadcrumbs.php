@@ -17,6 +17,18 @@ Breadcrumbs::register('dashboard', function ($breadcrumbs) {
     $breadcrumbs->push('Dashboard', route('dashboard'));
 });
 
+// Home > Components
+Breadcrumbs::register('components', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Components', route('components'));
+});
+
+// Components > Tables
+Breadcrumbs::register('tables', function ($breadcrumbs) {
+    $breadcrumbs->parent('components');
+    $breadcrumbs->push('Tables', route('tables'));
+});
+
 // Home > FAQs
 Breadcrumbs::register('faqs', function ($breadcrumbs) {
     $breadcrumbs->parent('home');

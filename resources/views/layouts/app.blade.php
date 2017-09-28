@@ -32,6 +32,7 @@
 <body>
     <div id="app">
         <main class="main">
+            <div class="is-primary" style="background-color:#4295b3;height:0.25rem">&nbps;</div>
             @include('partials.navbars.app')
             {{-- @include('partials.navbars.apps') --}}
             {{-- @include('partials.navbars.breadcrumb') --}}

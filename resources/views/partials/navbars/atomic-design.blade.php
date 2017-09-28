@@ -1,4 +1,4 @@
-<nav class="navbar is-facebook" role="navigation" aria-label="navigation">
+<nav class="navbar is-dark" role="navigation" aria-label="navigation">
     <div class="container is-fluid">
         <div class="navbar-menu" id="navbar-utilites">
             <div class="navbar-brand">

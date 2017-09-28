@@ -1,17 +1,22 @@
 @extends('layouts.app')
 @section('content')
 
-<header class="hero is-primary">
+<header class="hero is-light">
     <div class="hero-body">
         <div class="container is-fluid">
             <h1 class="title">Navbars</h1>
-            <h2 class="subtitle"></h2>
+            <h2 class="subtitle" style="text-shadow: 0 1px 2px rgba(0,0,0,0.20)">A responsive horizontal <b>navbar</b> that can supports images, links, buttons, and dropdowns</h2>
         </div>
     </div>
 </header>
+
 <section class="section">
     <div class="box">
         @include('partials.navbars.app')
+    </div>
+
+    <div class="box">
+        @include('partials.navbars.sellers')
     </div>
 
     <div class="box">

@@ -12,14 +12,14 @@
         </div>
 
         <div class="navbar-menu" id="navbar-main">
+            <div class="navbar-start">
+                @if (Auth::guest())
+                @else
                     @include('partials.navbar-items.order-management')
                     @include('partials.navbar-items.reporting')
                     @include('partials.navbar-items.price-guide')
                     @include('partials.navbar-items.avails')
                     @include('partials.navbar-items.campaign-performance')
-            <div class="navbar-start">
-                @if (Auth::guest())
-                @else
                 @endif
             </div>
 

@@ -85,7 +85,7 @@ Route::name('reporting')->get('/reporting', 'PagesController@reporting');
 Route::name('settings')->get('/settings', 'PagesController@settings');
 Route::name('sitemap')->get('/sitemap', 'PagesController@sitemap');
 // Route::name('table')->get('/table', 'PagesController@table');
-Route::name('tables')->get('/table', 'PagesController@tables');
+Route::name('tables')->get('/tables', 'PagesController@tables');
 Route::name('team')->get('/team', 'PagesController@team');
 Route::name('templates')->get('/templates', 'PagesController@templates');
 Route::name('terms')->get('/terms', 'PagesController@terms');
@@ -98,7 +98,9 @@ Route::name('view')->get('/view', 'PagesController@view');
 Route::name('zurb')->get('/zurb', 'PagesController@zurb');
 
 Route::name('home')->get('/', function () {
-    return redirect()->route('navbars');
+    // return redirect()->route('dashboard');
+    // return redirect()->route('navbars');
+    return redirect()->route('tables');
 });
 
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

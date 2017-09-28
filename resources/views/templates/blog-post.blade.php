@@ -58,7 +58,7 @@
       </div>
     </nav>
 
-    <section class="hero is-primary is-medium">
+    <section class="hero is-light is-medium">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-2">

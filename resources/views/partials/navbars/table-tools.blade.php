@@ -5,20 +5,6 @@
             </div>
             <div class="navbar-start">
 
-                <span class="navbar-item is-tab">
-                    <span class="m-r-sm">
-                        @svg('search')
-                    </span>
-                    <span>Search</span>
-                </span>
-
-                <span class="navbar-item is-tab">
-                    <span class="m-r-sm">
-                        @svg('filter-list')
-                    </span>
-                    <span>Filter List</span>
-                </span>
-
                 @include('partials.navbar-items.dashboard')
                 @include('partials.navbar-items.preferences')
                 @include('partials.navbar-items.format-size')

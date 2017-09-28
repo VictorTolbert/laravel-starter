@@ -4,7 +4,7 @@
 <div class="hero-body">
     <div class="container is-fluid">
         <h1 class="title">Card</h1>
-        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
+        <h2 class="subtitle">Cards are used to apply a container around a related grouping of information.</h2>
     </div>
 </div>
 @endsection

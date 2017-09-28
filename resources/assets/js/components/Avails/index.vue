@@ -24,50 +24,39 @@
             <template scope="props">
                 <!-- TODO - [ ] Loop over columnConfig object [h1] -->
 
+                <b-table-column field="id" meta="Internal ID" label="Avail Number" sortable>
+                    <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
+                        {{ props.row.id }}
+                    </a>
+                </b-table-column>
+
                 <b-table-column field="status" label="Status" sortable>
                     <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">
                         {{ props.row.status }}
                     </span>
                 </b-table-column>
 
-                <b-table-column field="id" meta="Internal ID" label="Videa Order" sortable>
-                    <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
-                        {{ props.row.id }}
-                    </a>
-                </b-table-column>
-
-                <b-table-column field="stationOrderNumber" label="Station Order" sortable>
+<!--                 <b-table-column field="stationOrderNumber" label="Station Order" sortable>
                     {{ props.row.stationOrderNumber }}
-                </b-table-column>
+                </b-table-column> -->
 
 <!--                 <b-table-column field="currency" label="Currency" sortable>
                     {{ props.row.currency }}
                 </b-table-column>
  -->
+
+ <b-table-column field="released" label="Released" sortable>
+     {{ props.row.released }}
+ </b-table-column>
+
                 <b-table-column field="advertiser" label="Advertiser" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(props.row.advertiser)">
                         {{ props.row.advertiser }}
                     </a>
                 </b-table-column>
 
-                <b-table-column field="agency" label="Agency" sortable>
-                    {{ props.row.agency }}
-                </b-table-column>
-
-               <b-table-column field="product" label="Product" sortable>
+                <b-table-column field="product" label="Product" sortable>
                     {{ props.row.product }}
-                </b-table-column>
-
-                <b-table-column field="demo" label="Demo" sortable>
-                    {{ props.row.demo }}
-                </b-table-column>
-
-                <b-table-column field="campaign" label="Campaign" sortable>
-                    {{ props.row.campaign }}
-                </b-table-column>
-
-                <b-table-column field="cpe" label="Cpe"  sortable>
-                    {{ props.row.cpe }}
                 </b-table-column>
 
                 <b-table-column field="estimate" label="Estimate" numeric sortable>
@@ -82,19 +71,41 @@
                     {{ props.row.flightEnd }}
                 </b-table-column>
 
+                <b-table-column field="agency" label="Agency" sortable>
+                    {{ props.row.agency }}
+                </b-table-column>
+
+                <b-table-column field="spots" label="Last Updated" sortable>
+                    {{ props.row.updated }}
+                </b-table-column>
+
+<!--
+
+                <b-table-column field="demo" label="Demo" sortable>
+                    {{ props.row.demo }}
+                </b-table-column>
+
+                <b-table-column field="campaign" label="Campaign" sortable>
+                    {{ props.row.campaign }}
+                </b-table-column>
+
+                <b-table-column field="cpe" label="Cpe"  sortable>
+                    {{ props.row.cpe }}
+                </b-table-column>
+
+
+
+
                 <b-table-column field="spots" label="Spots" sortable>
                     {{ props.row.spots }}
                 </b-table-column>
 
                 <b-table-column field="ordered" label="Ordered" sortable>
                     {{ props.row.ordered }}
-                </b-table-column>
+                </b-table-column> -->
 
-                <b-table-column field="released" label="Released" sortable>
-                    {{ props.row.released }}
-                </b-table-column>
 
-                <b-table-column field="budget" numeric label="Budget" sortable>
+<!--                 <b-table-column field="budget" numeric label="Budget" sortable>
                     {{ props.row.budget }}
                 </b-table-column>
 
@@ -108,7 +119,7 @@
 
                 <b-table-column field="share" numeric label="Share" sortable>
                     {{ props.row.share }}
-                </b-table-column>
+                </b-table-column> -->
             </template>
 
             <!-- TODO - [ ] Build out detail example -->
@@ -148,23 +159,6 @@
             </template>
         </b-table>
 
-        <hr class="is-marginless">
-<div class="box">
-            <b-tabs size="is-small">
-                <b-tab-item label="HTML">
-                    <pre><code v-text="code"></code></pre>
-                </b-tab-item>
-                <b-tab-item label="Handlebars"></b-tab-item>
-                <b-tab-item label="Nunjucks"></b-tab-item>
-                <b-tab-item label="Pug"></b-tab-item>
-                <b-tab-item label="Angular"></b-tab-item>
-                <b-tab-item label="React"></b-tab-item>
-                <b-tab-item label="Vue"></b-tab-item>
-                <b-tab-item label="Props"></b-tab-item>
-                <b-tab-item label="Events"></b-tab-item>
-            </b-tabs>
-</div>
-
         <!-- TODO - [ ] Consider how to use Modal components -->
         <div class="modal" :class="isActive ? 'is-active' : ''">
             <div class="modal-background"></div>
@@ -186,7 +180,7 @@
 </template>
 
 <script>
-const avails = require('../../data/orders')
+const avails = require('../../data/avails')
 
 export default {
     name: 'avails',
@@ -210,7 +204,7 @@ export default {
             hasDetails: true,
             hasMobileCards: true,
             isActive: false,
-            isBordered: false,
+            isBordered: true,
             isCheckable: true,
             isEmpty: false,
             isLoading: false,
