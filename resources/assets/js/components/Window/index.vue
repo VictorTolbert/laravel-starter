@@ -21,8 +21,8 @@
         components: { BrowserWindow },
         data() {
             return {
-                width: 460,
-                height: 270,
+                width: 530,
+                height: 290,
                 code: hljs.highlight('javascript', `import { EditorWindow } from 'vue-windows'
 new Vue({
     el: '#app',
@@ -44,5 +44,6 @@ new Vue({
     }
 </script>
 
-<style src="vue-windows/dist/vue-windows.css"></style>
+<!-- <style src="vue-windows/dist/vue-windows.css"></style> -->
 <!-- <style src="highlight.js/styles/androidstudio"></style> -->
+

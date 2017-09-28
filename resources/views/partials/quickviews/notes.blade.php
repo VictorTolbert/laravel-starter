@@ -1,8 +1,8 @@
-<div id="notes" class="quickview">
+<div id="notes" class="note quickview" style="">
     <div class="container is-fluid">
         <nav class="navbar is-transparent">
             <div class="navbar-brand">
-                <span class="navbar-item">
+                <span class="navbar-item is-size-4">
                     Notes
                 </span>
             </div>
@@ -20,7 +20,15 @@
     </div>
     <section class="section quickview-body">
         <div class="quickview-block">
-
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="{{ route('sitemap') }}">
+                            Sitemap
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 

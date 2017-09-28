@@ -1,3 +1,3 @@
 <a class="navbar-item" data-show="quickview">
-    <b-icon icon="format_size" size="is-small"></b-icon>
+    @svg('format-size', 'icon-lg')
 </a>

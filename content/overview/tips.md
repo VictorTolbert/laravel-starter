@@ -1,28 +1,29 @@
-# Tips
+# Code Snippets and Tips
 
 <!-- https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb -->
 
-- every
-- filter
-- find
-- forEach
-- join
-- length
-- map
-- pop
-- push
-- reduce
-- reverse
-- shift
-- slice
-- some
-- sort
-- all
-- first
-- splice
-- split
-- sum
+- [.every](#every)
+- [.find](#find)
+- [.map](#map)
+- [.filter](#filter)
+- [.forEach](#.forEach)
+- [join](#join)
+- [length](#length)
+- [pop](#pop)
+- [push](#push)
+- [reduce](#reduce)
+- [reverse](#reverse)
+- [shift](#shift)
+- [slice](#slice)
+- [some](#some)
+- [sort](#sort)
+- [all](#all)
+- [first](#first)
+- [splice](#splice)
+- [split](#split)
+- [sum](#sum)
 
+## .forEach
 
 ```js
 var colors = ['red', 'green', 'blue']
@@ -33,6 +34,8 @@ function print(val) {
 
 colors.forEach(print)
 ```
+
+## .map
 
 ```js
 var colors = ['red', 'green', 'blue']
@@ -46,6 +49,8 @@ var capitalizedColors = colors.map(capitalize)
 console.log(capitalizedColors)
 ```
 
+## .filter
+
 ```js
 var values = [1, 60, 34, 30, 20, 5]
 
@@ -57,6 +62,8 @@ var valuesLessThan20 = values.filter(lessThan20)
 
 console.log(valuesLessThan20)
 ```
+
+## .find
 
 ```js
 var people = [
@@ -76,6 +83,10 @@ var firstTeenager = people.find(teenager)
 console.log('First found teenager:', firstTeenager.name)
 ```
 
+
+## .every
+
+
 ```js
 var people = [
   {name: 'Jack', age: 50},
@@ -94,6 +105,8 @@ var everyoneIsTeenager = people.every(teenager)
 console.log('Everyone is teenager: ', everyoneIsTeenager)
 ```
 
+## .some
+
 ```js
 var people = [
   {name: 'Jack', age: 50},
@@ -111,6 +124,8 @@ var thereAreTeenagers = people.some(teenager)
 
 console.log('There are teenagers:', thereAreTeenagers)
 ```
+
+## .reduce
 
 ```js
 var array = [1, 2, 3, 4]

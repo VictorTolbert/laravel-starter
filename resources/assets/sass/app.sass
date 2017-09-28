@@ -7,3 +7,19 @@
 
 // Extend...
 @import 'extensions/_all'
+
+// width, opacity, position and font-size
+// http://trentwalton.com/2010/03/22/CSS3-in-transition
+a.foo
+    padding: 5px 10px
+    background: #9c3
+
+    // transition: background 0.3s ease 0.5s, color 0.2s linear
+    transition-property: background, color
+    transition-duration: 0.3s, 0.2s
+    transition-timing-function: ease, linear
+    transition-delay: 0.5s
+
+a.foo:hover,
+a.foo:focus
+    background: #690

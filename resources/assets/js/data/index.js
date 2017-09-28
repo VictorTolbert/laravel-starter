@@ -13,6 +13,8 @@ module.exports = function () {
         avails: require('./avails'),
         barChart: require('./bar-chart'),
         colors: require('./colors'),
+        clients: require('./clients'),
+        clientColumns: require('./client-columns'),
         components: require('./components'),
         data: require('./data'),
         dayparts: require('./dayparts'),

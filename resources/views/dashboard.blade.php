@@ -1,40 +1,96 @@
 @extends('layouts.app')
 
-@section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">Dashboard</h1>
-        <h1 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h1>
-    </div>
-</div>
-@endsection
-
 @section('content')
-@include('partials.nested-columns')
-
+<header class="hero is-primary">
+    <div class="hero-body">
+        <div class="container is-fluid">
+            <h1 class="title">Design System Dashboard</h1>
+        <h1 class="subtitle">Lorem ipsum <abbr>dolor</abbr> sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h1>
+        </div>
+    </div>
+</header>
+@include('partials.navbars.project-info')
 <section class="section">
     <div class="container is-fluid">
+
         <b-tabs>
-            <b-tab-item label="Logos">
+            <b-tab-item label="Elements">
                 <section class="section">
-                    {{-- @include('partials.logos') --}}
+                    <p class="is-size-4">Navbars</p>
+
+                    <div class="box">
+                        @include('partials.navbars.app')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.apps')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.breadcrumb')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.buyer')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.campaign-performance')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.design-system')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.gasps')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.ops')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.project-info')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.pagination')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.seller')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.style1')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.styleguide')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.table-tools')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.team')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.utilities')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.vti')
+                    </div>
+
+                    <div class="box">
+                        @include('partials.navbars.wizard')
+                    </div>
+
                 </section>
-            </b-tab-item>
-
-            <b-tab-item label="Dayparts">
-                <section class="section">
-                    {{-- @include('partials.dayparts') --}}
-                </section>
-            </b-tab-item>
-
-            <b-tab-item label="Gallery">
-                <section class="section">
-                    {{-- @include('partials.gallery') --}}
-                </section>
-            </b-tab-item>
-
-
-            <b-tab-item label="One">
                 <section class="section">
                     <div class="tile is-ancestor">
                         <div class="tile is-vertical is-8">
@@ -49,7 +105,180 @@
                                 </div>
 
                                 <div class="tile is-parent">
-                                    @include('partials.articles.featured.component')
+                                    @include('partials.articles.featured-component')
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <!-- -->
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <!-- -->
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </b-tab-item>
+            <b-tab-item label="Design Tokens">
+                <section class="section">
+                    <div class="columns">
+                        <div class="column is-1">
+                            <aside class="menu">
+                                <p class="menu-label">Overview</p>
+                                <ul class="menu-list">
+                                    <li><a href="#">Color</a></li>
+                                    <li><a href="#">Type</a></li>
+                                    <li><a href="#">Fonts</a></li>
+                                    <li><a href="#">Spacing</a></li>
+                                    <li><a href="#">Sizing</a></li>
+                                    <li><a href="#">Helpers</a></li>
+                                    <li><a href="#">Icons</a></li>
+                                    <li><a href="#">Grid</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="column">
+
+                        </div>
+                    </div>
+                </section>
+
+            </b-tab-item>
+
+            <b-tab-item label="Layout">
+                <section class="section">
+                    <div class="columns">
+                        <div class="column is-1">
+                            <aside class="menu">
+                                <p class="menu-label">Menu</p>
+                                <ul class="menu-list">
+                                    <li><a href="">Blank slate</a></li>
+                                    <li><a href="">Two-Column</a></li>
+                                    <li><a href="">Gallery</a></li>
+                                    <li><a href="">List page</a></li>
+                                    <li><a href="">Detail page</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="column">
+
+                        </div>
+                    </div>
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Data Tables">
+                <section class="section">
+                    @include('partials.articles.avails')
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Placeholders">
+                <section class="section">
+                    @include('partials.tables.responsive-images-with-ratio')
+                    <div class="columns">
+                        <div class="column is-6">
+                            <figure class="image box is-4by3">
+                                <img src="/images/placeholders/fpo.png">
+                            </figure>
+                            <hr>
+                            <figure class="image box is-3by2">
+                                <img src="/images/placeholders/fpo.png">
+                            </figure>
+                            <hr>
+                            <figure class="image box is-16by9">
+                                <img src="/images/placeholders/fpo.png">
+                            </figure>
+                        </div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Form Controls">
+                <section class="section">
+                    <div class="container is-fluid">
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">HTML5</p>
+                                <p class="is-size-4">Datalist</p>
+
+                                <input class="input" type="text" name="foo" id="foo" list="planets">
+                                <datalist id="planets">
+                                    <option value="Mercury"></option>
+                                    <option value="Venus"></option>
+                                </datalist>
+
+                                <p class="is-size-4">Progress</p>
+                                <progress min="0" max="100" value="60"></progress>
+
+                                <p class="is-size-4">Number</p>
+                                <input class="input" type="number" min="1" max="5">
+                            </div>
+
+                            <div class="column">
+                            </div>
+
+                            <div class="column">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Assets">
+                <section class="section">
+                    @include('partials.assets.icons')
+                    @include('partials.assets.images')
+                    @include('partials.assets.logos')
+                    @include('partials.assets.photos')
+                    <todo v-for="(todo, index) in todos" :key="index" :todo="todo"></todo>
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Daypart Display">
+                <section class="section">
+                    @include('partials.grids.dayparts')
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Galleries">
+                <section class="section">
+                    @include('partials.galleries.logos')
+                    @include('partials.galleries.tech')
+                    @include('partials.galleries.ui-details')
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Data Tables">
+                <section class="section">
+                    @include('partials.datatables.tv-grid')
+                </section>
+            </b-tab-item>
+
+
+
+            <b-tab-item label="Components">
+                <section class="section">
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile">
+                                <div class="tile is-parent is-vertical">
+
+                                    @include('partials.articles.political')
+
+                                    <article class="tile is-child box">
+                                        <!-- -->
+                                    </article>
+                                </div>
+
+                                <div class="tile is-parent">
+                                    @include('partials.articles.featured-component')
                                 </div>
                             </div>
                             <div class="tile is-parent">
@@ -72,7 +301,7 @@
                     <div class="tile is-ancestor">
                         <div class="tile is-4 is-vertical is-parent">
                             <div class="tile is-child box">
-                                {{-- @include('partials.popular') --}}
+                                @include('partials.panels.popular')
                             </div>
                             <div class="tile is-child box">
 
@@ -90,232 +319,7 @@
                 </section>
             </b-tab-item>
 
-            <b-tab-item label="Three">
-                <section class="section">
-                    <div class="tile is-ancestor">
-                        <div class="tile is-parent">
-                            @include('partials.articles.agile')
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Foo</p>
-                                <p class="subtitle">Bar</p>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Third column</p>
-                                <p class="subtitle">With some content</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="tile is-ancestor">
-                        <div class="tile is-vertical is-8">
-                            <div class="tile">
-                                <div class="tile is-parent is-vertical">
-                                    <article class="tile is-child box">
-                                        <p class="title">Vertical tiles</p>
-                                        <p class="subtitle">Top box</p>
-                                    </article>
-                                    <article class="tile is-child box">
-                                        <p class="title">Vertical tiles</p>
-                                        <p class="subtitle">Bottom box</p>
-                                    </article>
-                                </div>
-                                <div class="tile is-parent">
-                                    <article class="tile is-child box">
-                                        <p class="title">Middle box</p>
-                                        <p class="subtitle">With an image</p>
-                                        <figure class="image is-4by3">
-                                            <img src="http://bulma.io/images/placeholders/640x480.png">
-                                        </figure>
-                                    </article>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <p class="title">Wide column</p>
-                                    <p class="subtitle">Aligned with the right column</p>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <div class="content">
-                                    <p class="title">Tall column</p>
-                                    <p class="subtitle">With even more content</p>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                        <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-                                        <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="tile is-ancestor">
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Side column</p>
-                                <p class="subtitle">With some content</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="tile is-parent is-8">
-                            <article class="tile is-child box">
-                                <p class="title">Main column</p>
-                                <p class="subtitle">With some content</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-            </b-tab-item>
-
-            <b-tab-item label="Four">
-                <section class="section">
-                    <div class="tile is-ancestor">
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">One</p>
-                                <p class="subtitle">Subtitle</p>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Two</p>
-                                <p class="subtitle">Subtitle</p>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Three</p>
-                                <p class="subtitle">Subtitle</p>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Four</p>
-                                <p class="subtitle">Subtitle</p>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="tile is-ancestor">
-                        <div class="tile is-vertical is-9">
-                            <div class="tile">
-                                <div class="tile is-parent">
-                                    <article class="tile is-child box">
-                                        <p class="title">Five</p>
-                                        <p class="subtitle">Subtitle</p>
-                                        <div class="content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="tile is-8 is-vertical">
-                                    <div class="tile">
-                                        <div class="tile is-parent">
-                                            <article class="tile is-child box">
-                                                <p class="title">Six</p>
-                                                <p class="subtitle">Subtitle</p>
-                                            </article>
-                                        </div>
-                                        <div class="tile is-parent">
-                                            <article class="tile is-child box">
-                                                <p class="title">Seven</p>
-                                                <p class="subtitle">Subtitle</p>
-                                            </article>
-                                        </div>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="title">Eight</p>
-                                            <p class="subtitle">Subtitle</p>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tile">
-                                <div class="tile is-8 is-parent">
-                                    <article class="tile is-child box">
-                                        <p class="title">Nine</p>
-                                        <p class="subtitle">Subtitle</p>
-                                        <div class="content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="tile is-parent">
-                                    <article class="tile is-child box">
-                                        <p class="title">Ten</p>
-                                        <p class="subtitle">Subtitle</p>
-                                        <div class="content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <div class="content">
-                                    <p class="title">Eleven</p>
-                                    <p class="subtitle">Subtitle</p>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                        <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="tile is-ancestor">
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Twelve</p>
-                                <p class="subtitle">Subtitle</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="tile is-parent is-6">
-                            <article class="tile is-child box">
-                                <p class="title">Thirteen</p>
-                                <p class="subtitle">Subtitle</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">Fourteen</p>
-                                <p class="subtitle">Subtitle</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-            </b-tab-item>
-
-            <b-tab-item label="Five">
+            <b-tab-item label="Placeholders">
                 <section class="section">
                     <div class="tile is-ancestor">
                         <div class="tile is-vertical is-8">
@@ -331,26 +335,7 @@
                                     </article>
                                 </div>
                                 <div class="tile is-parent">
-                                    <article class="tile is-child notification is-info">
-                                        <h1 class="title">The Best Interface is No Interface</h1>
-                                        <p class="subtitle">by Golden Krishna</p>
-
-                                        <figure class="image is-4by3">
-                                            <img src="http://bulma.io/images/placeholders/640x480.png">
-                                        </figure>
-
-                                        <div class="content">
-                                            <blockquote>
-                                                <p>When you specifically hire someone to generate UI, you won't get new, innovative solutions. You'll get more UI, not better UX</p>
-                                            </blockquote>
-                                            <h3>This is UI</h3>
-                                            <p><a href="{{route('tables')}}">Data Tables</a>, Navigation, subnavigation, menus, dropdowns, buttons, links, windows, rounded corners, shadowing, error messages, alerts, updates, checkboxes, password fields, search fields, text inputs, radio buttons, textareas, hover states, selection states, pressed states, tolltips, banner ads, embedded videos, swipe animations, scrolling, clicking, iconography, colors, lists, slideshows, alt text, badges, notifications, gradients, pop-ups, carousels, OK/Cancel, etc., etc. etc.</p>
-                                            <h3>This is UX</h3>
-                                            <p>People, happiness, solving problems, understanding needs, love, efficiency, entertainment, pleasure, delight, smiles, soul, warmth, personality, joy, satisfaction, gratification, elation, exhilaration, bliss, euphoria, convience, enchantment, magic, productivity, effectiveness, etc. etc. etc.</p>
-                                            <hr>
-
-                                        </div>
-                                    </article>
+                                    @include('partials.articles.ui-ux')
                                 </div>
                             </div>
                             <div class="tile is-parent">
@@ -380,6 +365,14 @@
                             </article>
                         </div>
                     </div>
+                </section>
+            </b-tab-item>
+
+            <b-tab-item label="Team">
+                <section class="section">
+                    @include('partials.articles.product-team')
+                    @include('partials.articles.design-team')
+                    @include('partials.articles.team')
                 </section>
             </b-tab-item>
         </b-tabs>

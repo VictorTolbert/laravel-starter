@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="196" viewBox="0 0 260 196">
+  <g fill="none" fill-rule="evenodd" transform="translate(6 5)">
+    <circle cx="29.6" cy="30.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="29.6" cy="30.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="92.5" cy="30.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="92.5" cy="30.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="155.5" cy="30.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="155.5" cy="30.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="219.2" cy="30.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="219.2" cy="30.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="29.6" cy="93.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="29.6" cy="93.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="92.5" cy="93.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="92.5" cy="93.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="155.5" cy="93.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="155.5" cy="93.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="219.2" cy="93.2" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="219.2" cy="93.2" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="29.6" cy="156.1" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="29.6" cy="156.1" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="92.5" cy="156.1" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="92.5" cy="156.1" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="155.5" cy="156.1" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="155.5" cy="156.1" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="219.2" cy="156.1" r="29.3" stroke="#000" stroke-width="11"/>
+    <circle cx="219.2" cy="156.1" r="16.9" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="60.7" cy="30.2" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="29.6" cy="61.8" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="94" cy="61.8" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="156.2" cy="61.8" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="219.2" cy="61.8" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="29.6" cy="124.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="94" cy="124.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="156.2" cy="124.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="219.2" cy="124.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="123.6" cy="30.2" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="187.3" cy="30.2" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="60.7" cy="91.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="123.6" cy="91.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="187.3" cy="91.7" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="60.7" cy="154.6" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="123.6" cy="154.6" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+    <circle cx="187.3" cy="154.6" r="8.1" fill="#ABABAB" fill-rule="nonzero"/>
+  </g>
+</svg>

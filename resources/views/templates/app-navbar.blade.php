@@ -21,6 +21,9 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
+                    <div class="navbar-item">
+                        <input class="input" type="color">
+                    </div>
                 @endif
             </div>
         </div>

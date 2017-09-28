@@ -1,3 +1,4 @@
 <a class="navbar-item" data-show="quickview" data-target="preferences">
-    <b-icon icon="sliders" pack="fa"></b-icon>
+    @svg('sliders')
+    <span>Preferences</span>
 </a>

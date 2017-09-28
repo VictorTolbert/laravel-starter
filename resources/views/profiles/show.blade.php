@@ -19,6 +19,12 @@
                 </figure>
             </div>
             <div class="column is-5 name">
+                <h1 class="title">
+                    {{ $profileUser->name }}
+                </h1>
+                <h1 class="subtitle">
+                    {{ $profileUser->email }}
+                </h1>
                 <p>
                     <span class="title is-bold">{{ $profileUser->name }}</span>
                     <span class="button is-primary is-outlined follow">Follow</span>
@@ -55,7 +61,7 @@
             </div>
 
 
-{{--             <div class="column is-2 followers has-text-centered">
+            <div class="column is-2 followers has-text-centered">
                 <p class="stat-val">129k</p>
                 <p class="stat-key">followers</p>
             </div>
@@ -66,7 +72,7 @@
             <div class="column is-2 likes has-text-centered">
                 <p class="stat-val">29</p>
                 <p class="stat-key">likes</p>
-            </div> --}}
+            </div>
         </div>
     </section>
 
@@ -101,7 +107,7 @@
         </div>
     </div>
 
-{{--     <div class="box">
+    <div class="box">
         <!-- Main container -->
         <nav class="level">
             <!-- Left side -->
@@ -130,7 +136,7 @@
                 <p class="level-item"><a class="button is-success">New</a></p>
             </div>
         </nav>
-    </div> --}}
+    </div>
 
     <div class="spacer"></div>
 
@@ -527,24 +533,5 @@
         </div>
     </section>
 </div>
-
-<section class="section">
-    <div class="container is-fluid">
-        <div class="columns">
-            <div class="column is-narrow">
-                <figure class="image is-48x48">
-                  <img src="{{ get_gravatar($profileUser->email) }}">
-                </figure>
-            </div>
-            <div class="column is-8 col-md-8 col-md-offset-2">
-                <h1 class="title">
-                    {{ $profileUser->name }}
-                </h1>
-                <h1 class="subtitle">
-                    {{ $profileUser->email }}
-                </h1>
-            </div>
-        </div>
-    </div>
 </section>
 @endsection

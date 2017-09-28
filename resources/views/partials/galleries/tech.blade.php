@@ -17,19 +17,15 @@
 </a>
 
 <a class="navbar-item">
-    <span class="icon is-javascript">
-        @include('partials.svgs.javascript-logo')
-    </span>
+    <b-tooltip label="JavaScript">
+        <span class="icon is-javascript">
+            @include('partials.svgs.javascript-logo')
+        </span>
+    </b-tooltip>
 </a>
 
 <a class="navbar-item">
     <span class="icon is-react">
         @include('partials.svgs.react-logo')
-    </span>
-</a>
-
-<a class="navbar-item">
-    <span class="icon is-vue">
-        @include('partials.svgs.vue-logo')
     </span>
 </a>

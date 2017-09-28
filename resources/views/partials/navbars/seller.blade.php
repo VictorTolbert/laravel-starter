@@ -12,6 +12,11 @@
         </div>
 
         <div class="navbar-menu" id="navbar-main">
+                    @include('partials.navbar-items.order-management')
+                    @include('partials.navbar-items.reporting')
+                    @include('partials.navbar-items.price-guide')
+                    @include('partials.navbar-items.avails')
+                    @include('partials.navbar-items.campaign-performance')
             <div class="navbar-start">
                 @if (Auth::guest())
                 @else
@@ -21,7 +26,6 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
-                    <a href="{{ route('campaign-performance', Auth::user()) }}" class="navbar-item">Campaign Performance</a>
                 @endif
             </div>
         </div>

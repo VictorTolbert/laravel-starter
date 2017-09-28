@@ -1,14 +1,5 @@
 @extends('layouts.app')
 
-@section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">UI Prototypes</h1>
-        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, atque porro perspiciatis numquam. Eaque cupiditate minima et, aperiam sunt. Dolor, illo eum! Cupiditate nobis ipsa ab, tempora illo ipsum dolorem.</h2>
-    </div>
-</div>
-@endsection
-
 @section('content')
 <section class="section">
     <div class="container is-fluid">
@@ -46,6 +37,13 @@
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="column is-offset-1">
+                {{-- <a>Request an invite</a> --}}
+                <window>
+                    {{-- @include('partials.videos.sample') --}}
+                </window>
+                <img src="/images/screengrabs/website-wireframe.gif">
             </div>
         </div>
     </div>

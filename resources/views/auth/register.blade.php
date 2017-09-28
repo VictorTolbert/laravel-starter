@@ -25,6 +25,7 @@
                             <label for="email" class="label">E-Mail Address</label>
 
                             <div class="control">
+                                {{-- TODO Add cleave and validation to limit access to .videa.tv domains' --}}
                                 <input id="email" type="email" class="input{{ $errors->has('email') ? ' is-danger' : '' }}" name="email" value="{{ old('email') }}">
                             </div>
                             @if ($errors->has('email'))

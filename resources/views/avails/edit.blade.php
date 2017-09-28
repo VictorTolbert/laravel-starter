@@ -1,10 +1,13 @@
 @extends('layouts.app')
-
-@section('hero-body')
-@endsection
-
 @section('content')
-    <section class="section">
-        <h1>Avails Edit</h1>
-    </section>
+<header class="hero is-primary">
+    <div class="hero-body">
+        <div class="container is-fluid">
+            <h1 class="title">Avails</h1>
+            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
+        </div>
+    </div>
+</header>
+<section class="section">
+</section>
 @endsection

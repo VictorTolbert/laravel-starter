@@ -41,3 +41,4 @@ mix
 mix
     .js('resources/assets/js/docs.js', 'public/js')
     .postCss('resources/assets/css/docs.css', 'public/css')
+    .postCss('resources/assets/css/vue-window.css', 'public/css')

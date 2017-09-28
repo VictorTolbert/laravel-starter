@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'svg_path' => 'resources/assets/svgs/zondicons',
+    'svg_path' => 'resources/assets/svgs',
 
     /*
     |--------------------------------------------------------------------------

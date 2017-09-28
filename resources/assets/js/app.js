@@ -1,155 +1,32 @@
 import Vue from 'vue'
 // import router from './routes'
 
-// FIXME: -- need to figure this out (to annotate problems)
-// TODO: -- need to implement (to annotate solutions to problems)
-
 require('./bootstrap')
 
-Vue.component('flash', require('./components/Flash'))
-Vue.component('paginator', require('./components/Paginator'))
-Vue.component('quick-links', require('./components/QuickLinks'))
-Vue.component('scan-view', require('./components/scan-view'))
-Vue.component('multi-index', require('./components/MultiIndex'))
-Vue.component('autocomplete', require('./components/Autocomplete'))
-Vue.component('accordion-menu', require('./components/AccordionMenu'))
-Vue.component('notification', require('./components/Notification'))
-Vue.component('publish-button', require('./components/PublishButton'))
-Vue.component('subscribe-button', require('./components/SubscribeButton'))
-Vue.component('cover-image-upload', require('./components/CoverImageUpload'))
-Vue.component('account-performance', require('./components/AccountPerformance'))
-Vue.component('avails', require('./components/Avails'))
-Vue.component('publish-button', require('./components/PublishButton'))
-Vue.component('subscribe-button', require('./components/SubscribeButton'))
-Vue.component('cover-image-upload', require('./components/CoverImageUpload'))
-Vue.component('steps', require('./components/Steps'))
-Vue.component('imdb', require('./components/Imdb'))
-Vue.component('register', require('./components/Register'))
-Vue.component('device', require('./components/Device'))
-Vue.component('window', require('./components/Window'))
-
-// Vue.component('omdb', require('./components/Omdb'))
+import store from 'store'
 
 const db = require('./data')()
-
 import people from './data/people.json'
-import tv from './data/tv.json'
 import zipCode from './data/zip-code.json'
-import debounce from 'lodash/debounce'
-import ModalForm from './components/ModalForm'
-
-// import logo from './/assets/buefy.png'
-
-// const template = require('./template')
-
-const clients = [
-    {
-        id: 1,
-        first_name: 'Jesse',
-        last_name: 'Simmons',
-        date: '2016-10-15 13:43:27',
-        gender: 'Male'
-    },
-    {
-        id: 2,
-        first_name: 'John',
-        last_name: 'Jacobs',
-        date: '2016-12-15 06:00:53',
-        gender: 'Male'
-    },
-    {
-        id: 3,
-        first_name: 'Tina',
-        last_name: 'Gilbert',
-        date: '2016-04-26 06:26:28',
-        gender: 'Female'
-    },
-    {
-        id: 4,
-        first_name: 'Clarence',
-        last_name: 'Flores',
-        date: '2016-04-10 10:28:46',
-        gender: 'Male'
-    },
-    {
-        id: 5,
-        first_name: 'Anne',
-        last_name: 'Lee',
-        date: '2016-12-06 14:38:38',
-        gender: 'Female'
-    }
-]
-
-const avails = require('./data/avails')
+import tv from './data/tv.json'
 
 const app = new Vue({
     el: '#app',
+    store,
     // router,
-    components: {
-        ModalForm
-    },
     data () {
         return {
             db,
-            avails: db.avails,
-            clients,
-            // logo,
             people,
+            zipCode,
+            tv,
+            activeApp: 'prototypes',
+            avails: db.avails,
+            clients: db.clients,
             activeTab: 0,
             checkedRows: [],
-            checkedRows: [avails[1], avails[3]],
-            clientsColumns: [
-                {
-                    title: 'ID',
-                    field: 'id',
-                    meta: { icon: null },
-                    width: '',
-                    isVisible: true,
-                    isSortable: true,
-                    isNumeric: true,
-                    isCentered: false
-                },
-                {
-                    title: 'First Name',
-                    field: 'first_name',
-                    meta: { icon: null },
-                    width: '',
-                    isVisible: true,
-                    isSortable: true,
-                    isNumeric: false,
-                    isCentered: false
-                },
-                {
-                    title: 'Last Name',
-                    field: 'last_name',
-                    meta: { icon: null },
-                    width: '',
-                    isVisible: true,
-                    isSortable: true,
-                    isNumeric: false,
-                    isCentered: false
-                },
-                {
-                    title: 'Date',
-                    field: 'date',
-                    meta: { icon: null },
-                    width: '200',
-                    isVisible: true,
-                    isSortable: true,
-                    isNumeric: false,
-                    isCentered: false
-                },
-                {
-                    title: 'Gender',
-                    field: 'gender',
-                    meta: { icon: null },
-                    width: '50',
-                    isVisible: true,
-                    isSortable: true,
-                    isNumeric: false,
-                    isCentered: false
-                }
-            ],
+            checkedRows: [db.avails[1], db.avails[3]],
+            clientsColumns: db.clientColumns,
             // data: [],
             date: new Date(),
             defaultSortDirection: 'asc',
@@ -196,7 +73,7 @@ const app = new Vue({
             page: 1,
             perPage: 5,
             remember: true,
-            selected: avails[1],
+            selected: db.avails[1],
             selected: null,
             selected: {},
             selectedClient: null,
@@ -205,6 +82,11 @@ const app = new Vue({
             sortOrder: 'desc',
             total: 0,
             value: null
+        }
+    },
+    computed: {
+        todos () {
+            return this.$store.state.todos
         }
     },
     methods: {
@@ -349,26 +231,7 @@ const app = new Vue({
             })
         },
 
-        // You have to install and import debounce to use it,
-        // it's not mandatory though.
-        getMovies: debounce(function () {
-            this.movies = []
-            this.isFetching = true
-            this.$http
-                .get(
-                    `https://api.themoviedb.org/3/search/movie?api_key=bb6f51bef07465653c3e553d6ab161a8&query=${this
-                        .name}`
-                )
-                .then(
-                    ({ data }) => {
-                        data.results.forEach(item => this.movies.push(item))
-                        this.isFetching = false
-                    },
-                    response => {
-                        this.isFetching = false
-                    }
-                )
-        }, 500)
+
     },
 
     computed: {

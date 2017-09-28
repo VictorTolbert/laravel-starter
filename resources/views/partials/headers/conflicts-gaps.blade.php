@@ -1,4 +1,4 @@
-<section class="section">
+<header class="section">
     <div class="container">
         <div class="level">
             <div class="level-left">
@@ -19,5 +19,5 @@
             </div>
         </div>
     </div>
-</section>
+</header>
 

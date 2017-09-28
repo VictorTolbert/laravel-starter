@@ -14,17 +14,7 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column">
-                <ul>
-                    <li>Lynn Hobbs</li>
-                    <li>Dawn Tavoletti</li>
-                    <li>Tom Phillips</li>
-                    <li>Osen</li>
-                    <li>Evelyn</li>
-                </ul>
-            </div>
-            <div class="is-divider-vertical" data-content="OR"></div>
-            <div class="column">
-
+                @include('partials.articles.product-team')
             </div>
         </div>
     </div>

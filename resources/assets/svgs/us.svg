@@ -1,25 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-************* Copyright (c) 2015 Pareto Softare, LLC DBA Simplemaps.com *******************
-************* Offered under the MIT License http://opensource.org/licenses/MIT ************
-************* Attribution is appreciated! http://simplemaps.com ***************************
--->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   enable_background="new 0 0 1000 589"
-   height="589px"
    pretty_print="False"
    style="stroke-linejoin: round; stroke:#000; fill: none;"
    version="1.1"
    viewBox="0 0 1000 589"
-   width="1000px"
    id="svg2"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="us.svg">

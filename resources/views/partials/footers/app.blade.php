@@ -1,9 +1,19 @@
-{{-- <footer class="footer">
+<footer class="footer is-dark">
     <nav class="navbar">
         <div class="navbar-menu is-active">
             <div class="navbar-start">
                 <div class="navbar-item">
-                     &copy; {{ date('Y') }}, Version 2.1.4, Last updated 9/15/2017, 11:09:45 AM
+                    <p class="has-text-white">Made with
+
+                        <span style="color: red">
+                            @svg('favorite')
+                        </span> by
+
+                        <a style="color: white; text-decoration: underline;" href="https://twitter.com/VictorTolbert" target="_blank">
+                            Victor Tolbert
+                        </a>.
+                    </p>
+                     <p>&copy; {{ date('Y') }}, Version 2.1.4, Last updated 9/15/2017, 11:09:45 AM</p>
                 </div>
                 <a class="navbar-item" href="{{ route('privacy') }}">Privacy Policy</a>
                 <a class="navbar-item" href="{{ route('terms') }}">Terms and Conditions</a>
@@ -13,7 +23,7 @@
                 @if (Auth::guest())
                 @else
 
-                    @include('partials.tech')
+                    @include('partials.galleries.tech')
 
                     <span class="navbar-item">
                         @include('partials.buttons.page-info')
@@ -23,7 +33,7 @@
             </div>
         </div>
     </nav>
-</footer> --}}
+</footer>
 
 <!-- Page Loader -->
 <div class="pageloader"></div>

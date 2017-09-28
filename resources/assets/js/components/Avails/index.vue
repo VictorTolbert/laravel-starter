@@ -24,11 +24,11 @@
             <template scope="props">
                 <!-- TODO - [ ] Loop over columnConfig object [h1] -->
 
-                <!-- <b-table-column field="status" label="Status" sortable>
+                <b-table-column field="status" label="Status" sortable>
                     <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">
                         {{ props.row.status }}
                     </span>
-                </b-table-column> -->
+                </b-table-column>
 
                 <b-table-column field="id" meta="Internal ID" label="Videa Order" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
@@ -65,7 +65,7 @@
                 <b-table-column field="campaign" label="Campaign" sortable>
                     {{ props.row.campaign }}
                 </b-table-column>
-                <!--
+
                 <b-table-column field="cpe" label="Cpe"  sortable>
                     {{ props.row.cpe }}
                 </b-table-column>
@@ -108,7 +108,7 @@
 
                 <b-table-column field="share" numeric label="Share" sortable>
                     {{ props.row.share }}
-                </b-table-column> -->
+                </b-table-column>
             </template>
 
             <!-- TODO - [ ] Build out detail example -->
@@ -116,7 +116,7 @@
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img src="/images/placeholder-128x128.png">
+                            <img src="/images/placeholders/128x128.png">
                         </p>
                     </figure>
                     <div class="media-content">
@@ -149,20 +149,21 @@
         </b-table>
 
         <hr class="is-marginless">
-
-        <b-tabs size="is-small">
-            <b-tab-item label="HTML">
-                <pre><code v-text="code"></code></pre>
-            </b-tab-item>
-<!--             <b-tab-item label="Handlebars"></b-tab-item>
-            <b-tab-item label="Nunjucks"></b-tab-item>
-            <b-tab-item label="Pug"></b-tab-item>
-            <b-tab-item label="Angular"></b-tab-item>
-            <b-tab-item label="React"></b-tab-item>
-            <b-tab-item label="Vue"></b-tab-item> -->
-<!--             <b-tab-item label="Props"></b-tab-item>
-            <b-tab-item label="Events"></b-tab-item> -->
-        </b-tabs>
+<div class="box">
+            <b-tabs size="is-small">
+                <b-tab-item label="HTML">
+                    <pre><code v-text="code"></code></pre>
+                </b-tab-item>
+                <b-tab-item label="Handlebars"></b-tab-item>
+                <b-tab-item label="Nunjucks"></b-tab-item>
+                <b-tab-item label="Pug"></b-tab-item>
+                <b-tab-item label="Angular"></b-tab-item>
+                <b-tab-item label="React"></b-tab-item>
+                <b-tab-item label="Vue"></b-tab-item>
+                <b-tab-item label="Props"></b-tab-item>
+                <b-tab-item label="Events"></b-tab-item>
+            </b-tabs>
+</div>
 
         <!-- TODO - [ ] Consider how to use Modal components -->
         <div class="modal" :class="isActive ? 'is-active' : ''">
@@ -185,14 +186,10 @@
 </template>
 
 <script>
-
 const avails = require('../../data/orders')
-
-import Multiselect from 'vue-multiselect'
 
 export default {
     name: 'avails',
-    components: { Multiselect },
     data () {
         return {
             avails,
@@ -242,4 +239,3 @@ export default {
     }
 }
 </script>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>

@@ -1,0 +1,1 @@
+The Program Revenue screen shows you how your automated Videa accounts are faring relative to your station programming line up. It compares this year's numbers through the Videa automated system to last year's numbers. You can also see the sports or special programs already defined in the Videa system.

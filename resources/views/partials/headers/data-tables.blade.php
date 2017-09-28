@@ -1,5 +1,4 @@
-
-<div class="level" style="margin-bottom: 0.25rem">
+<header class="level" style="margin-bottom: 0.25rem">
     <div class="level-left">
 
         <div class="level-item">
@@ -78,4 +77,4 @@
             </p>
         </div>
     </div>
-</div>
+</header>
