@@ -14,7 +14,7 @@
     {{--  <link rel="stylesheet" href="//maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">  --}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-    {{-- <link href="{{ mix('/css/vue-window.css') }}" rel="stylesheet"> --}}
+    <link href="{{ mix('/css/vue-window.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -37,7 +37,12 @@
             {{-- @include('partials.navbars.breadcrumb') --}}
             {{-- @include('partials.navbars.buyer') --}}
             {{-- @include('partials.navbars.campaign-performance') --}}
-            @include('partials.navbars.design-system')
+            @if (Auth::guest())
+            @else
+                @include('partials.navbars.design-system')
+                @include('partials.navbars.atomic-design')
+
+            @endif
             {{-- @include('partials.navbars.gasps') --}}
             {{-- @include('partials.navbars.ops') --}}
             {{-- @include('partials.navbars.project-info') --}}
@@ -45,7 +50,6 @@
             {{-- @include('partials.navbars.seller') --}}
             {{-- @include('partials.navbars.style1') --}}
             {{-- @include('partials.navbars.styleguide') --}}
-            @include('partials.navbars.table-tools')
             {{-- @include('partials.navbars.team') --}}
             {{-- @include('partials.navbars.utilities') --}}
             {{-- @include('partials.navbars.vti') --}}

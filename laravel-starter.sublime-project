@@ -1,8 +1,17 @@
 {
-	"folders":
-	[
-		{
-			"path": "."
-		}
-	]
+    "folders":
+    [
+        {
+            "folder_exclude_patterns":
+            [
+                "node_modules",
+                "dist",
+                // "public",
+                "vendor",
+                ".storybook",
+                ".vscode"
+            ],
+            "path": "."
+        }
+    ]
 }

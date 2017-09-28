@@ -1,3 +1,4 @@
 <a class="navbar-item" data-show="quickview" data-target="help">
-    @svg('help')
+    <span class="m-r-sm">@svg('help')</span>
+    <span>Help</span>
 </a>

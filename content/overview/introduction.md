@@ -1,12 +1,20 @@
 # Overview
 
-- Elegant
+# UX Principles and Goals
+
+- Elegance
 - Clean
-- Semantic
+- [Resiliency](https://resilientwebdesign.com/)
+- Good Semantics and Accessibility
+- Progressive Enhancement
+- Mobile-Friendless, down to phone.
 - Declarative
 - Legible
 - Easy to maintain
 - Reactive
+
+* This framework is Responsive, if it's not contstrained by the framework. It's a one-off.
+* Your project doesn't have to, but the framework)
 
 ## Motivations
 
@@ -15,7 +23,14 @@
 - **easy modifier classes**: I prefer having a base class like `button` and modify the style on top of that, by using a pre-determined syntax, which is that every modifier class should start with is-
 - **learning**: this project has taught me a lot about flexbox, its pros and cons
 
+## Toolkit
 
+- Bulma
+- Utility Classes
+- Vue (for View layer interactions)
+- Vuex (UI State Management)
+- Single File Components
+- PostCSS
 
 ## Features
 
@@ -30,10 +45,6 @@
 - Components
 - Client Data Container (Vuex, Redux)
 - Opinionated but Configurable (CSS, Sass, Less, Stylus, HTML, Pug, JavaScript, Typescript, JSX)
-
-
-* :airplane:
-* :8ball: :100:
 
 
 This was written by @VictorTolbert

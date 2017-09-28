@@ -4,109 +4,80 @@
             <div class="navbar-brand">
             </div>
             <div class="navbar-start">
-                @include('partials.navbar-items.preferences')
-                @include('partials.navbar-items.format-size')
-                @include('partials.navbar-items.help')
-                @include('partials.navbar-items.notes')
-                @include('partials.navbar-items.dashboard')
-
-                <span class="navbar-item">
-                    <span class="icon">
-                        @svg('atomic-design/atom')
-                    </span>
-                </span>
-
-                <span class="navbar-item">
-                    <span class="icon">
-                        @svg('atomic-design/molecule')
-                    </span>
-                </span>
-
-                <span class="navbar-item">
-                    <span class="icon">
-                        @svg('atomic-design/organism')
-                    </span>
-                </span>
-
-                <span class="navbar-item">
-                    <span class="icon">
-                        @svg('atomic-design/page')
-                    </span>
-                </span>
-
-                <span class="navbar-item">
-                    <span class="icon">
-                        @svg('atomic-design/template')
-                    </span>
-                </span>
-
-
-                <span class="navbar-item">
-                    <span class="icon">
-                        @svg('more-horizontal')
-                    </span>
-                </span>
-
-                <span class="navbar-item is-tab is-active">
-                    <span class="icon-btn">
-                        @svg('plus')
-                    </span>
-                </span>
-
-                <span class="navbar-item is-tab is-active">
-                    <span class="icon-btn">
-                        @svg('plus')
-                    </span>
-                </span>
 
                 <span class="navbar-item is-tab">
-                    <span class="icon-btn">
+                    <span class="m-r-sm">
                         @svg('search')
                     </span>
+                    <span>Search</span>
                 </span>
 
                 <span class="navbar-item is-tab">
-                    <span class="icon-btn">
-                        @svg('print')
-                    </span>
-                </span>
-
-                <span class="navbar-item is-tab">
-                    <span class="icon-btn">
+                    <span class="m-r-sm">
                         @svg('filter-list')
                     </span>
+                    <span>Filter List</span>
+                </span>
+
+                @include('partials.navbar-items.dashboard')
+                @include('partials.navbar-items.preferences')
+                @include('partials.navbar-items.format-size')
+                @include('partials.navbar-items.notes')
+
+                <span class="navbar-item">
+                    <span class="icon m-r-sm">
+                        @svg('more-horizontal')
+                    </span>
+                    <span>More</span>
+                </span>
+
+                <span class="navbar-item is-tab is-active">
+                    <span class="m-r-sm">
+                        @svg('plus')
+                    </span>
+                    <span>Plus</span>
+                </span>
+
+                <span class="navbar-item is-tab is-active">
+                    <span class="m-r-sm">
+                        @svg('plus')
+                    </span>
+                    <span>Add</span>
                 </span>
 
                 <span class="navbar-item is-tab">
-                    <span class="icon-btn">
+                    <span class="m-r-sm">
+                        @svg('print')
+                    </span>
+                    <span>Print</span>
+                </span>
+
+                <span class="navbar-item is-tab">
+                    <span class="m-r-sm">
                         @svg('file-download')
                     </span>
+                    <span>Export</span>
                 </span>
 
-                <span class="navbar-item is-tab">
-                    <span class="icon-btn thin">
+{{--                 <span class="navbar-item is-tab">
+                    <span class="thin">
                         @svg('lock')
                     </span>
                 </span>
-
+ --}}
                 <span class="navbar-item is-tab">
-                    <span class="icon-btn">
+                    <span class="m-r-sm">
                         @svg('trash')
                     </span>
+                    <span>Trash</span>
                 </span>
 
-                <div class="navbar-item is-tab">
+{{--                 <div class="navbar-item is-tab">
                     <strong>2 items selected</strong>
-                </div>
+                </div> --}}
 
             </div>
             <div class="navbar-end">
-
-                 <span class="navbar-item">
-                    <span class="icon">
-                        @svg('peach')
-                    </span>
-                </span>
                 @include('partials.navbar-items.help')
             </div>
         </div>

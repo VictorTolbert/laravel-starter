@@ -1,4 +1,4 @@
-<h2 class="subtitle">Design Team</h2>
+<h2 class="subtitle">Team</h2>
 
 <article class="columns is-multiline">
     <div class="column">

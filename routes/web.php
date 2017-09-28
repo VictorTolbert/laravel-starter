@@ -32,6 +32,8 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
 });
 
 Route::name('account-performance')->get('/account-performance', 'PagesController@accountPerformance');
+Route::name('atomic-design')->get('/atomic-design', 'PagesController@atomicDesign');
+Route::name('atoms')->get('/atoms', 'PagesController@atoms');
 Route::name('avails')->get('/avails', 'PagesController@avails');
 Route::name('base')->get('/base', 'PagesController@base');
 Route::name('blog')->get('/blog', 'PagesController@blog');
@@ -54,12 +56,13 @@ Route::name('frontend-interview-questions')->get('/frontend-interview-questions'
 Route::name('glossary')->get('/glossary', 'PagesController@glossary');
 Route::name('goals')->get('/goals', 'PagesController@goals');
 Route::name('help')->get('/help', 'PagesController@help');
-Route::name('icons')->get('/icon', 'PagesController@icons');
+Route::name('icons')->get('/icons', 'PagesController@icons');
 Route::name('initiatives')->get('/initiatives', 'PagesController@initiatives');
 Route::name('kendo')->get('/kendo', 'PagesController@kendo');
 Route::name('layout')->get('/layout', 'PagesController@layout');
 Route::name('layouts')->get('/layouts', 'PagesController@layouts');
 Route::name('modifiers')->get('/modifiers', 'PagesController@modifiers');
+Route::name('molecules')->get('/molecules', 'PagesController@molecules');
 Route::name('movies')->get('/movies', 'PagesController@movies');
 Route::name('navigation')->get('/navigation', 'PagesController@navigation');
 Route::name('navbars')->get('/navbars', 'PagesController@navbars');
@@ -68,8 +71,10 @@ Route::name('open-preempts')->get('/open-preempts', 'PagesController@openPreempt
 Route::name('order-management')->get('/order-management', 'PagesController@orderManagement');
 Route::name('order-reporting')->get('/order-reporting', 'PagesController@orderReporting');
 Route::name('order-search')->get('/order-search', 'PagesController@orderSearch');
+Route::name('organisms')->get('/organisms', 'PagesController@organisms');
 Route::name('overview')->get('/overview', 'PagesController@order-search');
 Route::name('page-headers')->get('/page-headers', 'PagesController@pageHeaders');
+Route::name('pages')->get('/pages', 'PagesController@pages');
 Route::name('pending-makegoods')->get('/pending-makegoods', 'PagesController@pendingMakegoods');
 Route::name('pending-orders')->get('/pending-orders', 'PagesController@pendingOrders');
 Route::name('price-guide')->get('/price-guide', 'PagesController@priceGuide');
@@ -93,7 +98,7 @@ Route::name('view')->get('/view', 'PagesController@view');
 Route::name('zurb')->get('/zurb', 'PagesController@zurb');
 
 Route::name('home')->get('/', function () {
-    return redirect()->route('reporting');
+    return redirect()->route('navbars');
 });
 
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

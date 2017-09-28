@@ -1,16 +1,24 @@
 @extends('layouts.app')
 @section('content')
-    <div class="content">
-        @include('sitemap')
-    </div>
+    <section class="section">
+        <div class="content">
+            @include('sitemap')
+        </div>
+    </section>
 
     <section class="section">
         <div class="columns is-multiline">
+
             <div class="column is-3">
-                <figure class="image is-4x3">
-                    <img src="/images/screengrabs/data-tables/add-columns.jpg">
-                </figure>
+{{--                 <b-tabs>
+                    <b-tab-item v-for="(item, index) in $parent.db.features.dataTables" :key="index" :label="item">
+                        <figure class="image is-4x3">
+                            <img :src="`/images/screengrabs/data-tables/${item}.jpg`">
+                        </figure>
+                    </b-tab-item>
+                </b-tabs> --}}
             </div>
+
             <div class="column is-3">
                 <figure class="image is-4x3">
                     <img src="/images/screengrabs/data-tables/basic-filtering.jpg">

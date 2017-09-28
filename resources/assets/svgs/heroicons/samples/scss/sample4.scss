@@ -1,0 +1,24 @@
+$primary-color: #FC953F;
+$outline-color: adjust-color($primary-color, $saturation: -75%, $lightness: -26%);
+$fill-color: #FFF;
+
+body { background-color: adjust-color($primary-color, $hue: 20%, $saturation: -50%, $lightness: 32%); }
+
+.heroicon- {
+	&outline {
+		fill: $outline-color;
+	}
+
+	&component- {
+		&fill {
+			fill: $fill-color;
+		}
+		&accent {
+			fill: $primary-color;
+		}
+	}
+	
+	&shadows {
+		display: none;
+	}
+}

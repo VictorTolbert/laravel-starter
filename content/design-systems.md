@@ -3,8 +3,8 @@
 
 ## Why design systems are awesome:
 
-- They key your website <strong>consistent</strong>
-- Your Team has a **shared vocabulary**
+- They keep your apps <strong>consistent</strong>
+- Your team has a **shared vocabulary**
 - They **educate** people about the web
 - You can develop **new features faster**
 - And thus.. they **save money**
@@ -29,3 +29,6 @@
 
 
 ## How to
+
+[1]: https://medium.com/eightshapes-llc/a-design-system-isn-t-a-project-it-s-a-product-serving-products-74dcfffef935 "A Design System isn’t a Project. It’s a Product, Serving Products."
+[2]: https://uxdesign.cc/design-better-data-tables-4ecc99d23356 "Design better data tables"

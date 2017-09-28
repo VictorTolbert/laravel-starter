@@ -1,6 +1,6 @@
 <div class="navbar-item has-dropdown is-hoverable">
     <div class="navbar-link">
-        Pages
+        Documentation
     </div>
     <div id="moreDropdown" class="navbar-dropdown">
         <a class="navbar-item" href="{{ route('colors') }}">Colors</a>

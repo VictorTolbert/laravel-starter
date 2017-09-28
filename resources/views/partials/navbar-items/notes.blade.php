@@ -1,3 +1,6 @@
 <a class="navbar-item" data-show="quickview" data-target="notes">
-    @svg('description')
+    <span class="m-r-sm">
+        @svg('description')
+    </span>
+    <span>Notes</span>
 </a>

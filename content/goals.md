@@ -41,8 +41,9 @@ Goal Alignment:
 
 ---
 
-## Pattern Library Goals
+## Design System / Pattern Library Goals
 
+- Efficiencies in development 
 - Superb Documentation
 - Framework Agnostic
 - Flexible

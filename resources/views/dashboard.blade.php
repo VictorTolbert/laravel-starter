@@ -1,20 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="hero is-primary">
+<header class="hero is-primary has-bubbles">
     <div class="hero-body">
         <div class="container is-fluid">
-            <h1 class="title">Design System Dashboard</h1>
+            <h1 class="title">Dashboard</h1>
         <h1 class="subtitle">Lorem ipsum <abbr>dolor</abbr> sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h1>
         </div>
     </div>
 </header>
-@include('partials.navbars.project-info')
+{{-- @include('partials.navbars.project-info') --}}
 <section class="section">
     <div class="container is-fluid">
-
         <b-tabs>
-            <b-tab-item label="Elements">
+            <b-tab-item label="Sitemap">
+
+                <section class="section">
+                    <div class="content">
+                        @include('content.quotes')
+                        @include('content.sitemap')
+                    </div>
+                </section>
+
+            </b-tab-item>
+
+            <b-tab-item label="Navbars">
                 <section class="section">
                     <p class="is-size-4">Navbars</p>
 
@@ -89,7 +99,6 @@
                     <div class="box">
                         @include('partials.navbars.wizard')
                     </div>
-
                 </section>
                 <section class="section">
                     <div class="tile is-ancestor">

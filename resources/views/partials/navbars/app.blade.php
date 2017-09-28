@@ -8,7 +8,7 @@
             @if (Auth::guest())
             @else
                 <a class="navbar-item is-active" href="">
-                    Prototypes
+                    Design System
                 </a>
             @endif
 
@@ -33,7 +33,7 @@
                     {{-- @include('partials.navbar-items.getting-started') --}}
                     {{-- @include('partials.navbar-items.components') --}}
                     @include('partials.navbar-items.design-system')
-                    @include('partials.navbar-items.product-team')
+                    @include('partials.navbar-items.team')
                     {{-- @include('partials.navbar-items.design-tokens') --}}
                     {{-- @include('partials.navbar-items.icons') --}}
                     {{-- @include('partials.navbar-items.downloads') --}}

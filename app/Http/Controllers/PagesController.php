@@ -18,6 +18,16 @@ class PagesController extends Controller
         return view('index', compact('gravatar'));
     }
 
+    public function atoms()
+    {
+        return view('atoms.index');
+    }
+
+    public function atomicDesign()
+    {
+        return view('atomic-design.index');
+    }
+
     public function accountPerformance()
     {
         return view('reporting.account-performance.index');
@@ -60,6 +70,11 @@ class PagesController extends Controller
     public function dashboard()
     {
         return view('dashboard');
+    }
+
+    public function designSystem()
+    {
+        return view('design-system.index');
     }
 
     public function designTokens()
@@ -109,6 +124,11 @@ class PagesController extends Controller
         return view('layouts.index');
     }
 
+    public function molecules()
+    {
+        return view('molecules.index');
+    }
+
     public function navbars()
     {
         return view('navbars.index');
@@ -134,14 +154,24 @@ class PagesController extends Controller
         return view('order-management.order-search.index');
     }
 
+    public function organisms()
+    {
+        return view('organisms.index');
+    }
+
     public function overview()
     {
         return view('overview.index');
     }
 
+    public function pages()
+    {
+        return view('pages.index');
+    }
+
     public function pageHeaders()
     {
-        return view('page-headers..index');
+        return view('page-headers.index');
     }
 
     public function pendingMakegoods()
