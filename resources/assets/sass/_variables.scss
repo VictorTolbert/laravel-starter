@@ -93,10 +93,10 @@ $secondary-invert       : findColorInvert($secondary);
 $tertiary               : $fun-blue;
 $tertiary-invert        : findColorInvert($tertiary);
 
-$danger                 : $dark;
+$danger                 : $red;
 $danger-invert          : findColorInvert($danger);
 
-$warning                : $dark;
+$warning                : $orange;
 $warning-invert         : findColorInvert($warning);
 
 $lit                    : $yellow;
@@ -105,7 +105,7 @@ $lit-invert             : findColorInvert($lit);
 $success                : $dark;
 $success-invert         : findColorInvert($success);
 
-$info                   : $dark;
+$info                   : $blue;
 $info-invert            : findColorInvert($info);
 
 $css3-invert            : findColorInvert($css3);
