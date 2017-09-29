@@ -72,6 +72,7 @@ const app = new Vue({
             options: ['list', 'of', 'options'],
             page: 1,
             perPage: 5,
+            radioButton: null,
             remember: true,
             selected: db.avails[1],
             selected: null,

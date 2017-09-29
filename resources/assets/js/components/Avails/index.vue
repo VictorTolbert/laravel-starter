@@ -1,7 +1,5 @@
 <template>
     <div>
-        <!-- data is great--insights are better -->
-        <!-- TODO - [ ] Use generic `items` array as the prop when componentized -->
         <b-table
             :data="isEmpty ? [] : avails"
             :selected.sync="selected"
@@ -23,7 +21,6 @@
 
             <template scope="props">
                 <!-- TODO - [ ] Loop over columnConfig object [h1] -->
-
                 <b-table-column field="id" meta="Internal ID" label="Avail Number" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
                         {{ props.row.id }}
@@ -120,6 +117,15 @@
                 <b-table-column field="share" numeric label="Share" sortable>
                     {{ props.row.share }}
                 </b-table-column> -->
+                <b-table-column field="status" centered label="Actions">
+                    <!-- <span class="">
+                        <a class="button is-link">Edit</a>
+                        <a class="button is-link">Duplicate</a>
+                    </span> -->
+                    <a>
+                        <b-icon icon="more_horiz"></b-icon>
+                    </a>
+                </b-table-column>
             </template>
 
             <!-- TODO - [ ] Build out detail example -->
@@ -204,7 +210,7 @@ export default {
             hasDetails: true,
             hasMobileCards: true,
             isActive: false,
-            isBordered: true,
+            isBordered: false,
             isCheckable: true,
             isEmpty: false,
             isLoading: false,

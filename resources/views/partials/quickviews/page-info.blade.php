@@ -2,7 +2,9 @@
     <b-tabs>
         <b-tab-item label="Notes"></b-tab-item>
         <b-tab-item label="Discuss"></b-tab-item>
+        <b-tab-item label="Changelog"></b-tab-item>
     </b-tabs>
+
     <div class="container is-fluid">
         <nav class="navbar is-transparent">
             <div class="navbar-brand">

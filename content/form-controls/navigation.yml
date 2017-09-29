@@ -1,9 +1,16 @@
 title: Form controls
-weight: 3
+weight: 5
 items:
+  - General
   - Input
   - Textarea
   - Select
   - Checkbox
   - Radio
+  - Autocomplete
+  - Datepicker
+  - Slider
+  - Switch
+  - Field
   - File
+  - Upload

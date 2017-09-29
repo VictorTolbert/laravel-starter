@@ -14,3 +14,18 @@ module.exports = [
     { name: 'toast', label: 'Toast', description: 'Simple responsive horizontal navigation <b>tabs</b>, with different styles' },
     { name: 'tabs', label: 'Tabs', description: 'Simple responsive horizontal navigation <b>tabs</b>, with different styles' }
 ]
+
+// <a class="tag" href="/navbars">Navbar</a>
+// <a class="tag" href="/overview/autocomplete">Autocomplete</a>
+// <a class="tag" href="/overview/button">Button</a>
+// <a class="tag" href="/overview/data-table">Data Table</a>
+// <a class="tag" href="/overview/datepicker">Datepicker</a>
+// <a class="tag" href="/overview/field">Field</a>
+// <a class="tag" href="/overview/icon">Icon</a>
+// <a class="tag" href="/overview/input">Input</a>
+// <a class="tag" href="/panels">Panel</a>
+// <a class="tag" href="/quickviews">Quickview</a>
+// <a class="tag" href="/search">Search</a>
+// <a class="tag" href="/select">Select</a>
+// <a class="tag" href="/tabs">Tabs</a>
+// <a class="tag" href="/title">Title</a>

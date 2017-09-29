@@ -52,7 +52,9 @@
 <!-- Quick View -->
 {{-- @include('partials.quickviews.export') --}}
 {{-- @include('partials.quickviews.format-size') --}}
+@include('partials.quickviews.gtd')
 @include('partials.quickviews.help')
 @include('partials.quickviews.notes')
 @include('partials.quickviews.page-info')
 @include('partials.quickviews.preferences')
+@include('partials.quickviews.settings')

@@ -1,4 +1,4 @@
-<div class="navbar-item has-dropdown is-hoverable">
+<div class="navbar-item is-tab has-dropdown is-hoverable">
     <div class="navbar-link">
         Documentation
     </div>
@@ -15,10 +15,12 @@
         <a class="navbar-item" href="{{ route('elements') }}">Elements</a>
         <a class="navbar-item" href="{{ route('components') }}">Components</a>
         {{-- <a class="navbar-item" href="{{ route('page-headers') }}">Page Headers</a> --}}
-        {{-- <a class="navbar-item" href="{{ route('tables') }}">Tables</a> --}}
+        {{-- <a class="navbar-item" href="{{ route('data-table') }}">Tables</a> --}}
         <hr class="navbar-divider">
         <a class="navbar-item" href="{{ route('design-tokens') }}">Design Tokens</a>
         <a class="navbar-item" href="{{ route('icons') }}">Icons</a>
+        <hr class="navbar-divider">
+        <a class="navbar-item" href="{{ route('changelog') }}">Changelog</a>
         {{-- <a class="navbar-item" href="{{ route('icons') }}">Downloads</a> --}}
         {{-- <a class="navbar-item" href="{{ route('articles') }}">Articles</a> --}}
         {{-- <a class="navbar-item" href="{{ route('faq') }}">FAQ</a> --}}

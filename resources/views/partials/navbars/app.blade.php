@@ -1,16 +1,16 @@
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
     <div class="container is-fluid">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                @include('partials.svgs.vti-logo')
+                {{-- @include('partials.svgs.vti-logo') --}}
+                {{-- @include('partials.svgs.uxlab') --}}
                 @include('partials.svgs.uxlab-logo')
-                {{-- @include('partials.svgs.videa-logo') --}}
             </a>
             @if (Auth::guest())
             @else
-                <a class="navbar-item is-active" href="">
+{{--                 <a class="navbar-item is-active" href="">
                     Design System
-                </a>
+                </a> --}}
             @endif
 
             <span class="navbar-burger" data-target="navbarMain" @click="isActive = !isActive">
@@ -32,8 +32,11 @@
                 @else
                     {{-- @include('partials.navbar-items.getting-started') --}}
                     {{-- @include('partials.navbar-items.components') --}}
-                    @include('partials.navbar-items.design-system')
-                    @include('partials.navbar-items.team')
+                    {{-- @include('partials.navbar-items.blog') --}}
+                    {{-- @include('partials.navbar-items.design-system') --}}
+                    @include('partials.navbar-items.team-dropdown')
+                    {{-- @include('partials.navbar-items.design-team') --}}
+                    @include('partials.navbar-items.xml-proposal-viewer')
                     {{-- @include('partials.navbar-items.design-tokens') --}}
                     {{-- @include('partials.navbar-items.icons') --}}
                     {{-- @include('partials.navbar-items.downloads') --}}

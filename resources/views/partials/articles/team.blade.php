@@ -1,34 +1,20 @@
-<h2 class="subtitle">Team</h2>
-
-<article class="columns is-multiline">
-    <div class="column">
-        <span class="image">
-            <img src="/images/team/bill.jpg">
-        </span>
+<div class="columns is-multiline">
+    <div v-for="person in db.team" class="column is-3">
+         <div class="media">
+             <figure class="media-left" style="width: 10rem">
+                 <p class="image is-128x128 is-grayscale">
+                     <img :src="`/images/team-thumbs/${person.name.toLowerCase()}.jpg`">
+                 </p>
+             </figure>
+             <div class="media-content">
+                 <div class="content">
+                     <p>
+                         <strong v-text="person.name"></strong> <small v-text="person.email"></small> <small></small>
+                         <br>
+                         <div v-text="person.bio"></div>
+                     </p>
+                 </div>
+             </div>
+         </div>
     </div>
-    <div class="column">
-        <span class="image">
-            <img src="/images/team/jerome.jpg">
-        </span>
-    </div>
-    <div class="column">
-        <span class="image">
-            <img src="/images/team/ruth.jpg">
-        </span>
-    </div>
-    <div class="column">
-        <span class="image">
-            <img src="/images/team/phil.jpg">
-        </span>
-    </div>
-    <div class="column">
-        <span class="image">
-            <img src="/images/team/tom.jpg">
-        </span>
-    </div>
-    <div class="column">
-        <span class="image">
-            <img src="/images/team/victor.jpg">
-        </span>
-    </div>
-</article>
+</div>

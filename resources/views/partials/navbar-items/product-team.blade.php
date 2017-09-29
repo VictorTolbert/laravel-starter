@@ -1,1 +1,1 @@
-<a href="{{ route('team', Auth::user()) }}" class="navbar-item">Product Team</a>
+<a href="{{ route('product-team', Auth::user()) }}" class="navbar-item">Product Team</a>

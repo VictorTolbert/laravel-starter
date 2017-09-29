@@ -1,26 +1,19 @@
 @extends('layouts.app')
-
-@section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">Icons</h1>
-        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
-    </div>
-</div>
-@endsection
-
 @section('content')
-    <section class="section">
+<header class="hero is-light">
+    <div class="hero-body">
+        <div class="container is-fluid">
+            <h1 class="title">Icons</h1>
+            <h2 class="subtitle">
+                Icons provide visual context and enhance usability<br>
+                Looking for the icons? Go to <a href="">Resources › Icons</a>.
 
-    </section>
-@endsection
-@extends('layouts.app')
-
-@section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">Icons</h1>
-        <h1 class="subtitle"></h1>
+                Choose the icon you need from this page, then follow the implementation
+                instructions on the icon component page.
+            </h2>
+        </div>
     </div>
-</div>
+</header>
+<section class="section">
+</section>
 @endsection

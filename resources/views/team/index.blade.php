@@ -1,12 +1,13 @@
 @extends('layouts.app')
-
-@section('hero-body')
-
-@endsection
-
 @section('content')
 <header class="hero is-light">
-    <div class="hero-body">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('team') }}
+        </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
+    </div>
+    <div class="hero-body p-t-sm">
         <div class="container is-fluid">
             <h1 class="title">Team</h1>
             <h1 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit. Illum, quas nostrum? Rem, iste ratione saepe. Perspiciatis sapiente, molestiae iste vel.</h1>

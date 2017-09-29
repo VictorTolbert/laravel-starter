@@ -14,7 +14,7 @@
             <span>My Profile</span>
         </a>
 
-        <a class="navbar-item" data-show="quickview" data-target="quickviewDefault">
+        <a class="navbar-item" data-show="quickview" data-target="settings">
             <span class="icon is-medium p-r-xs" style="color: #333;">
                 <i class="material-icons">settings</i>
             </span>
@@ -29,11 +29,6 @@
                 <span>Logout</span>
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-        </div>
-
-        <hr class="navbar-divider">
-        <div class="navbar-item">
-            Version 0.5.3
         </div>
     </div>
 </div>

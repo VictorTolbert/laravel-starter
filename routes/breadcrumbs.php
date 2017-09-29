@@ -23,10 +23,28 @@ Breadcrumbs::register('components', function ($breadcrumbs) {
     $breadcrumbs->push('Components', route('components'));
 });
 
-// Components > Tables
-Breadcrumbs::register('tables', function ($breadcrumbs) {
+// Components > Data Table
+Breadcrumbs::register('data-table', function ($breadcrumbs) {
     $breadcrumbs->parent('components');
-    $breadcrumbs->push('Tables', route('tables'));
+    $breadcrumbs->push('Data Table', route('data-table'));
+});
+
+// Home > Team
+Breadcrumbs::register('team', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Team', route('team'));
+});
+
+// Home > Team > Design Team
+Breadcrumbs::register('design-team', function ($breadcrumbs) {
+    $breadcrumbs->parent('team');
+    $breadcrumbs->push('Design', route('design-team'));
+});
+
+// Home > Team > Product Team
+Breadcrumbs::register('product-team', function ($breadcrumbs) {
+    $breadcrumbs->parent('team');
+    $breadcrumbs->push('Product', route('product-team'));
 });
 
 // Home > FAQs

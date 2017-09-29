@@ -2,6 +2,12 @@ title: Overview
 weight: 1
 items:
   - Start
-  - Introduction
-  - Changelog
-  - Tips
+  - Customize
+  - Classes
+  - Modular
+  - Responsiveness
+  - Variables
+  - Colors
+  - Functions
+  - Mixins
+

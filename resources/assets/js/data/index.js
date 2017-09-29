@@ -43,6 +43,8 @@ module.exports = function () {
         stations: require('./stations'),
         tags: require('./tags'),
         team: require('./team'),
+        productTeam: require('./product-team'),
+        designTeam: require('./design-team'),
         tickets: require('./tickets'),
         typography: require('./typography'),
         vectors: require('./vectors'),

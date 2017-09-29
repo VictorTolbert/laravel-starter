@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/vue-window.css') }}" rel="stylesheet">
-
+    <style>
+        [v-cloak] { display: none; }
+    </style>
     <!-- Scripts -->
     <script>
         window.App = {!! json_encode([
@@ -24,38 +26,31 @@
             'signedIn' => Auth::check()
         ])!!};
     </script>
-    <style>
-        [v-cloak] { display: none; }
-    </style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     @routes
 </head>
 <body>
     <div id="app">
         <main class="main">
-            <div class="is-primary" style="background-color:#4295b3;height:0.25rem">&nbps;</div>
+            {{-- <div class="is-primary" style="background-color:#4295b3;height:0.25rem">&nbps;</div> --}}
             @include('partials.navbars.app')
+            {{-- @include('partials.navbars.vti') --}}
+            {{-- @include('partials.navbars.ops') --}}
             {{-- @include('partials.navbars.apps') --}}
             {{-- @include('partials.navbars.breadcrumb') --}}
             {{-- @include('partials.navbars.buyer') --}}
+            {{-- @include('partials.navbars.seller') --}}
             {{-- @include('partials.navbars.campaign-performance') --}}
             @if (Auth::guest())
             @else
-                @include('partials.navbars.design-system')
-                @include('partials.navbars.atomic-design')
+                {{-- @include('partials.navbars.atomic-design') --}}
 
             @endif
-            {{-- @include('partials.navbars.gasps') --}}
-            {{-- @include('partials.navbars.ops') --}}
+
             {{-- @include('partials.navbars.project-info') --}}
-            {{-- @include('partials.navbars.pagination') --}}
-            {{-- @include('partials.navbars.seller') --}}
             {{-- @include('partials.navbars.style1') --}}
-            {{-- @include('partials.navbars.styleguide') --}}
-            {{-- @include('partials.navbars.team') --}}
-            {{-- @include('partials.navbars.utilities') --}}
-            {{-- @include('partials.navbars.vti') --}}
-            {{-- @include('partials.navbars.wizard') --}}
-            {{-- @include('partials.heros.app') --}}
             @yield('content')
             <flash message="{{ session('flash') }}"></flash>
         </main>
@@ -63,6 +58,9 @@
     </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>
-    <script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+    {{-- <script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script> --}}
+    {{-- <script src="/chardinjs.min.js"></script> --}}
+    {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.js"></script> --}}
+    {{-- <script>$('body').chardinJs('start')</script> --}}
 </body>
 </html>

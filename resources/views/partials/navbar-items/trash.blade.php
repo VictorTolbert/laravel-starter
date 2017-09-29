@@ -1,5 +1,4 @@
 <a class="navbar-item is-tab">
-    <span class="icon-btn">
-        @svg('trash')
-    </span>
+    <span class="m-r-sm">@svg('trash')</span>
+    <span>Trash</span>
 </a>

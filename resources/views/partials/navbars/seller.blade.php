@@ -26,6 +26,8 @@
             <div class="navbar-end">
                 @if (Auth::guest())
                 @else
+                    {{-- @include('partials.navbar-items.settings') --}}
+                    @include('partials.navbar-items.user-dropdown')
                 @endif
             </div>
         </div>

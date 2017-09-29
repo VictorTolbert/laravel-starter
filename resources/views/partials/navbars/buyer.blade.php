@@ -7,14 +7,10 @@
                 </a>
             </div>
             <div class="navbar-start">
-                @include('partials.navbar-items.order-management')
-                @include('partials.navbar-items.reporting')
-                @include('partials.navbar-items.price-guide')
                 @include('partials.navbar-items.avails')
-                @include('partials.navbar-items.campaign-performance')
             </div>
             <div class="navbar-end">
-                @include('partials.navbar-items.help')
+                @include('partials.navbar-items.settings')
             </div>
         </div>
     </div>

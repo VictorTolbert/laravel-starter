@@ -5,6 +5,38 @@
             </div>
             <div class="navbar-start">
 
+                <div class="field">
+                    <b-switch :value="true">
+                        Default
+                    </b-switch>
+                </div>
+
+                <b-field>
+                    <b-radio-button v-model="radioButton"
+                        native-value="Nop"
+                        type="is-danger">
+                        <b-icon icon="clear"></b-icon>
+                        <span>Nop</span>
+                    </b-radio-button>
+
+                    <b-radio-button v-model="radioButton"
+                        native-value="Yep"
+                        type="is-success">
+                        <b-icon icon="done"></b-icon>
+                        <span>Yep</span>
+                    </b-radio-button>
+
+                    <b-radio-button v-model="radioButton"
+                        native-value="Default">
+                        Default
+                    </b-radio-button>
+
+                    <b-radio-button v-model="radioButton"
+                        native-value="Disabled"
+                        disabled>
+                        Disabled
+                    </b-radio-button>
+                </b-field>
                 @include('partials.navbar-items.dashboard')
                 @include('partials.navbar-items.preferences')
                 @include('partials.navbar-items.format-size')

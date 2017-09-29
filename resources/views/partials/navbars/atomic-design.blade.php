@@ -26,6 +26,13 @@
                     <span>Organisms</span>
                 </a>
 
+                <a href="{{route('templates')}}" class="navbar-item">
+                    <span class="icon m-r-sm">
+                        @svg('atomic-design.template')
+                    </span>
+                    <span>Templates</span>
+                </a>
+
                 <a href="{{route('pages')}}" class="navbar-item">
                     <span class="icon m-r-sm">
                         @svg('atomic-design.page')
@@ -33,12 +40,6 @@
                     <span>Pages</span>
                 </a>
 
-                <a href="{{route('templates')}}" class="navbar-item">
-                    <span class="icon m-r-sm">
-                        @svg('atomic-design.template')
-                    </span>
-                    <span>Templates</span>
-                </a>
             </div>
             <div class="navbar-end">
                 @include('partials.navbar-items.help')

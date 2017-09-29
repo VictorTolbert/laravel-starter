@@ -37,6 +37,7 @@ Route::name('atoms')->get('/atoms', 'PagesController@atoms');
 Route::name('avails')->get('/avails', 'PagesController@avails');
 Route::name('base')->get('/base', 'PagesController@base');
 Route::name('blog')->get('/blog', 'PagesController@blog');
+Route::name('buttons')->get('/buttons', 'PagesController@buttons');
 Route::name('campaign-performance')->get('/campaign-performance', 'PagesController@campaignPerformance');
 Route::name('changelog')->get('/changelog', 'PagesController@changelog');
 Route::name('charts')->get('/charts', 'PagesController@charts');
@@ -85,7 +86,9 @@ Route::name('reporting')->get('/reporting', 'PagesController@reporting');
 Route::name('settings')->get('/settings', 'PagesController@settings');
 Route::name('sitemap')->get('/sitemap', 'PagesController@sitemap');
 // Route::name('table')->get('/table', 'PagesController@table');
-Route::name('tables')->get('/tables', 'PagesController@tables');
+Route::name('data-table')->get('/data-table', 'PagesController@dataTable');
+Route::name('design-team')->get('/design-team', 'PagesController@designTeam');
+Route::name('product-team')->get('/product-team', 'PagesController@productTeam');
 Route::name('team')->get('/team', 'PagesController@team');
 Route::name('templates')->get('/templates', 'PagesController@templates');
 Route::name('terms')->get('/terms', 'PagesController@terms');
@@ -98,9 +101,9 @@ Route::name('view')->get('/view', 'PagesController@view');
 Route::name('zurb')->get('/zurb', 'PagesController@zurb');
 
 Route::name('home')->get('/', function () {
-    // return redirect()->route('dashboard');
+    return redirect()->route('dashboard');
     // return redirect()->route('navbars');
-    return redirect()->route('tables');
+    // return redirect()->route('data-table');
 });
 
 Route::name('page')->get('{url}', 'PageController')->where('url', '.*');

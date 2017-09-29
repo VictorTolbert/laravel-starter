@@ -43,6 +43,11 @@ class PagesController extends Controller
         return view('blog.index');
     }
 
+    public function buttons()
+    {
+        return view('base.buttons');
+    }
+
     public function campaignPerformance()
     {
         return view('campaign-performance.index');
@@ -72,9 +77,21 @@ class PagesController extends Controller
         return view('dashboard');
     }
 
+    public function dataTable()
+    {
+        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+
+        return view('components.data-table', compact('gravatar'));
+    }
+
     public function designSystem()
     {
         return view('design-system.index');
+    }
+
+    public function designTeam()
+    {
+        return view('team.design');
     }
 
     public function designTokens()
@@ -194,6 +211,11 @@ class PagesController extends Controller
         return view('privacy');
     }
 
+    public function productTeam()
+    {
+        return view('team.product');
+    }
+
     public function programRevenue()
     {
         return view('reporting.program-revenue.index');
@@ -219,13 +241,6 @@ class PagesController extends Controller
         $gravatar = get_gravatar('victor.tolbert@gmail.com');
 
         return view('components.table', compact('gravatar'));
-    }
-
-    public function tables()
-    {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
-
-        return view('tables.index', compact('gravatar'));
     }
 
     public function team()
