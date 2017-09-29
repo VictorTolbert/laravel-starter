@@ -21,13 +21,6 @@
     <section class="section quickview-body">
         <div class="quickview-block">
             <div class="content">
-                <ul>
-                    <li>
-                        <a href="{{ route('sitemap') }}">
-                            Sitemap
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </section>
