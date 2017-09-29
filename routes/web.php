@@ -85,6 +85,7 @@ Route::name('program-revenue')->get('/program-revenue', 'PagesController@program
 Route::name('reporting')->get('/reporting', 'PagesController@reporting');
 Route::name('settings')->get('/settings', 'PagesController@settings');
 Route::name('sitemap')->get('/sitemap', 'PagesController@sitemap');
+Route::name('spacing')->get('/spacing', 'PagesController@spacing');
 // Route::name('table')->get('/table', 'PagesController@table');
 Route::name('data-table')->get('/data-table', 'PagesController@dataTable');
 Route::name('design-team')->get('/design-team', 'PagesController@designTeam');

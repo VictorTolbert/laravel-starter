@@ -1,4 +1,4 @@
-<a class="navbar-item" href="{{ route('dashboard') }}">
+<a class="navbar-item" data-show="quickview" data-target="notes">
     <span class="m-r-sm">
         @svg('more-horizontal')
     </span>

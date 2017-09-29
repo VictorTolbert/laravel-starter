@@ -32,10 +32,12 @@
         {{-- @include('partials.navbars.project-info') --}}
         <h3 class="is-size-4">Exploration</h3>
         <hr>
-        <b-tabs>
-            <b-tab-item label="Avails">
+        <b-tabs type="is-boxed">
+            <b-tab-item label="Sample Data">
                 @include('partials.navbars.utilities')
                 <avails></avails>
+            </b-tab-item>
+            <b-tab-item label="Research">
             </b-tab-item>
 {{--             <b-tab-item label="Inventory Guide">
                 @include('partials.navbars.utilities')

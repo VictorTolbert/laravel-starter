@@ -236,6 +236,11 @@ class PagesController extends Controller
         return view('sitemap');
     }
 
+    public function spacing()
+    {
+        return view('atoms.spacing');
+    }
+
     public function table()
     {
         $gravatar = get_gravatar('victor.tolbert@gmail.com');

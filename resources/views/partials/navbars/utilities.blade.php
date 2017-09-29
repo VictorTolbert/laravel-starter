@@ -9,20 +9,19 @@
                 </span> --}}
             </div>
             <div class="navbar-start">
-                @include('partials.navbar-items.search')
-                @include('partials.navbar-items.filter-list')
+                {{-- @include('partials.navbar-items.search') --}}
+                {{-- @include('partials.navbar-items.filter-list') --}}
             </div>
             <div class="navbar-end">
-                @include('partials.navbar-items.preferences')
-                @include('partials.navbar-items.settings')
-                @include('partials.navbar-items.format-size')
-                @include('partials.navbar-items.help')
-                @include('partials.navbar-items.print')
+                {{-- @include('partials.navbar-items.format-size') --}}
+                {{-- @include('partials.navbar-items.print') --}}
                 {{-- @include('partials.navbar-items.export') --}}
+                {{-- @include('partials.navbar-items.trash') --}}
                 @include('partials.navbar-items.notes')
-                @include('partials.navbar-items.trash')
-                @include('partials.navbar-items.more')
-                @include('partials.navbar-items.show-sidebar')
+                @include('partials.navbar-items.preferences')
+                {{-- @include('partials.navbar-items.settings') --}}
+                {{-- @include('partials.navbar-items.help') --}}
+                {{-- @include('partials.navbar-items.more') --}}
             </div>
         </div>
     </div>

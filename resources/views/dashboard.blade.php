@@ -14,6 +14,20 @@
         </div>
     </div>
 </header>
+
+{{-- <a class="avatar" href="/andrew652" oldtitle="Andrew Gaken" title="" aria-describedby="ui-tooltip-4">
+    <span>
+        <em class="avatar-letter" style="color:#D0D0D3;">AG</em>
+    </span>
+    <span>Andrew Gaken</span>
+</a>
+ --}}
+{{-- <span class="avatar">
+    <span>
+        <img src="https://static.sched.com/a13/4483842/avatar.jpg.320x320px.jpg?659" alt="avatar for Victor Tolbert" id="myavatar" onerror="this.onerror=null;this.src='//cdn.schd.ws/common/img/avatar-empty.png';">
+    </span>
+</span> --}}
+
 <section class="section">
     <div class="container is-fluid">
         <div class="tile is-ancestor">
@@ -40,6 +54,15 @@
                         <a class="tag is-large" href="/modifiers/responsive-helpers">Responsive Helpers</a>
                         <a class="tag is-large" href="/modifiers/typography-helpers">Typography Helpers</a>
                     </p>
+                    <div class="paging">
+                        <a>M</a>
+                        <a>T</a>
+                        <a>W</a>
+                        <a>T</a>
+                        <a>F</a>
+                        <a>S</a>
+                        <a>S</a>
+                    </div>
                 </div>
             </div>
             <div class="tile is-4 is-vertical is-parent">

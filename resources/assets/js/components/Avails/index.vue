@@ -193,8 +193,8 @@ export default {
     data () {
         return {
             avails,
-            checkedRows: [],
             checkedRows: [avails[1], avails[3]],
+            checkedRows: [],
             code: `<table class="table is-checkable is-striped is-narrowed">
     ...
 </table>`,
@@ -214,7 +214,7 @@ export default {
             isCheckable: true,
             isEmpty: false,
             isLoading: false,
-            isNarrowed: true,
+            isNarrowed: false,
             isPaginated: false,
             isPaginationSimple: false,
             isStriped: true,
