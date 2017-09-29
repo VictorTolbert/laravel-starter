@@ -33,13 +33,11 @@
         <h3 class="is-size-4">Exploration</h3>
         <hr>
         <b-tabs>
-            <b-tab-item label="Account Performance">
-            </b-tab-item>
             <b-tab-item label="Avails">
                 @include('partials.navbars.utilities')
                 <avails></avails>
             </b-tab-item>
-            <b-tab-item label="Inventory Guide">
+{{--             <b-tab-item label="Inventory Guide">
                 @include('partials.navbars.utilities')
                 <b-table
                     :bordered="isBordered"
@@ -125,13 +123,13 @@
                         </section>
                     </template>
                 </b-table>
-            </b-tab-item>
-            <b-tab-item label="Order Reporting">
+            </b-tab-item> --}}
+{{--             <b-tab-item label="Order Reporting">
             </b-tab-item>
             <b-tab-item label="Order Search">
             </b-tab-item>
             <b-tab-item label="Order Summary">
-            </b-tab-item>
+            </b-tab-item> --}}
         </b-tabs>
 
 {{--         <div class="content">

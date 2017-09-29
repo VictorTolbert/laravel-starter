@@ -17,10 +17,52 @@ Breadcrumbs::register('dashboard', function ($breadcrumbs) {
     $breadcrumbs->push('Dashboard', route('dashboard'));
 });
 
+// Home > Columns
+Breadcrumbs::register('columns', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('columns', route('columns'));
+});
+
 // Home > Components
 Breadcrumbs::register('components', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Components', route('components'));
+});
+
+// Home > Elements
+Breadcrumbs::register('elements', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('elements', route('elements'));
+});
+
+// Home > Form Controls
+Breadcrumbs::register('form-control', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('form-control', route('form-control'));
+});
+
+// Home > Layout
+Breadcrumbs::register('layout', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('layout', route('layout'));
+});
+
+// Home > Modifiers
+Breadcrumbs::register('modifiers', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('modifiers', route('modifiers'));
+});
+
+// Home > Overview
+Breadcrumbs::register('overview', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('overview', route('overview'));
+});
+
+// Home > Prototypes
+Breadcrumbs::register('prototypes', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('prototypes', route('prototypes'));
 });
 
 // Components > Data Table
