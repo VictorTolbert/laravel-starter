@@ -11,6 +11,16 @@
 
 @section('content')
     <section class="section">
+        <div class="container">
+            <b-dropdown>
+                <p class="tag is-success" slot="trigger">
+                    Custom trigger
+                </p>
 
+                <b-dropdown-item>Action</b-dropdown-item>
+                <b-dropdown-item>Another action</b-dropdown-item>
+                <b-dropdown-item>Something else</b-dropdown-item>
+            </b-dropdown>
+        </div>
     </section>
 @endsection

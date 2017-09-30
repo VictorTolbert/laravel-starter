@@ -1,53 +1,24 @@
 import Vue from 'vue'
-// import router from './routes'
+import router from './routes'
 
 require('./bootstrap')
 
 import store from 'store'
 
 const db = require('./data')()
-import people from './data/people.json'
-import zipCode from './data/zip-code.json'
-import tv from './data/tv.json'
 
 const app = new Vue({
     el: '#app',
     store,
-    // router,
+    router,
     data () {
         return {
             db,
-            people,
-            zipCode,
-            tv,
             activeApp: 'prototypes',
-            avails: db.avails,
-            clients: db.clients,
             activeTab: 0,
             checkedRows: [],
-            checkedRows: [db.avails[1], db.avails[3]],
-            clientsColumns: db.clientColumns,
-            // data: [],
             date: new Date(),
             defaultSortDirection: 'asc',
-            formProps: {
-                email: 'evan@you.com',
-                password: 'testing'
-            },
-            frameworks: [
-                'Angular',
-                'Angular 2',
-                'Aurelia',
-                'Backbone',
-                'Ember',
-                'jQuery',
-                'Meteor',
-                'Node.js',
-                'Polymer',
-                'React',
-                'RxJS',
-                'Vue.js'
-            ],
             hasMobileCards: true,
             isActive: false,
             isBordered: true,
@@ -66,9 +37,8 @@ const app = new Vue({
             isStriped: false,
             keepFirst: false,
             loading: false,
-            movies: [],
-            name: '',
             navigation: null,
+            open: false,
             options: ['list', 'of', 'options'],
             page: 1,
             perPage: 5,
@@ -82,7 +52,7 @@ const app = new Vue({
             sortField: 'vote_count',
             sortOrder: 'desc',
             total: 0,
-            value: null
+            value: null,
         }
     },
     computed: {

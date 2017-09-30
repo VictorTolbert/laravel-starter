@@ -1,4 +1,5 @@
 <div id="notes" class="note quickview" style="">
+    <div class="is-primary" style="background-color:#9c3;height:0.25rem"></div>
     <div class="container is-fluid">
         <nav class="navbar is-transparent">
             <div class="navbar-brand">

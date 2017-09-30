@@ -65,6 +65,13 @@ class PagesController extends Controller
         return view('components.index', compact('gravatar'));
     }
 
+    public function content()
+    {
+        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+
+        return view('content.index', compact('gravatar'));
+    }
+
     public function colors()
     {
         $gravatar = get_gravatar('victor.tolbert@gmail.com');
@@ -224,6 +231,11 @@ class PagesController extends Controller
     public function reporting()
     {
         return view('reporting.index');
+    }
+
+    public function scratch()
+    {
+        return view('scratch');
     }
 
     public function settings()

@@ -11,16 +11,34 @@ Breadcrumbs::register('about', function ($breadcrumbs) {
     $breadcrumbs->push('About', route('about'));
 });
 
-// Home > Dashboard
-Breadcrumbs::register('dashboard', function ($breadcrumbs) {
+// Home > Atoms
+Breadcrumbs::register('atoms', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Dashboard', route('dashboard'));
+    $breadcrumbs->push('Atoms', route('atoms'));
 });
+
+// Home > Blog
+Breadcrumbs::register('blog', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Blog', route('blog'));
+});
+
+    // Home > Blog > [Category]
+    Breadcrumbs::register('category', function ($breadcrumbs, $category) {
+        $breadcrumbs->parent('blog');
+        $breadcrumbs->push($category->title, route('category', $category->id));
+    });
+
+    // Home > Blog > [Category] > [Post]
+    Breadcrumbs::register('post', function ($breadcrumbs, $post) {
+        $breadcrumbs->parent('category', $post->category);
+        $breadcrumbs->push($post->title, route('post', $post));
+    });
 
 // Home > Columns
 Breadcrumbs::register('columns', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('columns', route('columns'));
+    $breadcrumbs->push('Columns', route('columns'));
 });
 
 // Home > Components
@@ -29,16 +47,37 @@ Breadcrumbs::register('components', function ($breadcrumbs) {
     $breadcrumbs->push('Components', route('components'));
 });
 
+    // Components > Data Table
+    Breadcrumbs::register('data-table', function ($breadcrumbs) {
+        $breadcrumbs->parent('components');
+        $breadcrumbs->push('Data Table', route('data-table'));
+    });
+
+
+// Home > Dashboard
+Breadcrumbs::register('dashboard', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Dashboard', route('dashboard'));
+});
+
+
 // Home > Elements
 Breadcrumbs::register('elements', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('elements', route('elements'));
+    $breadcrumbs->push('Elements', route('elements'));
 });
 
-// Home > Form Controls
-Breadcrumbs::register('form-control', function ($breadcrumbs) {
+// Home > FAQs
+Breadcrumbs::register('faqs', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('form-control', route('form-control'));
+    $breadcrumbs->push('FAQs', route('faqs'));
+});
+
+
+// Home > Form
+Breadcrumbs::register('form', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('form', route('form'));
 });
 
 // Home > Layout
@@ -53,10 +92,28 @@ Breadcrumbs::register('modifiers', function ($breadcrumbs) {
     $breadcrumbs->push('modifiers', route('modifiers'));
 });
 
+// Home > Molecules
+Breadcrumbs::register('molecules', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Molecules', route('molecules'));
+});
+
+// Home > Organisms
+Breadcrumbs::register('organisms', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Organisms', route('organisms'));
+});
+
 // Home > Overview
 Breadcrumbs::register('overview', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('overview', route('overview'));
+});
+
+// Home > Pages
+Breadcrumbs::register('pages', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Pages', route('pages'));
 });
 
 // Home > Prototypes
@@ -65,50 +122,27 @@ Breadcrumbs::register('prototypes', function ($breadcrumbs) {
     $breadcrumbs->push('prototypes', route('prototypes'));
 });
 
-// Components > Data Table
-Breadcrumbs::register('data-table', function ($breadcrumbs) {
-    $breadcrumbs->parent('components');
-    $breadcrumbs->push('Data Table', route('data-table'));
-});
-
 // Home > Team
 Breadcrumbs::register('team', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Team', route('team'));
 });
 
-// Home > Team > Design Team
-Breadcrumbs::register('design-team', function ($breadcrumbs) {
-    $breadcrumbs->parent('team');
-    $breadcrumbs->push('Design', route('design-team'));
-});
+    // Home > Team > Design Team
+    Breadcrumbs::register('design-team', function ($breadcrumbs) {
+        $breadcrumbs->parent('team');
+        $breadcrumbs->push('Design', route('design-team'));
+    });
 
-// Home > Team > Product Team
-Breadcrumbs::register('product-team', function ($breadcrumbs) {
-    $breadcrumbs->parent('team');
-    $breadcrumbs->push('Product', route('product-team'));
-});
+    // Home > Team > Product Team
+    Breadcrumbs::register('product-team', function ($breadcrumbs) {
+        $breadcrumbs->parent('team');
+        $breadcrumbs->push('Product', route('product-team'));
+    });
 
-// Home > FAQs
-Breadcrumbs::register('faqs', function ($breadcrumbs) {
+// Home > Templates
+Breadcrumbs::register('templates', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('FAQs', route('faqs'));
+    $breadcrumbs->push('Templates', route('templates'));
 });
 
-// Home > Blog
-Breadcrumbs::register('blog', function ($breadcrumbs) {
-    $breadcrumbs->parent('home');
-    $breadcrumbs->push('Blog', route('blog'));
-});
-
-// Home > Blog > [Category]
-Breadcrumbs::register('category', function ($breadcrumbs, $category) {
-    $breadcrumbs->parent('blog');
-    $breadcrumbs->push($category->title, route('category', $category->id));
-});
-
-// Home > Blog > [Category] > [Post]
-Breadcrumbs::register('post', function ($breadcrumbs, $post) {
-    $breadcrumbs->parent('category', $post->category);
-    $breadcrumbs->push($post->title, route('post', $post));
-});

@@ -11,6 +11,101 @@
 </header>
 
 <section class="section">
+{{--     <div class="container is-fluid">
+        <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <h3>
+                        Seller
+                    </h3>
+                    <div class="field">
+                        <p class="field">
+                            <label class="label">Company Name</label>
+                            <p class="control">
+                                {{  $xml->Proposal->Seller['companyName'] }}
+                            </p>
+                        </p>
+
+                        <p class="field">
+                            <label class="label">Salesperson Name</label>
+                            <p class="control">
+                                {{  $xml->Proposal->Seller->Salesperson['name'] }}
+                            </p>
+                        </p>
+
+                        <p class="field">
+                            <label class="label">Salesperson Email</label>
+                            <p class="control">
+                                {{  $xml->Proposal->Seller->Salesperson->Email }}
+                            </p>
+                        </p>
+
+                        <p class="field">
+                            <label class="label">{{  $xml->Proposal->Seller->Salesperson->Phone[0]['type'] }}</label>
+                            <p class="control">
+                                {{  $xml->Proposal->Seller->Salesperson->Phone[0] }}
+                            </p>
+                        </p>
+                        <p class="field">
+                            <label class="label">{{  $xml->Proposal->Seller->Salesperson->Phone[1]['type'] }}</label>
+                            <p class="control">
+                                {{  $xml->Proposal->Seller->Salesperson->Phone[1] }}
+                            </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Seller</h3>
+                </div>
+                <div class="panel-body">
+                    <p> <b>{{  $xml->Proposal->Seller['companyName'] }}</b>,
+                    {{  $xml->Proposal->Seller->Salesperson['name'] }},
+                    {{  $xml->Proposal->Seller->Salesperson->Email }}<br>
+                    {{  $xml->Proposal->Seller->Salesperson->Phone[0]['type'] }}: {{  $xml->Proposal->Seller->Salesperson->Phone[0] }} /
+                    {{  $xml->Proposal->Seller->Salesperson->Phone[1]['type'] }}: {{  $xml->Proposal->Seller->Salesperson->Phone[1] }}<br><br>
+                    <b>{{  $xml->Proposal->Name }}</b></p>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Buyer</h3>
+                </div>
+                <div class="panel-body">
+                    <p><b>{{  $xml->Proposal->Buyer['buyingCompanyName'] }}</b><br>
+                    {{  $xml->Proposal->Buyer->BuyerName }}</p>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Advertiser</h3>
+                </div>
+                <div class="panel-body">
+                    <p><b>{{ $xml->Proposal->Advertiser['name'] }}</b><br>
+                    {{ $xml->Proposal->Advertiser->Product['name'] }}</p>
+                </div>
+            </div>
+
+            @if(!empty($daypartsSummary))
+                <table class="table is-bordered is-narrowed is-striped">
+                    <tr>
+                        <th>Daypart</th>
+                        <th class="text-center">Average CPP</th>
+                    </tr>
+                    @foreach($daypartsSummary as $key => $val)
+                        <tr>
+                            <td>{{ $key }}</td>
+                            <td class="text-center">{{ number_format($val, 2) }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            @endif
+        </div>
+    </div> --}}
     <div class="container is-fluid">
         {{-- <div class="print-header">
             <h5><b>{{  $xml->Proposal->Seller['companyName'] }}</b>,

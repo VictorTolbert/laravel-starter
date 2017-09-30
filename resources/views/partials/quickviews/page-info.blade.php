@@ -55,6 +55,16 @@
 
     <section class="section quickview-body">
         <div class="quickview-block">
+            <div class="content">
+                <h1>Page States</h1>
+                <ul class="page-states">
+                    <li>Empty</li>
+                    <li>Error</li>
+                    <li>Loading</li>
+                    <li>Notification</li>
+                    <li>Help</li>
+                </ul>
+            </div>
             <b-tabs class="block">
                 <b-tab-item label="User Preferences">
                     <section class="section">

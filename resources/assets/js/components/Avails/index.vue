@@ -7,7 +7,7 @@
             :checked-rows.sync="checkedRows"
             :detailed="hasDetails"
             @details-open="(row, index) => $toast.open(`Expanded ${row.advertiser}`)"
-            :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
+            :row-class="(row, index) => row.hiddenOnTouch  ? 'is-hidden-touch' : ''"
             :bordered="isBordered"
             :striped="isStriped"
             :narrowed="isNarrowed"
@@ -21,17 +21,17 @@
 
             <template scope="props">
                 <!-- TODO - [ ] Loop over columnConfig object [h1] -->
-                <b-table-column field="id" meta="Internal ID" label="Avail Number" sortable>
+<!--                 <b-table-column field="id" meta="Internal ID" label="ID" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(`${props.row.advertiser}, ${props.row.agency}`)">
                         {{ props.row.id }}
                     </a>
-                </b-table-column>
+                </b-table-column> -->
 
-                <b-table-column field="status" label="Status" sortable>
+<!--                 <b-table-column field="status" label="Status" sortable>
                     <span class="tag is-uppercase" :class="props.row.status == 'active' ? 'is-success' : 'is-info'">
                         {{ props.row.status }}
                     </span>
-                </b-table-column>
+                </b-table-column> -->
 
 <!--                 <b-table-column field="stationOrderNumber" label="Station Order" sortable>
                     {{ props.row.stationOrderNumber }}
@@ -42,23 +42,41 @@
                 </b-table-column>
  -->
 
- <b-table-column field="released" label="Released" sortable>
-     {{ props.row.released }}
- </b-table-column>
+                <b-table-column field="program" label="Program" sortable>
+                    {{ props.row.program }}
+                </b-table-column>
+                <b-table-column field="daypart" label="Daypart" sortable>
+                    {{ props.row.daypart }}
+                </b-table-column>
+                <b-table-column field="days" label="Days" sortable>
+                    <div class="paging">
+                        <a>M</a>
+                        <a>T</a>
+                        <a>W</a>
+                        <a>T</a>
+                        <a>F</a>
+                        <a>S</a>
+                        <a>S</a>
+                    </div>
+                </b-table-column>
 
-                <b-table-column field="advertiser" label="Advertiser" sortable>
+<!--                 <b-table-column field="released" label="Released" sortable>
+                    {{ props.row.released }}
+                </b-table-column> -->
+
+<!--                 <b-table-column field="advertiser" label="Advertiser" sortable>
                     <a style="text-decoration: underline" @click="$toast.open(props.row.advertiser)">
                         {{ props.row.advertiser }}
                     </a>
-                </b-table-column>
+                </b-table-column> -->
 
-                <b-table-column field="product" label="Product" sortable>
+<!--                 <b-table-column field="product" label="Product" sortable>
                     {{ props.row.product }}
-                </b-table-column>
+                </b-table-column> -->
 
-                <b-table-column field="estimate" label="Estimate" numeric sortable>
+<!--                 <b-table-column field="estimate" label="Estimate" numeric sortable>
                     {{ props.row.estimate }}
-                </b-table-column>
+                </b-table-column> -->
 
                 <b-table-column field="flightStart" label="Start" sortable>
                     {{ props.row.flightStart }}
@@ -68,14 +86,14 @@
                     {{ props.row.flightEnd }}
                 </b-table-column>
 
-                <b-table-column field="agency" label="Agency" sortable>
+<!--                 <b-table-column field="agency" label="Agency" sortable>
                     {{ props.row.agency }}
-                </b-table-column>
+                </b-table-column> -->
 
-                <b-table-column field="spots" label="Last Updated" sortable>
+<!--                 <b-table-column field="spots" label="Last Updated" sortable>
                     {{ props.row.updated }}
                 </b-table-column>
-
+ -->
 <!--
 
                 <b-table-column field="demo" label="Demo" sortable>
@@ -186,26 +204,27 @@
 </template>
 
 <script>
+import { Money } from 'v-money'
 const avails = require('../../data/avails')
 
 export default {
     name: 'avails',
+    components: {
+        Money
+    },
     data () {
         return {
             avails,
-            checkedRows: [avails[1], avails[3]],
+            price: 1234567.89,
+            money: {
+                decimal: '.',
+                thousands: ',',
+                prefix: '$ ',
+                suffix: '',
+                precision: 2,
+                masked: true /* doesn't work with directive */
+            },
             checkedRows: [],
-            code: `<table class="table is-checkable is-striped is-narrowed">
-    ...
-</table>`,
-            columnsTemplate: [
-                { title: 'ID', field: 'id', visible: true },
-                { title: 'First Name', field: 'first_name', visible: true },
-                { title: 'Last Name', field: 'last_name', visible: true },
-                { title: 'Date', field: 'date', visible: true },
-                { title: 'Gender', field: 'gender', visible: true }
-            ],
-            date: null,
             defaultSortDirection: 'asc',
             hasDetails: true,
             hasMobileCards: true,
@@ -215,12 +234,11 @@ export default {
             isEmpty: false,
             isLoading: false,
             isNarrowed: false,
+            isOpen: true,
             isPaginated: false,
             isPaginationSimple: false,
             isStriped: true,
-            options: ['list', 'of', 'options'],
             perPage: 20,
-            selected: avails[1],
             selected: {},
             value: null
         }

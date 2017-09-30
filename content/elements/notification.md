@@ -1,3 +1,3 @@
-# Notifications
+# Notification
 
 ## Bold **notification** blocks, to alert your users of something

@@ -1,6 +1,12 @@
 @extends('layouts.app')
-
 @section('content')
+<header class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <p>Scratch</p>
+        </div>
+    </div>
+</header>
 <section class="section">
     <div class="container is-fluid">
         <b-tabs>
@@ -289,182 +295,86 @@
                         <img src="/images/tips/input-label.jpg">
                     </figure>
                 </div>
-
-
             </b-tab-item>
             <b-tab-item label="Little UI Details">
-                    <section class="section">
-                        <div class="columns is-multiline">
+                <section class="section">
+                    <div class="columns is-multiline">
 
-{{--                             <div class="column is-3">
-                                <b-tabs>
-                                    <b-tab-item v-for="(item, index) in $parent.db.features.dataTables" :key="index" :label="item">
-                                        <figure class="image is-4x3">
-                                            <img :src="`/images/screengrabs/data-tables/${item}.jpg`">
-                                        </figure>
-                                    </b-tab-item>
-                                </b-tabs>
-                            </div>
- --}}
-
-{{--                             <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/basic-filtering.jpg">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/customizable-columns.jpg">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/display-density.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/expandable-rows.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/filter-columns.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/fixed-header.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/horizontal-scrolling.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/hover-actions.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/inline-editing.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/modal.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/multi-modal.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/pagination.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/quick-view.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/resizable-columns.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/row-style.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/row-to-details.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/searchable-columns.jpg">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/sortable-columns.jpg">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/data-tables/visual-table-summary.jpg">
-                                </figure>
-                            </div>
-                             --}}
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/fdk_preview_800x600.png">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/final.jpg">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/flexport-website.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/icons.png">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/invoice-reminder-flow.gif">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/private.png">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/style-guide.jpg">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/table.gi">
-                                </figure>
-                            </div>
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/screengrabs/website-wireframe.gif">
-                                </figure>
-                            </div>
-
-
-
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/tips/what-is-node.jpg">
-                                </figure>
-                            </div>
-
-                            <div class="column is-3">
-                                <figure class="image is-4x3">
-                                    <img src="/images/data-model-example.jpg">
-                                </figure>
-                            </div>
-
+                        <div class="column is-3">
+                            <b-tabs>
+                                <b-tab-item v-for="(item, index) in $parent.db.features.dataTables" :key="index" :label="item">
+                                    <figure class="image is-4x3">
+                                        <img :src="`/images/screengrabs/data-tables/${item}.jpg`">
+                                    </figure>
+                                </b-tab-item>
+                            </b-tabs>
                         </div>
-                    </section>
+
+
+
+
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/fdk_preview_800x600.png">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/final.jpg">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/flexport-website.gif">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/icons.png">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/invoice-reminder-flow.gif">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/private.png">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/style-guide.jpg">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/table.gi">
+                            </figure>
+                        </div>
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/screengrabs/website-wireframe.gif">
+                            </figure>
+                        </div>
+
+
+
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/tips/what-is-node.jpg">
+                            </figure>
+                        </div>
+
+                        <div class="column is-3">
+                            <figure class="image is-4x3">
+                                <img src="/images/data-model-example.jpg">
+                            </figure>
+                        </div>
+
+                    </div>
+                </section>
             </b-tab-item>
             <b-tab-item label="Layout">
                 <section class="section">
@@ -487,13 +397,11 @@
                     </div>
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Data Tables">
                 <section class="section">
                     @include('partials.articles.avails')
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Placeholders">
                 <section class="section">
                     @include('partials.tables.responsive-images-with-ratio')
@@ -517,8 +425,7 @@
 
                 </section>
             </b-tab-item>
-
-            <b-tab-item label="Form Controls">
+            <b-tab-item label="Form">
                 <section class="section">
                     <div class="container is-fluid">
                         <div class="columns">
@@ -548,7 +455,6 @@
                     </div>
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Assets">
                 <section class="section">
                     @include('partials.assets.icons')
@@ -558,13 +464,11 @@
                     <todo v-for="(todo, index) in todos" :key="index" :todo="todo"></todo>
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Daypart Display">
                 <section class="section">
                     @include('partials.grids.dayparts')
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Galleries">
                 <section class="section">
                     @include('partials.galleries.logos')
@@ -572,15 +476,11 @@
                     @include('partials.galleries.ui-details')
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Data Tables">
                 <section class="section">
                     @include('partials.datatables.tv-grid')
                 </section>
             </b-tab-item>
-
-
-
             <b-tab-item label="Components">
                 <section class="section">
                     <div class="tile is-ancestor">
@@ -613,7 +513,6 @@
                     </div>
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Two">
                 <section class="section">
                     <div class="tile is-ancestor">
@@ -636,7 +535,6 @@
                     </div>
                 </section>
             </b-tab-item>
-
             <b-tab-item label="Placeholders">
                 <section class="section">
                     <div class="tile is-ancestor">

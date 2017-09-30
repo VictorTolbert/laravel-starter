@@ -1,10 +1,48 @@
-# Start
+# Getting Started
 
-Includes the resources to create user interfaces consistent with 
+<!-- Includes the resources to create user interfaces consistent with 
 solid principles, design language, and best practices. Rather 
 than focusing on pixels, developers can focus on application
 logic, while designers can focus on user experience, 
 interactions, and flows.
+ -->
+
+You only need 1 CSS file to use Bulma
+
+---
+
+There are several ways to **get started** with Bulma. You can either:
+
+1. use npm to install the Bulma package
+2. use the cdnjs CDN to link to the Bulma stylesheet
+3. use the GitHub repository to get the latest development version
+
+### 1. Use NPM (recommended):
+
+```
+npm install bulma
+```
+
+2. Use the [cdnjs][] CDN 
+https://cdnjs.com/libraries/bulma
+
+### 3. Download from the repository 
+https://github.com/jgthms/bulma/tree/master/css
+
+
+Font Awesome icons
+
+If you want to use icons with Bulma, don't forget to include Font Awesome:
+```
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+```
+
+---
+
+
+## Starter template 
+
+If you want to get started right away, you can use this HTML starter template. Just copy/paste this code in a file and save it on your computer.
 
 ```html
 <!DOCTYPE html>
@@ -29,6 +67,8 @@ interactions, and flows.
     </body>
 </html>
 ```
+
+
 
 ## TODO Cleanup
 

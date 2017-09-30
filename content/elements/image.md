@@ -1,3 +1,3 @@
-# Images
+# Image
 
 ## A container for **responsive images**
