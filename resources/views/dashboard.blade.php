@@ -14,7 +14,23 @@
         </div>
     </div>
 </header>
+
 <section class="section">
+    <b-tabs>
+        <b-tab-item label="Loaders"></b-tab-item>
+        <b-tab-item label="Spinners"></b-tab-item>
+    </b-tabs>
+
+
+    <span class="box" v-for="(group, index) in db.demo.stationGroups" :key="index">
+        @{{ group.group }}
+    </span>
+
+{{--
+    <span class="icon" v-for="(icon, index) in db.demo.materialIcons" :key="index">
+        @svg("${icon}")
+    </span> --}}
+
     <div class="container">
         <h1 class="title">Mixins</h1>
         <h2 class="subtitle">Utility mixins for custom elements and responsive helpers</h2>

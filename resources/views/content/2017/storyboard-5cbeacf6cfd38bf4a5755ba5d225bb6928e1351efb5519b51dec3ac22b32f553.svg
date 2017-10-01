@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="269px" height="323px" viewBox="0 0 269 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Abstract Storyboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="8.14296737" y="6.8799973" width="238.397668" height="294.558657"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.75 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design" transform="translate(-917.000000, -825.000000)">
+            <g id="User-Research-and-Product-Design-Sprint" transform="translate(28.000000, 813.000000)">
+                <g id="Abstract-Storyboard" transform="translate(1023.898925, 166.483751) rotate(-6.000000) translate(-1023.898925, -166.483751) translate(896.398925, 12.483751)">
+                    <g id="Rectangle-73" transform="translate(127.341801, 154.159326) rotate(3.000000) translate(-127.341801, -154.159326) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <rect id="Rectangle-79" fill="#0D78DE" transform="translate(83.965463, 62.041049) rotate(3.000000) translate(-83.965463, -62.041049) " x="35.8274724" y="29.3123093" width="96.2759812" height="65.4574793"></rect>
+                    <rect id="Rectangle-79" fill="#0D78DE" transform="translate(82.179110, 139.926126) rotate(1.000000) translate(-82.179110, -139.926126) " x="34.0411195" y="107.197386" width="96.2759812" height="65.4574793"></rect>
+                    <rect id="Rectangle-79" fill="#0D78DE" transform="translate(72.875609, 229.848632) rotate(1.000000) translate(-72.875609, -229.848632) " x="24.7376185" y="197.119893" width="96.2759812" height="65.4574793"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(185.907175, 41.921083) rotate(3.000000) translate(-185.907175, -41.921083) " x="144.757585" y="39.1342615" width="82.2991793" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(184.468413, 54.608861) rotate(3.000000) translate(-184.468413, -54.608861) " x="147.791848" y="51.8220393" width="73.3531285" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(174.926486, 64.475966) rotate(3.000000) translate(-174.926486, -64.475966) " x="144.010627" y="61.6891437" width="61.8317177" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(186.505805, 75.856237) rotate(3.000000) translate(-186.505805, -75.856237) " x="142.982377" y="73.0694151" width="87.0468556" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(184.061757, 120.933191) rotate(3.000000) translate(-184.061757, -120.933191) " x="142.912167" y="118.146369" width="82.2991793" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(177.800573, 143.351726) rotate(3.000000) translate(-177.800573, -143.351726) " x="141.124008" y="140.564904" width="73.3531285" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(171.457110, 131.397687) rotate(3.000000) translate(-171.457110, -131.397687) " x="140.541252" y="128.610865" width="61.8317177" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(182.371243, 154.748376) rotate(3.000000) translate(-182.371243, -154.748376) " x="138.847815" y="151.961554" width="87.0468556" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(177.578986, 200.832391) rotate(3.000000) translate(-177.578986, -200.832391) " x="136.429396" y="198.045569" width="82.2991793" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(170.173230, 212.875658) rotate(3.000000) translate(-170.173230, -212.875658) " x="133.496666" y="210.088837" width="73.3531285" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(163.829768, 223.844472) rotate(3.000000) translate(-163.829768, -223.844472) " x="132.913909" y="221.05765" width="61.8317177" height="5.57364373"></rect>
+                    <rect id="Rectangle-80" fill="#E0E0E0" transform="translate(173.599328, 234.527607) rotate(3.000000) translate(-173.599328, -234.527607) " x="130.0759" y="231.740785" width="87.0468556" height="5.57364373"></rect>
+                    <ellipse id="Oval-12" fill="#60D9BE" cx="69.3416293" cy="33.8112077" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12" fill="#60D9BE" cx="100.28748" cy="242.409167" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12-Copy" fill="#60D9BE" cx="116.333477" cy="208.024888" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12" fill="#60D9BE" cx="95.7029099" cy="38.3957782" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12" fill="#60D9BE" cx="128.941046" cy="52.1494898" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12" fill="#60D9BE" cx="110.602764" cy="158.740755" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12" fill="#FF5773" cx="216.047886" cy="80.8030556" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12-Copy-2" fill="#FF5773" cx="78.5107704" cy="229.801598" rx="10.888355" ry="10.888355"></ellipse>
+                    <ellipse id="Oval-12" fill="#FF5773" cx="69.3416293" cy="73.9261998" rx="10.888355" ry="10.888355"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

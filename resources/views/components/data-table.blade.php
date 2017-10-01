@@ -205,6 +205,27 @@
                     </div>
 
                     @include('partials.navbars.utilities')
+
+                    <div class="box">
+                        <h1 class="title">Station Groups</h1>
+
+                        <hr class="is-marginless">
+
+                        <b-table :data="db.demo.stationGroups" striped narrowed>
+                            <template scope="props">
+                                <b-table-column field="rank" label="Rank" width="40" sortable numeric>
+                                    @{{ props.row.rank }}
+                                </b-table-column>
+                                <b-table-column field="group" label="Group" sortable>
+                                    @{{ props.row.group }}
+                                </b-table-column>
+                                <b-table-column field="revenue" label="Revenue" sortable numeric>
+                                    @{{ props.row.revenue }}
+                                </b-table-column>
+                            </template>
+                        </b-table>
+                    </div>
+
                     <avails></avails>
                 </section>
             </b-tab-item>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MadCapSynonyms xml:lang="en-us">
+    <!-- saved from url=(0016)http://localhost -->
+    <Groups />
+    <Directional>
+        <DirectionalSynonym From="AAAA" To="4a" />
+        <DirectionalSynonym From="AUR" To="average unit r" />
+        <DirectionalSynonym From="cost per thousand" To="cpm" />
+        <DirectionalSynonym From="cost per point" To="cpp" />
+        <DirectionalSynonym From="inventory" To="avail" />
+        <DirectionalSynonym From="lowest unit rate" To="lur" />
+        <DirectionalSynonym From="lowest unit charge" To="lur" />
+        <DirectionalSynonym From="MO" To="mediaocean" />
+        <DirectionalSynonym Stem="true" From="invoice" To="affidavit" FromStem="invoic" />
+        <DirectionalSynonym Stem="true" From="availability" To="avail" FromStem="avail" />
+    </Directional>
+</MadCapSynonyms>

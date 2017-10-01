@@ -69,5 +69,5 @@ return [
     |
     */
 
-    'class' => 'icon',
+    'class' => '',
 ];

@@ -1,7 +1,19 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" :width="width" :height="height">
-        <rect :x="borderWidth" :y="borderWidth" :width="internalWidth" :height="internalHeight" :style="imgStyle" />
-        <text x="50%" y="50%" :font-size="fontSize" :font-family="fontFamily" :fill="fontColour" text-anchor="middle" alignment-baseline="middle">
+    <svg xmlns="http://www.w3.org/2000/svg"
+        :width="width"
+        :height="height">
+        <rect
+            :x="borderWidth"
+            :y="borderWidth"
+            :width="internalWidth"
+            :height="internalHeight"
+            :style="imgStyle" />
+        <text x="50%" y="50%"
+            :font-size="fontSize"
+            :font-family="fontFamily"
+            :fill="fontColor"
+            text-anchor="middle"
+            alignment-baseline="middle">
             {{ displayText }}
         </text>
     </svg>
@@ -18,11 +30,11 @@
                 type: Number,
                 default: 150
             },
-            backgroundColour: {
+            backgroundColor: {
                 type: String,
                 default: '#ccc'
             },
-            borderColour: {
+            borderColor: {
                 type: String,
                 default: '#333'
             },
@@ -38,7 +50,7 @@
                 type: String,
                 default: 'monospace, sans-serif'
             },
-            fontColour: {
+            fontColor: {
                 type: String,
                 default: '#333'
             },
@@ -50,8 +62,8 @@
         computed: {
             imgStyle () {
                 return {
-                    fill: this.backgroundColour,
-                    stroke: this.borderColour,
+                    fill: this.backgroundColor,
+                    stroke: this.borderColor,
                     strokeWidth: this.borderWidth
                 }
             },
