@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <header class="hero is-light">
+    <header class="hero is-dark has-code-bg">
         <div class="hero-body">
             <div class="container is-fluid">
                 <h1 class="title">Buttons</h1>

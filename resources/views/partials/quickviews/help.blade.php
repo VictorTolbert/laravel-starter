@@ -33,7 +33,7 @@
             </div>
         </div>
     </nav>
-    <header class="hero is-light">
+    <header class="hero is-dark has-code-bg">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">Help me, please!</h1>

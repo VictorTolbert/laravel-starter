@@ -1,6 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Components &mdash; Data Table')
 @section('content')
-<section class="hero is-dark" id="home-intro">
+<header class="hero is-dark has-code-bg" id="home-intro">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('data-table') }}
@@ -13,7 +14,7 @@
             <h2 class="subtitle">The inevitable HTML <b>table</b>, with special case cells</h2>
         </div>
     </div>
-</section>
+</header>
 
 <section class="section p-t-md">
     <div class="container is-fluid">
@@ -36,113 +37,129 @@
                                     <p>Data is useless without the ability to visualize and act on it. The success of future industries will couple advanced data collection with a better user experience, and the data table comprises much of this user experience.</p>
 
                                     <p>Good data tables allow users to scan, analyze, compare, filter, sort, and manipulate information to derive insights and commit actions. This article presents a list of design structures, interaction patterns, and techniques to help you design better data tables.</p>
-                                    <div class="columns is-multiline">
-                                        <div class="column is-6">
+                                    <hr>
+                                    <div class="colus is-multiline has-text-centered">
+                                        <div class="colu is-xx">
                                             <h3>Basic Filtering</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/basic-filtering.jpg">
                                             </figure>
                                             <p>Basic filtering allows users to manipulate the data presented in the table.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Customizable Columns</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/customizable-columns.jpg">
                                             </figure>
                                             <p>The customizable columns feature enables users to pick the columns they want to see and sort accordingly. The feature may include the ability to save presets for later use.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Display Density</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/display-density.gif">
                                             </figure>
                                             <p>Smaller row height enables the user to view more data without the need for scrolling. However, is effects scannability leading to visual parsing errors. That is why many successful data table designs incorporate the ability to control display density.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Add Columns</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/add-columns.jpg">
                                             </figure>
                                             <p>This pattern allows users to add columns from a dataset. It is a way to keep the table’s data limited to essential information, and allows the user to add additional columns based on their use case.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Expandable Rows</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/expandable-rows.gif">
                                             </figure>
                                             <p>Expandable rows allows the user to evaluate additional information without loosing their context.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Filter Columns</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/filter-columns.gif">
                                             </figure>
                                             <p>This design pattern allows users to assign filtering parameters to specific columns.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Fixed Header</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/fixed-header.gif">
                                             </figure>
                                             <p>Fixing the row header as a user scrolls provides context on what column the user is on.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Horizontal Scrolling</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/horizontal-scrolling.gif">
                                             </figure>
                                             <p>Horizontal scrolling is inevitable when presenting large datasets. It is good practice to place identifier data in the first column. As an advanced feature, enable individual locking of columns so users can compare data with multiple anchoring identifiers.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Hover Actions</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/hover-actions.gif">
                                             </figure>
                                             <p>Presenting additional action when a user hovers reduces visual clutter. However, it can cause discoverability issues because the user needs to interact with the table to expose the presentation of actions.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Inline Editing</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/inline-editing.gif">
                                             </figure>
                                             <p>Inline editing allows the user to change data without navigating to a separate details view.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Modal</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/modal.gif">
                                             </figure>
                                             <p>Modals allow the user to stay within the table view, but provides more focus to the additional information and actions.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Multi Modal</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/multi-modal.gif">
                                             </figure>
                                             <p>A multi-modal feature is powerful for active use users to crank through a number of actions, or compare details of disparate items.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Pagination</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/pagination.jpg">
                                             </figure>
                                             <p>Pagination works by presenting a set number of rows in a view, with the ability to navigate to another set. The above example provides the ability to customize the row count per view. This pattern is often replaced by infinite scroll. Infinite scroll progressively loads results as a user scrolls. Infinite scroll works well for discovery websites, but is often disastrous for prioritization apps.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Quick View</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/quick-view.gif">
                                             </figure>
                                             <p>Much like expandable rows, quick view enables a user to view additional information while staying in-context.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Resizable Columns</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/resizable-columns.gif">
                                             </figure>
                                             <p>Resizing columns allows users to see abbreviated data in full.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Row Style</h3>
                                             <h4>Zebra Stripes, Line Divisions, Free Form.</h4>
                                             <figure class="image is-4x3">
@@ -150,28 +167,32 @@
                                                 <p>The row style helps users scan data. Reducing visual noise by removing row lines or zebra stripes works well for small datasets. Users may lose their place when parsing larger datasets. Line divisions help users keep their place. Alternating rows (aka zebra stripes) help users keep their place when scanning long horizontal datasets. Although they cause usability problems when there is a small number of rows because users may ascribe meaning to the highlighted rows.</p>
                                             </figure>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Row to Details</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/row-to-details.gif">
                                             </figure>
                                             <p>Clicking on a row link transforms the table into a view with list items on the left and additional details on the right. It enables a user to parse large datasets, as well as reference many items without losing their place.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Searchable Columns</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/searchable-columns.jpg">
                                             </figure>
                                             <p>This design pattern allows a user to search specific values within each column.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Sortable Columns</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/sortable-columns.jpg">
                                             </figure>
                                             <p>Column sorting allows users to organize rows alphabetically and numerically.</p>
                                         </div>
-                                        <div class="column is-6">
+                                        <hr>
+                                        <div class="colu is-xx">
                                             <h3>Visual Table Summary</h3>
                                             <figure class="image is-4x3">
                                                 <img src="/images/screengrabs/data-tables/visual-table-summary.jpg">

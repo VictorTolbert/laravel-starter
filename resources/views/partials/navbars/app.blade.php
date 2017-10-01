@@ -3,8 +3,11 @@
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
                 {{-- @include('partials.svgs.vti-logo') --}}
-                {{-- @include('partials.svgs.uxlab') --}}
-                @include('partials.svgs.uxlab-logo')
+                {{-- <span class="m-r-xs">@svg('user')</span> --}}
+                {{-- @svg('uxlab') --}}
+                @svg('uxlab-alt')
+                {{-- @include('partials.svgs.logo') --}}
+                {{-- @include('partials.svgs.uxlab-logo') --}}
             </a>
             @if (Auth::guest())
             @else

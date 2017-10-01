@@ -1,18 +1,19 @@
 @if (Auth::guest())
 @else
-{{--     <footer class="footer is-dark">
-        <nav class="navbar">
+    <footer class="footer is-dark">
+        <nav class="navbar is-transparent">
             <div class="navbar-menu is-active">
                 <div class="navbar-start">
                     <div class="navbar-item">
-                        <p class="has-text-white">Made with
-                            <span style="color: red">
+                        <p>Made with
+                            <span class="icon" style="color: red">
                                 @svg('favorite')
-                            </span> by
+                            </span>
+                            {{-- by
 
                             <a style="color: white; text-decoration: underline;" href="https://twitter.com/VictorTolbert" target="_blank">
                                 Victor Tolbert
-                            </a>.
+                            </a>. --}}
                         </p>
                     </div>
                 </div>
@@ -21,7 +22,7 @@
                     @if (Auth::guest())
                     @else
 
-                        @include('partials.galleries.tech')
+{{--                         @include('partials.galleries.tech')
 
                         <div class="navbar-item">
                             <p>
@@ -38,12 +39,12 @@
 
                         <span class="navbar-item">
                             @include('partials.buttons.page-info')
-                        </span>
+                        </span> --}}
                     @endif
                 </div>
             </div>
         </nav>
-    </footer> --}}
+    </footer>
 @endif
 
 <!-- Page Loader -->

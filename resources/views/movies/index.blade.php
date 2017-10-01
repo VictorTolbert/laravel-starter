@@ -1,6 +1,6 @@
 <div id="app">
     {{--  https://codepen.io/itslit/pen/MvvjZr?editors=1100  --}}
-    <section class="hero is-light is-medium">
+    <section class="hero is-dark has-code-bg is-medium">
         <router-view></router-view>
 
         <div class="hero-foot">

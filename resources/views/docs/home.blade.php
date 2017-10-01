@@ -4,15 +4,16 @@
             <div class="home__header__inner">
                 <div class="home__logo">
                     <a href="{{route('docs')}}" target="videa">
-                        @include('partials.svgs.logo')
+                        {{-- @include('partials.svgs.logo') --}}
+                        @svg('uxlab-alt2')
                     </a>
                 </div>
                 <h1 class="home__title">
-                    Design Docs
+                    CSS Documentation
                 </h1>
             </div>
         </header>
-        <section class="home__introduction">
+{{--         <section class="home__introduction">
             <p class="-large">
                 Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna.
             </p>
@@ -22,7 +23,7 @@
             <p>
                 All pages are hosted on <a href="" target="videa">GitHub</a>, so edits and improvements are welcome. Note that these are our own opinionated ideas, so we'll be finicky when it comes to substantial changes.
             </p>
-        </section>
+        </section> --}}
         <nav class="home__index">
             <div class="home__index__inner">
                 {{ app('navigation')->menu()->addClass('menu--home') }}

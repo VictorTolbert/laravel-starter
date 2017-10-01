@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<header class="hero is-light">
+<header class="hero is-dark has-code-bg">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('product-team') }}

@@ -1,16 +1,21 @@
 @extends('layouts.app')
-
-@section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">Responsive Helpers</h1>
-        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
-    </div>
-</div>
-@endsection
-
+@section('title', 'Modifiers &mdash; Responsive Helpers')
 @section('content')
-    <section class="section">
+<header class="hero is-dark has-code-bg">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('responsive-helpers') }}
+        </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
+    </div>
+    <div class="hero-body p-t-sm">
+        <div class="container is-fluid">
+            <h1 class="title">Responsive Helpers</h1>
+            <h2 class="subtitle"><strong>Show/hide</strong> content depending on the width of the viewport</h2>
+        </div>
+    </div>
+</header>
+<section class="section">
 
-    </section>
+</section>
 @endsection

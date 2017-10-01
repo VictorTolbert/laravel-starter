@@ -1,6 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Team')
 @section('content')
-<header class="hero is-light">
+<header class="hero is-dark has-code-bg">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('team') }}
@@ -14,8 +15,22 @@
         </div>
     </div>
 </header>
-<section class="section">
+
+<section class="section m-t-sm">
     <div class="container is-fluid">
+        <nav class="panel">
+            <p class="panel-heading">
+                Search
+            </p>
+            <div class="panel-block">
+                <p class="control has-icons-left">
+                    <input class="input" type="search" placeholder="">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </p>
+            </div>
+        </nav>
         <div class="columns">
             <div class="column">
                 @include('partials.articles.team')

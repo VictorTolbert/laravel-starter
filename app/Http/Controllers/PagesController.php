@@ -18,6 +18,11 @@ class PagesController extends Controller
         return view('index', compact('gravatar'));
     }
 
+    public function alert()
+    {
+        return view('components.alert');
+    }
+
     public function atoms()
     {
         return view('atoms.index');
@@ -38,9 +43,39 @@ class PagesController extends Controller
         return view('avails.index');
     }
 
+    public function autocomplete()
+    {
+        return view('form.autocomplete');
+    }
+
+    public function badge()
+    {
+        return view('components.badge');
+    }
+
+    public function basics()
+    {
+        return view('columns.basics');
+    }
+
     public function blog()
     {
         return view('blog.index');
+    }
+
+    public function box()
+    {
+        return view('elements.box');
+    }
+
+    public function breadcrumb()
+    {
+        return view('components.breadcrumb');
+    }
+
+    public function button()
+    {
+        return view('elements.button');
     }
 
     public function buttons()
@@ -48,9 +83,19 @@ class PagesController extends Controller
         return view('base.buttons');
     }
 
+    public function calendar()
+    {
+        return view('components.calendar');
+    }
+
     public function campaignPerformance()
     {
         return view('campaign-performance.index');
+    }
+
+    public function card()
+    {
+        return view('components.card');
     }
 
     public function changelog()
@@ -58,25 +103,34 @@ class PagesController extends Controller
         return view('changelog');
     }
 
-    public function components()
+    public function checkbox()
     {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
-
-        return view('components.index', compact('gravatar'));
-    }
-
-    public function content()
-    {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
-
-        return view('content.index', compact('gravatar'));
+        return view('form.checkbox');
     }
 
     public function colors()
     {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+        return view('base.colors');
+    }
 
-        return view('base.colors', compact('gravatar'));
+    public function columns()
+    {
+        return view('columns.index');
+    }
+
+    public function components()
+    {
+        return view('components.index');
+    }
+
+    public function container()
+    {
+        return view('layout.container');
+    }
+
+    public function content()
+    {
+        return view('elements.content');
     }
 
     public function dashboard()
@@ -86,9 +140,17 @@ class PagesController extends Controller
 
     public function dataTable()
     {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+        return view('components.data-table');
+    }
 
-        return view('components.data-table', compact('gravatar'));
+    public function datepicker()
+    {
+        return view('form.datepicker');
+    }
+
+    public function delete()
+    {
+        return view('elements.delete');
     }
 
     public function designSystem()
@@ -106,9 +168,19 @@ class PagesController extends Controller
         return view('design-tokens.index');
     }
 
+    public function divider()
+    {
+        return view('elements.divider');
+    }
+
     public function docs()
     {
         return view('docs.home');
+    }
+
+    public function dropdown()
+    {
+        return view('components.dropdown');
     }
 
     public function elements()
@@ -116,9 +188,34 @@ class PagesController extends Controller
         return view('elements.index');
     }
 
+    public function field()
+    {
+        return view('form.field');
+    }
+
+    public function file()
+    {
+        return view('form.file');
+    }
+
+    public function footer()
+    {
+        return view('layout.footer');
+    }
+
+    public function gap()
+    {
+        return view('columns.gap');
+    }
+
     public function glossary()
     {
         return view('glossary');
+    }
+
+    public function grid()
+    {
+        return view('grid');
     }
 
     public function help()
@@ -126,11 +223,369 @@ class PagesController extends Controller
         return view('help.index');
     }
 
+    public function helpers()
+    {
+        return view('modifiers.helpers');
+    }
+
+    public function hero()
+    {
+        return view('layout.hero');
+    }
+
+    public function icon()
+    {
+        $icons = [
+            'ac-unit',
+            'access-time',
+            'account-balance',
+            'account-box',
+            'account-circle',
+            'add-box',
+            'add-circle-outline',
+            'add-circle',
+            'add',
+            'airport-shuttle',
+            'alarm',
+            'album',
+            'all-inclusive',
+            'apps',
+            'archive',
+            'arrow-drop-down-circle',
+            'arrow-drop-down',
+            'arrow-drop-up',
+            'arrow-forward',
+            'arrow-upward',
+            'attach-file',
+            'attach-money',
+            'attachment',
+            'beach-access',
+            'block',
+            'bubble-chart',
+            'bug-report',
+            'build',
+            'business-center',
+            'cake',
+            'cancel',
+            'change-history',
+            'check-circle',
+            'check',
+            'child-care',
+            'child-friendly',
+            'clear',
+            'close',
+            'compare-arrows',
+            'content-copy',
+            'create',
+            'crop-16-9',
+            'crop-3-2',
+            'crop-5-4',
+            'dashboard',
+            'date-range',
+            'description',
+            'desktop-mac',
+            'desktop-windows',
+            'edit',
+            'equalizer',
+            'error-outline',
+            'error',
+            'exit-to-app',
+            'expand-less',
+            'expand-more',
+            'face',
+            'favorite-border',
+            'favorite',
+            'file-download',
+            'file-upload',
+            'filter-list',
+            'fitness-center',
+            'folder-open',
+            'folder',
+            'format-quote',
+            'format-size',
+            'forum',
+            'free-breakfast',
+            'fullscreen-exit',
+            'fullscreen',
+            'golf-course',
+            'grade',
+            'help-outline',
+            'help',
+            'highlight-off',
+            'home',
+            'indeterminate-check-box',
+            'info-outline',
+            'info',
+            'insert-chart',
+            'kitchen',
+            'label-outline',
+            'label',
+            'language',
+            'laptop-mac',
+            'laptop-windows',
+            'laptop',
+            'launch',
+            'library-books',
+            'line-weight',
+            'link',
+            'mail-outline',
+            'menu',
+            'mode-edit',
+            'mood-bad',
+            'mood',
+            'more-horiz',
+            'more-vert',
+            'movie',
+            'new-releases',
+            'note',
+            'pan-tool',
+            'pause-circle-filled',
+            'pause-circle-outline',
+            'pause',
+            'phone-iphone',
+            'pie-chart-outlined',
+            'pie-chart',
+            'play-arrow',
+            'play-circle-filled',
+            'play-circle-outline',
+            'poll',
+            'pool',
+            'refresh',
+            'remove-circle-outline',
+            'remove-circle',
+            'remove',
+            'reorder',
+            'report-problem',
+            'restore',
+            'room-service',
+            'save',
+            'schedule',
+            'school',
+            'search',
+            'send',
+            'sentiment-dissatisfied',
+            'sentiment-neutral',
+            'sentiment-satisfied',
+            'sentiment-very-dissatisfied',
+            'sentiment-very-satisfied',
+            'settings',
+            'share',
+            'shopping-cart',
+            'smartphone',
+            'smoke-free',
+            'smoking-rooms',
+            'sort',
+            'spa',
+            'star-rate',
+            'stars',
+            'storage',
+            'swap-horiz',
+            'swap-vert',
+            'tablet-mac',
+            'text-fields',
+            'text-format',
+            'timeline',
+            'toc',
+            'today',
+            'trending-down',
+            'trending-flat',
+            'trending-up',
+            'turned-in-not',
+            'turned-in',
+            'tv',
+            'warning',
+            'watch-later',
+            'watch',
+            'web',
+            'whatshot',
+            'work'
+        ];
+        return view('components.icon', compact('icons'));
+    }
+
     public function icons()
     {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+        $icons = [
+            'ac-unit',
+            'access-time',
+            'account-balance',
+            'account-box',
+            'account-circle',
+            'add-box',
+            'add-circle-outline',
+            'add-circle',
+            'add',
+            'airport-shuttle',
+            'alarm',
+            'album',
+            'all-inclusive',
+            'apps',
+            'archive',
+            'arrow-drop-down-circle',
+            'arrow-drop-down',
+            'arrow-drop-up',
+            'arrow-forward',
+            'arrow-upward',
+            'attach-file',
+            'attach-money',
+            'attachment',
+            'beach-access',
+            'block',
+            'bubble-chart',
+            'bug-report',
+            'build',
+            'business-center',
+            'cake',
+            'cancel',
+            'change-history',
+            'check-circle',
+            'check',
+            'child-care',
+            'child-friendly',
+            'clear',
+            'close',
+            'compare-arrows',
+            'content-copy',
+            'create',
+            'crop-16-9',
+            'crop-3-2',
+            'crop-5-4',
+            'dashboard',
+            'date-range',
+            'description',
+            'desktop-mac',
+            'desktop-windows',
+            'edit',
+            'equalizer',
+            'error-outline',
+            'error',
+            'exit-to-app',
+            'expand-less',
+            'expand-more',
+            'face',
+            'favorite-border',
+            'favorite',
+            'file-download',
+            'file-upload',
+            'filter-list',
+            'fitness-center',
+            'folder-open',
+            'folder',
+            'format-quote',
+            'format-size',
+            'forum',
+            'free-breakfast',
+            'fullscreen-exit',
+            'fullscreen',
+            'golf-course',
+            'grade',
+            'help-outline',
+            'help',
+            'highlight-off',
+            'home',
+            'indeterminate-check-box',
+            'info-outline',
+            'info',
+            'insert-chart',
+            'kitchen',
+            'label-outline',
+            'label',
+            'language',
+            'laptop-mac',
+            'laptop-windows',
+            'laptop',
+            'launch',
+            'library-books',
+            'line-weight',
+            'link',
+            'mail-outline',
+            'menu',
+            'mode-edit',
+            'mood-bad',
+            'mood',
+            'more-horiz',
+            'more-vert',
+            'movie',
+            'new-releases',
+            'note',
+            'pan-tool',
+            'pause-circle-filled',
+            'pause-circle-outline',
+            'pause',
+            'phone-iphone',
+            'pie-chart-outlined',
+            'pie-chart',
+            'play-arrow',
+            'play-circle-filled',
+            'play-circle-outline',
+            'poll',
+            'pool',
+            'refresh',
+            'remove-circle-outline',
+            'remove-circle',
+            'remove',
+            'reorder',
+            'report-problem',
+            'restore',
+            'room-service',
+            'save',
+            'schedule',
+            'school',
+            'search',
+            'send',
+            'sentiment-dissatisfied',
+            'sentiment-neutral',
+            'sentiment-satisfied',
+            'sentiment-very-dissatisfied',
+            'sentiment-very-satisfied',
+            'settings',
+            'share',
+            'shopping-cart',
+            'smartphone',
+            'smoke-free',
+            'smoking-rooms',
+            'sort',
+            'spa',
+            'star-rate',
+            'stars',
+            'storage',
+            'swap-horiz',
+            'swap-vert',
+            'tablet-mac',
+            'text-fields',
+            'text-format',
+            'timeline',
+            'toc',
+            'today',
+            'trending-down',
+            'trending-flat',
+            'trending-up',
+            'turned-in-not',
+            'turned-in',
+            'tv',
+            'warning',
+            'watch-later',
+            'watch',
+            'web',
+            'whatshot',
+            'work'
+        ];
+        return view('elements.icons', compact('icons'));
+    }
 
-        return view('components.icons', compact('gravatar'));
+    public function input()
+    {
+        return view('form.input');
+    }
+
+    public function image()
+    {
+        return view('elements.image');
+    }
+
+    public function imagePlaceholder()
+    {
+        return view('components.image-placeholder');
     }
 
     public function kendo()
@@ -148,9 +603,54 @@ class PagesController extends Controller
         return view('layouts.index');
     }
 
+    public function level()
+    {
+        return view('layout.level');
+    }
+
+    public function loading()
+    {
+        return view('components.loading');
+    }
+
+    public function media()
+    {
+        return view('components.media');
+    }
+
+    public function mediaObject()
+    {
+        return view('layout.media-object');
+    }
+
+    public function menu()
+    {
+        return view('components.menu');
+    }
+
+    public function message()
+    {
+        return view('components.message');
+    }
+
+    public function modal()
+    {
+        return view('components.modal');
+    }
+
+    public function modifiers()
+    {
+        return view('modifiers.index');
+    }
+
     public function molecules()
     {
         return view('molecules.index');
+    }
+
+    public function navbar()
+    {
+        return view('components.navbar');
     }
 
     public function navbars()
@@ -158,9 +658,24 @@ class PagesController extends Controller
         return view('navbars.index');
     }
 
+    public function nesting()
+    {
+        return view('columns.nesting');
+    }
+
+    public function notification()
+    {
+        return view('elements.notification');
+    }
+
     public function openPreempts()
     {
         return view('order-management.open-preempts.index');
+    }
+
+    public function options()
+    {
+        return view('columns.options');
     }
 
     public function orderManagment()
@@ -193,9 +708,24 @@ class PagesController extends Controller
         return view('pages.index');
     }
 
+    public function pagination()
+    {
+        return view('components.pagination');
+    }
+
     public function pageHeaders()
     {
         return view('page-headers.index');
+    }
+
+    public function pageloader()
+    {
+        return view('elements.pageloader');
+    }
+
+    public function panel()
+    {
+        return view('components.panel');
     }
 
     public function pendingMakegoods()
@@ -206,6 +736,11 @@ class PagesController extends Controller
     public function pendingOrders()
     {
         return view('order-management.pending-orders.index');
+    }
+
+    public function popover()
+    {
+        return view('components.popover');
     }
 
     public function priceGuide()
@@ -228,14 +763,44 @@ class PagesController extends Controller
         return view('reporting.program-revenue.index');
     }
 
+    public function progress()
+    {
+        return view('elements.progress');
+    }
+
+    public function radio()
+    {
+        return view('form.radio');
+    }
+
     public function reporting()
     {
         return view('reporting.index');
     }
 
+    public function responsiveHelpers()
+    {
+        return view('modifiers.responsive-helpers');
+    }
+
+    public function responsiveness()
+    {
+        return view('columns.responsiveness');
+    }
+
     public function scratch()
     {
         return view('scratch');
+    }
+
+    public function section()
+    {
+        return view('layout.section');
+    }
+
+    public function select()
+    {
+        return view('form.select');
     }
 
     public function settings()
@@ -248,16 +813,49 @@ class PagesController extends Controller
         return view('sitemap');
     }
 
+    public function sizes()
+    {
+        return view('columns.sizes');
+    }
+
+    public function slds()
+    {
+        return view('slds.index');
+    }
+
+    public function slider()
+    {
+        return view('form.slider');
+    }
+
     public function spacing()
     {
         return view('atoms.spacing');
     }
 
+    public function switch()
+    {
+        return view('form.switch');
+    }
+
+    public function syntax()
+    {
+        return view('modifiers.syntax');
+    }
+
     public function table()
     {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+        return view('components.table');
+    }
 
-        return view('components.table', compact('gravatar'));
+    public function tabs()
+    {
+        return view('components.tabs');
+    }
+
+    public function tag()
+    {
+        return view('elements.tag');
     }
 
     public function team()
@@ -280,11 +878,40 @@ class PagesController extends Controller
         return view('test');
     }
 
+    public function textarea()
+    {
+        return view('form.textarea');
+    }
+
+    public function tiles()
+    {
+        return view('layout.tiles');
+    }
+
+    public function title()
+    {
+        return view('elements.title');
+    }
+
+    public function tooltip()
+    {
+        return view('components.tooltip');
+    }
+
     public function typography()
     {
-        $gravatar = get_gravatar('victor.tolbert@gmail.com');
+        return view('base.typography');
+    }
 
-        return view('base.typography', compact('gravatar'));
+    public function typographyHelpers()
+    {
+        return view('modifiers.typography-helpers');
+    }
+
+
+    public function upload()
+    {
+        return view('form.upload');
     }
 
     public function zurb()

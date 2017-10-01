@@ -9,10 +9,10 @@
     <meta name="google" value="notranslate">
 
     <title>@yield('title') &mdash; {{ config('app.name', 'Laravel') }}</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons|Audiowide">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{-- <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons|Audiowide"> --}}
+    {{-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
     {{--  <link rel="stylesheet" href="//maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">  --}}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    {{-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> --}}
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/vue-window.css') }}" rel="stylesheet">
     <style>
@@ -27,8 +27,8 @@
         ])!!};
     </script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> --}}
+    {{-- <script>hljs.initHighlightingOnLoad();</script> --}}
     @routes
 </head>
 <body>
@@ -58,7 +58,29 @@
     </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    {{-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var $navbarBurgers = Array.prototype.slice.call(
+                document.querySelectorAll('.navbar-burger'), 0
+            )
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target
+                        var $target = document.getElementById(target)
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active')
+                        $target.classList.toggle('is-active')
+                    })
+                })
+            }
+        })
+    </script>
+
     {{-- <script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script> --}}
     {{-- <script src="/chardinjs.min.js"></script> --}}
     {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.js"></script> --}}

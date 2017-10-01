@@ -1,13 +1,15 @@
 @extends('layouts.app')
-
-@section('hero-body')
-@endsection
-
+@section('title', 'Components &mdash; Table')
 @section('content')
-<section class="hero is-light" id="home-intro">
-    <div class="hero-body">
+<section class="hero is-dark has-code-bg" id="home-intro">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('table') }}
+        </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
+    </div>
+    <div class="hero-body p-t-sm">
         <div class="container is-fluid">
-
             <h1 class="title">Table</h1>
             <h2 class="subtitle">The inevitable HTML <b>table</b>, with special case cells</h2>
         </div>

@@ -1,7 +1,14 @@
 @extends('layouts.app')
+@section('title', 'Components &mdash; Icons')
 @section('content')
-<header class="hero is-light">
-    <div class="hero-body">
+<header class="hero is-dark has-code-bg">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('icon') }}
+        </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
+    </div>
+    <div class="hero-body p-t-sm">
         <div class="container is-fluid">
             <h1 class="title">Icons</h1>
             <h2 class="subtitle">
@@ -10,92 +17,24 @@
         </div>
     </div>
 </header>
+
 <section class="section">
     <div class="container is-fluid">
         <div class="columns is-multiline">
-            <div class="column is-2">
-                <a class="navbar-item">
-                    <span class="icon m-r-sm">
-                        @svg('material.language')
-                    </span>
-                    <span>Language</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item">
-                    <span class="icon m-r-sm">
-                        @svg('material.menu')
-                    </span>
-                    <span>Menu</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item">
-                    <span class="icon m-r-sm">
-                        @svg('material.note')
-                    </span>
-                    <span>Note</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.more-horiz')
-                    </span>
-                    <span>More Horizontal</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.more-vert')
-                    </span>
-                    <span>More Vertical</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.access-time')
-                    </span>
-                    <span>Access Time</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.account-circle')
-                    </span>
-                    <span>Account Circle</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.account-box')
-                    </span>
-                    <span>Account Box</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.airport-shuttle')
-                    </span>
-                    <span>Airport Shuttle</span>
-                </a>
-            </div>
-            <div class="column is-2">
-                <a class="navbar-item" href="{{ route('dashboard') }}">
-                    <span class="icon m-r-sm">
-                        @svg('material.airport-shuttle')
-                    </span>
-                    <span>Alarm</span>
-                </a>
-            </div>
+            @foreach($icons as $icon)
+                <div class="column is-2">
+                    <a class="navbar-item">
+                        <span class="icon m-r-sm">
+                            @svg('material.'.$icon)
+                        </span>
+                        <code>{{ $icon }}</code>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
+
 <section class="section">
     <div class="container is-fluid">
 

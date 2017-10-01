@@ -1,4 +1,4 @@
-<section class="hero is-light is-large header-image">
+<section class="hero is-dark has-code-bg is-large header-image">
     <div class="hero-head">
       <header class="nav">
         <div class="container">

@@ -51,32 +51,97 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
         Route::name('overview')->get('/overview', 'PagesController@order-search');
         Route::name('design-tokens')->get('/design-tokens', 'PagesController@designTokens');
         Route::name('colors')->get('/colors', 'PagesController@colors');
-        Route::name('icons')->get('/icons', 'PagesController@icons');
         Route::name('typography')->get('/typography', 'PagesController@typography');
 
     // Modifiers
         Route::name('modifiers')->get('/modifiers', 'PagesController@modifiers');
+        Route::name('helpers')->get('/helpers', 'PagesController@helpers');
+        Route::name('responsive-helpers')->get('/responsive-helpers', 'PagesController@responsiveHelpers');
+        Route::name('syntax')->get('/syntax', 'PagesController@syntax');
         Route::name('spacing')->get('/spacing', 'PagesController@spacing');
+        Route::name('typography-helpers')->get('/typography-helpers', 'PagesController@typographyHelpers');
 
     // Columns
         Route::name('columns')->get('/columns', 'PagesController@columns');
+        Route::name('basics')->get('/basics', 'PagesController@basics');
+        Route::name('gap')->get('/gap', 'PagesController@gap');
+        Route::name('nesting')->get('/nesting', 'PagesController@nesting');
+        Route::name('options')->get('/options', 'PagesController@options');
+        Route::name('responsiveness')->get('/responsiveness', 'PagesController@responsiveness');
+        Route::name('sizes')->get('/sizes', 'PagesController@sizes');
 
     // Layout
         Route::name('layout')->get('/layout', 'PagesController@layout');
+        Route::name('container')->get('/container', 'PagesController@container');
+        Route::name('footer')->get('/footer', 'PagesController@footer');
+        Route::name('hero')->get('/hero', 'PagesController@hero');
+        Route::name('level')->get('/level', 'PagesController@level');
+        Route::name('media-object')->get('/media-object', 'PagesController@mediaObject');
+        Route::name('section')->get('/section', 'PagesController@section');
+        Route::name('tiles')->get('/tiles', 'PagesController@tiles');
 
     // Form
         Route::name('form')->get('/form', 'PagesController@form');
+        Route::name('autocomplete')->get('/autocomplete', 'PagesController@autocomplete');
+        Route::name('checkbox')->get('/checkbox', 'PagesController@checkbox');
+        Route::name('datepicker')->get('/datepicker', 'PagesController@datepicker');
+        Route::name('field')->get('/field', 'PagesController@field');
+        Route::name('file')->get('/file', 'PagesController@file');
+        Route::name('input')->get('/input', 'PagesController@input');
+        Route::name('radio')->get('/radio', 'PagesController@radio');
+        Route::name('select')->get('/select', 'PagesController@select');
+        Route::name('slider')->get('/slider', 'PagesController@slider');
+        Route::name('switch')->get('/switch', 'PagesController@switch');
+        Route::name('textarea')->get('/textarea', 'PagesController@textarea');
+        Route::name('upload')->get('/upload', 'PagesController@upload');
 
     // Elements
-        Route::name('buttons')->get('/buttons', 'PagesController@buttons');
         Route::name('elements')->get('/elements', 'PagesController@elements');
-
+        Route::name('box')->get('/box', 'PagesController@box');
+        Route::name('button')->get('/button', 'PagesController@button');
+        Route::name('content')->get('/content', 'PagesController@content');
+        Route::name('delete')->get('/delete', 'PagesController@delete');
+        Route::name('divider')->get('/divider', 'PagesController@divider');
+        Route::name('form')->get('/form', 'PagesController@form');
+        Route::name('icons')->get('/icons', 'PagesController@icons');
+        Route::name('image')->get('/image', 'PagesController@image');
+        Route::name('notification')->get('/notification', 'PagesController@notification');
+        Route::name('pageloader')->get('/pageloader', 'PagesController@pageloader');
+        Route::name('progress')->get('/progress', 'PagesController@progress');
+        Route::name('table')->get('/table', 'PagesController@table');
+        Route::name('tag')->get('/tag', 'PagesController@tag');
+        Route::name('title')->get('/title', 'PagesController@title');
+        Route::name('tooltip')->get('/tooltip', 'PagesController@tooltip');
 
     // Components
         Route::name('components')->get('/components', 'PagesController@components');
+        Route::name('alert')->get('/alert', 'PagesController@alert');
+        Route::name('badge')->get('/badge', 'PagesController@badge');
+        Route::name('breadcrumb')->get('/breadcrumb', 'PagesController@breadcrumb');
+        Route::name('card')->get('/card', 'PagesController@card');
+        Route::name('calendar')->get('/calendar', 'PagesController@calendar');
+        Route::name('collapse')->get('/collapse', 'PagesController@collapse');
         Route::name('data-table')->get('/data-table', 'PagesController@dataTable');
+        Route::name('dropdown')->get('/dropdown', 'PagesController@dropdown');
+        Route::name('icon')->get('/icon', 'PagesController@icon');
+        Route::name('menu')->get('/menu', 'PagesController@menu');
+        Route::name('modal')->get('/modal', 'PagesController@modal');
+        Route::name('navbar')->get('/navbar', 'PagesController@navbar');
+        Route::name('pagination')->get('/pagination', 'PagesController@pagination');
         Route::name('panel')->get('/panel', 'PagesController@panel');
-        Route::name('navbars')->get('/navbars', 'PagesController@navbars');
+        Route::name('popover')->get('/popover', 'PagesController@popover');
+        Route::name('table')->get('/table', 'PagesController@table');
+        Route::name('tabs')->get('/tabs', 'PagesController@tabs');
+        Route::name('tooltip')->get('/tooltips', 'PagesController@tooltip');
+
+    // Notices
+        Route::name('dialog')->get('/dialog', 'PagesController@dialog');
+        Route::name('loading')->get('/loading', 'PagesController@loading');
+        Route::name('message')->get('/message', 'PagesController@message');
+        Route::name('notification')->get('/notification', 'PagesController@notification');
+        Route::name('snackbar')->get('/snackbar', 'PagesController@snackbar');
+        Route::name('toast')->get('/toast', 'PagesController@toast');
+
 
 // Seller Pages
     Route::name('account-performance')->get('/account-performance', 'PagesController@accountPerformance');
@@ -95,17 +160,18 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
 Route::name('base')->get('/base', 'PagesController@base');
 Route::name('blog')->get('/blog', 'PagesController@blog');
 Route::name('changelog')->get('/changelog', 'PagesController@changelog');
-Route::name('content')->get('/content', 'PagesController@content');
 Route::name('charts')->get('/charts', 'PagesController@charts');
 Route::name('core-values')->get('/core-values', 'PagesController@coreValues');
 Route::name('dashboard')->get('/dashboard', 'PagesController@dashboard');
 Route::name('design-engineering')->get('/design-engineering', 'PagesController@designEngineering');
 Route::name('design-system')->get('/design-system', 'PagesController@designSystem');
+Route::name('design-team')->get('/design-team', 'PagesController@designTeam');
 Route::name('docs')->get('/docs', 'PagesController@docs');
 Route::name('features')->get('/features', 'PagesController@features');
 Route::name('frontend-interview-questions')->get('/frontend-interview-questions', 'PagesController@frontendInterviewQuestions');
 Route::name('glossary')->get('/glossary', 'PagesController@glossary');
 Route::name('goals')->get('/goals', 'PagesController@goals');
+Route::name('grid')->get('/grid', 'PagesController@grid');
 Route::name('help')->get('/help', 'PagesController@help');
 Route::name('initiatives')->get('/initiatives', 'PagesController@initiatives');
 Route::name('kendo')->get('/kendo', 'PagesController@kendo');
@@ -115,10 +181,9 @@ Route::name('navigation')->get('/navigation', 'PagesController@navigation');
 Route::name('onepage')->get('/onepage', 'PagesController@onepage');
 Route::name('page-headers')->get('/page-headers', 'PagesController@pageHeaders');
 Route::name('profile')->get('/profiles/{user}', 'ProfilesController@show');
-// Route::name('table')->get('/table', 'PagesController@table');
-Route::name('design-team')->get('/design-team', 'PagesController@designTeam');
 Route::name('product-team')->get('/product-team', 'PagesController@productTeam');
 Route::name('scratch')->get('/scratch', 'PagesController@scratch');
+Route::name('slds')->get('/slds', 'PagesController@slds');
 Route::name('team')->get('/team', 'PagesController@team');
 Route::name('test')->get('/test', 'PagesController@test');
 Route::name('tools')->get('/tools', 'PagesController@tools');

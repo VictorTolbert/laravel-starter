@@ -31,7 +31,7 @@
         </nav>
     </div>
 
-    <header class="hero is-dark has-grid-bg">
+    <header class="hero is-dark has-code-bg has-grid-bg">
         <div class="hero-body">
             <div class="container is-fluid">
 

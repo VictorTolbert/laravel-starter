@@ -1,27 +1,23 @@
 @extends('layouts.app')
-
-@section('hero-body')
-<div class="hero-body">
-    <div class="container is-fluid">
-        <h1 class="title">Input</h1>
-        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
-    </div>
-</div>
-@endsection
-
+@section('title', 'Form &mdash; Input')
 @section('content')
+<header class="hero is-dark has-code-bg">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('input') }}
+        </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
+    </div>
+    <div class="hero-body p-t-sm">
+        <div class="container is-fluid">
+            <h1 class="title">Input</h1>
+            <h2 class="subtitle">The <strong>text input</strong> and its variations</h2>
+        </div>
+    </div>
+</header>
 <section class="section">
-    <div class="container">
-        <h1 class="title">Input</h1>
-        <h2 class="subtitle">
-            The <strong>text input</strong> and its variations
-        </h2>
+    <div class="container is-fluid">
         <div id="meta" class="field is-grouped is-grouped-multiline">
-
-
-
-
-
             <div class="control">
                 <div class="tags has-addons">
                     <span class="tag">Colors</span>
@@ -292,10 +288,6 @@
 
         <div class="columns">
             <div class="column is-half">
-                <p style="margin-bottom: 0.5rem;">
-                    <span class="tag is-success">New!</span>
-                    <span class="tag is-info">0.4.3</span>
-                </p>
                 <div class="content">
                     <p>
                         You can resize the loading spinner by appending <code>is-small</code>, <code>is-medium</code> or <code>is-large</code> to the <code>control</code> container.
@@ -368,10 +360,6 @@
         </div>
 
         <h4 class="subtitle">Readonly and static inputs</h4>
-        <p style="margin-bottom: 0.5rem;">
-            <span class="tag is-success">New!</span>
-            <span class="tag is-info">0.5.3</span>
-        </p>
         <div class="content">
             <p>
                 If you use the <code>readonly</code> HTML attribute, the input will look similar to a normal one, but is not editable and has no shadow.

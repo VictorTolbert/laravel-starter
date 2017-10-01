@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="hero is-dark">
+<header class="hero is-dark has-code-bg">
     <div class="hero-body">
         <div class="container is-fluid">
             <h1 class="title">XML Proposal Viewer</h1>

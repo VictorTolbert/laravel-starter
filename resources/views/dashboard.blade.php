@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
+@section('title', 'Dashboard')
 @section('content')
-<header class="hero is-dark">
+<header class="hero is-dark has-code-bg">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('dashboard') }}
@@ -10,94 +10,10 @@
     <div class="hero-body p-t-sm">
         <div class="container is-fluid">
             <h1 class="title">Dashboard</h1>
-            <h2 class="subtitle">Lorem ipsum <abbr>dolor</abbr> sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
+            {{-- <h2 class="subtitle">Lorem ipsum <abbr>dolor</abbr> sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2> --}}
         </div>
     </div>
 </header>
-
-<section class="section">
-    <b-tabs>
-        <b-tab-item label="Loaders"></b-tab-item>
-        <b-tab-item label="Spinners"></b-tab-item>
-    </b-tabs>
-
-
-    <span class="box" v-for="(group, index) in db.demo.stationGroups" :key="index">
-        @{{ group.group }}
-    </span>
-
-{{--
-    <span class="icon" v-for="(icon, index) in db.demo.materialIcons" :key="index">
-        @svg("${icon}")
-    </span> --}}
-
-    <div class="container">
-        <h1 class="title">Mixins</h1>
-        <h2 class="subtitle">Utility mixins for custom elements and responsive helpers</h2>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>=arrow($color)</code></td>
-                    <td>Creates a CSS-only down arrow. Used for the dropdown select.</td>
-                </tr>
-                <tr>
-                    <td><code>=block</code></td>
-                    <td>Defines a margin-bottom of 1.5rem, except when the element is the last child. Used for almost all block elements.</td>
-                </tr>
-                <tr>
-                    <td><code>=clearfix</code></td>
-                    <td>Adds a clearfix at the end of the element. Used for the “is-clearfix” helper.</td>
-                </tr>
-                <tr>
-                    <td><code>=center($size)</code></td>
-                    <td>Positions an element in the exact center of its parent. Used for the spinner in a loading button.</td>
-                </tr>
-                <tr>
-                    <td><code>=delete</code></td>
-                    <td>Creates a CSS-only cross. Used for the delete element in modals, messages, tags…</td>
-                </tr>
-                <tr>
-                    <td><code>=fa($size, $dimensions)</code></td>
-                    <td>Sets the style of a Font Awesome icon container.</td>
-                </tr>
-                <tr>
-                    <td><code>=hamburger($dimensions)</code></td>
-                    <td>Creates a CSS-only hamburger menu with 3 bars. Used for the “nav-toggle”.</td>
-                </tr>
-                <tr>
-                    <td><code>=loader</code></td>
-                    <td>Creates a CSS-only loading spinner. Used for the “.loader” element, and for input and button spinners.</td>
-                </tr>
-                <tr>
-                    <td><code>=overflow-touch</code></td>
-                    <td>Sets the style of a container so that it keeps momentum when scrolling on iOS devices.</td>
-                </tr>
-                <tr>
-                    <td><code>=overlay($offset: 0)</code></td>
-                    <td>Makes the element overlay its parent container, like the transparent modal background.</td>
-                </tr>
-                <tr>
-                    <td><code>=placeholder</code></td>
-                    <td>Sets the styles of an input placeholder.</td>
-                </tr>
-                <tr>
-                    <td><code>=unselectable</code></td>
-                    <td>Turns the element unselectable. Used for buttons to prevent selection when clicking.</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-</section>
-
-
 
 <section class="section">
     <div class="container is-fluid">
@@ -122,10 +38,10 @@
                 <div class="tile is-child box">
                     <p class="title">Modifiers</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/modifiers/syntax">Syntax</a>
-                        <a class="tag is-medium" href="/modifiers/helpers">Helpers</a>
-                        <a class="tag is-medium" href="/modifiers/responsive-helpers">Responsive Helpers</a>
-                        <a class="tag is-medium" href="/modifiers/typography-helpers">Typography Helpers</a>
+                        <a class="tag is-medium" href="/syntax">Syntax</a>
+                        <a class="tag is-medium" href="/helpers">Helpers</a>
+                        <a class="tag is-medium" href="/responsive-helpers">Responsive Helpers</a>
+                        <a class="tag is-medium" href="/typography-helpers">Typography Helpers</a>
                     </p>
                 </div>
             </div>
@@ -134,40 +50,40 @@
                 <div class="tile is-child box">
                     <p class="title">Columns</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/columns/basics">Basics</a>
-                        <a class="tag is-medium" href="/columns/sizing">Sizing</a>
-                        <a class="tag is-medium" href="/columns/responsiveness">Responsiveness</a>
-                        <a class="tag is-medium" href="/columns/nesting">Nesting</a>
-                        <a class="tag is-medium" href="/columns/gap">Gap</a>
-                        <a class="tag is-medium" href="/columns/options">Options</a>
+                        <a class="tag is-medium" href="/basics">Basics</a>
+                        <a class="tag is-medium" href="/sizes">Sizes</a>
+                        <a class="tag is-medium" href="/responsiveness">Responsiveness</a>
+                        <a class="tag is-medium" href="/nesting">Nesting</a>
+                        <a class="tag is-medium" href="/gap">Gap</a>
+                        <a class="tag is-medium" href="/options">Options</a>
                     </p>
                 </div>
                 <div class="tile is-child box">
                     <p class="title">Layout</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/layout/container">Container</a>
-                        <a class="tag is-medium" href="/layout/level">Level</a>
-                        <a class="tag is-medium" href="/layout/media">Media Object</a>
-                        <a class="tag is-medium" href="/layout/hero">Hero</a>
-                        <a class="tag is-medium" href="/layout/section">Section</a>
-                        <a class="tag is-medium" href="/layout/footer">Footer</a>
-                        <a class="tag is-medium" href="/layout/tiles">Tiles</a>
+                        <a class="tag is-medium" href="/container">Container</a>
+                        <a class="tag is-medium" href="/level">Level</a>
+                        <a class="tag is-medium" href="/media-object">Media Object</a>
+                        <a class="tag is-medium" href="/hero">Hero</a>
+                        <a class="tag is-medium" href="/section">Section</a>
+                        <a class="tag is-medium" href="/footer">Footer</a>
+                        <a class="tag is-medium" href="/tiles">Tiles</a>
                     </p>
                 </div>
                 <div class="tile is-child box">
                     <p class="title">Form</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/form/input">Field</a>
-                        <a class="tag is-medium" href="/form/input">Input</a>
-                        <a class="tag is-medium" href="/form/textarea">Textarea</a>
-                        <a class="tag is-medium" href="/form/select">Select</a>
-                        <a class="tag is-medium" href="/form/autocomplete">Autocomplete</a>
-                        <a class="tag is-medium" href="/form/checkbox">Checkbox</a>
-                        <a class="tag is-medium" href="/form/radio">Radio</a>
-                        <a class="tag is-medium" href="/form/switch">Switch</a>
-                        <a class="tag is-medium" href="/form/file">File</a>
-                        <a class="tag is-medium" href="/form/upload">Upload</a>
-                        <a class="tag is-medium" href="/form/datepicker">Datepicker</a>
+                        <a class="tag is-medium" href="/field">Field</a>
+                        <a class="tag is-medium" href="/input">Input</a>
+                        <a class="tag is-medium" href="/textarea">Textarea</a>
+                        <a class="tag is-medium" href="/select">Select</a>
+                        <a class="tag is-medium" href="/autocomplete">Autocomplete</a>
+                        <a class="tag is-medium" href="/checkbox">Checkbox</a>
+                        <a class="tag is-medium" href="/radio">Radio</a>
+                        <a class="tag is-medium" href="/switch">Switch</a>
+                        <a class="tag is-medium" href="/file">File</a>
+                        <a class="tag is-medium" href="/upload">Upload</a>
+                        <a class="tag is-medium" href="/datepicker">Datepicker</a>
                     </p>
                 </div>
             </div>
@@ -175,42 +91,44 @@
                 <div class="tile is-child box">
                     <p class="title">Elements</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/elements/box">Box</a>
-                        <a class="tag is-medium" href="/elements/button">Button</a>
-                        <a class="tag is-medium" href="/elements/content">Content</a>
-                        <a class="tag is-medium" href="/elements/delete">Delete</a>
-                        <a class="tag is-medium" href="/elements/icon">Icon</a>
-                        <a class="tag is-medium" href="/elements/image">Image</a>
-                        <a class="tag is-medium" href="/elements/notification">Notification</a>
-                        <a class="tag is-medium" href="/elements/progress">Progress</a>
-                        <a class="tag is-medium" href="/elements/table">Table</a>
-                        <a class="tag is-medium" href="/elements/tag">Tag</a>
-                        <a class="tag is-medium" href="/elements/title">Title</a>
+                        <a class="tag is-medium" href="/box">Box</a>
+                        <a class="tag is-medium" href="/button">Button</a>
+                        <a class="tag is-medium" href="/content">Content</a>
+                        <a class="tag is-medium" href="/delete">Delete</a>
+                        <a class="tag is-medium" href="/icon">Icon</a>
+                        <a class="tag is-medium" href="/image">Image</a>
+                        <a class="tag is-medium" href="/notification">Notification</a>
+                        <a class="tag is-medium" href="/progress">Progress</a>
+                        <a class="tag is-medium" href="/table">Table</a>
+                        <a class="tag is-medium" href="/tag">Tag</a>
+                        <a class="tag is-medium" href="/title">Title</a>
                     </p>
                 </div>
                 <div class="tile is-child box">
                     <p class="title">Components</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/components/datepicker">Datepicker</a>
-                        <a class="tag is-medium" href="/components/popover">Popover</a>
-                        <a class="tag is-medium" href="/components/breadcrumb">Breadcrumb</a>
-                        <a class="tag is-medium" href="/components/card">Card</a>i
-                        <a class="tag is-medium" href="/components/dropdown">Dropdown</a>
-                        <a class="tag is-medium is-dark" href="/data-table">Data Table</a>
-                        <a class="tag is-medium" href="/components/menu">Menu</a>
-                        <a class="tag is-medium" href="/components/message">Message</a>
-                        <a class="tag is-medium" href="/components/modal">Modal</a>
-                        <a class="tag is-medium" href="/components/navbar">Navbar</a>
-                        <a class="tag is-medium" href="/components/pagination">Pagination</a>
-                        <a class="tag is-medium" href="/components/panel">Panel</a>
-                        <a class="tag is-medium" href="/components/tabs">Tabs</a>
-                        <a class="tag is-medium" href="/components/tooltip">Collapse</a>
-                        <a class="tag is-medium" href="/components/tooltip">Tooltip</a>
-                        <a class="tag is-medium" href="/components/dialog">Dialog</a>
-                        <a class="tag is-medium" href="/components/toast">Toast</a>
-                        <a class="tag is-medium" href="/components/snackbar">Snackbar</a>
-                        <a class="tag is-medium" href="/components/notification">Notification</a>
-                        <a class="tag is-medium" href="/components/message">Loading</a>
+                        <a class="tag is-medium" href="/breadcrumb">Breadcrumb</a>
+                        <a class="tag is-medium" href="/calendar">Calendar</a>
+                        <a class="tag is-medium" href="/card">Card</a>
+                        <a class="tag is-medium" href="/data-table">Data Table</a>
+                        <a class="tag is-medium" href="/dropdown">Dropdown</a>
+                        <a class="tag is-medium" href="/icon">Icon</a>
+                        <a class="tag is-medium" href="/menu">Menu</a>
+                        <a class="tag is-medium" href="/message">Message</a>
+                        <a class="tag is-medium" href="/modal">Modal</a>
+                        <a class="tag is-medium" href="/navbar">Navbar</a>
+                        <a class="tag is-medium" href="/pagination">Pagination</a>
+                        <a class="tag is-medium" href="/panel">Panel</a>
+                        <a class="tag is-medium" href="/tabs">Tabs</a>
+                        <a class="tag is-medium" href="/table">Table</a>
+                        <a class="tag is-medium" href="/tooltip">Tooltip</a>
+                        <a class="tag is-medium" href="/collapse">Collapse</a>
+                        <a class="tag is-medium" href="/dialog">Dialog</a>
+                        <a class="tag is-medium" href="/loading">Loading</a>
+                        <a class="tag is-medium" href="/popover">Popover</a>
+                        <a class="tag is-medium" href="/toast">Toast</a>
+                        <a class="tag is-medium" href="/snackbar">Snackbar</a>
+                        {{-- <a class="tag is-medium" href="/notification">Notification</a> --}}
                   </p>
                 </div>
             </div>

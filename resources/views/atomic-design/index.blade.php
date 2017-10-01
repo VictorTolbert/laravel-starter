@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
+@section('Atomic Design')
 @section('content')
-<header class="hero is-light">
+<header class="hero is-dark has-code-bg">
     <div class="hero-body">
         <div class="content">
             <h1 class="title">
