@@ -101,6 +101,12 @@ Breadcrumbs::register('components', function ($breadcrumbs) {
         $breadcrumbs->push('Card', route('card'));
     });
 
+    // Components > Collapse
+    Breadcrumbs::register('collapse', function ($breadcrumbs) {
+        $breadcrumbs->parent('components');
+        $breadcrumbs->push('Collapse', route('collapse'));
+    });
+
     // Components > Data Table
     Breadcrumbs::register('data-table', function ($breadcrumbs) {
         $breadcrumbs->parent('components');
@@ -131,11 +137,11 @@ Breadcrumbs::register('components', function ($breadcrumbs) {
         $breadcrumbs->push('Menu', route('menu'));
     });
 
-    // Components > Message
-    Breadcrumbs::register('message', function ($breadcrumbs) {
-        $breadcrumbs->parent('components');
-        $breadcrumbs->push('Message', route('message'));
-    });
+    // // Components > Message
+    // Breadcrumbs::register('message', function ($breadcrumbs) {
+    //     $breadcrumbs->parent('components');
+    //     $breadcrumbs->push('Message', route('message'));
+    // });
 
     // Components > Modal
     Breadcrumbs::register('modal', function ($breadcrumbs) {
@@ -240,11 +246,11 @@ Breadcrumbs::register('elements', function ($breadcrumbs) {
         $breadcrumbs->push('Image', route('image'));
     });
 
-    // Elements > Notification
-    Breadcrumbs::register('notification', function ($breadcrumbs) {
-        $breadcrumbs->parent('elements');
-        $breadcrumbs->push('Notification', route('notification'));
-    });
+    // // Elements > Notification
+    // Breadcrumbs::register('notification', function ($breadcrumbs) {
+    //     $breadcrumbs->parent('elements');
+    //     $breadcrumbs->push('Notification', route('notification'));
+    // });
 
     // Elements > Pageloader
     Breadcrumbs::register('pageloader', function ($breadcrumbs) {
@@ -458,6 +464,48 @@ Breadcrumbs::register('molecules', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Molecules', route('molecules'));
 });
+
+// Home > Notices
+Breadcrumbs::register('notices', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Notices', route('notices'));
+});
+
+    // Notices > Dialog
+    Breadcrumbs::register('dialog', function ($breadcrumbs) {
+        $breadcrumbs->parent('notices');
+        $breadcrumbs->push('Dialog', route('dialog'));
+    });
+
+    // Notices > Loading
+    Breadcrumbs::register('loading', function ($breadcrumbs) {
+        $breadcrumbs->parent('notices');
+        $breadcrumbs->push('Loading', route('loading'));
+    });
+
+    // Notices > Message
+    Breadcrumbs::register('message', function ($breadcrumbs) {
+        $breadcrumbs->parent('notices');
+        $breadcrumbs->push('Message', route('message'));
+    });
+
+    // Notices > Notification
+    Breadcrumbs::register('notification', function ($breadcrumbs) {
+        $breadcrumbs->parent('notices');
+        $breadcrumbs->push('Notification', route('notification'));
+    });
+
+    // Notices > Snackbar
+    Breadcrumbs::register('snackbar', function ($breadcrumbs) {
+        $breadcrumbs->parent('notices');
+        $breadcrumbs->push('Snackbar', route('snackbar'));
+    });
+
+    // Notices > Toast
+    Breadcrumbs::register('toast', function ($breadcrumbs) {
+        $breadcrumbs->parent('notices');
+        $breadcrumbs->push('Toast', route('toast'));
+    });
 
 // Home > Organisms
 Breadcrumbs::register('organisms', function ($breadcrumbs) {

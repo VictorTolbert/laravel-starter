@@ -1,8 +1,5 @@
 @extends('layouts.app')
-@section('hero-body')
-
-@endsection
-
+@section('title', 'XML Proposal Viewer')
 @section('content')
 <header class="hero is-light">
     <div class="hero-body">

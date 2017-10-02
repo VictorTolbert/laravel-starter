@@ -7,7 +7,7 @@ logic, while designers can focus on user experience,
 interactions, and flows.
  -->
 
-You only need 1 CSS file to use Bulma
+You only need **1 CSS file** to use Bulma
 
 ---
 

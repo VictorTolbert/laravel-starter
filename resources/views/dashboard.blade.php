@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Dashboard')
 @section('content')
-<header class="hero is-tertiary has-rainbow-bg">
+<header class="hero is-light">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('dashboard') }}
@@ -23,17 +23,17 @@
                 <div class="tile is-child box">
                     <p class="title">Overview and Guidelines</p>
                     <p class="tags">
-                        <a class="tag is-medium" href="/overview/start">Getting Started</a>
-                        <a class="tag is-medium" href="/overview/customize">Customizing with Sass</a>
-                        <a class="tag is-medium" href="/overview/classes">Classes</a>
-                        <a class="tag is-medium" href="/overview/modular">Modular</a>
-                        <a class="tag is-medium" href="/overview/responsiveness">Responsiveness</a>
+                        <a class="tag is-medium" href="/overview/start" target="docs">Getting Started</a>
+                        <a class="tag is-medium" href="/overview/customize" target="docs">Customizing with Sass</a>
+                        <a class="tag is-medium" href="/overview/classes" target="docs">Classes</a>
+                        <a class="tag is-medium" href="/overview/modular" target="docs">Modular</a>
+                        <a class="tag is-medium" href="/overview/responsiveness" target="docs">Responsiveness</a>
                         {{-- <a class="tag is-medium" href="/columns/icons">Icons</a> --}}
                         {{-- <a class="tag is-medium" href="/columns/spacing">Spacing</a> --}}
-                        <a class="tag is-medium" href="/overview/variables">Variables</a>
-                        <a class="tag is-medium" href="/overview/colors">Colors</a>
-                        <a class="tag is-medium" href="/overview/functions">Functions</a>
-                        <a class="tag is-medium" href="/overview/mixins">Mixins</a>
+                        <a class="tag is-medium" href="/overview/variables" target="docs">Variables</a>
+                        <a class="tag is-medium" href="/overview/colors" target="docs">Colors</a>
+                        <a class="tag is-medium" href="/overview/functions" target="docs">Functions</a>
+                        <a class="tag is-medium" href="/overview/mixins" target="docs">Mixins</a>
                     </p>
                 </div>
                 <div class="tile is-child box">

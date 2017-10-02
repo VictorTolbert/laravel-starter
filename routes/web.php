@@ -134,7 +134,8 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
         Route::name('tabs')->get('/tabs', 'PagesController@tabs');
         Route::name('tooltip')->get('/tooltips', 'PagesController@tooltip');
 
-    // Notices
+    // Notices // Extensions
+        Route::name('notices')->get('/notices', 'PagesController@notices');
         Route::name('dialog')->get('/dialog', 'PagesController@dialog');
         Route::name('loading')->get('/loading', 'PagesController@loading');
         Route::name('message')->get('/message', 'PagesController@message');

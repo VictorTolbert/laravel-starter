@@ -1,5 +1,5 @@
 <div id="preferences" class="note quickview">
-    <div class="is-primary" style="background-color:#4295b3;height:0.25rem"></div>
+    {{-- <div class="is-primary" style="background-color:#4295b3;height:0.25rem"></div> --}}
     <nav class="navbar is-light">
         <div class="container is-fluid">
             <div class="navbar-brand">

@@ -27,7 +27,7 @@
         <b-tabs type="is-boxed">
             <b-tab-item label="Experiments">
                 <section class="section">
-                    <div class="level">
+                    {{-- <div class="level">
                         <div class="level-left">
                             <a class="level-item">
                                 <div class="tags has-addons">
@@ -42,11 +42,12 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
 
                     @include('partials.navbars.utilities')
+                    <avails></avails>
 
-                    <div class="box">
+{{--                     <div class="box">
                         <h1 class="title">Station Groups</h1>
 
                         <hr class="is-marginless">
@@ -64,9 +65,8 @@
                                 </b-table-column>
                             </template>
                         </b-table>
-                    </div>
+                    </div> --}}
 
-                    <avails></avails>
                 </section>
             </b-tab-item>
             <b-tab-item label="Inspiration">

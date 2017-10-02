@@ -4,7 +4,7 @@
     <section class="sidebar waves">
         <nav class="sidebar__contents">
             <div class="sidebar__logo">
-                <a href="{{route('docs')}}" target="videa">
+                <a href="{{route('docs')}}" target="docs">
                     {{-- @include('partials.svgs.logo') --}}
                     @svg('uxlab-alt2')
                 </a>
@@ -23,7 +23,7 @@
                     </button>
                 </form>
             @endauth
-            <a href="{{route('docs')}}" target="videa">
+            <a href="{{route('docs')}}" target="docs">
                 © videa
             </a>
         </footer>

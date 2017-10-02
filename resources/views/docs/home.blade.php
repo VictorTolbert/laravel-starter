@@ -3,7 +3,7 @@
         <header class="home__header waves">
             <div class="home__header__inner">
                 <div class="home__logo">
-                    <a href="{{route('docs')}}" target="videa">
+                    <a href="{{route('docs')}}" target="docs">
                         {{-- @include('partials.svgs.logo') --}}
                         @svg('uxlab-alt2')
                     </a>
@@ -21,7 +21,7 @@
                 Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
             </p>
             <p>
-                All pages are hosted on <a href="" target="videa">GitHub</a>, so edits and improvements are welcome. Note that these are our own opinionated ideas, so we'll be finicky when it comes to substantial changes.
+                All pages are hosted on <a href="" target="docs">GitHub</a>, so edits and improvements are welcome. Note that these are our own opinionated ideas, so we'll be finicky when it comes to substantial changes.
             </p>
         </section> --}}
         <nav class="home__index">
@@ -29,7 +29,7 @@
                 {{ app('navigation')->menu()->addClass('menu--home') }}
             </div>
             <footer class="home__index__footer">
-                <a href="{{route('docs')}}" target="videa">
+                <a href="{{route('docs')}}" target="docs">
                     © videa
                 </a>
             </footer>

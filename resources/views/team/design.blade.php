@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Team &mdash Design')
 @section('content')
 <header class="hero is-light">
     <div class="hero-head">

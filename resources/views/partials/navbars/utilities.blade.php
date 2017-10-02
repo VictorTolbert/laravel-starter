@@ -1,4 +1,4 @@
-<b-collapse :open="false">
+{{-- <b-collapse :open="false">
     <button class="button is-light is-small is-marginless" slot="trigger">Customize</button>
     <div class="box is-light">
         <div class="field is-grouped">
@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-</b-collapse>
+</b-collapse> --}}
 
 <nav class="navbar is-light is-hidden-touch" role="navigation" aria-label="navigation">
     {{-- <div class="container is-fluid"> --}}
@@ -91,7 +91,7 @@
                 {{-- @include('partials.navbar-items.export') --}}
                 {{-- @include('partials.navbar-items.trash') --}}
                 {{-- @include('partials.navbar-items.notes') --}}
-                {{-- @include('partials.navbar-items.preferences') --}}
+                @include('partials.navbar-items.preferences')
                 {{-- @include('partials.navbar-items.settings') --}}
                 {{-- @include('partials.navbar-items.help') --}}
                 {{-- @include('partials.navbar-items.more') --}}

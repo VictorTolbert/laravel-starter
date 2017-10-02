@@ -108,6 +108,11 @@ class PagesController extends Controller
         return view('form.checkbox');
     }
 
+    public function collapse()
+    {
+        return view('components.collapse');
+    }
+
     public function colors()
     {
         return view('base.colors');
@@ -166,6 +171,11 @@ class PagesController extends Controller
     public function designTokens()
     {
         return view('design-tokens.index');
+    }
+
+    public function dialog()
+    {
+        return view('notices.dialog');
     }
 
     public function divider()
@@ -610,7 +620,7 @@ class PagesController extends Controller
 
     public function loading()
     {
-        return view('components.loading');
+        return view('notices.loading');
     }
 
     public function media()
@@ -630,7 +640,7 @@ class PagesController extends Controller
 
     public function message()
     {
-        return view('components.message');
+        return view('notices.message');
     }
 
     public function modal()
@@ -661,6 +671,11 @@ class PagesController extends Controller
     public function nesting()
     {
         return view('columns.nesting');
+    }
+
+    public function notices()
+    {
+        return view('notices.index');
     }
 
     public function notification()
@@ -828,6 +843,11 @@ class PagesController extends Controller
         return view('form.slider');
     }
 
+    public function snackbar()
+    {
+        return view('notices.snackbar');
+    }
+
     public function spacing()
     {
         return view('atoms.spacing');
@@ -891,6 +911,11 @@ class PagesController extends Controller
     public function title()
     {
         return view('elements.title');
+    }
+
+    public function toast()
+    {
+        return view('notices.toast');
     }
 
     public function tooltip()
