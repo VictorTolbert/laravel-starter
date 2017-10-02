@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="hero is-dark has-code-bg">
+    <section class="hero is-light">
         <div class="hero-body">
             <div class="container is-fluid">
                     <h1 class="title">Podcasting for Programmers</h1>

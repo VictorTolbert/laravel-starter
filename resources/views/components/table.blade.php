@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Components &mdash; Table')
 @section('content')
-<section class="hero is-dark has-code-bg" id="home-intro">
+<section class="hero is-light" id="home-intro">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('table') }}

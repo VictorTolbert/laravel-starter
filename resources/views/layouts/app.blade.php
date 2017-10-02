@@ -58,7 +58,7 @@
     </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>
-    {{-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> --}}
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var $navbarBurgers = Array.prototype.slice.call(

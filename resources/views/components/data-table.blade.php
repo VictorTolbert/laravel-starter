@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Components &mdash; Data Table')
 @section('content')
-<header class="hero is-dark has-code-bg" id="home-intro">
+<header class="hero is-light" id="home-intro">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('data-table') }}
@@ -25,6 +25,50 @@
         {{-- <h3 class="is-size-4">Exploration</h3> --}}
         {{-- <hr> --}}
         <b-tabs type="is-boxed">
+            <b-tab-item label="Experiments">
+                <section class="section">
+                    <div class="level">
+                        <div class="level-left">
+                            <a class="level-item">
+                                <div class="tags has-addons">
+                                    <span class="tag is-medium">Conflicts</span>
+                                    <span class="tag is-medium is-danger">8</span>
+                                </div>
+                            </a>
+                            <a class="level-item">
+                                <div class="tags has-addons">
+                                    <span class="tag is-medium">Gaps</span>
+                                    <span class="tag is-medium is-danger">4</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    @include('partials.navbars.utilities')
+
+                    <div class="box">
+                        <h1 class="title">Station Groups</h1>
+
+                        <hr class="is-marginless">
+
+                        <b-table :data="db.demo.stationGroups" striped narrowed>
+                            <template scope="props">
+                                <b-table-column field="rank" label="Rank" width="40" sortable numeric>
+                                    @{{ props.row.rank }}
+                                </b-table-column>
+                                <b-table-column field="group" label="Group" sortable>
+                                    @{{ props.row.group }}
+                                </b-table-column>
+                                <b-table-column field="revenue" label="Revenue" sortable numeric>
+                                    @{{ props.row.revenue }}
+                                </b-table-column>
+                            </template>
+                        </b-table>
+                    </div>
+
+                    <avails></avails>
+                </section>
+            </b-tab-item>
             <b-tab-item label="Inspiration">
                 <section class="section">
                     <div class="columns">
@@ -204,50 +248,6 @@
                             </div>
                         </div>
                     </div>
-                </section>
-            </b-tab-item>
-            <b-tab-item label="Experiments">
-                <section class="section">
-                    <div class="level">
-                        <div class="level-left">
-                            <a class="level-item">
-                                <div class="tags has-addons">
-                                    <span class="tag is-medium">Conflicts</span>
-                                    <span class="tag is-medium is-danger">8</span>
-                                </div>
-                            </a>
-                            <a class="level-item">
-                                <div class="tags has-addons">
-                                    <span class="tag is-medium">Gaps</span>
-                                    <span class="tag is-medium is-danger">4</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    @include('partials.navbars.utilities')
-
-                    <div class="box">
-                        <h1 class="title">Station Groups</h1>
-
-                        <hr class="is-marginless">
-
-                        <b-table :data="db.demo.stationGroups" striped narrowed>
-                            <template scope="props">
-                                <b-table-column field="rank" label="Rank" width="40" sortable numeric>
-                                    @{{ props.row.rank }}
-                                </b-table-column>
-                                <b-table-column field="group" label="Group" sortable>
-                                    @{{ props.row.group }}
-                                </b-table-column>
-                                <b-table-column field="revenue" label="Revenue" sortable numeric>
-                                    @{{ props.row.revenue }}
-                                </b-table-column>
-                            </template>
-                        </b-table>
-                    </div>
-
-                    <avails></avails>
                 </section>
             </b-tab-item>
 

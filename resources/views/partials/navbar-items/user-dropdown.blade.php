@@ -24,7 +24,8 @@
         <div class="navbar-item">
             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                 <span class="icon is-medium p-r-xs" style="color: #333;">
-                    <i class="material-icons">exit_to_app</i>
+                    {{-- <i class="material-icons">exit_to_app</i> --}}
+                    @svg('material.exit-to-app')
                 </span>
                 <span>Logout</span>
             </a>
