@@ -17,6 +17,7 @@
 </header>
 <section class="section">
     <div class="container is-fluid">
+        <p>Create various text style inputs such as: <code>text</code>, <code>password</code>, <code>number</code>, <code>url</code>, <code>email</code>, <code>search</code>, and more.</p>
         <div id="meta" class="field is-grouped is-grouped-multiline">
             <div class="control">
                 <div class="tags has-addons">

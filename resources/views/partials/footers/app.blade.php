@@ -21,7 +21,9 @@
                 <div class="navbar-end">
                     @if (Auth::guest())
                     @else
+                    <span >
 
+                    </span>
 {{--                         @include('partials.galleries.tech')
 
                         <div class="navbar-item">

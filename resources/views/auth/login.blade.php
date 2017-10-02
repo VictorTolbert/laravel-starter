@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-light">
+<section class="hero is-dark has-rainbow-bg">
     <div class="hero-head">
     </div>
     <div class="hero-body">
@@ -50,7 +50,7 @@
 
             <div class="column is-8">
                 {{-- @include('partials.videos.sample') --}}
-                <b-collapse :open="false">
+{{--                 <b-collapse :open="false">
                     <button class="button is-primary" slot="trigger">Click me!</button>
                     <div class="notification">
                         <div class="content">
@@ -64,7 +64,7 @@
                             </p>
                         </div>
                     </div>
-                </b-collapse>
+                </b-collapse> --}}
 
 {{--                 <h2 class="title">UI ≠ UX</h2>
                 <hr>

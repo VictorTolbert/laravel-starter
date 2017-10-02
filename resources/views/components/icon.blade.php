@@ -24,7 +24,7 @@
             @foreach($icons as $icon)
                 <div class="column is-2">
                     <a class="navbar-item">
-                        <span class="icon m-r-sm">
+                        <span class="icon is-custom m-r-sm">
                             @svg('material.'.$icon)
                         </span>
                         <code>{{ $icon }}</code>

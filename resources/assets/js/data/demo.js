@@ -1453,6 +1453,217 @@ module.exports =  {
         'whatshot',
         'work'
     ],
+    palettes: [
+        {
+            color: 'Dark',
+            variations: [
+                '#eaeaec',
+                '#cbccce',
+                '#a9aaae',
+                '#86878e',
+                '#6c6e75',
+                '#52545d',
+                '#4b4d55',
+                '#41434b',
+                '#383a41',
+                '#282930',
+                '#8495fa',
+                '#536af8',
+                '#193aff',
+                '#0024fe'
+            ]
+        },
+        {
+            color: 'Light',
+            variations: [
+                '#fffdf7',
+                '#fef9eb',
+                '#fef6dd',
+                '#fef2cf',
+                '#fdefc5',
+                '#fdecbb',
+                '#fdeab5',
+                '#fce7ac',
+                '#fce4a4',
+                '#fcdf96',
+                '#ffffff',
+                '#ffffff',
+                '#ffffff',
+                '#ffffff'
+            ]
+        },
+        {
+            color: 'Red',
+            variations: [
+                '#f8e4e8',
+                '#eebcc5',
+                '#e2909f',
+                '#d66378',
+                '#ce415b',
+                '#c5203e',
+                '#bf1c38',
+                '#b81830',
+                '#b01328',
+                '#a30b1b',
+                '#ffd1d4',
+                '#ff9ea5',
+                '#ff6b76',
+                '#ff515e',
+            ]
+        },
+        {
+            color: 'Green',
+            variations: [
+                '#e1f0e9',
+                '#b4dbc9',
+                '#82c3a5',
+                '#4faa81',
+                '#2a9866',
+                '#04864b',
+                '#037e44',
+                '#03733b',
+                '#026933',
+                '#015623',
+                '#88ffad',
+                '#55ff8a',
+                '#22ff67',
+                '#08ff56',
+            ]
+        },
+        {
+            color: 'Dark Blue',
+            variations: [
+                '#e4eaf2',
+                '#bbcade',
+                '#8ea7c8',
+                '#6184b1',
+                '#3f69a1',
+                '#1d4f90',
+                '#1a4888',
+                '#153f7d',
+                '#113673',
+                '#0a2661',
+                '#94b1ff',
+                '#618bff',
+                '#2e66ff',
+                '#1454ff',
+            ]
+        },
+        {
+            color: 'Blue',
+            variations: [
+                '#e5ecf2',
+                '#becfde',
+                '#93b0c9',
+                '#6890b3',
+                '#4778a2',
+                '#276092',
+                '#23588a',
+                '#1d4e7f',
+                '#174475',
+                '#0e3363',
+                '#97c0ff',
+                '#64a2ff',
+                '#3183ff',
+                '#1874ff',
+            ]
+        },
+        {
+            color: 'Light Blue',
+            variations: [
+                '#e8f2f6',
+                '#c6e0e9',
+                '#a1cbda',
+                '#7bb6cb',
+                '#5ea6bf',
+                '#4296b4',
+                '#3c8ead',
+                '#3383a4',
+                '#2b799c',
+                '#1d688c',
+                '#c7ebff',
+                '#94d9ff',
+                '#61c7ff',
+                '#47beff',
+            ]
+        },
+        {
+            color: 'Orange',
+            variations: [
+                '#fef0e4',
+                '#fcdabc',
+                '#fac18f',
+                '#f7a862',
+                '#f69641',
+                '#f4831f',
+                '#f37b1b',
+                '#f17017',
+                '#ef6612',
+                '#ec530a',
+                '#ffffff',
+                '#ffeae2',
+                '#ffc5af',
+                '#ffb396',
+            ]
+        },
+        {
+            color: 'Purple',
+            variations: [
+                '#ede5ed',
+                '#d2bed1',
+                '#b492b2',
+                '#966693',
+                '#80467c',
+                '#692565',
+                '#61215d',
+                '#561b53',
+                '#4c1649',
+                '#3b0d37',
+                '#ff75f4',
+                '#ff42f0',
+                '#ff0fec',
+                '#f500e1'
+            ]
+        },
+        {
+            color: 'Turquoise',
+            variations: [
+                '#ecf6f7',
+                '#d1e8eb',
+                '#b2d8de',
+                '#93c8d0',
+                '#7bbdc6',
+                '#64b1bc',
+                '#5caab6',
+                '#52a1ad',
+                '#4898a5',
+                '#368897',
+                '#e3faff',
+                '#b0f2ff',
+                '#7deaff',
+                '#63e6ff',
+            ]
+        },
+        {
+            color: 'Teal',
+            variations: [
+                '#e5f4f3',
+                '#bee4e1',
+                '#93d3cd',
+                '#67c1b8',
+                '#47b3a9',
+                '#26a69a',
+                '#229e92',
+                '#1c9588',
+                '#178b7e',
+                '#0d7b6c',
+                '#adfff3',
+                '#7affec',
+                '#47ffe4',
+                '#2dffe0',
+            ]
+        }
+    ],
     stationGroups: [
         {
             rank: 1,
@@ -1686,4 +1897,3 @@ module.exports =  {
         }
     ]
 }
-

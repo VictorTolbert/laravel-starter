@@ -10,6 +10,20 @@
 </header>
 <section class="section">
     <div class="container is-fluid">
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-1" v-for="(palette, index) in db.demo.palettes">
+                <h2 class="subtitle" v-text="palette.color"></h2>
+                <ul v-for="(variation, index) in palette.variations">
+                    <li v-text="variation" :style="`padding: 0.5rem 1rem;background-color: ${variation}`">
+                        &nbsp;
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container is-fluid">
         <div class="content">
             <p>
                 Most elements and components have color variations thanks to <strong>modifiers</strong> with syntax <code>.is-$color</code>, like <code>is-primary</code> or <code>is-dark</code>.

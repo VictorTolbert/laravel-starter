@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
 </head>
 
 <body>
@@ -16,10 +15,13 @@
                 Hello World
             </h1>
             <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
+                My first website!
             </p>
         </div>
     </section>
-</body>
+    <main class="main">
 
+    </main>
+    <script src=""></script>
+</body>
 </html>
