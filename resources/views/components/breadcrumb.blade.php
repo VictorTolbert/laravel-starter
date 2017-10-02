@@ -11,7 +11,7 @@
     <div class="hero-body p-t-sm">
         <div class="container is-fluid">
             <h1 class="title">Breadcrumb</h1>
-            <h2 class="subtitle">A simple breadcrumb component to improve your navigation experience</h2>
+            <h2 class="subtitle">A simple <strong>breadcrumb</strong> component to improve the navigation experience</h2>
         </div>
     </div>
 </header>

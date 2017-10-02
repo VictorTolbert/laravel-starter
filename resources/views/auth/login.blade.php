@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-dark has-rainbow-bg">
+<section class="hero is-light">
     <div class="hero-head">
     </div>
     <div class="hero-body">
         <div class="container is-fluid">
-            <h1 class="title">🔥</h1>
+            <h1 class="title">UI Toolkit</h1>
+            <h2 class="subtitle">HTML and CSS for Prototyping in the Browser</h2>
         </div>
     </div>
 </section>
