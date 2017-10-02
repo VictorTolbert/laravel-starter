@@ -31,7 +31,7 @@
                         {{-- <a class="tag is-medium" href="/columns/icons">Icons</a> --}}
                         {{-- <a class="tag is-medium" href="/columns/spacing">Spacing</a> --}}
                         <a class="tag is-medium" href="/overview/variables" target="docs">Variables</a>
-                        <a class="tag is-medium" href="/overview/colors" target="docs">Colors</a>
+                        <a class="tag is-medium" href="/colors">Colors</a>
                         <a class="tag is-medium" href="/overview/functions" target="docs">Functions</a>
                         <a class="tag is-medium" href="/overview/mixins" target="docs">Mixins</a>
                     </p>
@@ -76,7 +76,7 @@
                     <p class="title">Elements</p>
                     <p class="tags">
                         <a class="tag is-medium" href="/box">Box</a>
-                        <a class="tag is-medium" href="/button">Button</a>
+                        <a class="tag is-success is-medium" href="/button">Button</a>
                         <a class="tag is-medium" href="/content">Content</a>
                         <a class="tag is-medium" href="/delete">Delete</a>
                         <a class="tag is-medium" href="/icon">Icon</a>
@@ -123,7 +123,7 @@
                         <a class="tag is-medium" href="/panel">Panel</a>
                         <a class="tag is-medium" href="/tabs">Tabs</a>
                         <a class="tag is-medium" href="/table">Table</a>
-                        <a class="tag is-medium" href="/tooltip">Tooltip</a>
+                        <a class="tag is-success is-medium" href="/tooltip">Tooltip</a>
                         <a class="tag is-medium" href="/collapse">Collapse</a>
                         <a class="tag is-medium" href="/dialog">Dialog</a>
                         <a class="tag is-medium" href="/loading">Loading</a>

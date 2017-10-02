@@ -14,6 +14,7 @@ const app = new Vue({
     data () {
         return {
             db,
+            active: false,
             activeApp: 'prototypes',
             activeTab: 0,
             checkedRows: [],

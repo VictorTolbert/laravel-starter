@@ -92,7 +92,7 @@
                 {{-- @include('partials.navbar-items.trash') --}}
                 {{-- @include('partials.navbar-items.notes') --}}
                 @include('partials.navbar-items.preferences')
-                {{-- @include('partials.navbar-items.settings') --}}
+                @include('partials.navbar-items.settings')
                 {{-- @include('partials.navbar-items.help') --}}
                 {{-- @include('partials.navbar-items.more') --}}
             </div>

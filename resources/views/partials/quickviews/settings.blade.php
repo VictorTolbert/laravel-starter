@@ -1,6 +1,6 @@
 <div id="settings" class="quickview">
     {{-- <div class="is-primary" style="background-color:#4295b3;height:0.25rem"></div> --}}
-    <nav class="navbar is-transparent">
+{{--     <nav class="navbar is-transparent">
         <div class="container is-fluid">
             <div class="navbar-brand">
                 <span class="navbar-item">
@@ -40,10 +40,11 @@
                 <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis asperiores vel ea quia culpa veniam vitae, ex minus corporis, dolorem, magnam fugiat blanditiis, cupiditate modi molestiae hic eos. Facere, optio!</h2>
             </div>
         </div>
-    </header>
+    </header> --}}
 
     <section class="section quickview-body">
         <div class="quickview-block">
+
         </div>
     </section>
 

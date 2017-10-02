@@ -16,12 +16,7 @@
     </div>
 </header>
 <section class="section">
-  <div class="container">
-    <h1 class="title">Media Object</h1>
-    <h2 class="subtitle">The famous <strong>media object</strong> prevalent in social media interfaces, but useful in any context</h2>
-
-    <hr>
-
+  <div class="container is-fluid">
     <div class="content">
       <p>The <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">media object</a> is a UI element perfect for repeatable and nestable content.</p>
     </div>

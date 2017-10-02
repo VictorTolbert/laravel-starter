@@ -16,6 +16,22 @@
     </div>
 </header>
 <section class="section">
-
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-3">
+                <b-field label="Inline Calendar">
+                    <b-datepicker v-model="date" inline></b-datepicker>
+                </b-field>
+            </div>
+            <div class="column is-3">
+                <b-field label="Select a date">
+                       <b-datepicker
+                           placeholder="Click to select..."
+                           icon="today">
+                       </b-datepicker>
+                   </b-field>
+            </div>
+        </div>
+    </div>
 </section>
 @endsection

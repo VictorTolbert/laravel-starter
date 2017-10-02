@@ -693,7 +693,7 @@ class PagesController extends Controller
         return view('columns.options');
     }
 
-    public function orderManagment()
+    public function orderManagement()
     {
         return view('order-management.index');
     }

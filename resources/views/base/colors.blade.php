@@ -15,7 +15,14 @@
             <div class="column is-1" v-for="(palette, index) in db.demo.palettes">
                 <h2 class="subtitle" v-text="palette.color"></h2>
                 <ul v-for="(variation, index) in palette.variations">
-                    <li v-text="variation" :style="`padding: 0.5rem 1rem;background-color: ${variation}`">
+                    <li v-if="index == 5"
+                        v-text="variation"
+                        :style="`outline: 1px solid #000;padding: 0.5rem 1rem;background-color: ${variation}`">
+                        &nbsp;
+                    </li>
+                    <li v-else
+                        v-text="variation"
+                        :style="`padding: 0.5rem 1rem;background-color: ${variation}`">
                         &nbsp;
                     </li>
                 </ul>

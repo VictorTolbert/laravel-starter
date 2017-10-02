@@ -1,0 +1,179 @@
+/*
+Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+/// cobalt 2
+$color-yellow         : #FFC600;
+$color-orange         : #FF9D00;
+$color-mint           : #2AFFDF;
+$color-blue           : #193549;
+$color-off-blue       : #0D3A58; // (use on variable bgs)
+$color-dusty-blue     : #35434d;
+$color-dark-blue      : #15232D;
+$color-pink           : #FB94FF;
+$color-light-blue     : #9EFFFF;
+// $comment: #0088ff;
+// $constant: #ff628c;
+// $entitiy:#ffc600;
+// $invalid: #800f00;
+// $keyword: #ff9d00;
+// $meta: #9effff;
+// $meta-brace: #e1efff;
+// $punctuation: #e1efff;
+// $punctuation-params: #ffee80;
+
+
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: $color-blue;
+  color: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #0088FF;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: $color-light-blue;
+}
+
+.hljs-string {
+  color: #A5FF90;
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-tag {
+  color: #f8f8f8;
+}
+.hljs-name { color: $color-light-blue; }
+
+.hljs-class .hljs-title,
+.hljs-doctag {
+  text-decoration: underline;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-number {
+  color: #FF628C;
+}
+
+.hljs-params,
+.hljs-variable,
+.hljs-template-variable {
+  color: #fff;
+}
+
+.hljs-attribute {
+  color: #FFC600;
+}
+
+.hljs-meta {
+  color: #8996a8;
+}
+
+.hljs-formula {
+  background-color: #0e2231;
+  color: #f8f8f8;
+  font-style: italic;
+}
+
+.hljs-addition {
+  background-color: #253b22;
+  color: #f8f8f8;
+}
+
+.hljs-deletion {
+  background-color: #f92672;
+  color: #f8f8f8;
+}
+
+.hljs-selector-class {
+  color: #9b703f;
+}
+
+.hljs-selector-id {
+  color: #8b98ab;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+// #223545
+// #1f4662
+// #0088FF
+// #FF628C
+// #3AD900 //attribute value
+// #f8f8f2
+// #ffc600 //attribute name
+// #ffa5f3
+// #1d3c52
+// #FF9D00
+// #FF9D00
+// #ffc600
+// #fd971f
+
+
+.hljs,
+.hljs-addition { }
+.hljs-attr {
+    color: #FFC600;
+     // font-style: italic
+ }
+// .hljs-attribute { color: #fd971f; }
+.hljs-built_in { }
+.hljs-builtin-name { }
+.hljs-bullet { }
+.hljs-class .hljs-title { }
+.hljs-comment { }
+.hljs-deletion
+.hljs-doctag { }
+.hljs-emphasis
+.hljs-formula
+.hljs-keyword { }
+.hljs-link
+.hljs-literal { }
+.hljs-meta .hljs-keyword { }
+.hljs-meta .hljs-meta-string { }
+.hljs-meta { }
+.hljs-name { }
+.hljs-number { }
+.hljs-quote { }
+.hljs-regexp { color: #fd971f}
+.hljs-section { }
+.hljs-selector-attr { }
+.hljs-selector-class { }
+.hljs-selector-id { }
+.hljs-selector-pseudo { }
+.hljs-selector-tag { }
+.hljs-string { }
+.hljs-strong
+.hljs-subst { }
+.hljs-symbol { }
+.hljs-template-tag { }
+.hljs-template-variable { }
+.hljs-title { }
+.hljs-type { }
+.hljs-variable { }

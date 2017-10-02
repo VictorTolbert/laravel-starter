@@ -39,6 +39,7 @@
                     {{-- @include('partials.navbar-items.design-system') --}}
                     @include('partials.navbar-items.team-dropdown')
                     {{-- @include('partials.navbar-items.design-team') --}}
+                    @include('partials.navbar-items.prototypes')
                     @include('partials.navbar-items.xml-proposal-viewer')
                     {{-- @include('partials.navbar-items.design-tokens') --}}
                     {{-- @include('partials.navbar-items.icons') --}}
