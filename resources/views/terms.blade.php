@@ -4,7 +4,7 @@
     <section class="section">
         <article class="container">
             <div class="content">
-                <h1 class="vui-text-heading--large vui-m-bottom--medium">Videa Platform Terms of Use Agreement</h1>
+                <h1 class="slds-text-heading--large slds-m-bottom--medium">Videa Platform Terms of Use Agreement</h1>
                 <p><strong>EACH USER SHOULD CAREFULLY READ THE FOLLOWING TERMS OF USE AGREEMENT (THE "AGREEMENT") BEFORE ACCESSING OR USING THE VIDEA PLATFORM OR THE VIDEA SERVICE. USER MAY NOT ACCESS OR USE THIS SERVICE WITHOUT FIRST AGREEING TO THESE TERMS. BY CHECKING THE "I ACCEPT" BOX OR OTHERWISE BY ACCESSING OR USING THE VIDEA SERVICE, USER AGREES TO ACCEPT ALL OF THESE TERMS FOR ITSELF AND THE CUSTOMER ON BEHALF OF WHICH USER IS USING THE VIDEA SERVICE.USER HEREBY REPRESENTS THAT USER IS AUTHORIZED TO ACCEPT THESE TERMS AND CONDITIONS ON BEHALF OF SUCH CUSTOMER.</strong></p>
                 <p>Videa, LLC ("Videa") and User (as defined below) are entering into this Agreement pursuant to which Videa will provide Users with access to Videa Platform (as defined below) and the services and information provided through the Videa Platform (the “Videa Service”), subject to the terms of the applicable Customer agreement and the terms and conditions set forth herein.</p>
                 <p><strong>Definitions:</strong></p>

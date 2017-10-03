@@ -18,7 +18,7 @@ mix.webpackConfig({
 // mix.config.postCss = require("./postcss.config").plugins; TODO: Test this when I need to customize PostCSS
 mix.config.postCss = [
     require('postcss-easy-import')(),
-    require('postcss-slds-prefix')('vui'),
+    // require('postcss-slds-prefix')('vui'),
     require('postcss-cssnext')({
         features: {
             // Mix takes care of this for us.
@@ -42,3 +42,6 @@ mix
     .js('resources/assets/js/docs.js', 'public/js')
     .postCss('resources/assets/css/docs.css', 'public/css')
     .postCss('resources/assets/css/vue-window.css', 'public/css')
+
+mix
+    .sass('resources/assets/sass/slds.scss', 'public/css')

@@ -108,6 +108,11 @@ class PagesController extends Controller
         return view('form.checkbox');
     }
 
+    public function classes()
+    {
+        return view('overview.classes');
+    }
+
     public function collapse()
     {
         return view('components.collapse');
@@ -136,6 +141,11 @@ class PagesController extends Controller
     public function content()
     {
         return view('elements.content');
+    }
+
+    public function customize()
+    {
+        return view('overview.customize');
     }
 
     public function dashboard()
@@ -211,6 +221,11 @@ class PagesController extends Controller
     public function footer()
     {
         return view('layout.footer');
+    }
+
+    public function functions()
+    {
+        return view('overview.functions');
     }
 
     public function gap()
@@ -598,6 +613,11 @@ class PagesController extends Controller
         return view('components.image-placeholder');
     }
 
+    public function introduction()
+    {
+        return view('overview.introduction');
+    }
+
     public function kendo()
     {
         return view('templates.kendo');
@@ -623,6 +643,11 @@ class PagesController extends Controller
         return view('notices.loading');
     }
 
+    public function maintenance()
+    {
+        return view('maintenance.index');
+    }
+
     public function media()
     {
         return view('components.media');
@@ -643,6 +668,11 @@ class PagesController extends Controller
         return view('notices.message');
     }
 
+    public function mixins()
+    {
+        return view('overview.mixins');
+    }
+
     public function modal()
     {
         return view('components.modal');
@@ -651,6 +681,11 @@ class PagesController extends Controller
     public function modifiers()
     {
         return view('modifiers.index');
+    }
+
+    public function modular()
+    {
+        return view('overview.modular');
     }
 
     public function molecules()
@@ -853,6 +888,11 @@ class PagesController extends Controller
         return view('atoms.spacing');
     }
 
+    public function start()
+    {
+        return view('overview.start');
+    }
+
     public function switch()
     {
         return view('form.switch');
@@ -908,6 +948,11 @@ class PagesController extends Controller
         return view('layout.tiles');
     }
 
+    public function tips()
+    {
+        return view('overview.tips');
+    }
+
     public function title()
     {
         return view('elements.title');
@@ -925,7 +970,7 @@ class PagesController extends Controller
 
     public function typography()
     {
-        return view('base.typography');
+        return view('overview.typography');
     }
 
     public function typographyHelpers()
@@ -933,10 +978,14 @@ class PagesController extends Controller
         return view('modifiers.typography-helpers');
     }
 
-
     public function upload()
     {
         return view('form.upload');
+    }
+
+    public function variables()
+    {
+        return view('overview.variables');
     }
 
     public function zurb()

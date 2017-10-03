@@ -153,9 +153,9 @@ $colors                 : (
 // Typography
 $family-serif           : "Merriweather", "Georgia", serif;
 $family-obscured        : 'Flow Circular', monospace;
-$family-sans-serif      : 'Salesforce', 'Roboto', sans-serif;
-// $family-monospace       : "Operator Mono", "Roboto Mono", "Consolas", monospace;
-// $family-primary         : $family-sans-serif;
+$family-sans-serif      : 'Roboto', 'Salesforce', sans-serif;
+$family-monospace       : "Operator Mono", "Roboto Mono", "Consolas", monospace;
+$family-primary         : $family-sans-serif;
 
 // Font Sizing
 $size-1                 : 3rem;

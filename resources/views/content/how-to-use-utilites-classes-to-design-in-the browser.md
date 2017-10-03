@@ -10,19 +10,19 @@
 /*
     Salesforce style
 ************************/
-.vui-m-top--large { 
+.slds-m-top--large { 
     
 }
 
-.vui-m-right--x-small { 
+.slds-m-right--x-small { 
 
 }
 
-.vui-p-bottom--small {
+.slds-p-bottom--small {
 
 }
 
-.vui-p-left--medium { 
+.slds-p-left--medium { 
 
 }
 

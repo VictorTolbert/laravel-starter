@@ -516,8 +516,93 @@ Breadcrumbs::register('organisms', function ($breadcrumbs) {
 // Home > Overview
 Breadcrumbs::register('overview', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('overview', route('overview'));
+    $breadcrumbs->push('Overview', route('overview'));
 });
+
+    // Overview > Changelog
+    Breadcrumbs::register('changelog', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Changelog', route('changelog'));
+    });
+
+    // Overview > Classes
+    Breadcrumbs::register('classes', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Classes', route('classes'));
+    });
+
+    // Overview > Colors
+    Breadcrumbs::register('colors', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Colors', route('colors'));
+    });
+
+    // Overview > Customize
+    Breadcrumbs::register('customize', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Customize', route('customize'));
+    });
+
+    // Overview > Design Tokens
+    Breadcrumbs::register('design-tokens', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Design Tokens', route('design-tokens'));
+    });
+
+    // Overview > Functions
+    Breadcrumbs::register('functions', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Functions', route('functions'));
+    });
+
+    // Overview > Introduction
+    Breadcrumbs::register('introduction', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Introduction', route('introduction'));
+    });
+
+    // Overview > Mixins
+    Breadcrumbs::register('mixins', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Mixins', route('mixins'));
+    });
+
+    // Overview > Modular
+    Breadcrumbs::register('modular', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Modular', route('modular'));
+    });
+
+    // // Overview > Responsiveness
+    // Breadcrumbs::register('responsiveness', function ($breadcrumbs) {
+    //     $breadcrumbs->parent('overview');
+    //     $breadcrumbs->push('Responsiveness', route('responsiveness'));
+    // });
+
+    // Overview > Start
+    Breadcrumbs::register('start', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Start', route('start'));
+    });
+
+    // Overview > Tips
+    Breadcrumbs::register('tips', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Tips', route('tips'));
+    });
+
+    // Overview > Typography
+    Breadcrumbs::register('typography', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Typography', route('typography'));
+    });
+
+    // Overview > Variables
+    Breadcrumbs::register('variables', function ($breadcrumbs) {
+        $breadcrumbs->parent('overview');
+        $breadcrumbs->push('Variables', route('variables'));
+    });
+
 
 // Home > Pages
 Breadcrumbs::register('pages', function ($breadcrumbs) {

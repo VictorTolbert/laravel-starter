@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Elements &mdash; Icons')
 @section('content')
 <header class="hero is-light" id="home-intro">
     <div class="hero-head">

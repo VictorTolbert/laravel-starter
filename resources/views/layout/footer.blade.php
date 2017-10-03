@@ -16,25 +16,25 @@
     </div>
 </header>
 <section class="section">
-  <div class="container is-fluid">
-<div class="bd-example">
-<footer class="footer">
-  <div class="container is-fluid">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      </p>
-      <p>
-        <a class="icon" href="https://github.com/jgthms/bulma">
-          <i class="fa fa-github"></i>
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
-</div>
+    <div class="container is-fluid">
+        <div class="bd-example">
+            <footer class="footer">
+                <div class="container is-fluid">
+                    <div class="content has-text-centered">
+                        <p>
+                            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                        </p>
+                        <p>
+                            <a class="icon" href="https://github.com/jgthms/bulma">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>

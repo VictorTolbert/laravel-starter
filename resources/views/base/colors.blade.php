@@ -2,8 +2,14 @@
 @section('title', 'Colors')
 @section('content')
 <header class="hero is-light">
-    <div class="hero-body">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('colors') }}
+        </div>
+    </div>
+    <div class="hero-body p-t-sm">
         <div class="container is-fluid">
+            {{-- <h1 class="title">Design Coding Dashboard</h1> --}}
             <h1 class="title">Colors</h1>
             <h2 class="subtitle">The <b>colors</b> that <b>style</b> most of our elements and components</h2>
         </div>
@@ -11,18 +17,19 @@
 </header>
 <section class="section">
     <div class="container is-fluid">
+        <h2 class="is-size-3">Material Design Palette -- Brand Colors</h2>
         <div class="columns is-gapless is-multiline">
             <div class="column is-1" v-for="(palette, index) in db.demo.palettes">
                 <h2 class="subtitle" v-text="palette.color"></h2>
                 <ul v-for="(variation, index) in palette.variations">
                     <li v-if="index == 5"
-                        v-text="variation"
-                        :style="`outline: 1px solid #000;padding: 0.5rem 1rem;background-color: ${variation}`">
+                        v-text="variation.color"
+                        :style="`text-transform:uppercase;border-top: 1px solid #000;border-bottom: 1px solid #000;padding: 0.5rem 1rem;color: ${variation.textColor } ;background-color: ${variation.color}`">
                         &nbsp;
                     </li>
                     <li v-else
-                        v-text="variation"
-                        :style="`padding: 0.5rem 1rem;background-color: ${variation}`">
+                        v-text="variation.color"
+                        :style="`text-transform:uppercase;padding: 0.5rem 1rem;color: ${variation.textColor} ;background-color: ${variation.color}`">
                         &nbsp;
                     </li>
                 </ul>

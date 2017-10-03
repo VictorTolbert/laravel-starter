@@ -3,7 +3,7 @@
     <section class="section">
         <article class="container">
             <div class="content">
-                <h1 class="vui-text-heading--large vui-m-bottom--medium">Privacy Policy</h1>
+                <h1 class="slds-text-heading--large slds-m-bottom--medium">Privacy Policy</h1>
                 <p class="jump-target"><b>General:</b><br>Videa, LLC (hereinafter referred to as “Videa”) respects the privacy of visitors to the Site and its Visitors, as defined in the Visitor Agreement. Please read this Privacy Policy carefully so that Visitor understands Videa's privacy practices. Questions regarding privacy issues should be directed to Videa, LLC, 3390 Peachtree Road NE, Suite 700 Atlanta, Georgia 30326.</p>
                 <p>All capitalized terms shall have the meaning given to them in the Visitor Agreement.</p>
                 <p><b>The Types of Information Videa Collects:</b><br><u>Anonymous User Data.</u> Videa's web servers automatically collect and store certain limited information about Visitor's computer's connection to the Internet, including Visitor's IP address, when Visitor visits or browses the Site. (Visitor's IP address is a number that lets computers attached to the Internet know where to send Visitor data -- such as the web pages Visitor views.) Visitor's IP address does not identify Visitor personally to us. Videa uses this information to deliver Videa's Site to Visitor upon request, to measure traffic within the Site, and to tailor specific information to certain general classes of IP addresses.</p>

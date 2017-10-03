@@ -48,10 +48,21 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
 
 // Bulma
     // Overview
-        Route::name('overview')->get('/overview', 'PagesController@order-search');
-        Route::name('design-tokens')->get('/design-tokens', 'PagesController@designTokens');
+        Route::name('overview')->get('/overview', 'PagesController@overview');
+        Route::name('changelog')->get('/changelog', 'PagesController@changelog');
+        Route::name('classes')->get('/classes', 'PagesController@classes');
         Route::name('colors')->get('/colors', 'PagesController@colors');
+        Route::name('customize')->get('/customize', 'PagesController@customize');
+        Route::name('design-tokens')->get('/design-tokens', 'PagesController@designTokens');
+        Route::name('functions')->get('/functions', 'PagesController@functions');
+        Route::name('introduction')->get('/introduction', 'PagesController@introduction');
+        Route::name('mixins')->get('/mixins', 'PagesController@mixins');
+        Route::name('modular')->get('/modular', 'PagesController@modular');
+        // Route::name('responsiveness')->get('/responsiveness', 'PagesController@responsiveness');
+        Route::name('start')->get('/start', 'PagesController@start');
+        Route::name('tips')->get('/tips', 'PagesController@tips');
         Route::name('typography')->get('/typography', 'PagesController@typography');
+        Route::name('variables')->get('/variables', 'PagesController@variables');
 
     // Modifiers
         Route::name('modifiers')->get('/modifiers', 'PagesController@modifiers');
@@ -160,7 +171,6 @@ Route::group(['prefix' => 'proposal-viewer'], function () {
 
 Route::name('base')->get('/base', 'PagesController@base');
 Route::name('blog')->get('/blog', 'PagesController@blog');
-Route::name('changelog')->get('/changelog', 'PagesController@changelog');
 Route::name('charts')->get('/charts', 'PagesController@charts');
 Route::name('core-values')->get('/core-values', 'PagesController@coreValues');
 Route::name('dashboard')->get('/dashboard', 'PagesController@dashboard');
@@ -177,6 +187,7 @@ Route::name('help')->get('/help', 'PagesController@help');
 Route::name('initiatives')->get('/initiatives', 'PagesController@initiatives');
 Route::name('kendo')->get('/kendo', 'PagesController@kendo');
 Route::name('layouts')->get('/layouts', 'PagesController@layouts');
+Route::name('maintenance')->get('/maintenance', 'PagesController@maintenance');
 Route::name('movies')->get('/movies', 'PagesController@movies');
 Route::name('navigation')->get('/navigation', 'PagesController@navigation');
 Route::name('onepage')->get('/onepage', 'PagesController@onepage');

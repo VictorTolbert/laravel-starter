@@ -1,9 +1,5 @@
 @extends('layouts.app')
-
-@section('hero-body')
-
-@endsection
-
+@section('title', 'Overview &mdash; Colors')
 @section('content')
 <div class="hero-body">
     <div class="container is-fluid">
