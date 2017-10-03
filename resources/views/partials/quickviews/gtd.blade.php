@@ -19,28 +19,18 @@
         </div>
     </nav>
 
-    <header class="hero is-light">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">Help</h1>
-            </div>
-        </div>
-    </header>
-
     <section class="section quickview-body">
         <div class="quickview-block">
-            @include('partials.navbars.atomic-design')
-            @include('partials.navbars.breadcrumb')
             @include('partials.navbars.design-system')
             @include('partials.navbars.ops')
-            @include('partials.navbars.project-info')
-            @include('partials.navbars.style1')
-            @include('partials.navbars.styleguide')
-            @include('partials.navbars.table-tools')
-            @include('partials.navbars.team')
-            @include('partials.navbars.utilities')
-            @include('partials.navbars.vti')
-            @include('partials.navbars.wizard')
+            {{-- @include('partials.navbars.project-info') --}}
+            {{-- @include('partials.navbars.style1') --}}
+            {{-- @include('partials.navbars.styleguide') --}}
+            {{-- @include('partials.navbars.table-tools') --}}
+            {{-- @include('partials.navbars.team') --}}
+            {{-- @include('partials.navbars.utilities') --}}
+            {{-- @include('partials.navbars.vti') --}}
+            {{-- @include('partials.navbars.wizard') --}}
         </div>
     </section>
 

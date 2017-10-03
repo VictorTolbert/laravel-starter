@@ -1,21 +1,21 @@
 @extends('layouts.app')
-@section('title', 'Components')
+@section('title', 'Components &mdash; Breadcrumb')
 @section('content')
-    <header class="hero is-light">
-        <div class="hero-head">
-            <div class="container is-fluid p-l-lg">
-                {{ Breadcrumbs::render('components') }}
-            </div>
-            {{-- <hr class="m-b-sm m-t-xxs"> --}}
+<header class="hero is-light">
+    <div class="hero-head">
+        <div class="container is-fluid p-l-lg">
+            {{ Breadcrumbs::render('breadcrumb') }}
         </div>
-        <div class="hero-body p-t-sm">
-            <div class="container is-fluid">
-                <h1 class="title">Components</h1>
-                <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
-            </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
+    </div>
+    <div class="hero-body p-t-sm">
+        <div class="container is-fluid">
+            <h1 class="title">Breadcrumb</h1>
+            <h2 class="subtitle">A simple <strong>breadcrumb</strong> component to improve the navigation experience</h2>
         </div>
-    </header>
-    <section class="section">
+    </div>
+</header>
+<section class="section">
 
-    </section>
+</section>
 @endsection

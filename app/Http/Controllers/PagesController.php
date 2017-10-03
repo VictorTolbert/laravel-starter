@@ -223,6 +223,11 @@ class PagesController extends Controller
         return view('layout.footer');
     }
 
+    public function form()
+    {
+        return view('form.index');
+    }
+
     public function functions()
     {
         return view('overview.functions');

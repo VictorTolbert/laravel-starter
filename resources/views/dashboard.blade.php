@@ -5,7 +5,6 @@
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('dashboard') }}
-            <a href="{{route('atomic-design')}}">Atomic Design View</a>
         </div>
     </div>
     <div class="hero-body p-t-sm">
@@ -16,7 +15,13 @@
         </div>
     </div>
 </header>
-
+<section class="m-t-md m-b-none s-clearfix">
+    <div class="container is-fluid">
+        <span class="is-pulled-right">
+            <a class="button is-neutral is-small" href="{{route('atomic-design')}}">Atomic Design View</a>
+        </span>
+    </div>
+</section>
 <section class="section">
     <div class="container is-fluid">
         <div class="tile is-ancestor">

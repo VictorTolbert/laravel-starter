@@ -1,17 +1,17 @@
 @extends('layouts.app')
-@section('title', 'Form')
+@section('title', 'Form &mdash; Field')
 @section('content')
 <header class="hero is-light">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
-            {{ Breadcrumbs::render('form') }}
+            {{ Breadcrumbs::render('field') }}
         </div>
         {{-- <hr class="m-b-sm m-t-xxs"> --}}
     </div>
     <div class="hero-body p-t-sm">
         <div class="container is-fluid">
-            <h1 class="title">Form</h1>
-            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
+            <h1 class="title">Field</h1>
+            <h2 class="subtitle">Fields are used to add functionality to controls and to attach/group components and elements together</h2>
         </div>
     </div>
 </header>

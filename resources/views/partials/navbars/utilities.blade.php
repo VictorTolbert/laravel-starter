@@ -68,7 +68,7 @@
     </div>
 </b-collapse> --}}
 
-<nav class="navbar is-info is-hidden-touch" role="navigation" aria-label="navigation">
+<nav class="navbar is-dark is-hidden-touch" role="navigation" aria-label="navigation">
     {{-- <div class="container is-fluid"> --}}
         <div class="navbar-menu" id="navbar-utilites">
             <div class="navbar-brand">
@@ -83,19 +83,18 @@
                 {{-- @include('partials.navbar-items.filter-list') --}}
                 <div class="navbar-item">
                 </div>
-
+                {{-- @include('partials.navbar-items.notes') --}}
             </div>
             <div class="navbar-end">
                 {{-- @include('partials.navbar-items.format-size') --}}
                 {{-- @include('partials.navbar-items.print') --}}
                 {{-- @include('partials.navbar-items.export') --}}
                 {{-- @include('partials.navbar-items.trash') --}}
-                @include('partials.navbar-items.gtd')
-                @include('partials.navbar-items.notes')
-                @include('partials.navbar-items.preferences')
-                @include('partials.navbar-items.settings')
+                {{-- @include('partials.navbar-items.gtd') --}}
+                {{-- @include('partials.navbar-items.preferences') --}}
+                {{-- @include('partials.navbar-items.settings') --}}
                 @include('partials.navbar-items.page-info')
-                @include('partials.navbar-items.help')
+                {{-- @include('partials.navbar-items.help') --}}
                 {{-- @include('partials.navbar-items.more') --}}
             </div>
         </div>

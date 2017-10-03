@@ -3,7 +3,7 @@
         <div class="container is-fluid">
             <div class="navbar-brand">
                 <span class="navbar-item">
-                    <p class="is-size-4">Settings</p>
+                    <p class="is-size-4">Preferences</p>
                 </span>
             </div>
 

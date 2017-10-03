@@ -1,21 +1,25 @@
 @extends('layouts.app')
-@section('title', 'Overview')
+@section('title', 'Overview &mdash; Getting Started')
 @section('content')
 <header class="hero is-light">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
-            {{ Breadcrumbs::render('overview') }}
+            {{ Breadcrumbs::render('start') }}
         </div>
+        {{-- <hr class="m-b-sm m-t-xxs"> --}}
     </div>
     <div class="hero-body p-t-sm">
         <div class="container is-fluid">
-            {{-- <h1 class="title">Design Coding Dashboard</h1> --}}
-            <h1 class="title">Overview</h1>
-            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est aspernatur consectetur, atque exercitationem consequatur nisi magni voluptatum suscipit amet dolor eligendi expedita officia asperiores delectus rerum pariatur sapiente quaerat quia.</h2>
+            <h1 class="title">Getting Stated</h1>
+            <h2 class="subtitle">You only need <strong>1 CSS file</strong></h2>
         </div>
     </div>
 </header>
-    <section class="section">
-
-    </section>
+<section class="section">
+    <div class="container is-fluid">
+        <div class="content">
+            @include('content.overview.start')
+        </div>
+    </div>
+</section>
 @endsection

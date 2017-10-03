@@ -4,12 +4,51 @@
     </a>
 
     <div class="navbar-dropdown">
+        {{-- <a class="navbar-item" href="{{ route('order-management') }}">
+            <span>Order Management</span>
+        </a> --}}
+        <a class="navbar-item" href="{{ route('pending-orders') }}">
+            <span>Pending Orders</span>
+        </a>
+
+        <a class="navbar-item" href="{{ route('pending-makegoods') }}">
+            <span>Pending Makegoods</span>
+        </a>
+
+        <a class="navbar-item" href="{{ route('open-preempts') }}">
+            <span>Open Preempts</span>
+        </a>
+
+        <a class="navbar-item" href="{{ route('order-search') }}">
+            <span>Order Search</span>
+        </a>
+
+        <hr class="navbar-divider">
+
+        {{-- <a class="navbar-item" href="{{ route('reporting') }}">
+            <span>Reporting</span>
+        </a> --}}
+
         <a class="navbar-item" href="{{ route('account-performance') }}">
             <span>Account Performance</span>
         </a>
 
+        <a class="navbar-item" href="{{ route('program-revenue') }}">
+            <span>Program Revenue</span>
+        </a>
+
+        <a class="navbar-item" href="{{ route('order-reporting') }}">
+            <span>Order Reporting</span>
+        </a>
+
+        <hr class="navbar-divider">
+
         <a class="navbar-item" href="{{ route('avails') }}">
             <span>Avails</span>
+        </a>
+
+        <a class="navbar-item" href="{{ route('price-guide') }}">
+            <span>Price Guide</span>
         </a>
 
         <a class="navbar-item" href="{{ route('campaign-performance') }}">
@@ -18,45 +57,7 @@
 
         <hr class="navbar-divider">
 
-        <a class="navbar-item" href="{{ route('order-management') }}">
-            <span>Order Management</span>
-        </a>
-
-        <a class="navbar-item" href="{{ route('order-reporting') }}">
-            <span>Order Reporting</span>
-        </a>
-
-        <a class="navbar-item" href="{{ route('order-search') }}">
-            <span>Order Search</span>
-        </a>
-
-        <a class="navbar-item" href="{{ route('pending-makegoods') }}">
-            <span>Pending Makegoods</span>
-        </a>
-
-
-        <hr class="navbar-divider">
-
-        <a class="navbar-item" href="{{ route('pending-orders') }}">
-            <span>Pending Orders</span>
-        </a>
-
-        <a class="navbar-item" href="{{ route('price-guide') }}">
-            <span>Price Guide</span>
-        </a>
-
-
-        <hr class="navbar-divider">
-
         @include('partials.navbar-items.xml-proposal-viewer')
-
-        <a class="navbar-item" href="{{ route('program-revenue') }}">
-            <span>Program Revenue</span>
-        </a>
-
-        <a class="navbar-item" href="{{ route('reporting') }}">
-            <span>Reporting</span>
-        </a>
     </div>
 </div>
 {{--
