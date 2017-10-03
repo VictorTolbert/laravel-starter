@@ -25,7 +25,7 @@
                 <ul v-for="(variation, index) in palette.variations">
                     <li v-if="index == 5"
                         v-text="variation.color"
-                        :style="`text-transform:uppercase;border-top: 1px solid #000;border-bottom: 1px solid #000;padding: 0.5rem 1rem;color: ${variation.textColor } ;background-color: ${variation.color}`">
+                        :style="`text-transform:uppercase;border-top: 3px solid #fff;border-bottom: 3px solid #fff;padding: 0.5rem 1rem;color: ${variation.textColor } ;background-color: ${variation.color}`">
                         &nbsp;
                     </li>
                     <li v-else
@@ -61,8 +61,6 @@
                 </tr>
             </thead>
             <tbody>
-
-
                 <tr>
                     <td>
                         <strong>White</strong>

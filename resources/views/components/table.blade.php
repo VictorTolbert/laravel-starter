@@ -37,12 +37,12 @@
             :bordered="isBordered"
             :checkable="isCheckable"
             :checked-rows.sync="checkedRows"
-            :data="isEmpty ? [] : clients"
+            :data="isEmpty ? [] : db.demo.data"
             :default-sort-direction="defaultSortDirection"
             :loading="isLoading"
             :mobile-cards="hasMobileCards"
             :narrowed="isNarrowed"
-            :paginated="clients.length > perPage"
+            :paginated="db.demo.data.length > perPage"
             :pagination-simple="isPaginationSimple"
             :per-page="perPage"
             :row-class="(row, index) => row.id === 1 ? 'is-warning' : ''"
@@ -52,7 +52,7 @@
             default-sort=""
             detailed>
             <template scope="props">
-                <b-table-column v-for="(column, index) in clientsColumns"
+                <b-table-column v-for="(column, index) in db.demo.columns"
                     :key="index"
                     :label="column.title"
                     :field="column.field"

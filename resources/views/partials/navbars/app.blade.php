@@ -14,7 +14,6 @@
                 {{-- <a class="navbar-item is-active" href="">
                     Design System
                 </a> --}}
-                @include('partials.navbar-items.prototypes')
             @endif
 
             <span class="navbar-burger" data-target="navbarMain" @click="isActive = !isActive">
@@ -28,6 +27,7 @@
             <div class="navbar-start">
                 @if (Auth::guest())
                 @else
+                    @include('partials.navbar-items.prototypes')
                 @endif
             </div>
 

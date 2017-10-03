@@ -1,5 +1,6 @@
 module.exports = {
     spacing: [
+        { name: '$spacing-none', value: 'none' },
         { name: '$spacing-xxx-small', value: '0.125rem' },
         { name: '$spacing-xx-small', value: '0.25rem' },
         { name: '$spacing-x-small', value: '0.5rem' },

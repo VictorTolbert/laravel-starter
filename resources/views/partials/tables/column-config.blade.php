@@ -7,7 +7,7 @@
             <th>Lock Column</th>
         </tr>
     </thead>
-    <tr v-for="(column, index) in clientsColumns">
+    <tr v-for="(column, index) in db.demo.columns">
         <td class="has-text-centered">
             <b-checkbox v-model="column.isVisible"></b-checkbox>
         </td>
