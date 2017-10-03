@@ -1,4 +1,23 @@
 <div id="page-info" class="quickview">
+    <nav class="navbar is-light">
+        <div class="container is-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-item">
+                    <p class="is-size-4">Page Info</p>
+                </span>
+            </div>
+
+            <div class="navbar-menu is-active">
+                <div class="navbar-start">
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item is-hidden-touch" data-dismiss="quickview">
+                        <b-icon icon="close"></b-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <b-tabs>
         <b-tab-item label="Notes"></b-tab-item>
         <b-tab-item label="Discuss"></b-tab-item>

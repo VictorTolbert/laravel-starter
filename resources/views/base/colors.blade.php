@@ -15,6 +15,7 @@
         </div>
     </div>
 </header>
+@include('partials.navbars.utilities')
 <section class="section">
     <div class="container is-fluid">
         <h2 class="is-size-3">Material Design Palette -- Brand Colors</h2>

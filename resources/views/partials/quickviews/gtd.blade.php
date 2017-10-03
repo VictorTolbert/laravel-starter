@@ -1,9 +1,9 @@
 <div id="gtd" class="quickview">
-    <nav class="navbar is-dark">
+    <nav class="navbar is-light">
         <div class="container is-fluid">
             <div class="navbar-brand">
                 <span class="navbar-item">
-                    {{-- Help --}}
+                    <p class="is-size-4">GTD</p>
                 </span>
             </div>
 

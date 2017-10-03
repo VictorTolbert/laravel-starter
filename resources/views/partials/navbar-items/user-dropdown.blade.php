@@ -7,12 +7,12 @@
     </a>
 
     <div class="navbar-dropdown is-right">
-{{--         <a class="navbar-item" href="{{ route('profile', Auth::user()) }}">
+       <a class="navbar-item" href="{{ route('profile', Auth::user()) }}">
             <span class="icon is-medium p-r-xs">
                 <i class="material-icons">person</i>
             </span>
             <span>My Profile</span>
-        </a> --}}
+        </a>
 
 {{--         <a class="navbar-item" data-show="quickview" data-target="settings">
             <span class="icon is-medium p-r-xs" style="color: #333;">

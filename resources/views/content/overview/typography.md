@@ -1,0 +1,51 @@
+Roboto Thin
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Light
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Light Italic
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Regular
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Italic
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Medium
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Medium Italic
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Bold
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+1234567890
+
+Roboto Bold Italic
+
+ABCDEFGHIJK
