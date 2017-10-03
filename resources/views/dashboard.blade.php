@@ -26,9 +26,9 @@
                         <a class="tag is-medium" href="/start">Getting Started</a>
                         <a class="tag is-medium" href="/customize">Customizing with Sass</a>
                         <a class="tag is-medium" href="/classes">Classes</a>
-                        <a class="tag is-warning is-medium" href="/design-tokens">Design Tokens</a>
+                        <a class="tag is-medium" href="/design-tokens">Design Tokens</a>
                         <a class="tag is-medium" href="/modular">Modular</a>
-                        <a class="tag is-warning is-medium" href="/responsiveness">Responsiveness</a>
+                        <a class="tag is-medium" href="/responsiveness">Responsiveness</a>
                         {{-- <a class="tag is-medium" href="/columns/icons">Icons</a> --}}
                         {{-- <a class="tag is-medium" href="/columns/spacing">Spacing</a> --}}
                         <a class="tag is-medium" href="/variables">Variables</a>
@@ -43,7 +43,7 @@
                     <p class="tags">
                         <a class="tag is-medium" href="/syntax">Syntax</a>
                         <a class="tag is-medium" href="/spacing">Spacing</a>
-                        <a class="tag is-warning is-medium" href="/spacing">Z-Index</a>
+                        <a class="tag is-medium" href="/spacing">Z-Index</a>
                         <a class="tag is-medium" href="/helpers">Helpers</a>
                         <a class="tag is-medium" href="/responsive-helpers">Responsive Helpers</a>
                         <a class="tag is-medium" href="/typography-helpers">Typography Helpers</a>
@@ -54,7 +54,7 @@
                     <p class="tags">
                         <a class="tag is-medium" href="/basics">Basics</a>
                         <a class="tag is-medium" href="/sizes">Sizes</a>
-                        <a class="tag is-warning is-medium" href="/responsiveness">Responsiveness</a>
+                        <a class="tag is-medium" href="/responsiveness">Responsiveness</a>
                         <a class="tag is-medium" href="/nesting">Nesting</a>
                         <a class="tag is-medium" href="/gap">Gap</a>
                         <a class="tag is-medium" href="/options">Options</a>
@@ -78,12 +78,12 @@
                     <p class="title">Elements</p>
                     <p class="tags">
                         <a class="tag is-medium" href="/box">Box</a>
-                        <a class="tag is-success is-medium" href="/button">Button</a>
+                        <a class="tag is-medium" href="/button">Button</a>
                         <a class="tag is-medium" href="/content">Content</a>
                         <a class="tag is-medium" href="/delete">Delete</a>
                         <a class="tag is-medium" href="/icon">Icon</a>
                         <a class="tag is-medium" href="/image">Image</a>
-                        <a class="tag is-warning is-medium" href="/notification">Notification</a>
+                        <a class="tag is-medium" href="/notification">Notification</a>
                         <a class="tag is-medium" href="/progress">Progress</a>
                         <a class="tag is-medium" href="/table">Table</a>
                         <a class="tag is-medium" href="/tag">Tag</a>
@@ -125,14 +125,14 @@
                         <a class="tag is-medium" href="/panel">Panel</a>
                         <a class="tag is-medium" href="/tabs">Tabs</a>
                         <a class="tag is-medium" href="/table">Table</a>
-                        <a class="tag is-success is-medium" href="/tooltip">Tooltip</a>
+                        <a class="tag is-medium" href="/tooltip">Tooltip</a>
                         <a class="tag is-medium" href="/collapse">Collapse</a>
                         <a class="tag is-medium" href="/dialog">Dialog</a>
                         <a class="tag is-medium" href="/loading">Loading</a>
                         <a class="tag is-medium" href="/popover">Popover</a>
                         <a class="tag is-medium" href="/toast">Toast</a>
                         <a class="tag is-medium" href="/snackbar">Snackbar</a>
-                        <a class="tag is-warning is-medium" href="/notification">Notification</a>
+                        <a class="tag is-medium" href="/notification">Notification</a>
                   </p>
                 </div>
             </div>
