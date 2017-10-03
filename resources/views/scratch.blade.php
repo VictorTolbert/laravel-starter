@@ -8,140 +8,146 @@
         </div>
     </div>
 </header>
-
 <section class="section">
-    <div class="container is-fluid">
-        <div class="box">
-            <p class="is-size-3">Tooltips</p>
-            <hr class="is-marginless">
+    <b-tabs>
+        <b-tab-item label="Form">
             <section class="section">
-                <div class="columns">
-                    <div class="column">
-                        <b-tooltip
-                            {{-- @click.native="active = !active"  --}}
-                            {{-- :active="active"  --}}
-                            position="is-right"
-                            multilined
-                            label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
-                            <a href="#" id="indicate_changes_popup" data-original-title="" title="">
-                                <span class="icon">
-                                    @svg('material.help')
-                                </span>
-                            </a>
-                        <b-tooltip>
-                    </div>
+                <div class="container is-fluid">
+                    <h1 class="title">Settings</h1>
+                    <hr>
+                    <div class="columns">
+                        <div class="column is-half">
+                            <div class="columns">
+                                <div class="column is-one-third">
+                                    <h2 class="is-size-4">Account</h2>
+                                </div>
+                                <div class="column is-two-thirds">
+                                    <div class="field">
+                                        <label class="label" for="fullname">Username</label>
+                                        <div class="control">
+                                            <input class="input" type="text">
+                                        </div>
+                                        <p class="help is-success">The username is available</p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label" for="fullname">Email Address</label>
+                                        <div class="control">
+                                            <input class="input" type="text">
+                                        </div>
+                                        <p class="help is-danger">This email is invalid</p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label" for="fullname">Phone Number</label>
+                                        <div class="control">
+                                            <input class="input" type="tel">
+                                        </div>
+                                        <p class="help is-info">Helpful text...</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="column">
-                        <b-tooltip
-                            {{-- @click.native="active = !active"  --}}
-                            {{-- :active="active"  --}}
-                            position="is-top"
-                            multilined
-                            label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
-                            <a href="#" id="indicate_changes_popup" data-original-title="" title="">
-                                <span class="icon">
-                                    @svg('material.help')
-                                </span>
-                            </a>
-                        <b-tooltip>
-                    </div>
-
-                    <div class="column">
-                        <b-tooltip
-                            {{-- @click.native="active = !active"  --}}
-                            {{-- :active="active"  --}}
-                            position="is-bottom"
-                            multilined
-                            label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
-                            <a href="#" id="indicate_changes_popup" data-original-title="" title="">
-                                <span class="icon">
-                                    @svg('material.help')
-                                </span>
-                            </a>
-                        <b-tooltip>
-                    </div>
-
-                    <div class="column">
-                        <b-tooltip
-                            {{-- @click.native="active = !active"  --}}
-                            {{-- :active="active"  --}}
-                            position="is-left"
-                            multilined
-                            label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
-                            <a href="#" id="indicate_changes_popup" data-original-title="" title="">
-                                <span class="icon">
-                                    @svg('material.help')
-                                </span>
-                            </a>
-                        <b-tooltip>
+                            <div class="columns">
+                                <div class="column is-one-third">
+                                    <h2 class="is-size-4">Billing</h2>
+                                </div>
+                                <div class="column is-two-thirds">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-        </div>
-    </div>
-</section>
-
-<nav class="panel">
-    <p class="panel-heading">
-        View Selection
-    </p>
-    <div class="panel-block">
-        <p class="control has-icons-left">
-            <input class="input" type="text" placeholder="Search">
-            <span class="icon is-small is-left">
-                <i class="fa fa-search"></i>
-            </span>
-        </p>
-    </div>
-</nav>
-
-<div class="container is-fluid">
-    <h1 class="title">Settings</h1>
-    <hr>
-    <div class="columns">
-        <div class="column is-half">
-            <div class="columns">
-                <div class="column is-one-third">
-                    <h2 class="is-size-4">Account</h2>
-                </div>
-                <div class="column is-two-thirds">
-                    <div class="field">
-                        <label class="label" for="fullname">Username</label>
-                        <div class="control">
-                            <input class="input" type="text">
-                        </div>
-                        <p class="help is-success">The username is available</p>
+        </b-tab-item>
+        <b-tab-item label="Panel">
+            <section class="section">
+                <nav class="panel">
+                    <p class="panel-heading">
+                        View Selection
+                    </p>
+                    <div class="panel-block">
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" placeholder="Search">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </p>
                     </div>
-                    <div class="field">
-                        <label class="label" for="fullname">Email Address</label>
-                        <div class="control">
-                            <input class="input" type="text">
-                        </div>
-                        <p class="help is-danger">This email is invalid</p>
-                    </div>
-                    <div class="field">
-                        <label class="label" for="fullname">Phone Number</label>
-                        <div class="control">
-                            <input class="input" type="tel">
-                        </div>
-                        <p class="help is-info">Helpful text...</p>
-                    </div>
-                </div>
-            </div>
+                </nav>
+            </section>
+        </b-tab-item>
+        <b-tab-item label="Tooltip">
+            <section class="section">
+                <div class="container is-fluid">
+                    <div class="box">
+                        <p class="is-size-3">Tooltips</p>
+                        <hr class="is-marginless">
+                        <section class="section">
+                            <div class="columns">
+                                <div class="column">
+                                    <b-tooltip
+                                        {{-- @click.native="active = !active"  --}}
+                                        {{-- :active="active"  --}}
+                                        position="is-right"
+                                        multilined
+                                        label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
+                                        <a href="#" id="indicate_changes_popup" data-original-title="" title="">
+                                            <span class="icon">
+                                                @svg('material.help')
+                                            </span>
+                                        </a>
+                                    <b-tooltip>
+                                </div>
 
-            <div class="columns">
-                <div class="column is-one-third">
-                    <h2 class="is-size-4">Billing</h2>
-                </div>
-                <div class="column is-two-thirds">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                                <div class="column">
+                                    <b-tooltip
+                                        {{-- @click.native="active = !active"  --}}
+                                        {{-- :active="active"  --}}
+                                        position="is-top"
+                                        multilined
+                                        label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
+                                        <a href="#" id="indicate_changes_popup" data-original-title="" title="">
+                                            <span class="icon">
+                                                @svg('material.help')
+                                            </span>
+                                        </a>
+                                    <b-tooltip>
+                                </div>
 
-<section class="section">
-    <b-tabs>
+                                <div class="column">
+                                    <b-tooltip
+                                        {{-- @click.native="active = !active"  --}}
+                                        {{-- :active="active"  --}}
+                                        position="is-bottom"
+                                        multilined
+                                        label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
+                                        <a href="#" id="indicate_changes_popup" data-original-title="" title="">
+                                            <span class="icon">
+                                                @svg('material.help')
+                                            </span>
+                                        </a>
+                                    <b-tooltip>
+                                </div>
+
+                                <div class="column">
+                                    <b-tooltip
+                                        {{-- @click.native="active = !active"  --}}
+                                        {{-- :active="active"  --}}
+                                        position="is-left"
+                                        multilined
+                                        label="Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
+                                        <a href="#" id="indicate_changes_popup" data-original-title="" title="">
+                                            <span class="icon">
+                                                @svg('material.help')
+                                            </span>
+                                        </a>
+                                    <b-tooltip>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </b-tab-item>
         <b-tab-item label="Timeline">
             <section class="section">
                 <div class="container is-fluid">
@@ -165,11 +171,12 @@
         <b-tab-item label="Calendar">
             <section class="section">
                 <div class="container is-fluid">
-                    @include('partials.calendar')
+                    <div class="content">
+                        @include('partials.calendar')
+                    </div>
                 </div>
             </section>
         </b-tab-item>
-
         <b-tab-item label="Goals">
             <section class="section">
                 <div class="container is-fluid">

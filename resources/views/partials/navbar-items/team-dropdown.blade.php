@@ -5,7 +5,7 @@
 
     <div class="navbar-dropdown">
         <a class="navbar-item" href="{{ route('product-team') }}">
-            <span>Product</span>
+            <span>Product Development</span>
         </a>
 
         <a class="navbar-item" href="{{ route('design-team') }}">

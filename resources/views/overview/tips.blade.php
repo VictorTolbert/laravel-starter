@@ -16,6 +16,10 @@
     </div>
 </header>
 <section class="section">
-
+    <div class="container is-fluid">
+        <div class="content">
+            @include('content.overview.tips')
+        </div>
+    </div>
 </section>
 @endsection

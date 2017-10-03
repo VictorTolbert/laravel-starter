@@ -1,7 +1,8 @@
 <div class="navbar-item has-dropdown is-hoverable">
     <a class="navbar-link">
         <span class="icon is-medium p-r-xs">
-            <img src="{{ get_gravatar(Auth::user()->email) }}">
+            {{-- <img src="{{ get_gravatar(Auth::user()->email) }}"> --}}
+            <img src="/demo-user.png">
         </span>
         <span>{{ Auth::user()->name }}</span>
     </a>
@@ -9,17 +10,21 @@
     <div class="navbar-dropdown is-right">
        <a class="navbar-item" href="{{ route('profile', Auth::user()) }}">
             <span class="icon is-medium p-r-xs">
-                <i class="material-icons">person</i>
+                {{-- <i class="material-icons">person</i> --}}
+                @svg('material.person')
             </span>
             <span>My Profile</span>
         </a>
 
-{{--         <a class="navbar-item" data-show="quickview" data-target="settings">
+        <a class="navbar-item" data-show="quickview" data-target="settings">
             <span class="icon is-medium p-r-xs" style="color: #333;">
-                <i class="material-icons">settings</i>
+                {{-- <i class="material-icons">settings</i> --}}
+                @svg('material.settings')
             </span>
-            <span>Settings</span>
-        </a> --}}
+            <span>Preferences</span>
+        </a>
+
+        <hr class="navbar-divider">
 
         <div class="navbar-item">
             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">

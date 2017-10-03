@@ -1,9 +1,3 @@
-# Responsiveness
-
-Bulma is a **mobile-first** framework
-
----
-
 ## Vertical by default
 
 Every element in Bulma is **mobile-first** and optimizes for **vertical reading**, so by default on mobile:

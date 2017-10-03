@@ -1,9 +1,3 @@
-# Classes
-
-Bulma is simply a collection of CSS classes. Write the HTML code you want.
-
----
-
 Bulma is a **CSS** framework, meaning that the end result is simply a **single** `.css` file: 
 <https://github.com/jgthms/bulma/blob/master/css/bulma.css>
 

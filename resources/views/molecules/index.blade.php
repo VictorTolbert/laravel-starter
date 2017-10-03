@@ -9,7 +9,7 @@
         </div>
     </div>
 </header>
-
+@include('partials.navbars.atomic-design')
 <section class="section">
     <div class="container is-fluid">
         <div class="content">

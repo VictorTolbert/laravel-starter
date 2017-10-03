@@ -1,9 +1,3 @@
-# Functions
-
-Utility functions to calculate colors and other values
-
----
-
 Bulma uses 3 custom functions to help define the values and colors dynamically:
 
 - powerNumber($number, $exp): calculates the value of a number exposed to another one. Returns a number.

@@ -1,9 +1,3 @@
-# Colors
-
-The **colors** that **style** most Bulma elements and components
-
----
-
 Most elements and components have color variations thanks to **modifiers** with syntax `.is-$color`, like `is-primary` or `is-dark`.
 
 This is thanks to the `$colors` **Sass map**, through which Bulma cycles to grab all the colors and their inverts.

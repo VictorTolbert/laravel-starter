@@ -11,9 +11,10 @@
             </a>
             @if (Auth::guest())
             @else
-{{--                 <a class="navbar-item is-active" href="">
+                {{-- <a class="navbar-item is-active" href="">
                     Design System
                 </a> --}}
+                @include('partials.navbar-items.prototypes')
             @endif
 
             <span class="navbar-burger" data-target="navbarMain" @click="isActive = !isActive">
@@ -39,8 +40,7 @@
                     {{-- @include('partials.navbar-items.design-system') --}}
                     @include('partials.navbar-items.team-dropdown')
                     {{-- @include('partials.navbar-items.design-team') --}}
-                    @include('partials.navbar-items.prototypes')
-                    @include('partials.navbar-items.xml-proposal-viewer')
+                    {{-- @include('partials.navbar-items.xml-proposal-viewer') --}}
                     {{-- @include('partials.navbar-items.design-tokens') --}}
                     {{-- @include('partials.navbar-items.icons') --}}
                     {{-- @include('partials.navbar-items.downloads') --}}

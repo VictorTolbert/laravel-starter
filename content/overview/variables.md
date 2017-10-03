@@ -1,9 +1,3 @@
-# Variables
-
-Easily **customize** Bulma to match your design
-
----
-
 Bulma has **two** variable files divided into **4** sections:
 
 1. **Initial variables**: where you define variables by **literal** value, like:

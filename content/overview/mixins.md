@@ -1,8 +1,3 @@
-# Mixins
-
-Utility mixins for custom elements and responsive helpers
-
----
 |                           |                                                                                                                   |    
 |---------------------------|-------------------------------------------------------------------------------------------------------------------|
 | `=arrow($color)`          | Creates a CSS-only down arrow. Used for the dropdown select.                                                      |

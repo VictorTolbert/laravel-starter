@@ -11,11 +11,15 @@
     <div class="hero-body p-t-sm">
         <div class="container is-fluid">
             <h1 class="title">Variables</h1>
-            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eveniet saepe facilis libero, unde molestiae animi, ratione similique numquam quasi voluptatum quaerat debitis. Consequatur deleniti culpa laudantium ratione! Quia, modi.</h2>
+            <h2 class="subtitle">Easily <strong>customize</strong> Bulma to match your design</h2>
         </div>
     </div>
 </header>
 <section class="section">
-
+    <div class="container is-fluid">
+        <div class="content">
+            @include('content.overview.variables')
+        </div>
+    </div>
 </section>
 @endsection

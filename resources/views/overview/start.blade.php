@@ -15,7 +15,6 @@
         </div>
     </div>
 </header>
-
 <section class="section">
     <div class="container is-fluid">
         <div class="content">

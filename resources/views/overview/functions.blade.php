@@ -11,11 +11,15 @@
     <div class="hero-body p-t-sm">
         <div class="container is-fluid">
             <h1 class="title">Functions</h1>
-            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eveniet saepe facilis libero, unde molestiae animi, ratione similique numquam quasi voluptatum quaerat debitis. Consequatur deleniti culpa laudantium ratione! Quia, modi.</h2>
+            <h2 class="subtitle">Utility functions to calculate colors and other values</h2>
         </div>
     </div>
 </header>
 <section class="section">
-
+    <div class="container is-fluid">
+        <div class="content">
+            @include('content.overview.functions')
+        </div>
+    </div>
 </section>
 @endsection

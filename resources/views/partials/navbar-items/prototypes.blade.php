@@ -1,6 +1,6 @@
 <div class="navbar-item has-dropdown is-hoverable">
     <a class="navbar-link">
-        <span>Seller Prototypes</span>
+        <span>Prototypes</span>
     </a>
 
     <div class="navbar-dropdown">
@@ -15,6 +15,8 @@
         <a class="navbar-item" href="{{ route('campaign-performance') }}">
             <span>Campaign Performance</span>
         </a>
+
+        <hr class="navbar-divider">
 
         <a class="navbar-item" href="{{ route('order-management') }}">
             <span>Order Management</span>
@@ -32,6 +34,9 @@
             <span>Pending Makegoods</span>
         </a>
 
+
+        <hr class="navbar-divider">
+
         <a class="navbar-item" href="{{ route('pending-orders') }}">
             <span>Pending Orders</span>
         </a>
@@ -39,6 +44,11 @@
         <a class="navbar-item" href="{{ route('price-guide') }}">
             <span>Price Guide</span>
         </a>
+
+
+        <hr class="navbar-divider">
+
+        @include('partials.navbar-items.xml-proposal-viewer')
 
         <a class="navbar-item" href="{{ route('program-revenue') }}">
             <span>Program Revenue</span>

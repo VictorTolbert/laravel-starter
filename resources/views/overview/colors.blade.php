@@ -4,7 +4,7 @@
 <div class="hero-body">
     <div class="container is-fluid">
         <h1 class="title">Colors</h1>
-        <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque nesciunt nobis dolores doloremque assumenda dolorem, laboriosam reprehenderit.</h2>
+        <h2 class="subtitle">The <strong>colors that <strong>style</strong> most Bulma elements and components</h2>
     </div>
 </div>
 <section class="section">

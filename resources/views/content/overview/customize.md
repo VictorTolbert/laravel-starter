@@ -1,9 +1,3 @@
-# Customizing with Sass
-
-Create your **own theme** with a simple set of **variables**
-
----
-
 If you're familiar with [Sass](http://sass-lang.com/) and want to **customize** Bulma with your own colors and variables, just install Bulma via **npm**:
 
 ### 1. Download the source files:

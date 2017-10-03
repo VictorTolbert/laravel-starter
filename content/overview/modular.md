@@ -1,9 +1,3 @@
-# Modular
-
-Just import what you **need**
-
----
-
 Bulma consists of **29** `.sass` files that you can import **individually**.
 
 For example, let's say you only want the Bulma **columns**. 

@@ -16,18 +16,10 @@
         </div>
     </div>
 </header>
+@include('partials.navbars.atomic-design')
 <section class="section">
     <div class="container is-fluid">
-
-        http://bradfrost.com/blog/post/atomic-web-design/#atoms
-
-        http://bradfrost.com/blog/post/atomic-web-design/#molecules
-
-        http://bradfrost.com/blog/post/atomic-web-design/#organisms
-
-        http://bradfrost.com/blog/post/atomic-web-design/#templates
-        http://bradfrost.com/blog/post/atomic-web-design/#pages
-
+        @include('content.atomic-design')
     </div>
 </section>
 @endsection

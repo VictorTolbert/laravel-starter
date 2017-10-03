@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <header class="hero is-light">
     <div class="hero-body">
@@ -9,7 +8,7 @@
         </div>
     </div>
 </header>
-
+@include('partials.navbars.atomic-design')
 <section class="section">
     <div class="container is-fluide">
         <div class="content">
