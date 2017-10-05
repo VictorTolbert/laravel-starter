@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Dashboard')
 @section('content')
-<header class="hero is-light">
+<header class="hero is-primary">
     <div class="hero-head">
         <div class="container is-fluid p-l-lg">
             {{ Breadcrumbs::render('dashboard') }}
@@ -11,6 +11,9 @@
         <div class="container is-fluid">
             {{-- <h1 class="title">Design Coding Dashboard</h1> --}}
             <h1 class="title">UI Toolkit</h1>
+            <span class="icon" style="color: rgb(191, 28, 56)">
+                @svg('material.opacity')
+            </span>
             <h2 class="subtitle">HTML and CSS for Prototyping in the Browser</h2>
         </div>
     </div>

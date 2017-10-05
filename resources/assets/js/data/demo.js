@@ -1664,6 +1664,48 @@ module.exports =  {
             ]
         }
     ],
+    portfolio: [
+        {
+            slug: 'morehouse1987',
+            client: 'Morehouse Class of 1987',
+            project: '30-Year Reunion Website'
+        },
+        {
+            slug: 'att',
+            client: 'AT&T',
+            project: 'Numerous'
+        },
+        {
+            slug: 'autotrader',
+            client: 'AutoTrader.com',
+            project: 'Numerous'
+        },
+        {
+            slug: 'oldschool',
+            client: 'VIP Universal',
+            project: 'Old School Saturday'
+        },
+        {
+            slug: 'prospectus',
+            client: 'Prospectus Group',
+            project: 'Georgia Strategic Prevention System'
+        },
+        {
+            slug: 'swats',
+            client: 'SWATS Event Planning and Marketing',
+            project: 'Urban Film Review'
+        },
+        {
+            slug: 'webmd',
+            client: 'WebMD',
+            project: 'Numerous'
+        },
+        {
+            slug: 'videa',
+            client: 'Corporate Website',
+            project: 'Numerous'
+        },
+    ],
     stationGroups: [
         {
             rank: 1,

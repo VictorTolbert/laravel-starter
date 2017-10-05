@@ -1,7 +1,7 @@
 module.exports = [
-    { name: 'Allison', title: '', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
+    { name: 'Allison', title: 'Media Adviser', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
     { name: 'Clifton', title: '', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
-    { name: 'Bill', title: '', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
+    { name: 'Bill', title: 'Sr. Technical Writer & Editor', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
     { name: 'Boris', title: '', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
     { name: 'Brant', title: '', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
     { name: 'Bryan', title: '', bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },

@@ -6,6 +6,26 @@ use Carbon\Carbon;
 //     return Carbon::now();
 // }
 
+/**
+ * Validate some data.
+ *
+ * @param string|array $fields
+ * @param string|array $rules
+ * @return bool
+ */
+function validate($fields, $rules)
+{
+    if (! is_array($fields)) {
+        $fields = ['default' => $fields];
+    }
+
+    if (! is_array($rules)) {
+        $rules = ['default' => $rules];
+    }
+
+    return Validator::make($fields, $rules)->passes();
+}
+
 function visit($url)
 {
     $agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";

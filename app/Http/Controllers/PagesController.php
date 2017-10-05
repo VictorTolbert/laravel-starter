@@ -20,6 +20,10 @@ class PagesController extends Controller
 
     public function alert()
     {
+        // validate('20150230', 'date'); //returns false
+        // validate('20150227', 'date'); //returns true
+        // validate('freek@spatie.be', 'email'); //returns true
+        // validate('192.168.10.10', 'ip'); //returns true
         return view('components.alert');
     }
 
@@ -216,6 +220,11 @@ class PagesController extends Controller
     public function file()
     {
         return view('form.file');
+    }
+
+    public function flexboxOffcanvas()
+    {
+        return view('flexbox-offcanvas');
     }
 
     public function footer()
@@ -798,6 +807,11 @@ class PagesController extends Controller
         return view('components.popover');
     }
 
+    public function portfolio()
+    {
+        return view('portfolio');
+    }
+
     public function priceGuide()
     {
         return view('price-guide.index');
@@ -966,6 +980,11 @@ class PagesController extends Controller
     public function toast()
     {
         return view('notices.toast');
+    }
+
+    public function toc()
+    {
+        return view('toc');
     }
 
     public function tooltip()

@@ -2,12 +2,12 @@
     <div class="container is-fluid">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                {{-- @include('partials.svgs.vti-logo') --}}
+                @include('partials.svgs.vti-logo')
                 {{-- <span class="m-r-xs">@svg('user')</span> --}}
                 {{-- @svg('uxlab') --}}
-                @svg('uxlab-alt')
+                {{-- @svg('uxlab-alt') --}}
                 {{-- @include('partials.svgs.logo') --}}
-                {{-- @include('partials.svgs.uxlab-logo') --}}
+                @include('partials.svgs.uxlab-logo')
             </a>
             @if (Auth::guest())
             @else

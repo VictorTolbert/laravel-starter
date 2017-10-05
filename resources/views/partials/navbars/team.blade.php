@@ -8,7 +8,28 @@
             </span>
         </div>
         <div class="navbar-menu" id="navbarTeam">
-            <div class="navbar-start">
+            <div class="navbar-start" style="flex-grow: 1; width: 100%">
+                <div class="navbar-item" style="flex-grow: 1; width: 100%">
+                    {{-- <form @submit="handleSearchSubmit"> --}}
+                        <div class="field has-addons" style="flex-grow: 1; width: 100%">
+                            <div class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    placeholder="Search..."
+                                    value=""
+                                    @change="" />
+                            </div>
+                            <div class="control">
+                                <button class="button" type="submit">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    {{-- </form> --}}
+                </div>
             </div>
             <div class="navbar-end">
                 <a class="navbar-item">Bill</a>

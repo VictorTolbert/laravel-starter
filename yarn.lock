@@ -2408,6 +2408,10 @@ clean-css@^4.1.3, clean-css@4.1.x:
   dependencies:
     source-map "0.5.x"
 
+cleave.js:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cleave.js/-/cleave.js-1.0.1.tgz#c22b7558823012b37a956a890d25b8c5befc7988"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"

@@ -43,6 +43,12 @@
                                         </div>
                                         <p class="help is-info">Helpful text...</p>
                                     </div>
+                                    <div class="field">
+                                        <label for="credit-card" class="label">Credit Card</label>
+                                        <p class="control">
+                                            <b-input name="credit-card" v-cleave="{ creditCard: true }"></b-input>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -209,6 +215,65 @@
         <b-tab-item label="Codepen">
             <section class="section">
                 <div class="container is-fluid">
+                    <div class="image-tiles">
+                        <a href="#" class="image-tile">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/1.jpg"/>
+                            <div class="details">
+                                <span class="title">Lorem Ipsum Dolor</span>
+                                    <span class="info">Quisque vel felis lectus donec vitae dapibus magna
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#" class="image-tile">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/2.jpg"/>
+                            <div class="details">
+                                <span class="title">Lorem Ipsum Dolor</span>
+                                <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+                            </div>
+                        </a>
+                        <a href="#" class="image-tile">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/3.jpg"/>
+                            <div class="details">
+                                <span class="title">Lorem Ipsum Dolor</span>
+                                <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+                            </div>
+                        </a>
+                        <a href="#" class="image-tile">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/4.jpg"/>
+                            <div class="details">
+                                <span class="title">Lorem Ipsum Dolor</span>
+                                <span class="info">Quisque vel felis lectus donec vitae dapibus magna</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container is-fluid">
+                    <figure class="slideout red">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample33.jpg" alt="sample33" />
+                        <figcaption>
+                            <h2>Jean <span> Myers</span></h2>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+
+                    <figure class="slideout blue ">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample34.jpg" alt="sample34" />
+                        <figcaption>
+                            <h2>Lynn <span> Reyes</span></h2>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+
+                    <figure class="slideout">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample35.jpg" alt="sample35" />
+                        <figcaption>
+                            <h2>Tracy <span> Logan</span></h2>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+
                     <codepen slug-hash="WjRGWb"></codepen>
                 </div>
             </section>

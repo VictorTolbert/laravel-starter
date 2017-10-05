@@ -1,5 +1,6 @@
-import "./buefy"
-import "./global-components"
+import './buefy'
+import './cleave'
+import './global-components'
 
 import hljs from 'highlight.js/lib/highlight'
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))

@@ -22,6 +22,25 @@
 
     <section class="section quickview-body">
         <div class="quickview-block">
+            Online Help
+
+            Find page specific help or access the general help documentation.
+
+            Page HelpGeneral Help
+            Call Us
+
+            We are available from 8:00am-11:00pm EST/EDT Mon - Fri.
+            Customer Service: 1(844)48VIDEA
+            Live Chat
+
+            Need fast help? From 8:00am-11:00pm EST/EDT Mon - Fri we are online and ready to help.
+            Contact Us
+
+            Technical Support: support@videa.tv
+            Or, use our email form and we will get back to you within our support hours of 8:00am-11:00pm EST/EDT - Mon-Fri
+
+            Contact Us
+
         </div>
     </section>
 

@@ -216,6 +216,35 @@
                                     </button>
                                 </article>
                             </b-tab-item>
+                            <b-tab-item label="Display">
+                                Date Format
+                                Default Demographic
+                                Default number of table rows
+                                Station Share Goal
+                                Primary Demographic
+                                Additional Demographics
+                            </b-tab-item>
+                            <b-tab-item label="User Settings">
+                                Reset Password
+                                Please enter your old password and confirm your new password.
+                                Old Password
+                                New Password
+                                Confirm Password:
+                                Password Requirements
+                                At least 6 characters
+                                Contains uppercase and lowercase letters
+                                Contains a number
+                                Contains at least 1 special character (!@$)
+                                Does NOT include your email or username
+                                Contact Information
+                                Update Phone Number
+                                Please enter your phone number and confirm your new phone number.
+                                Phone Number (xxx-xxx-xxxx)
+                                New Phone Number (xxx-xxx-xxxx)
+                                Confirm Phone Number
+                                SubmitCancel
+                                Please contact the administrator at 844-213-8543 or admin@videa.tv if you need to have your email updated.
+                            </b-tab-item>
                         </b-tabs>
                     </section>
                 </b-tab-item>

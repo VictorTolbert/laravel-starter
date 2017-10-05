@@ -15,18 +15,6 @@
                <tr>
                    <th>Property</th>
                    <th>Value</th>
-                   <th>Property</th>
-                   <th>Value</th>
-                   <th>Property</th>
-                   <th>Value</th>
-                   <th>Property</th>
-                   <th>Value</th>
-                   <th>Property</th>
-                   <th>Value</th>
-                   <th>Property</th>
-                   <th>Value</th>
-                   <th>Property</th>
-                   <th>Value</th>
                </tr>
            </thead>
            <tbody>
@@ -34,48 +22,6 @@
                     v-for="(prop, index) in db.tokens.spacing"
                     :key="index"
                     :style="(prop.value == '0.5rem') ? 'background: #222; color: #eee' : ''">
-                   <td
-                        v-text="prop.name"
-                        :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
-                        <span v-if=><b>@{{ prop.name }}</b></span>
-                        <span v-else>@{{ prop.name }}</span>
-                    </td>
-                   <td v-text="prop.value"></td>
-                   <td
-                        v-text="prop.name"
-                        :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
-                        <span v-if=><b>@{{ prop.name }}</b></span>
-                        <span v-else>@{{ prop.name }}</span>
-                    </td>
-                   <td v-text="prop.value"></td>
-                   <td
-                        v-text="prop.name"
-                        :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
-                        <span v-if=><b>@{{ prop.name }}</b></span>
-                        <span v-else>@{{ prop.name }}</span>
-                    </td>
-                   <td v-text="prop.value"></td>
-                   <td
-                        v-text="prop.name"
-                        :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
-                        <span v-if=><b>@{{ prop.name }}</b></span>
-                        <span v-else>@{{ prop.name }}</span>
-                    </td>
-                   <td v-text="prop.value"></td>
-                   <td
-                        v-text="prop.name"
-                        :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
-                        <span v-if=><b>@{{ prop.name }}</b></span>
-                        <span v-else>@{{ prop.name }}</span>
-                    </td>
-                   <td v-text="prop.value"></td>
-                   <td
-                        v-text="prop.name"
-                        :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
-                        <span v-if=><b>@{{ prop.name }}</b></span>
-                        <span v-else>@{{ prop.name }}</span>
-                    </td>
-                   <td v-text="prop.value"></td>
                    <td
                         v-text="prop.name"
                         :style="`padding-top: ${prop.value};padding-bottom: ${prop.value}`">
