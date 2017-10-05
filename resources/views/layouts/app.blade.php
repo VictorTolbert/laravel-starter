@@ -36,7 +36,7 @@
         <main class="main">
             {{-- <div class="is-primary" style="background-color:#4295b3;height:0.25rem">&nbps;</div> --}}
             @include('partials.navbars.app')
-            @include('partials.navbars.team')
+            {{-- @include('partials.navbars.team') --}}
             {{-- @include('partials.navbars.vti') --}}
             {{-- @include('partials.navbars.ops') --}}
             {{-- @include('partials.navbars.apps') --}}

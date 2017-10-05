@@ -11,22 +11,23 @@
         <div class="container is-fluid">
             {{-- <h1 class="title">Design Coding Dashboard</h1> --}}
             <h1 class="title">UI Toolkit</h1>
-            <span class="icon" style="color: rgb(191, 28, 56)">
+            {{-- <span class="icon" style="color: rgb(191, 28, 56)">
                 @svg('material.opacity')
-            </span>
+            </span> --}}
             <h2 class="subtitle">HTML and CSS for Prototyping in the Browser</h2>
         </div>
     </div>
 </header>
-<section class="m-t-md m-b-none s-clearfix">
+<section class="m-t-md m-b-none is-clearfix">
     <div class="container is-fluid">
         <span class="is-pulled-right">
             <a class="button is-neutral is-small" href="{{route('atomic-design')}}">Atomic Design View</a>
         </span>
+        {{-- <img src="/bop-wit-it.gif"> --}}
     </div>
 </section>
-<section class="section">
-    <div class="container is-fluid">
+<section class="section p-t-md">
+    <div class="">
         <div class="tile is-ancestor">
             <div class="tile is-4 is-vertical is-parent">
                 <div class="tile is-child box">
